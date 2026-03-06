@@ -1,4 +1,4 @@
-// Copyright 2015-2026 The Khronos Group Inc.
+// Copyright 2015-2024 The Khronos Group Inc.
 //
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 //
@@ -27,7 +27,7 @@ export module vulkan;
 
 export import std;
 
-VULKAN_HPP_STATIC_ASSERT( VK_HEADER_VERSION == 344, "Wrong VK_HEADER_VERSION!" );
+VULKAN_HPP_STATIC_ASSERT( VK_HEADER_VERSION == 275, "Wrong VK_HEADER_VERSION!" );
 
 #if defined( _MSC_VER )
 #  pragma warning( push )
@@ -284,27 +284,6 @@ export {
   using ::PFN_vkQueueSubmit2;
   using ::PFN_vkSetPrivateData;
 
-  //=== VK_VERSION_1_4 ===
-  using ::PFN_vkCmdBindDescriptorSets2;
-  using ::PFN_vkCmdBindIndexBuffer2;
-  using ::PFN_vkCmdPushConstants2;
-  using ::PFN_vkCmdPushDescriptorSet;
-  using ::PFN_vkCmdPushDescriptorSet2;
-  using ::PFN_vkCmdPushDescriptorSetWithTemplate;
-  using ::PFN_vkCmdPushDescriptorSetWithTemplate2;
-  using ::PFN_vkCmdSetLineStipple;
-  using ::PFN_vkCmdSetRenderingAttachmentLocations;
-  using ::PFN_vkCmdSetRenderingInputAttachmentIndices;
-  using ::PFN_vkCopyImageToImage;
-  using ::PFN_vkCopyImageToMemory;
-  using ::PFN_vkCopyMemoryToImage;
-  using ::PFN_vkGetDeviceImageSubresourceLayout;
-  using ::PFN_vkGetImageSubresourceLayout2;
-  using ::PFN_vkGetRenderingAreaGranularity;
-  using ::PFN_vkMapMemory2;
-  using ::PFN_vkTransitionImageLayout;
-  using ::PFN_vkUnmapMemory2;
-
   //=== VK_KHR_surface ===
   using ::PFN_vkDestroySurfaceKHR;
   using ::PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR;
@@ -409,9 +388,7 @@ export {
   using ::PFN_vkDestroyCuModuleNVX;
 
   //=== VK_NVX_image_view_handle ===
-  using ::PFN_vkGetDeviceCombinedImageSamplerIndexNVX;
   using ::PFN_vkGetImageViewAddressNVX;
-  using ::PFN_vkGetImageViewHandle64NVX;
   using ::PFN_vkGetImageViewHandleNVX;
 
   //=== VK_AMD_draw_indirect_count ===
@@ -613,18 +590,6 @@ export {
   using ::PFN_vkGetExecutionGraphPipelineScratchSizeAMDX;
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  //=== VK_EXT_descriptor_heap ===
-  using ::PFN_vkCmdBindResourceHeapEXT;
-  using ::PFN_vkCmdBindSamplerHeapEXT;
-  using ::PFN_vkCmdPushDataEXT;
-  using ::PFN_vkGetImageOpaqueCaptureDataEXT;
-  using ::PFN_vkGetPhysicalDeviceDescriptorSizeEXT;
-  using ::PFN_vkGetTensorOpaqueCaptureDataARM;
-  using ::PFN_vkRegisterCustomBorderColorEXT;
-  using ::PFN_vkUnregisterCustomBorderColorEXT;
-  using ::PFN_vkWriteResourceDescriptorsEXT;
-  using ::PFN_vkWriteSamplerDescriptorsEXT;
-
   //=== VK_EXT_sample_locations ===
   using ::PFN_vkCmdSetSampleLocationsEXT;
   using ::PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT;
@@ -708,7 +673,6 @@ export {
   using ::PFN_vkGetMemoryHostPointerPropertiesEXT;
 
   //=== VK_AMD_buffer_marker ===
-  using ::PFN_vkCmdWriteBufferMarker2AMD;
   using ::PFN_vkCmdWriteBufferMarkerAMD;
 
   //=== VK_EXT_calibrated_timestamps ===
@@ -726,19 +690,12 @@ export {
 
   //=== VK_NV_device_diagnostic_checkpoints ===
   using ::PFN_vkCmdSetCheckpointNV;
-  using ::PFN_vkGetQueueCheckpointData2NV;
   using ::PFN_vkGetQueueCheckpointDataNV;
 
   //=== VK_KHR_timeline_semaphore ===
   using ::PFN_vkGetSemaphoreCounterValueKHR;
   using ::PFN_vkSignalSemaphoreKHR;
   using ::PFN_vkWaitSemaphoresKHR;
-
-  //=== VK_EXT_present_timing ===
-  using ::PFN_vkGetPastPresentationTimingEXT;
-  using ::PFN_vkGetSwapchainTimeDomainPropertiesEXT;
-  using ::PFN_vkGetSwapchainTimingPropertiesEXT;
-  using ::PFN_vkSetSwapchainPresentTimingQueueSizeEXT;
 
   //=== VK_INTEL_performance_query ===
   using ::PFN_vkAcquirePerformanceConfigurationINTEL;
@@ -767,10 +724,6 @@ export {
   //=== VK_KHR_fragment_shading_rate ===
   using ::PFN_vkCmdSetFragmentShadingRateKHR;
   using ::PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR;
-
-  //=== VK_KHR_dynamic_rendering_local_read ===
-  using ::PFN_vkCmdSetRenderingAttachmentLocationsKHR;
-  using ::PFN_vkCmdSetRenderingInputAttachmentIndicesKHR;
 
   //=== VK_EXT_buffer_device_address ===
   using ::PFN_vkGetBufferDeviceAddressEXT;
@@ -885,11 +838,6 @@ export {
   using ::PFN_vkGetCudaModuleCacheNV;
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  //=== VK_QCOM_tile_shading ===
-  using ::PFN_vkCmdBeginPerTileExecutionQCOM;
-  using ::PFN_vkCmdDispatchTileQCOM;
-  using ::PFN_vkCmdEndPerTileExecutionQCOM;
-
 #if defined( VK_USE_PLATFORM_METAL_EXT )
   //=== VK_EXT_metal_objects ===
   using ::PFN_vkExportMetalObjectsEXT;
@@ -900,7 +848,9 @@ export {
   using ::PFN_vkCmdResetEvent2KHR;
   using ::PFN_vkCmdSetEvent2KHR;
   using ::PFN_vkCmdWaitEvents2KHR;
+  using ::PFN_vkCmdWriteBufferMarker2AMD;
   using ::PFN_vkCmdWriteTimestamp2KHR;
+  using ::PFN_vkGetQueueCheckpointData2NV;
   using ::PFN_vkQueueSubmit2KHR;
 
   //=== VK_EXT_descriptor_buffer ===
@@ -1052,12 +1002,6 @@ export {
   using ::PFN_vkGetPipelineIndirectDeviceAddressNV;
   using ::PFN_vkGetPipelineIndirectMemoryRequirementsNV;
 
-#if defined( VK_USE_PLATFORM_OHOS )
-  //=== VK_OHOS_external_memory ===
-  using ::PFN_vkGetMemoryNativeBufferOHOS;
-  using ::PFN_vkGetNativeBufferPropertiesOHOS;
-#endif /*VK_USE_PLATFORM_OHOS*/
-
   //=== VK_EXT_extended_dynamic_state3 ===
   using ::PFN_vkCmdSetAlphaToCoverageEnableEXT;
   using ::PFN_vkCmdSetAlphaToOneEnableEXT;
@@ -1091,19 +1035,6 @@ export {
   using ::PFN_vkCmdSetViewportSwizzleNV;
   using ::PFN_vkCmdSetViewportWScalingEnableNV;
 
-  //=== VK_ARM_tensors ===
-  using ::PFN_vkBindTensorMemoryARM;
-  using ::PFN_vkCmdCopyTensorARM;
-  using ::PFN_vkCreateTensorARM;
-  using ::PFN_vkCreateTensorViewARM;
-  using ::PFN_vkDestroyTensorARM;
-  using ::PFN_vkDestroyTensorViewARM;
-  using ::PFN_vkGetDeviceTensorMemoryRequirementsARM;
-  using ::PFN_vkGetPhysicalDeviceExternalTensorPropertiesARM;
-  using ::PFN_vkGetTensorMemoryRequirementsARM;
-  using ::PFN_vkGetTensorOpaqueCaptureDescriptorDataARM;
-  using ::PFN_vkGetTensorViewOpaqueCaptureDescriptorDataARM;
-
   //=== VK_EXT_shader_module_identifier ===
   using ::PFN_vkGetShaderModuleCreateInfoIdentifierEXT;
   using ::PFN_vkGetShaderModuleIdentifierEXT;
@@ -1121,37 +1052,15 @@ export {
   using ::PFN_vkGetImageSubresourceLayout2KHR;
   using ::PFN_vkGetRenderingAreaGranularityKHR;
 
-  //=== VK_AMD_anti_lag ===
-  using ::PFN_vkAntiLagUpdateAMD;
-
-  //=== VK_KHR_present_wait2 ===
-  using ::PFN_vkWaitForPresent2KHR;
-
   //=== VK_EXT_shader_object ===
   using ::PFN_vkCmdBindShadersEXT;
-  using ::PFN_vkCmdSetDepthClampRangeEXT;
   using ::PFN_vkCreateShadersEXT;
   using ::PFN_vkDestroyShaderEXT;
   using ::PFN_vkGetShaderBinaryDataEXT;
 
-  //=== VK_KHR_pipeline_binary ===
-  using ::PFN_vkCreatePipelineBinariesKHR;
-  using ::PFN_vkDestroyPipelineBinaryKHR;
-  using ::PFN_vkGetPipelineBinaryDataKHR;
-  using ::PFN_vkGetPipelineKeyKHR;
-  using ::PFN_vkReleaseCapturedPipelineDataKHR;
-
   //=== VK_QCOM_tile_properties ===
   using ::PFN_vkGetDynamicRenderingTilePropertiesQCOM;
   using ::PFN_vkGetFramebufferTilePropertiesQCOM;
-
-  //=== VK_KHR_swapchain_maintenance1 ===
-  using ::PFN_vkReleaseSwapchainImagesKHR;
-
-  //=== VK_NV_cooperative_vector ===
-  using ::PFN_vkCmdConvertCooperativeVectorMatrixNV;
-  using ::PFN_vkConvertCooperativeVectorMatrixNV;
-  using ::PFN_vkGetPhysicalDeviceCooperativeVectorPropertiesNV;
 
   //=== VK_NV_low_latency2 ===
   using ::PFN_vkGetLatencyTimingsNV;
@@ -1163,19 +1072,6 @@ export {
   //=== VK_KHR_cooperative_matrix ===
   using ::PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR;
 
-  //=== VK_ARM_data_graph ===
-  using ::PFN_vkBindDataGraphPipelineSessionMemoryARM;
-  using ::PFN_vkCmdDispatchDataGraphARM;
-  using ::PFN_vkCreateDataGraphPipelinesARM;
-  using ::PFN_vkCreateDataGraphPipelineSessionARM;
-  using ::PFN_vkDestroyDataGraphPipelineSessionARM;
-  using ::PFN_vkGetDataGraphPipelineAvailablePropertiesARM;
-  using ::PFN_vkGetDataGraphPipelinePropertiesARM;
-  using ::PFN_vkGetDataGraphPipelineSessionBindPointRequirementsARM;
-  using ::PFN_vkGetDataGraphPipelineSessionMemoryRequirementsARM;
-  using ::PFN_vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM;
-  using ::PFN_vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM;
-
   //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
   using ::PFN_vkCmdSetAttachmentFeedbackLoopEnableEXT;
 
@@ -1183,9 +1079,6 @@ export {
   //=== VK_QNX_external_memory_screen_buffer ===
   using ::PFN_vkGetScreenBufferPropertiesQNX;
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
-
-  //=== VK_KHR_line_rasterization ===
-  using ::PFN_vkCmdSetLineStippleKHR;
 
   //=== VK_KHR_calibrated_timestamps ===
   using ::PFN_vkGetCalibratedTimestampsKHR;
@@ -1198,74 +1091,4 @@ export {
   using ::PFN_vkCmdPushDescriptorSet2KHR;
   using ::PFN_vkCmdPushDescriptorSetWithTemplate2KHR;
   using ::PFN_vkCmdSetDescriptorBufferOffsets2EXT;
-
-  //=== VK_QCOM_tile_memory_heap ===
-  using ::PFN_vkCmdBindTileMemoryQCOM;
-
-  //=== VK_KHR_copy_memory_indirect ===
-  using ::PFN_vkCmdCopyMemoryIndirectKHR;
-  using ::PFN_vkCmdCopyMemoryToImageIndirectKHR;
-
-  //=== VK_EXT_memory_decompression ===
-  using ::PFN_vkCmdDecompressMemoryEXT;
-  using ::PFN_vkCmdDecompressMemoryIndirectCountEXT;
-
-  //=== VK_NV_external_compute_queue ===
-  using ::PFN_vkCreateExternalComputeQueueNV;
-  using ::PFN_vkDestroyExternalComputeQueueNV;
-  using ::PFN_vkGetExternalComputeQueueDataNV;
-
-  //=== VK_NV_cluster_acceleration_structure ===
-  using ::PFN_vkCmdBuildClusterAccelerationStructureIndirectNV;
-  using ::PFN_vkGetClusterAccelerationStructureBuildSizesNV;
-
-  //=== VK_NV_partitioned_acceleration_structure ===
-  using ::PFN_vkCmdBuildPartitionedAccelerationStructuresNV;
-  using ::PFN_vkGetPartitionedAccelerationStructuresBuildSizesNV;
-
-  //=== VK_EXT_device_generated_commands ===
-  using ::PFN_vkCmdExecuteGeneratedCommandsEXT;
-  using ::PFN_vkCmdPreprocessGeneratedCommandsEXT;
-  using ::PFN_vkCreateIndirectCommandsLayoutEXT;
-  using ::PFN_vkCreateIndirectExecutionSetEXT;
-  using ::PFN_vkDestroyIndirectCommandsLayoutEXT;
-  using ::PFN_vkDestroyIndirectExecutionSetEXT;
-  using ::PFN_vkGetGeneratedCommandsMemoryRequirementsEXT;
-  using ::PFN_vkUpdateIndirectExecutionSetPipelineEXT;
-  using ::PFN_vkUpdateIndirectExecutionSetShaderEXT;
-
-#if defined( VK_USE_PLATFORM_OHOS )
-  //=== VK_OHOS_surface ===
-  using ::PFN_vkCreateSurfaceOHOS;
-#endif /*VK_USE_PLATFORM_OHOS*/
-
-  //=== VK_NV_cooperative_matrix2 ===
-  using ::PFN_vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV;
-
-#if defined( VK_USE_PLATFORM_METAL_EXT )
-  //=== VK_EXT_external_memory_metal ===
-  using ::PFN_vkGetMemoryMetalHandleEXT;
-  using ::PFN_vkGetMemoryMetalHandlePropertiesEXT;
-#endif /*VK_USE_PLATFORM_METAL_EXT*/
-
-  //=== VK_ARM_performance_counters_by_region ===
-  using ::PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM;
-
-  //=== VK_EXT_fragment_density_map_offset ===
-  using ::PFN_vkCmdEndRendering2EXT;
-
-  //=== VK_EXT_custom_resolve ===
-  using ::PFN_vkCmdBeginCustomResolveEXT;
-
-  //=== VK_KHR_maintenance10 ===
-  using ::PFN_vkCmdEndRendering2KHR;
-
-  //=== VK_NV_compute_occupancy_priority ===
-  using ::PFN_vkCmdSetComputeOccupancyPriorityNV;
-
-#if defined( VK_USE_PLATFORM_UBM_SEC )
-  //=== VK_SEC_ubm_surface ===
-  using ::PFN_vkCreateUbmSurfaceSEC;
-  using ::PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC;
-#endif /*VK_USE_PLATFORM_UBM_SEC*/
 }

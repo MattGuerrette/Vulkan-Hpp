@@ -3293,7 +3293,8 @@ std::string VulkanHppGenerator::generateCommand1ReturnsValue( std::string const 
                                                    m_baseTypes.contains( returnType ) ||
                                                    m_bitmasks.contains( returnType ) ||
                                                    m_enums.contains( returnType ) ||
-                                                   m_externalTypes.contains( returnType ) )
+                                                   m_externalTypes.contains( returnType ) ||
+                                                   m_types.contains( returnType ) )
   {
     // the returnType is a handle or some basic type
     bool unique = isHandle && ( commandData.returnType.type == "VkResult" );  // only if the return type is VkResult, we need to have a unique version
@@ -14407,8 +14408,8 @@ void VulkanHppGenerator::readRegistry( tinyxml2::XMLElement const * element )
                    { "spirvextensions", MultipleAllowed::No },
                    { "sync", MultipleAllowed::No },
                    { "tags", MultipleAllowed::No },
-                   { "types", MultipleAllowed::No },
-                   { "videocodecs", MultipleAllowed::No } } );
+                   { "types", MultipleAllowed::Yes } },
+                 { { "videocodecs", MultipleAllowed::No } } );
   for ( auto child : children )
   {
     std::string const value = child->Value();
@@ -15630,7 +15631,7 @@ void VulkanHppGenerator::readTypeFuncpointer( tinyxml2::XMLElement const * eleme
   if ( nameIt != children.end() )
   {
     // found the old fashioned funcpointer specification via "name" and "type"
-    checkElements( line, children, { { "name", MultipleAllowed::No }, { "type", MultipleAllowed::No } } );
+    checkElements( line, children, { { "name", MultipleAllowed::No } }, { { "type", MultipleAllowed::Yes } } );
 
     std::string text = element->GetText();
     assert( text.starts_with( "typedef " ) && text.ends_with( " (VKAPI_PTR *" ) );

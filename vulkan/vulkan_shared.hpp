@@ -1,4 +1,4 @@
-// Copyright 2015-2026 The Khronos Group Inc.
+// Copyright 2015-2024 The Khronos Group Inc.
 //
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 //
@@ -513,6 +513,16 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
   using SharedSemaphore = SharedHandle<Semaphore>;
 
   template <>
+  class SharedHandleTraits<Event>
+  {
+  public:
+    using DestructorType = Device;
+    using deleter        = detail::ObjectDestroyShared<Event>;
+  };
+
+  using SharedEvent = SharedHandle<Event>;
+
+  template <>
   class SharedHandleTraits<QueryPool>
   {
   public:
@@ -533,6 +543,16 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
   using SharedBuffer = SharedHandle<Buffer>;
 
   template <>
+  class SharedHandleTraits<BufferView>
+  {
+  public:
+    using DestructorType = Device;
+    using deleter        = detail::ObjectDestroyShared<BufferView>;
+  };
+
+  using SharedBufferView = SharedHandle<BufferView>;
+
+  template <>
   class SharedHandleTraits<Image>
   {
   public:
@@ -551,46 +571,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
   };
 
   using SharedImageView = SharedHandle<ImageView>;
-
-  template <>
-  class SharedHandleTraits<CommandPool>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<CommandPool>;
-  };
-
-  using SharedCommandPool = SharedHandle<CommandPool>;
-
-  template <>
-  class SharedHandleTraits<CommandBuffer>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::PoolFreeShared<CommandBuffer, CommandPool>;
-  };
-
-  using SharedCommandBuffer = SharedHandle<CommandBuffer>;
-
-  template <>
-  class SharedHandleTraits<Event>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<Event>;
-  };
-
-  using SharedEvent = SharedHandle<Event>;
-
-  template <>
-  class SharedHandleTraits<BufferView>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<BufferView>;
-  };
-
-  using SharedBufferView = SharedHandle<BufferView>;
 
   template <>
   class SharedHandleTraits<ShaderModule>
@@ -692,18 +672,27 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
   using SharedRenderPass = SharedHandle<RenderPass>;
 
-  //=== VK_VERSION_1_1 ===
   template <>
-  class SharedHandleTraits<DescriptorUpdateTemplate>
+  class SharedHandleTraits<CommandPool>
   {
   public:
     using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<DescriptorUpdateTemplate>;
+    using deleter        = detail::ObjectDestroyShared<CommandPool>;
   };
 
-  using SharedDescriptorUpdateTemplate    = SharedHandle<DescriptorUpdateTemplate>;
-  using SharedDescriptorUpdateTemplateKHR = SharedHandle<DescriptorUpdateTemplate>;
+  using SharedCommandPool = SharedHandle<CommandPool>;
 
+  template <>
+  class SharedHandleTraits<CommandBuffer>
+  {
+  public:
+    using DestructorType = Device;
+    using deleter        = detail::PoolFreeShared<CommandBuffer, CommandPool>;
+  };
+
+  using SharedCommandBuffer = SharedHandle<CommandBuffer>;
+
+  //=== VK_VERSION_1_1 ===
   template <>
   class SharedHandleTraits<SamplerYcbcrConversion>
   {
@@ -714,6 +703,17 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
   using SharedSamplerYcbcrConversion    = SharedHandle<SamplerYcbcrConversion>;
   using SharedSamplerYcbcrConversionKHR = SharedHandle<SamplerYcbcrConversion>;
+
+  template <>
+  class SharedHandleTraits<DescriptorUpdateTemplate>
+  {
+  public:
+    using DestructorType = Device;
+    using deleter        = detail::ObjectDestroyShared<DescriptorUpdateTemplate>;
+  };
+
+  using SharedDescriptorUpdateTemplate    = SharedHandle<DescriptorUpdateTemplate>;
+  using SharedDescriptorUpdateTemplateKHR = SharedHandle<DescriptorUpdateTemplate>;
 
   //=== VK_VERSION_1_3 ===
   template <>
@@ -823,17 +823,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
   };
 
   using SharedDebugUtilsMessengerEXT = SharedHandle<DebugUtilsMessengerEXT>;
-
-  //=== VK_EXT_descriptor_heap ===
-  template <>
-  class SharedHandleTraits<TensorARM>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<TensorARM>;
-  };
-
-  using SharedTensorARM = SharedHandle<TensorARM>;
 
   //=== VK_KHR_acceleration_structure ===
   template <>
@@ -948,17 +937,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
   using SharedMicromapEXT = SharedHandle<MicromapEXT>;
 
-  //=== VK_ARM_tensors ===
-  template <>
-  class SharedHandleTraits<TensorViewARM>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<TensorViewARM>;
-  };
-
-  using SharedTensorViewARM = SharedHandle<TensorViewARM>;
-
   //=== VK_NV_optical_flow ===
   template <>
   class SharedHandleTraits<OpticalFlowSessionNV>
@@ -980,60 +958,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
   };
 
   using SharedShaderEXT = SharedHandle<ShaderEXT>;
-
-  //=== VK_KHR_pipeline_binary ===
-  template <>
-  class SharedHandleTraits<PipelineBinaryKHR>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<PipelineBinaryKHR>;
-  };
-
-  using SharedPipelineBinaryKHR = SharedHandle<PipelineBinaryKHR>;
-
-  //=== VK_ARM_data_graph ===
-  template <>
-  class SharedHandleTraits<DataGraphPipelineSessionARM>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<DataGraphPipelineSessionARM>;
-  };
-
-  using SharedDataGraphPipelineSessionARM = SharedHandle<DataGraphPipelineSessionARM>;
-
-  //=== VK_NV_external_compute_queue ===
-  template <>
-  class SharedHandleTraits<ExternalComputeQueueNV>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<ExternalComputeQueueNV>;
-  };
-
-  using SharedExternalComputeQueueNV = SharedHandle<ExternalComputeQueueNV>;
-
-  //=== VK_EXT_device_generated_commands ===
-  template <>
-  class SharedHandleTraits<IndirectCommandsLayoutEXT>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<IndirectCommandsLayoutEXT>;
-  };
-
-  using SharedIndirectCommandsLayoutEXT = SharedHandle<IndirectCommandsLayoutEXT>;
-
-  template <>
-  class SharedHandleTraits<IndirectExecutionSetEXT>
-  {
-  public:
-    using DestructorType = Device;
-    using deleter        = detail::ObjectDestroyShared<IndirectExecutionSetEXT>;
-  };
-
-  using SharedIndirectExecutionSetEXT = SharedHandle<IndirectExecutionSetEXT>;
 
   // a number of SharedHandle specializations
   enum class SwapchainOwns

@@ -1,4 +1,4 @@
-// Copyright 2015-2026 The Khronos Group Inc.
+// Copyright 2015-2024 The Khronos Group Inc.
 //
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 //
@@ -285,10 +285,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkDestroyDebugUtilsMessengerEXT = PFN_vkDestroyDebugUtilsMessengerEXT( vkGetInstanceProcAddr( instance, "vkDestroyDebugUtilsMessengerEXT" ) );
           vkSubmitDebugUtilsMessageEXT    = PFN_vkSubmitDebugUtilsMessageEXT( vkGetInstanceProcAddr( instance, "vkSubmitDebugUtilsMessageEXT" ) );
 
-          //=== VK_EXT_descriptor_heap ===
-          vkGetPhysicalDeviceDescriptorSizeEXT =
-            PFN_vkGetPhysicalDeviceDescriptorSizeEXT( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceDescriptorSizeEXT" ) );
-
           //=== VK_EXT_sample_locations ===
           vkGetPhysicalDeviceMultisamplePropertiesEXT =
             PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceMultisamplePropertiesEXT" ) );
@@ -364,51 +360,17 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
             PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceScreenPresentationSupportQNX" ) );
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-          //=== VK_ARM_tensors ===
-          vkGetPhysicalDeviceExternalTensorPropertiesARM =
-            PFN_vkGetPhysicalDeviceExternalTensorPropertiesARM( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceExternalTensorPropertiesARM" ) );
-
           //=== VK_NV_optical_flow ===
           vkGetPhysicalDeviceOpticalFlowImageFormatsNV =
             PFN_vkGetPhysicalDeviceOpticalFlowImageFormatsNV( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceOpticalFlowImageFormatsNV" ) );
-
-          //=== VK_NV_cooperative_vector ===
-          vkGetPhysicalDeviceCooperativeVectorPropertiesNV =
-            PFN_vkGetPhysicalDeviceCooperativeVectorPropertiesNV( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceCooperativeVectorPropertiesNV" ) );
 
           //=== VK_KHR_cooperative_matrix ===
           vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR =
             PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR" ) );
 
-          //=== VK_ARM_data_graph ===
-          vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM = PFN_vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM(
-            vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM" ) );
-          vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM = PFN_vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM(
-            vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM" ) );
-
           //=== VK_KHR_calibrated_timestamps ===
           vkGetPhysicalDeviceCalibrateableTimeDomainsKHR =
             PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsKHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceCalibrateableTimeDomainsKHR" ) );
-
-#  if defined( VK_USE_PLATFORM_OHOS )
-          //=== VK_OHOS_surface ===
-          vkCreateSurfaceOHOS = PFN_vkCreateSurfaceOHOS( vkGetInstanceProcAddr( instance, "vkCreateSurfaceOHOS" ) );
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
-          //=== VK_NV_cooperative_matrix2 ===
-          vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV = PFN_vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV(
-            vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV" ) );
-
-          //=== VK_ARM_performance_counters_by_region ===
-          vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM = PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM(
-            vkGetInstanceProcAddr( instance, "vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM" ) );
-
-#  if defined( VK_USE_PLATFORM_UBM_SEC )
-          //=== VK_SEC_ubm_surface ===
-          vkCreateUbmSurfaceSEC = PFN_vkCreateUbmSurfaceSEC( vkGetInstanceProcAddr( instance, "vkCreateUbmSurfaceSEC" ) );
-          vkGetPhysicalDeviceUbmPresentationSupportSEC =
-            PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceUbmPresentationSupportSEC" ) );
-#  endif /*VK_USE_PLATFORM_UBM_SEC*/
 
           vkGetDeviceProcAddr = PFN_vkGetDeviceProcAddr( vkGetInstanceProcAddr( instance, "vkGetDeviceProcAddr" ) );
         }
@@ -602,9 +564,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkDestroyDebugUtilsMessengerEXT vkDestroyDebugUtilsMessengerEXT = 0;
         PFN_vkSubmitDebugUtilsMessageEXT    vkSubmitDebugUtilsMessageEXT    = 0;
 
-        //=== VK_EXT_descriptor_heap ===
-        PFN_vkGetPhysicalDeviceDescriptorSizeEXT vkGetPhysicalDeviceDescriptorSizeEXT = 0;
-
         //=== VK_EXT_sample_locations ===
         PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT vkGetPhysicalDeviceMultisamplePropertiesEXT = 0;
 
@@ -681,46 +640,14 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_dummy vkGetPhysicalDeviceScreenPresentationSupportQNX_placeholder = 0;
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-        //=== VK_ARM_tensors ===
-        PFN_vkGetPhysicalDeviceExternalTensorPropertiesARM vkGetPhysicalDeviceExternalTensorPropertiesARM = 0;
-
         //=== VK_NV_optical_flow ===
         PFN_vkGetPhysicalDeviceOpticalFlowImageFormatsNV vkGetPhysicalDeviceOpticalFlowImageFormatsNV = 0;
-
-        //=== VK_NV_cooperative_vector ===
-        PFN_vkGetPhysicalDeviceCooperativeVectorPropertiesNV vkGetPhysicalDeviceCooperativeVectorPropertiesNV = 0;
 
         //=== VK_KHR_cooperative_matrix ===
         PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR = 0;
 
-        //=== VK_ARM_data_graph ===
-        PFN_vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM                 vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM                 = 0;
-        PFN_vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM = 0;
-
         //=== VK_KHR_calibrated_timestamps ===
         PFN_vkGetPhysicalDeviceCalibrateableTimeDomainsKHR vkGetPhysicalDeviceCalibrateableTimeDomainsKHR = 0;
-
-#  if defined( VK_USE_PLATFORM_OHOS )
-        //=== VK_OHOS_surface ===
-        PFN_vkCreateSurfaceOHOS vkCreateSurfaceOHOS = 0;
-#  else
-        PFN_dummy vkCreateSurfaceOHOS_placeholder = 0;
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
-        //=== VK_NV_cooperative_matrix2 ===
-        PFN_vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV = 0;
-
-        //=== VK_ARM_performance_counters_by_region ===
-        PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM = 0;
-
-#  if defined( VK_USE_PLATFORM_UBM_SEC )
-        //=== VK_SEC_ubm_surface ===
-        PFN_vkCreateUbmSurfaceSEC                        vkCreateUbmSurfaceSEC                        = 0;
-        PFN_vkGetPhysicalDeviceUbmPresentationSupportSEC vkGetPhysicalDeviceUbmPresentationSupportSEC = 0;
-#  else
-        PFN_dummy vkCreateUbmSurfaceSEC_placeholder                        = 0;
-        PFN_dummy vkGetPhysicalDeviceUbmPresentationSupportSEC_placeholder = 0;
-#  endif /*VK_USE_PLATFORM_UBM_SEC*/
 
         PFN_vkGetDeviceProcAddr vkGetDeviceProcAddr = 0;
       };
@@ -757,50 +684,30 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkWaitForFences                    = PFN_vkWaitForFences( vkGetDeviceProcAddr( device, "vkWaitForFences" ) );
           vkCreateSemaphore                  = PFN_vkCreateSemaphore( vkGetDeviceProcAddr( device, "vkCreateSemaphore" ) );
           vkDestroySemaphore                 = PFN_vkDestroySemaphore( vkGetDeviceProcAddr( device, "vkDestroySemaphore" ) );
-          vkCreateQueryPool                  = PFN_vkCreateQueryPool( vkGetDeviceProcAddr( device, "vkCreateQueryPool" ) );
-          vkDestroyQueryPool                 = PFN_vkDestroyQueryPool( vkGetDeviceProcAddr( device, "vkDestroyQueryPool" ) );
-          vkGetQueryPoolResults              = PFN_vkGetQueryPoolResults( vkGetDeviceProcAddr( device, "vkGetQueryPoolResults" ) );
-          vkCreateBuffer                     = PFN_vkCreateBuffer( vkGetDeviceProcAddr( device, "vkCreateBuffer" ) );
-          vkDestroyBuffer                    = PFN_vkDestroyBuffer( vkGetDeviceProcAddr( device, "vkDestroyBuffer" ) );
-          vkCreateImage                      = PFN_vkCreateImage( vkGetDeviceProcAddr( device, "vkCreateImage" ) );
-          vkDestroyImage                     = PFN_vkDestroyImage( vkGetDeviceProcAddr( device, "vkDestroyImage" ) );
-          vkGetImageSubresourceLayout        = PFN_vkGetImageSubresourceLayout( vkGetDeviceProcAddr( device, "vkGetImageSubresourceLayout" ) );
-          vkCreateImageView                  = PFN_vkCreateImageView( vkGetDeviceProcAddr( device, "vkCreateImageView" ) );
-          vkDestroyImageView                 = PFN_vkDestroyImageView( vkGetDeviceProcAddr( device, "vkDestroyImageView" ) );
-          vkCreateCommandPool                = PFN_vkCreateCommandPool( vkGetDeviceProcAddr( device, "vkCreateCommandPool" ) );
-          vkDestroyCommandPool               = PFN_vkDestroyCommandPool( vkGetDeviceProcAddr( device, "vkDestroyCommandPool" ) );
-          vkResetCommandPool                 = PFN_vkResetCommandPool( vkGetDeviceProcAddr( device, "vkResetCommandPool" ) );
-          vkAllocateCommandBuffers           = PFN_vkAllocateCommandBuffers( vkGetDeviceProcAddr( device, "vkAllocateCommandBuffers" ) );
-          vkFreeCommandBuffers               = PFN_vkFreeCommandBuffers( vkGetDeviceProcAddr( device, "vkFreeCommandBuffers" ) );
-          vkBeginCommandBuffer               = PFN_vkBeginCommandBuffer( vkGetDeviceProcAddr( device, "vkBeginCommandBuffer" ) );
-          vkEndCommandBuffer                 = PFN_vkEndCommandBuffer( vkGetDeviceProcAddr( device, "vkEndCommandBuffer" ) );
-          vkResetCommandBuffer               = PFN_vkResetCommandBuffer( vkGetDeviceProcAddr( device, "vkResetCommandBuffer" ) );
-          vkCmdCopyBuffer                    = PFN_vkCmdCopyBuffer( vkGetDeviceProcAddr( device, "vkCmdCopyBuffer" ) );
-          vkCmdCopyImage                     = PFN_vkCmdCopyImage( vkGetDeviceProcAddr( device, "vkCmdCopyImage" ) );
-          vkCmdCopyBufferToImage             = PFN_vkCmdCopyBufferToImage( vkGetDeviceProcAddr( device, "vkCmdCopyBufferToImage" ) );
-          vkCmdCopyImageToBuffer             = PFN_vkCmdCopyImageToBuffer( vkGetDeviceProcAddr( device, "vkCmdCopyImageToBuffer" ) );
-          vkCmdUpdateBuffer                  = PFN_vkCmdUpdateBuffer( vkGetDeviceProcAddr( device, "vkCmdUpdateBuffer" ) );
-          vkCmdFillBuffer                    = PFN_vkCmdFillBuffer( vkGetDeviceProcAddr( device, "vkCmdFillBuffer" ) );
-          vkCmdPipelineBarrier               = PFN_vkCmdPipelineBarrier( vkGetDeviceProcAddr( device, "vkCmdPipelineBarrier" ) );
-          vkCmdBeginQuery                    = PFN_vkCmdBeginQuery( vkGetDeviceProcAddr( device, "vkCmdBeginQuery" ) );
-          vkCmdEndQuery                      = PFN_vkCmdEndQuery( vkGetDeviceProcAddr( device, "vkCmdEndQuery" ) );
-          vkCmdResetQueryPool                = PFN_vkCmdResetQueryPool( vkGetDeviceProcAddr( device, "vkCmdResetQueryPool" ) );
-          vkCmdWriteTimestamp                = PFN_vkCmdWriteTimestamp( vkGetDeviceProcAddr( device, "vkCmdWriteTimestamp" ) );
-          vkCmdCopyQueryPoolResults          = PFN_vkCmdCopyQueryPoolResults( vkGetDeviceProcAddr( device, "vkCmdCopyQueryPoolResults" ) );
-          vkCmdExecuteCommands               = PFN_vkCmdExecuteCommands( vkGetDeviceProcAddr( device, "vkCmdExecuteCommands" ) );
           vkCreateEvent                      = PFN_vkCreateEvent( vkGetDeviceProcAddr( device, "vkCreateEvent" ) );
           vkDestroyEvent                     = PFN_vkDestroyEvent( vkGetDeviceProcAddr( device, "vkDestroyEvent" ) );
           vkGetEventStatus                   = PFN_vkGetEventStatus( vkGetDeviceProcAddr( device, "vkGetEventStatus" ) );
           vkSetEvent                         = PFN_vkSetEvent( vkGetDeviceProcAddr( device, "vkSetEvent" ) );
           vkResetEvent                       = PFN_vkResetEvent( vkGetDeviceProcAddr( device, "vkResetEvent" ) );
+          vkCreateQueryPool                  = PFN_vkCreateQueryPool( vkGetDeviceProcAddr( device, "vkCreateQueryPool" ) );
+          vkDestroyQueryPool                 = PFN_vkDestroyQueryPool( vkGetDeviceProcAddr( device, "vkDestroyQueryPool" ) );
+          vkGetQueryPoolResults              = PFN_vkGetQueryPoolResults( vkGetDeviceProcAddr( device, "vkGetQueryPoolResults" ) );
+          vkCreateBuffer                     = PFN_vkCreateBuffer( vkGetDeviceProcAddr( device, "vkCreateBuffer" ) );
+          vkDestroyBuffer                    = PFN_vkDestroyBuffer( vkGetDeviceProcAddr( device, "vkDestroyBuffer" ) );
           vkCreateBufferView                 = PFN_vkCreateBufferView( vkGetDeviceProcAddr( device, "vkCreateBufferView" ) );
           vkDestroyBufferView                = PFN_vkDestroyBufferView( vkGetDeviceProcAddr( device, "vkDestroyBufferView" ) );
+          vkCreateImage                      = PFN_vkCreateImage( vkGetDeviceProcAddr( device, "vkCreateImage" ) );
+          vkDestroyImage                     = PFN_vkDestroyImage( vkGetDeviceProcAddr( device, "vkDestroyImage" ) );
+          vkGetImageSubresourceLayout        = PFN_vkGetImageSubresourceLayout( vkGetDeviceProcAddr( device, "vkGetImageSubresourceLayout" ) );
+          vkCreateImageView                  = PFN_vkCreateImageView( vkGetDeviceProcAddr( device, "vkCreateImageView" ) );
+          vkDestroyImageView                 = PFN_vkDestroyImageView( vkGetDeviceProcAddr( device, "vkDestroyImageView" ) );
           vkCreateShaderModule               = PFN_vkCreateShaderModule( vkGetDeviceProcAddr( device, "vkCreateShaderModule" ) );
           vkDestroyShaderModule              = PFN_vkDestroyShaderModule( vkGetDeviceProcAddr( device, "vkDestroyShaderModule" ) );
           vkCreatePipelineCache              = PFN_vkCreatePipelineCache( vkGetDeviceProcAddr( device, "vkCreatePipelineCache" ) );
           vkDestroyPipelineCache             = PFN_vkDestroyPipelineCache( vkGetDeviceProcAddr( device, "vkDestroyPipelineCache" ) );
           vkGetPipelineCacheData             = PFN_vkGetPipelineCacheData( vkGetDeviceProcAddr( device, "vkGetPipelineCacheData" ) );
           vkMergePipelineCaches              = PFN_vkMergePipelineCaches( vkGetDeviceProcAddr( device, "vkMergePipelineCaches" ) );
+          vkCreateGraphicsPipelines          = PFN_vkCreateGraphicsPipelines( vkGetDeviceProcAddr( device, "vkCreateGraphicsPipelines" ) );
           vkCreateComputePipelines           = PFN_vkCreateComputePipelines( vkGetDeviceProcAddr( device, "vkCreateComputePipelines" ) );
           vkDestroyPipeline                  = PFN_vkDestroyPipeline( vkGetDeviceProcAddr( device, "vkDestroyPipeline" ) );
           vkCreatePipelineLayout             = PFN_vkCreatePipelineLayout( vkGetDeviceProcAddr( device, "vkCreatePipelineLayout" ) );
@@ -815,21 +722,20 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkAllocateDescriptorSets           = PFN_vkAllocateDescriptorSets( vkGetDeviceProcAddr( device, "vkAllocateDescriptorSets" ) );
           vkFreeDescriptorSets               = PFN_vkFreeDescriptorSets( vkGetDeviceProcAddr( device, "vkFreeDescriptorSets" ) );
           vkUpdateDescriptorSets             = PFN_vkUpdateDescriptorSets( vkGetDeviceProcAddr( device, "vkUpdateDescriptorSets" ) );
-          vkCmdBindPipeline                  = PFN_vkCmdBindPipeline( vkGetDeviceProcAddr( device, "vkCmdBindPipeline" ) );
-          vkCmdBindDescriptorSets            = PFN_vkCmdBindDescriptorSets( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorSets" ) );
-          vkCmdClearColorImage               = PFN_vkCmdClearColorImage( vkGetDeviceProcAddr( device, "vkCmdClearColorImage" ) );
-          vkCmdDispatch                      = PFN_vkCmdDispatch( vkGetDeviceProcAddr( device, "vkCmdDispatch" ) );
-          vkCmdDispatchIndirect              = PFN_vkCmdDispatchIndirect( vkGetDeviceProcAddr( device, "vkCmdDispatchIndirect" ) );
-          vkCmdSetEvent                      = PFN_vkCmdSetEvent( vkGetDeviceProcAddr( device, "vkCmdSetEvent" ) );
-          vkCmdResetEvent                    = PFN_vkCmdResetEvent( vkGetDeviceProcAddr( device, "vkCmdResetEvent" ) );
-          vkCmdWaitEvents                    = PFN_vkCmdWaitEvents( vkGetDeviceProcAddr( device, "vkCmdWaitEvents" ) );
-          vkCmdPushConstants                 = PFN_vkCmdPushConstants( vkGetDeviceProcAddr( device, "vkCmdPushConstants" ) );
-          vkCreateGraphicsPipelines          = PFN_vkCreateGraphicsPipelines( vkGetDeviceProcAddr( device, "vkCreateGraphicsPipelines" ) );
           vkCreateFramebuffer                = PFN_vkCreateFramebuffer( vkGetDeviceProcAddr( device, "vkCreateFramebuffer" ) );
           vkDestroyFramebuffer               = PFN_vkDestroyFramebuffer( vkGetDeviceProcAddr( device, "vkDestroyFramebuffer" ) );
           vkCreateRenderPass                 = PFN_vkCreateRenderPass( vkGetDeviceProcAddr( device, "vkCreateRenderPass" ) );
           vkDestroyRenderPass                = PFN_vkDestroyRenderPass( vkGetDeviceProcAddr( device, "vkDestroyRenderPass" ) );
           vkGetRenderAreaGranularity         = PFN_vkGetRenderAreaGranularity( vkGetDeviceProcAddr( device, "vkGetRenderAreaGranularity" ) );
+          vkCreateCommandPool                = PFN_vkCreateCommandPool( vkGetDeviceProcAddr( device, "vkCreateCommandPool" ) );
+          vkDestroyCommandPool               = PFN_vkDestroyCommandPool( vkGetDeviceProcAddr( device, "vkDestroyCommandPool" ) );
+          vkResetCommandPool                 = PFN_vkResetCommandPool( vkGetDeviceProcAddr( device, "vkResetCommandPool" ) );
+          vkAllocateCommandBuffers           = PFN_vkAllocateCommandBuffers( vkGetDeviceProcAddr( device, "vkAllocateCommandBuffers" ) );
+          vkFreeCommandBuffers               = PFN_vkFreeCommandBuffers( vkGetDeviceProcAddr( device, "vkFreeCommandBuffers" ) );
+          vkBeginCommandBuffer               = PFN_vkBeginCommandBuffer( vkGetDeviceProcAddr( device, "vkBeginCommandBuffer" ) );
+          vkEndCommandBuffer                 = PFN_vkEndCommandBuffer( vkGetDeviceProcAddr( device, "vkEndCommandBuffer" ) );
+          vkResetCommandBuffer               = PFN_vkResetCommandBuffer( vkGetDeviceProcAddr( device, "vkResetCommandBuffer" ) );
+          vkCmdBindPipeline                  = PFN_vkCmdBindPipeline( vkGetDeviceProcAddr( device, "vkCmdBindPipeline" ) );
           vkCmdSetViewport                   = PFN_vkCmdSetViewport( vkGetDeviceProcAddr( device, "vkCmdSetViewport" ) );
           vkCmdSetScissor                    = PFN_vkCmdSetScissor( vkGetDeviceProcAddr( device, "vkCmdSetScissor" ) );
           vkCmdSetLineWidth                  = PFN_vkCmdSetLineWidth( vkGetDeviceProcAddr( device, "vkCmdSetLineWidth" ) );
@@ -839,39 +745,66 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdSetStencilCompareMask         = PFN_vkCmdSetStencilCompareMask( vkGetDeviceProcAddr( device, "vkCmdSetStencilCompareMask" ) );
           vkCmdSetStencilWriteMask           = PFN_vkCmdSetStencilWriteMask( vkGetDeviceProcAddr( device, "vkCmdSetStencilWriteMask" ) );
           vkCmdSetStencilReference           = PFN_vkCmdSetStencilReference( vkGetDeviceProcAddr( device, "vkCmdSetStencilReference" ) );
+          vkCmdBindDescriptorSets            = PFN_vkCmdBindDescriptorSets( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorSets" ) );
           vkCmdBindIndexBuffer               = PFN_vkCmdBindIndexBuffer( vkGetDeviceProcAddr( device, "vkCmdBindIndexBuffer" ) );
           vkCmdBindVertexBuffers             = PFN_vkCmdBindVertexBuffers( vkGetDeviceProcAddr( device, "vkCmdBindVertexBuffers" ) );
           vkCmdDraw                          = PFN_vkCmdDraw( vkGetDeviceProcAddr( device, "vkCmdDraw" ) );
           vkCmdDrawIndexed                   = PFN_vkCmdDrawIndexed( vkGetDeviceProcAddr( device, "vkCmdDrawIndexed" ) );
           vkCmdDrawIndirect                  = PFN_vkCmdDrawIndirect( vkGetDeviceProcAddr( device, "vkCmdDrawIndirect" ) );
           vkCmdDrawIndexedIndirect           = PFN_vkCmdDrawIndexedIndirect( vkGetDeviceProcAddr( device, "vkCmdDrawIndexedIndirect" ) );
+          vkCmdDispatch                      = PFN_vkCmdDispatch( vkGetDeviceProcAddr( device, "vkCmdDispatch" ) );
+          vkCmdDispatchIndirect              = PFN_vkCmdDispatchIndirect( vkGetDeviceProcAddr( device, "vkCmdDispatchIndirect" ) );
+          vkCmdCopyBuffer                    = PFN_vkCmdCopyBuffer( vkGetDeviceProcAddr( device, "vkCmdCopyBuffer" ) );
+          vkCmdCopyImage                     = PFN_vkCmdCopyImage( vkGetDeviceProcAddr( device, "vkCmdCopyImage" ) );
           vkCmdBlitImage                     = PFN_vkCmdBlitImage( vkGetDeviceProcAddr( device, "vkCmdBlitImage" ) );
+          vkCmdCopyBufferToImage             = PFN_vkCmdCopyBufferToImage( vkGetDeviceProcAddr( device, "vkCmdCopyBufferToImage" ) );
+          vkCmdCopyImageToBuffer             = PFN_vkCmdCopyImageToBuffer( vkGetDeviceProcAddr( device, "vkCmdCopyImageToBuffer" ) );
+          vkCmdUpdateBuffer                  = PFN_vkCmdUpdateBuffer( vkGetDeviceProcAddr( device, "vkCmdUpdateBuffer" ) );
+          vkCmdFillBuffer                    = PFN_vkCmdFillBuffer( vkGetDeviceProcAddr( device, "vkCmdFillBuffer" ) );
+          vkCmdClearColorImage               = PFN_vkCmdClearColorImage( vkGetDeviceProcAddr( device, "vkCmdClearColorImage" ) );
           vkCmdClearDepthStencilImage        = PFN_vkCmdClearDepthStencilImage( vkGetDeviceProcAddr( device, "vkCmdClearDepthStencilImage" ) );
           vkCmdClearAttachments              = PFN_vkCmdClearAttachments( vkGetDeviceProcAddr( device, "vkCmdClearAttachments" ) );
           vkCmdResolveImage                  = PFN_vkCmdResolveImage( vkGetDeviceProcAddr( device, "vkCmdResolveImage" ) );
+          vkCmdSetEvent                      = PFN_vkCmdSetEvent( vkGetDeviceProcAddr( device, "vkCmdSetEvent" ) );
+          vkCmdResetEvent                    = PFN_vkCmdResetEvent( vkGetDeviceProcAddr( device, "vkCmdResetEvent" ) );
+          vkCmdWaitEvents                    = PFN_vkCmdWaitEvents( vkGetDeviceProcAddr( device, "vkCmdWaitEvents" ) );
+          vkCmdPipelineBarrier               = PFN_vkCmdPipelineBarrier( vkGetDeviceProcAddr( device, "vkCmdPipelineBarrier" ) );
+          vkCmdBeginQuery                    = PFN_vkCmdBeginQuery( vkGetDeviceProcAddr( device, "vkCmdBeginQuery" ) );
+          vkCmdEndQuery                      = PFN_vkCmdEndQuery( vkGetDeviceProcAddr( device, "vkCmdEndQuery" ) );
+          vkCmdResetQueryPool                = PFN_vkCmdResetQueryPool( vkGetDeviceProcAddr( device, "vkCmdResetQueryPool" ) );
+          vkCmdWriteTimestamp                = PFN_vkCmdWriteTimestamp( vkGetDeviceProcAddr( device, "vkCmdWriteTimestamp" ) );
+          vkCmdCopyQueryPoolResults          = PFN_vkCmdCopyQueryPoolResults( vkGetDeviceProcAddr( device, "vkCmdCopyQueryPoolResults" ) );
+          vkCmdPushConstants                 = PFN_vkCmdPushConstants( vkGetDeviceProcAddr( device, "vkCmdPushConstants" ) );
           vkCmdBeginRenderPass               = PFN_vkCmdBeginRenderPass( vkGetDeviceProcAddr( device, "vkCmdBeginRenderPass" ) );
           vkCmdNextSubpass                   = PFN_vkCmdNextSubpass( vkGetDeviceProcAddr( device, "vkCmdNextSubpass" ) );
           vkCmdEndRenderPass                 = PFN_vkCmdEndRenderPass( vkGetDeviceProcAddr( device, "vkCmdEndRenderPass" ) );
+          vkCmdExecuteCommands               = PFN_vkCmdExecuteCommands( vkGetDeviceProcAddr( device, "vkCmdExecuteCommands" ) );
 
           //=== VK_VERSION_1_1 ===
           vkBindBufferMemory2                 = PFN_vkBindBufferMemory2( vkGetDeviceProcAddr( device, "vkBindBufferMemory2" ) );
           vkBindImageMemory2                  = PFN_vkBindImageMemory2( vkGetDeviceProcAddr( device, "vkBindImageMemory2" ) );
           vkGetDeviceGroupPeerMemoryFeatures  = PFN_vkGetDeviceGroupPeerMemoryFeatures( vkGetDeviceProcAddr( device, "vkGetDeviceGroupPeerMemoryFeatures" ) );
           vkCmdSetDeviceMask                  = PFN_vkCmdSetDeviceMask( vkGetDeviceProcAddr( device, "vkCmdSetDeviceMask" ) );
+          vkCmdDispatchBase                   = PFN_vkCmdDispatchBase( vkGetDeviceProcAddr( device, "vkCmdDispatchBase" ) );
           vkGetImageMemoryRequirements2       = PFN_vkGetImageMemoryRequirements2( vkGetDeviceProcAddr( device, "vkGetImageMemoryRequirements2" ) );
           vkGetBufferMemoryRequirements2      = PFN_vkGetBufferMemoryRequirements2( vkGetDeviceProcAddr( device, "vkGetBufferMemoryRequirements2" ) );
           vkGetImageSparseMemoryRequirements2 = PFN_vkGetImageSparseMemoryRequirements2( vkGetDeviceProcAddr( device, "vkGetImageSparseMemoryRequirements2" ) );
           vkTrimCommandPool                   = PFN_vkTrimCommandPool( vkGetDeviceProcAddr( device, "vkTrimCommandPool" ) );
           vkGetDeviceQueue2                   = PFN_vkGetDeviceQueue2( vkGetDeviceProcAddr( device, "vkGetDeviceQueue2" ) );
-          vkCmdDispatchBase                   = PFN_vkCmdDispatchBase( vkGetDeviceProcAddr( device, "vkCmdDispatchBase" ) );
+          vkCreateSamplerYcbcrConversion      = PFN_vkCreateSamplerYcbcrConversion( vkGetDeviceProcAddr( device, "vkCreateSamplerYcbcrConversion" ) );
+          vkDestroySamplerYcbcrConversion     = PFN_vkDestroySamplerYcbcrConversion( vkGetDeviceProcAddr( device, "vkDestroySamplerYcbcrConversion" ) );
           vkCreateDescriptorUpdateTemplate    = PFN_vkCreateDescriptorUpdateTemplate( vkGetDeviceProcAddr( device, "vkCreateDescriptorUpdateTemplate" ) );
           vkDestroyDescriptorUpdateTemplate   = PFN_vkDestroyDescriptorUpdateTemplate( vkGetDeviceProcAddr( device, "vkDestroyDescriptorUpdateTemplate" ) );
           vkUpdateDescriptorSetWithTemplate   = PFN_vkUpdateDescriptorSetWithTemplate( vkGetDeviceProcAddr( device, "vkUpdateDescriptorSetWithTemplate" ) );
           vkGetDescriptorSetLayoutSupport     = PFN_vkGetDescriptorSetLayoutSupport( vkGetDeviceProcAddr( device, "vkGetDescriptorSetLayoutSupport" ) );
-          vkCreateSamplerYcbcrConversion      = PFN_vkCreateSamplerYcbcrConversion( vkGetDeviceProcAddr( device, "vkCreateSamplerYcbcrConversion" ) );
-          vkDestroySamplerYcbcrConversion     = PFN_vkDestroySamplerYcbcrConversion( vkGetDeviceProcAddr( device, "vkDestroySamplerYcbcrConversion" ) );
 
           //=== VK_VERSION_1_2 ===
+          vkCmdDrawIndirectCount          = PFN_vkCmdDrawIndirectCount( vkGetDeviceProcAddr( device, "vkCmdDrawIndirectCount" ) );
+          vkCmdDrawIndexedIndirectCount   = PFN_vkCmdDrawIndexedIndirectCount( vkGetDeviceProcAddr( device, "vkCmdDrawIndexedIndirectCount" ) );
+          vkCreateRenderPass2             = PFN_vkCreateRenderPass2( vkGetDeviceProcAddr( device, "vkCreateRenderPass2" ) );
+          vkCmdBeginRenderPass2           = PFN_vkCmdBeginRenderPass2( vkGetDeviceProcAddr( device, "vkCmdBeginRenderPass2" ) );
+          vkCmdNextSubpass2               = PFN_vkCmdNextSubpass2( vkGetDeviceProcAddr( device, "vkCmdNextSubpass2" ) );
+          vkCmdEndRenderPass2             = PFN_vkCmdEndRenderPass2( vkGetDeviceProcAddr( device, "vkCmdEndRenderPass2" ) );
           vkResetQueryPool                = PFN_vkResetQueryPool( vkGetDeviceProcAddr( device, "vkResetQueryPool" ) );
           vkGetSemaphoreCounterValue      = PFN_vkGetSemaphoreCounterValue( vkGetDeviceProcAddr( device, "vkGetSemaphoreCounterValue" ) );
           vkWaitSemaphores                = PFN_vkWaitSemaphores( vkGetDeviceProcAddr( device, "vkWaitSemaphores" ) );
@@ -880,18 +813,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkGetBufferOpaqueCaptureAddress = PFN_vkGetBufferOpaqueCaptureAddress( vkGetDeviceProcAddr( device, "vkGetBufferOpaqueCaptureAddress" ) );
           vkGetDeviceMemoryOpaqueCaptureAddress =
             PFN_vkGetDeviceMemoryOpaqueCaptureAddress( vkGetDeviceProcAddr( device, "vkGetDeviceMemoryOpaqueCaptureAddress" ) );
-          vkCmdDrawIndirectCount        = PFN_vkCmdDrawIndirectCount( vkGetDeviceProcAddr( device, "vkCmdDrawIndirectCount" ) );
-          vkCmdDrawIndexedIndirectCount = PFN_vkCmdDrawIndexedIndirectCount( vkGetDeviceProcAddr( device, "vkCmdDrawIndexedIndirectCount" ) );
-          vkCreateRenderPass2           = PFN_vkCreateRenderPass2( vkGetDeviceProcAddr( device, "vkCreateRenderPass2" ) );
-          vkCmdBeginRenderPass2         = PFN_vkCmdBeginRenderPass2( vkGetDeviceProcAddr( device, "vkCmdBeginRenderPass2" ) );
-          vkCmdNextSubpass2             = PFN_vkCmdNextSubpass2( vkGetDeviceProcAddr( device, "vkCmdNextSubpass2" ) );
-          vkCmdEndRenderPass2           = PFN_vkCmdEndRenderPass2( vkGetDeviceProcAddr( device, "vkCmdEndRenderPass2" ) );
 
           //=== VK_VERSION_1_3 ===
           vkCreatePrivateDataSlot             = PFN_vkCreatePrivateDataSlot( vkGetDeviceProcAddr( device, "vkCreatePrivateDataSlot" ) );
           vkDestroyPrivateDataSlot            = PFN_vkDestroyPrivateDataSlot( vkGetDeviceProcAddr( device, "vkDestroyPrivateDataSlot" ) );
           vkSetPrivateData                    = PFN_vkSetPrivateData( vkGetDeviceProcAddr( device, "vkSetPrivateData" ) );
           vkGetPrivateData                    = PFN_vkGetPrivateData( vkGetDeviceProcAddr( device, "vkGetPrivateData" ) );
+          vkCmdSetEvent2                      = PFN_vkCmdSetEvent2( vkGetDeviceProcAddr( device, "vkCmdSetEvent2" ) );
+          vkCmdResetEvent2                    = PFN_vkCmdResetEvent2( vkGetDeviceProcAddr( device, "vkCmdResetEvent2" ) );
+          vkCmdWaitEvents2                    = PFN_vkCmdWaitEvents2( vkGetDeviceProcAddr( device, "vkCmdWaitEvents2" ) );
           vkCmdPipelineBarrier2               = PFN_vkCmdPipelineBarrier2( vkGetDeviceProcAddr( device, "vkCmdPipelineBarrier2" ) );
           vkCmdWriteTimestamp2                = PFN_vkCmdWriteTimestamp2( vkGetDeviceProcAddr( device, "vkCmdWriteTimestamp2" ) );
           vkQueueSubmit2                      = PFN_vkQueueSubmit2( vkGetDeviceProcAddr( device, "vkQueueSubmit2" ) );
@@ -899,55 +829,29 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdCopyImage2                     = PFN_vkCmdCopyImage2( vkGetDeviceProcAddr( device, "vkCmdCopyImage2" ) );
           vkCmdCopyBufferToImage2             = PFN_vkCmdCopyBufferToImage2( vkGetDeviceProcAddr( device, "vkCmdCopyBufferToImage2" ) );
           vkCmdCopyImageToBuffer2             = PFN_vkCmdCopyImageToBuffer2( vkGetDeviceProcAddr( device, "vkCmdCopyImageToBuffer2" ) );
+          vkCmdBlitImage2                     = PFN_vkCmdBlitImage2( vkGetDeviceProcAddr( device, "vkCmdBlitImage2" ) );
+          vkCmdResolveImage2                  = PFN_vkCmdResolveImage2( vkGetDeviceProcAddr( device, "vkCmdResolveImage2" ) );
+          vkCmdBeginRendering                 = PFN_vkCmdBeginRendering( vkGetDeviceProcAddr( device, "vkCmdBeginRendering" ) );
+          vkCmdEndRendering                   = PFN_vkCmdEndRendering( vkGetDeviceProcAddr( device, "vkCmdEndRendering" ) );
+          vkCmdSetCullMode                    = PFN_vkCmdSetCullMode( vkGetDeviceProcAddr( device, "vkCmdSetCullMode" ) );
+          vkCmdSetFrontFace                   = PFN_vkCmdSetFrontFace( vkGetDeviceProcAddr( device, "vkCmdSetFrontFace" ) );
+          vkCmdSetPrimitiveTopology           = PFN_vkCmdSetPrimitiveTopology( vkGetDeviceProcAddr( device, "vkCmdSetPrimitiveTopology" ) );
+          vkCmdSetViewportWithCount           = PFN_vkCmdSetViewportWithCount( vkGetDeviceProcAddr( device, "vkCmdSetViewportWithCount" ) );
+          vkCmdSetScissorWithCount            = PFN_vkCmdSetScissorWithCount( vkGetDeviceProcAddr( device, "vkCmdSetScissorWithCount" ) );
+          vkCmdBindVertexBuffers2             = PFN_vkCmdBindVertexBuffers2( vkGetDeviceProcAddr( device, "vkCmdBindVertexBuffers2" ) );
+          vkCmdSetDepthTestEnable             = PFN_vkCmdSetDepthTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthTestEnable" ) );
+          vkCmdSetDepthWriteEnable            = PFN_vkCmdSetDepthWriteEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthWriteEnable" ) );
+          vkCmdSetDepthCompareOp              = PFN_vkCmdSetDepthCompareOp( vkGetDeviceProcAddr( device, "vkCmdSetDepthCompareOp" ) );
+          vkCmdSetDepthBoundsTestEnable       = PFN_vkCmdSetDepthBoundsTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthBoundsTestEnable" ) );
+          vkCmdSetStencilTestEnable           = PFN_vkCmdSetStencilTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetStencilTestEnable" ) );
+          vkCmdSetStencilOp                   = PFN_vkCmdSetStencilOp( vkGetDeviceProcAddr( device, "vkCmdSetStencilOp" ) );
+          vkCmdSetRasterizerDiscardEnable     = PFN_vkCmdSetRasterizerDiscardEnable( vkGetDeviceProcAddr( device, "vkCmdSetRasterizerDiscardEnable" ) );
+          vkCmdSetDepthBiasEnable             = PFN_vkCmdSetDepthBiasEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthBiasEnable" ) );
+          vkCmdSetPrimitiveRestartEnable      = PFN_vkCmdSetPrimitiveRestartEnable( vkGetDeviceProcAddr( device, "vkCmdSetPrimitiveRestartEnable" ) );
           vkGetDeviceBufferMemoryRequirements = PFN_vkGetDeviceBufferMemoryRequirements( vkGetDeviceProcAddr( device, "vkGetDeviceBufferMemoryRequirements" ) );
           vkGetDeviceImageMemoryRequirements  = PFN_vkGetDeviceImageMemoryRequirements( vkGetDeviceProcAddr( device, "vkGetDeviceImageMemoryRequirements" ) );
           vkGetDeviceImageSparseMemoryRequirements =
             PFN_vkGetDeviceImageSparseMemoryRequirements( vkGetDeviceProcAddr( device, "vkGetDeviceImageSparseMemoryRequirements" ) );
-          vkCmdSetEvent2                  = PFN_vkCmdSetEvent2( vkGetDeviceProcAddr( device, "vkCmdSetEvent2" ) );
-          vkCmdResetEvent2                = PFN_vkCmdResetEvent2( vkGetDeviceProcAddr( device, "vkCmdResetEvent2" ) );
-          vkCmdWaitEvents2                = PFN_vkCmdWaitEvents2( vkGetDeviceProcAddr( device, "vkCmdWaitEvents2" ) );
-          vkCmdBlitImage2                 = PFN_vkCmdBlitImage2( vkGetDeviceProcAddr( device, "vkCmdBlitImage2" ) );
-          vkCmdResolveImage2              = PFN_vkCmdResolveImage2( vkGetDeviceProcAddr( device, "vkCmdResolveImage2" ) );
-          vkCmdBeginRendering             = PFN_vkCmdBeginRendering( vkGetDeviceProcAddr( device, "vkCmdBeginRendering" ) );
-          vkCmdEndRendering               = PFN_vkCmdEndRendering( vkGetDeviceProcAddr( device, "vkCmdEndRendering" ) );
-          vkCmdSetCullMode                = PFN_vkCmdSetCullMode( vkGetDeviceProcAddr( device, "vkCmdSetCullMode" ) );
-          vkCmdSetFrontFace               = PFN_vkCmdSetFrontFace( vkGetDeviceProcAddr( device, "vkCmdSetFrontFace" ) );
-          vkCmdSetPrimitiveTopology       = PFN_vkCmdSetPrimitiveTopology( vkGetDeviceProcAddr( device, "vkCmdSetPrimitiveTopology" ) );
-          vkCmdSetViewportWithCount       = PFN_vkCmdSetViewportWithCount( vkGetDeviceProcAddr( device, "vkCmdSetViewportWithCount" ) );
-          vkCmdSetScissorWithCount        = PFN_vkCmdSetScissorWithCount( vkGetDeviceProcAddr( device, "vkCmdSetScissorWithCount" ) );
-          vkCmdBindVertexBuffers2         = PFN_vkCmdBindVertexBuffers2( vkGetDeviceProcAddr( device, "vkCmdBindVertexBuffers2" ) );
-          vkCmdSetDepthTestEnable         = PFN_vkCmdSetDepthTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthTestEnable" ) );
-          vkCmdSetDepthWriteEnable        = PFN_vkCmdSetDepthWriteEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthWriteEnable" ) );
-          vkCmdSetDepthCompareOp          = PFN_vkCmdSetDepthCompareOp( vkGetDeviceProcAddr( device, "vkCmdSetDepthCompareOp" ) );
-          vkCmdSetDepthBoundsTestEnable   = PFN_vkCmdSetDepthBoundsTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthBoundsTestEnable" ) );
-          vkCmdSetStencilTestEnable       = PFN_vkCmdSetStencilTestEnable( vkGetDeviceProcAddr( device, "vkCmdSetStencilTestEnable" ) );
-          vkCmdSetStencilOp               = PFN_vkCmdSetStencilOp( vkGetDeviceProcAddr( device, "vkCmdSetStencilOp" ) );
-          vkCmdSetRasterizerDiscardEnable = PFN_vkCmdSetRasterizerDiscardEnable( vkGetDeviceProcAddr( device, "vkCmdSetRasterizerDiscardEnable" ) );
-          vkCmdSetDepthBiasEnable         = PFN_vkCmdSetDepthBiasEnable( vkGetDeviceProcAddr( device, "vkCmdSetDepthBiasEnable" ) );
-          vkCmdSetPrimitiveRestartEnable  = PFN_vkCmdSetPrimitiveRestartEnable( vkGetDeviceProcAddr( device, "vkCmdSetPrimitiveRestartEnable" ) );
-
-          //=== VK_VERSION_1_4 ===
-          vkMapMemory2                        = PFN_vkMapMemory2( vkGetDeviceProcAddr( device, "vkMapMemory2" ) );
-          vkUnmapMemory2                      = PFN_vkUnmapMemory2( vkGetDeviceProcAddr( device, "vkUnmapMemory2" ) );
-          vkGetDeviceImageSubresourceLayout   = PFN_vkGetDeviceImageSubresourceLayout( vkGetDeviceProcAddr( device, "vkGetDeviceImageSubresourceLayout" ) );
-          vkGetImageSubresourceLayout2        = PFN_vkGetImageSubresourceLayout2( vkGetDeviceProcAddr( device, "vkGetImageSubresourceLayout2" ) );
-          vkCopyMemoryToImage                 = PFN_vkCopyMemoryToImage( vkGetDeviceProcAddr( device, "vkCopyMemoryToImage" ) );
-          vkCopyImageToMemory                 = PFN_vkCopyImageToMemory( vkGetDeviceProcAddr( device, "vkCopyImageToMemory" ) );
-          vkCopyImageToImage                  = PFN_vkCopyImageToImage( vkGetDeviceProcAddr( device, "vkCopyImageToImage" ) );
-          vkTransitionImageLayout             = PFN_vkTransitionImageLayout( vkGetDeviceProcAddr( device, "vkTransitionImageLayout" ) );
-          vkCmdPushDescriptorSet              = PFN_vkCmdPushDescriptorSet( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSet" ) );
-          vkCmdPushDescriptorSetWithTemplate  = PFN_vkCmdPushDescriptorSetWithTemplate( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetWithTemplate" ) );
-          vkCmdBindDescriptorSets2            = PFN_vkCmdBindDescriptorSets2( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorSets2" ) );
-          vkCmdPushConstants2                 = PFN_vkCmdPushConstants2( vkGetDeviceProcAddr( device, "vkCmdPushConstants2" ) );
-          vkCmdPushDescriptorSet2             = PFN_vkCmdPushDescriptorSet2( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSet2" ) );
-          vkCmdPushDescriptorSetWithTemplate2 = PFN_vkCmdPushDescriptorSetWithTemplate2( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetWithTemplate2" ) );
-          vkCmdSetLineStipple                 = PFN_vkCmdSetLineStipple( vkGetDeviceProcAddr( device, "vkCmdSetLineStipple" ) );
-          vkCmdBindIndexBuffer2               = PFN_vkCmdBindIndexBuffer2( vkGetDeviceProcAddr( device, "vkCmdBindIndexBuffer2" ) );
-          vkGetRenderingAreaGranularity       = PFN_vkGetRenderingAreaGranularity( vkGetDeviceProcAddr( device, "vkGetRenderingAreaGranularity" ) );
-          vkCmdSetRenderingAttachmentLocations =
-            PFN_vkCmdSetRenderingAttachmentLocations( vkGetDeviceProcAddr( device, "vkCmdSetRenderingAttachmentLocations" ) );
-          vkCmdSetRenderingInputAttachmentIndices =
-            PFN_vkCmdSetRenderingInputAttachmentIndices( vkGetDeviceProcAddr( device, "vkCmdSetRenderingInputAttachmentIndices" ) );
 
           //=== VK_KHR_swapchain ===
           vkCreateSwapchainKHR    = PFN_vkCreateSwapchainKHR( vkGetDeviceProcAddr( device, "vkCreateSwapchainKHR" ) );
@@ -1004,11 +908,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdCuLaunchKernelNVX = PFN_vkCmdCuLaunchKernelNVX( vkGetDeviceProcAddr( device, "vkCmdCuLaunchKernelNVX" ) );
 
           //=== VK_NVX_image_view_handle ===
-          vkGetImageViewHandleNVX   = PFN_vkGetImageViewHandleNVX( vkGetDeviceProcAddr( device, "vkGetImageViewHandleNVX" ) );
-          vkGetImageViewHandle64NVX = PFN_vkGetImageViewHandle64NVX( vkGetDeviceProcAddr( device, "vkGetImageViewHandle64NVX" ) );
-          vkGetImageViewAddressNVX  = PFN_vkGetImageViewAddressNVX( vkGetDeviceProcAddr( device, "vkGetImageViewAddressNVX" ) );
-          vkGetDeviceCombinedImageSamplerIndexNVX =
-            PFN_vkGetDeviceCombinedImageSamplerIndexNVX( vkGetDeviceProcAddr( device, "vkGetDeviceCombinedImageSamplerIndexNVX" ) );
+          vkGetImageViewHandleNVX  = PFN_vkGetImageViewHandleNVX( vkGetDeviceProcAddr( device, "vkGetImageViewHandleNVX" ) );
+          vkGetImageViewAddressNVX = PFN_vkGetImageViewAddressNVX( vkGetDeviceProcAddr( device, "vkGetImageViewAddressNVX" ) );
 
           //=== VK_AMD_draw_indirect_count ===
           vkCmdDrawIndirectCountAMD = PFN_vkCmdDrawIndirectCountAMD( vkGetDeviceProcAddr( device, "vkCmdDrawIndirectCountAMD" ) );
@@ -1073,12 +974,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
           //=== VK_KHR_push_descriptor ===
           vkCmdPushDescriptorSetKHR = PFN_vkCmdPushDescriptorSetKHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetKHR" ) );
-          if ( !vkCmdPushDescriptorSet )
-            vkCmdPushDescriptorSet = vkCmdPushDescriptorSetKHR;
           vkCmdPushDescriptorSetWithTemplateKHR =
             PFN_vkCmdPushDescriptorSetWithTemplateKHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetWithTemplateKHR" ) );
-          if ( !vkCmdPushDescriptorSetWithTemplate )
-            vkCmdPushDescriptorSetWithTemplate = vkCmdPushDescriptorSetWithTemplateKHR;
+          vkCmdPushDescriptorSetWithTemplateKHR =
+            PFN_vkCmdPushDescriptorSetWithTemplateKHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetWithTemplateKHR" ) );
 
           //=== VK_EXT_conditional_rendering ===
           vkCmdBeginConditionalRenderingEXT = PFN_vkCmdBeginConditionalRenderingEXT( vkGetDeviceProcAddr( device, "vkCmdBeginConditionalRenderingEXT" ) );
@@ -1180,17 +1079,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdDispatchGraphIndirectAMDX      = PFN_vkCmdDispatchGraphIndirectAMDX( vkGetDeviceProcAddr( device, "vkCmdDispatchGraphIndirectAMDX" ) );
           vkCmdDispatchGraphIndirectCountAMDX = PFN_vkCmdDispatchGraphIndirectCountAMDX( vkGetDeviceProcAddr( device, "vkCmdDispatchGraphIndirectCountAMDX" ) );
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
-
-          //=== VK_EXT_descriptor_heap ===
-          vkWriteSamplerDescriptorsEXT     = PFN_vkWriteSamplerDescriptorsEXT( vkGetDeviceProcAddr( device, "vkWriteSamplerDescriptorsEXT" ) );
-          vkWriteResourceDescriptorsEXT    = PFN_vkWriteResourceDescriptorsEXT( vkGetDeviceProcAddr( device, "vkWriteResourceDescriptorsEXT" ) );
-          vkCmdBindSamplerHeapEXT          = PFN_vkCmdBindSamplerHeapEXT( vkGetDeviceProcAddr( device, "vkCmdBindSamplerHeapEXT" ) );
-          vkCmdBindResourceHeapEXT         = PFN_vkCmdBindResourceHeapEXT( vkGetDeviceProcAddr( device, "vkCmdBindResourceHeapEXT" ) );
-          vkCmdPushDataEXT                 = PFN_vkCmdPushDataEXT( vkGetDeviceProcAddr( device, "vkCmdPushDataEXT" ) );
-          vkGetImageOpaqueCaptureDataEXT   = PFN_vkGetImageOpaqueCaptureDataEXT( vkGetDeviceProcAddr( device, "vkGetImageOpaqueCaptureDataEXT" ) );
-          vkRegisterCustomBorderColorEXT   = PFN_vkRegisterCustomBorderColorEXT( vkGetDeviceProcAddr( device, "vkRegisterCustomBorderColorEXT" ) );
-          vkUnregisterCustomBorderColorEXT = PFN_vkUnregisterCustomBorderColorEXT( vkGetDeviceProcAddr( device, "vkUnregisterCustomBorderColorEXT" ) );
-          vkGetTensorOpaqueCaptureDataARM  = PFN_vkGetTensorOpaqueCaptureDataARM( vkGetDeviceProcAddr( device, "vkGetTensorOpaqueCaptureDataARM" ) );
 
           //=== VK_EXT_sample_locations ===
           vkCmdSetSampleLocationsEXT = PFN_vkCmdSetSampleLocationsEXT( vkGetDeviceProcAddr( device, "vkCmdSetSampleLocationsEXT" ) );
@@ -1315,8 +1203,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkGetMemoryHostPointerPropertiesEXT = PFN_vkGetMemoryHostPointerPropertiesEXT( vkGetDeviceProcAddr( device, "vkGetMemoryHostPointerPropertiesEXT" ) );
 
           //=== VK_AMD_buffer_marker ===
-          vkCmdWriteBufferMarkerAMD  = PFN_vkCmdWriteBufferMarkerAMD( vkGetDeviceProcAddr( device, "vkCmdWriteBufferMarkerAMD" ) );
-          vkCmdWriteBufferMarker2AMD = PFN_vkCmdWriteBufferMarker2AMD( vkGetDeviceProcAddr( device, "vkCmdWriteBufferMarker2AMD" ) );
+          vkCmdWriteBufferMarkerAMD = PFN_vkCmdWriteBufferMarkerAMD( vkGetDeviceProcAddr( device, "vkCmdWriteBufferMarkerAMD" ) );
 
           //=== VK_EXT_calibrated_timestamps ===
           vkGetCalibratedTimestampsEXT = PFN_vkGetCalibratedTimestampsEXT( vkGetDeviceProcAddr( device, "vkGetCalibratedTimestampsEXT" ) );
@@ -1333,9 +1220,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdSetExclusiveScissorNV       = PFN_vkCmdSetExclusiveScissorNV( vkGetDeviceProcAddr( device, "vkCmdSetExclusiveScissorNV" ) );
 
           //=== VK_NV_device_diagnostic_checkpoints ===
-          vkCmdSetCheckpointNV        = PFN_vkCmdSetCheckpointNV( vkGetDeviceProcAddr( device, "vkCmdSetCheckpointNV" ) );
-          vkGetQueueCheckpointDataNV  = PFN_vkGetQueueCheckpointDataNV( vkGetDeviceProcAddr( device, "vkGetQueueCheckpointDataNV" ) );
-          vkGetQueueCheckpointData2NV = PFN_vkGetQueueCheckpointData2NV( vkGetDeviceProcAddr( device, "vkGetQueueCheckpointData2NV" ) );
+          vkCmdSetCheckpointNV       = PFN_vkCmdSetCheckpointNV( vkGetDeviceProcAddr( device, "vkCmdSetCheckpointNV" ) );
+          vkGetQueueCheckpointDataNV = PFN_vkGetQueueCheckpointDataNV( vkGetDeviceProcAddr( device, "vkGetQueueCheckpointDataNV" ) );
 
           //=== VK_KHR_timeline_semaphore ===
           vkGetSemaphoreCounterValueKHR = PFN_vkGetSemaphoreCounterValueKHR( vkGetDeviceProcAddr( device, "vkGetSemaphoreCounterValueKHR" ) );
@@ -1347,14 +1233,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkSignalSemaphoreKHR = PFN_vkSignalSemaphoreKHR( vkGetDeviceProcAddr( device, "vkSignalSemaphoreKHR" ) );
           if ( !vkSignalSemaphore )
             vkSignalSemaphore = vkSignalSemaphoreKHR;
-
-          //=== VK_EXT_present_timing ===
-          vkSetSwapchainPresentTimingQueueSizeEXT =
-            PFN_vkSetSwapchainPresentTimingQueueSizeEXT( vkGetDeviceProcAddr( device, "vkSetSwapchainPresentTimingQueueSizeEXT" ) );
-          vkGetSwapchainTimingPropertiesEXT = PFN_vkGetSwapchainTimingPropertiesEXT( vkGetDeviceProcAddr( device, "vkGetSwapchainTimingPropertiesEXT" ) );
-          vkGetSwapchainTimeDomainPropertiesEXT =
-            PFN_vkGetSwapchainTimeDomainPropertiesEXT( vkGetDeviceProcAddr( device, "vkGetSwapchainTimeDomainPropertiesEXT" ) );
-          vkGetPastPresentationTimingEXT = PFN_vkGetPastPresentationTimingEXT( vkGetDeviceProcAddr( device, "vkGetPastPresentationTimingEXT" ) );
 
           //=== VK_INTEL_performance_query ===
           vkInitializePerformanceApiINTEL   = PFN_vkInitializePerformanceApiINTEL( vkGetDeviceProcAddr( device, "vkInitializePerformanceApiINTEL" ) );
@@ -1377,16 +1255,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           //=== VK_KHR_fragment_shading_rate ===
           vkCmdSetFragmentShadingRateKHR = PFN_vkCmdSetFragmentShadingRateKHR( vkGetDeviceProcAddr( device, "vkCmdSetFragmentShadingRateKHR" ) );
 
-          //=== VK_KHR_dynamic_rendering_local_read ===
-          vkCmdSetRenderingAttachmentLocationsKHR =
-            PFN_vkCmdSetRenderingAttachmentLocationsKHR( vkGetDeviceProcAddr( device, "vkCmdSetRenderingAttachmentLocationsKHR" ) );
-          if ( !vkCmdSetRenderingAttachmentLocations )
-            vkCmdSetRenderingAttachmentLocations = vkCmdSetRenderingAttachmentLocationsKHR;
-          vkCmdSetRenderingInputAttachmentIndicesKHR =
-            PFN_vkCmdSetRenderingInputAttachmentIndicesKHR( vkGetDeviceProcAddr( device, "vkCmdSetRenderingInputAttachmentIndicesKHR" ) );
-          if ( !vkCmdSetRenderingInputAttachmentIndices )
-            vkCmdSetRenderingInputAttachmentIndices = vkCmdSetRenderingInputAttachmentIndicesKHR;
-
           //=== VK_EXT_buffer_device_address ===
           vkGetBufferDeviceAddressEXT = PFN_vkGetBufferDeviceAddressEXT( vkGetDeviceProcAddr( device, "vkGetBufferDeviceAddressEXT" ) );
           if ( !vkGetBufferDeviceAddress )
@@ -1399,6 +1267,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           //=== VK_EXT_full_screen_exclusive ===
           vkAcquireFullScreenExclusiveModeEXT = PFN_vkAcquireFullScreenExclusiveModeEXT( vkGetDeviceProcAddr( device, "vkAcquireFullScreenExclusiveModeEXT" ) );
           vkReleaseFullScreenExclusiveModeEXT = PFN_vkReleaseFullScreenExclusiveModeEXT( vkGetDeviceProcAddr( device, "vkReleaseFullScreenExclusiveModeEXT" ) );
+          vkGetDeviceGroupSurfacePresentModes2EXT =
+            PFN_vkGetDeviceGroupSurfacePresentModes2EXT( vkGetDeviceProcAddr( device, "vkGetDeviceGroupSurfacePresentModes2EXT" ) );
           vkGetDeviceGroupSurfacePresentModes2EXT =
             PFN_vkGetDeviceGroupSurfacePresentModes2EXT( vkGetDeviceProcAddr( device, "vkGetDeviceGroupSurfacePresentModes2EXT" ) );
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
@@ -1417,8 +1287,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
           //=== VK_EXT_line_rasterization ===
           vkCmdSetLineStippleEXT = PFN_vkCmdSetLineStippleEXT( vkGetDeviceProcAddr( device, "vkCmdSetLineStippleEXT" ) );
-          if ( !vkCmdSetLineStipple )
-            vkCmdSetLineStipple = vkCmdSetLineStippleEXT;
 
           //=== VK_EXT_host_query_reset ===
           vkResetQueryPoolEXT = PFN_vkResetQueryPoolEXT( vkGetDeviceProcAddr( device, "vkResetQueryPoolEXT" ) );
@@ -1480,34 +1348,20 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
             PFN_vkGetPipelineExecutableInternalRepresentationsKHR( vkGetDeviceProcAddr( device, "vkGetPipelineExecutableInternalRepresentationsKHR" ) );
 
           //=== VK_EXT_host_image_copy ===
-          vkCopyMemoryToImageEXT = PFN_vkCopyMemoryToImageEXT( vkGetDeviceProcAddr( device, "vkCopyMemoryToImageEXT" ) );
-          if ( !vkCopyMemoryToImage )
-            vkCopyMemoryToImage = vkCopyMemoryToImageEXT;
-          vkCopyImageToMemoryEXT = PFN_vkCopyImageToMemoryEXT( vkGetDeviceProcAddr( device, "vkCopyImageToMemoryEXT" ) );
-          if ( !vkCopyImageToMemory )
-            vkCopyImageToMemory = vkCopyImageToMemoryEXT;
-          vkCopyImageToImageEXT = PFN_vkCopyImageToImageEXT( vkGetDeviceProcAddr( device, "vkCopyImageToImageEXT" ) );
-          if ( !vkCopyImageToImage )
-            vkCopyImageToImage = vkCopyImageToImageEXT;
-          vkTransitionImageLayoutEXT = PFN_vkTransitionImageLayoutEXT( vkGetDeviceProcAddr( device, "vkTransitionImageLayoutEXT" ) );
-          if ( !vkTransitionImageLayout )
-            vkTransitionImageLayout = vkTransitionImageLayoutEXT;
+          vkCopyMemoryToImageEXT          = PFN_vkCopyMemoryToImageEXT( vkGetDeviceProcAddr( device, "vkCopyMemoryToImageEXT" ) );
+          vkCopyImageToMemoryEXT          = PFN_vkCopyImageToMemoryEXT( vkGetDeviceProcAddr( device, "vkCopyImageToMemoryEXT" ) );
+          vkCopyImageToImageEXT           = PFN_vkCopyImageToImageEXT( vkGetDeviceProcAddr( device, "vkCopyImageToImageEXT" ) );
+          vkTransitionImageLayoutEXT      = PFN_vkTransitionImageLayoutEXT( vkGetDeviceProcAddr( device, "vkTransitionImageLayoutEXT" ) );
           vkGetImageSubresourceLayout2EXT = PFN_vkGetImageSubresourceLayout2EXT( vkGetDeviceProcAddr( device, "vkGetImageSubresourceLayout2EXT" ) );
-          if ( !vkGetImageSubresourceLayout2 )
-            vkGetImageSubresourceLayout2 = vkGetImageSubresourceLayout2EXT;
+          if ( !vkGetImageSubresourceLayout2KHR )
+            vkGetImageSubresourceLayout2KHR = vkGetImageSubresourceLayout2EXT;
 
           //=== VK_KHR_map_memory2 ===
-          vkMapMemory2KHR = PFN_vkMapMemory2KHR( vkGetDeviceProcAddr( device, "vkMapMemory2KHR" ) );
-          if ( !vkMapMemory2 )
-            vkMapMemory2 = vkMapMemory2KHR;
+          vkMapMemory2KHR   = PFN_vkMapMemory2KHR( vkGetDeviceProcAddr( device, "vkMapMemory2KHR" ) );
           vkUnmapMemory2KHR = PFN_vkUnmapMemory2KHR( vkGetDeviceProcAddr( device, "vkUnmapMemory2KHR" ) );
-          if ( !vkUnmapMemory2 )
-            vkUnmapMemory2 = vkUnmapMemory2KHR;
 
           //=== VK_EXT_swapchain_maintenance1 ===
           vkReleaseSwapchainImagesEXT = PFN_vkReleaseSwapchainImagesEXT( vkGetDeviceProcAddr( device, "vkReleaseSwapchainImagesEXT" ) );
-          if ( !vkReleaseSwapchainImagesKHR )
-            vkReleaseSwapchainImagesKHR = vkReleaseSwapchainImagesEXT;
 
           //=== VK_NV_device_generated_commands ===
           vkGetGeneratedCommandsMemoryRequirementsNV =
@@ -1550,11 +1404,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdCudaLaunchKernelNV = PFN_vkCmdCudaLaunchKernelNV( vkGetDeviceProcAddr( device, "vkCmdCudaLaunchKernelNV" ) );
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-          //=== VK_QCOM_tile_shading ===
-          vkCmdDispatchTileQCOM          = PFN_vkCmdDispatchTileQCOM( vkGetDeviceProcAddr( device, "vkCmdDispatchTileQCOM" ) );
-          vkCmdBeginPerTileExecutionQCOM = PFN_vkCmdBeginPerTileExecutionQCOM( vkGetDeviceProcAddr( device, "vkCmdBeginPerTileExecutionQCOM" ) );
-          vkCmdEndPerTileExecutionQCOM   = PFN_vkCmdEndPerTileExecutionQCOM( vkGetDeviceProcAddr( device, "vkCmdEndPerTileExecutionQCOM" ) );
-
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
           //=== VK_EXT_metal_objects ===
           vkExportMetalObjectsEXT = PFN_vkExportMetalObjectsEXT( vkGetDeviceProcAddr( device, "vkExportMetalObjectsEXT" ) );
@@ -1579,6 +1428,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkQueueSubmit2KHR = PFN_vkQueueSubmit2KHR( vkGetDeviceProcAddr( device, "vkQueueSubmit2KHR" ) );
           if ( !vkQueueSubmit2 )
             vkQueueSubmit2 = vkQueueSubmit2KHR;
+          vkCmdWriteBufferMarker2AMD  = PFN_vkCmdWriteBufferMarker2AMD( vkGetDeviceProcAddr( device, "vkCmdWriteBufferMarker2AMD" ) );
+          vkGetQueueCheckpointData2NV = PFN_vkGetQueueCheckpointData2NV( vkGetDeviceProcAddr( device, "vkGetQueueCheckpointData2NV" ) );
 
           //=== VK_EXT_descriptor_buffer ===
           vkGetDescriptorSetLayoutSizeEXT = PFN_vkGetDescriptorSetLayoutSizeEXT( vkGetDeviceProcAddr( device, "vkGetDescriptorSetLayoutSizeEXT" ) );
@@ -1755,13 +1606,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkGetPipelineIndirectDeviceAddressNV =
             PFN_vkGetPipelineIndirectDeviceAddressNV( vkGetDeviceProcAddr( device, "vkGetPipelineIndirectDeviceAddressNV" ) );
 
-#  if defined( VK_USE_PLATFORM_OHOS )
-          //=== VK_OHOS_external_memory ===
-          vkGetNativeBufferPropertiesOHOS = PFN_vkGetNativeBufferPropertiesOHOS( vkGetDeviceProcAddr( device, "vkGetNativeBufferPropertiesOHOS" ) );
-          vkGetMemoryNativeBufferOHOS     = PFN_vkGetMemoryNativeBufferOHOS( vkGetDeviceProcAddr( device, "vkGetMemoryNativeBufferOHOS" ) );
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
           //=== VK_EXT_extended_dynamic_state3 ===
+          vkCmdSetTessellationDomainOriginEXT = PFN_vkCmdSetTessellationDomainOriginEXT( vkGetDeviceProcAddr( device, "vkCmdSetTessellationDomainOriginEXT" ) );
           vkCmdSetDepthClampEnableEXT         = PFN_vkCmdSetDepthClampEnableEXT( vkGetDeviceProcAddr( device, "vkCmdSetDepthClampEnableEXT" ) );
           vkCmdSetPolygonModeEXT              = PFN_vkCmdSetPolygonModeEXT( vkGetDeviceProcAddr( device, "vkCmdSetPolygonModeEXT" ) );
           vkCmdSetRasterizationSamplesEXT     = PFN_vkCmdSetRasterizationSamplesEXT( vkGetDeviceProcAddr( device, "vkCmdSetRasterizationSamplesEXT" ) );
@@ -1772,7 +1618,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdSetColorBlendEnableEXT         = PFN_vkCmdSetColorBlendEnableEXT( vkGetDeviceProcAddr( device, "vkCmdSetColorBlendEnableEXT" ) );
           vkCmdSetColorBlendEquationEXT       = PFN_vkCmdSetColorBlendEquationEXT( vkGetDeviceProcAddr( device, "vkCmdSetColorBlendEquationEXT" ) );
           vkCmdSetColorWriteMaskEXT           = PFN_vkCmdSetColorWriteMaskEXT( vkGetDeviceProcAddr( device, "vkCmdSetColorWriteMaskEXT" ) );
-          vkCmdSetTessellationDomainOriginEXT = PFN_vkCmdSetTessellationDomainOriginEXT( vkGetDeviceProcAddr( device, "vkCmdSetTessellationDomainOriginEXT" ) );
           vkCmdSetRasterizationStreamEXT      = PFN_vkCmdSetRasterizationStreamEXT( vkGetDeviceProcAddr( device, "vkCmdSetRasterizationStreamEXT" ) );
           vkCmdSetConservativeRasterizationModeEXT =
             PFN_vkCmdSetConservativeRasterizationModeEXT( vkGetDeviceProcAddr( device, "vkCmdSetConservativeRasterizationModeEXT" ) );
@@ -1799,21 +1644,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
             PFN_vkCmdSetRepresentativeFragmentTestEnableNV( vkGetDeviceProcAddr( device, "vkCmdSetRepresentativeFragmentTestEnableNV" ) );
           vkCmdSetCoverageReductionModeNV = PFN_vkCmdSetCoverageReductionModeNV( vkGetDeviceProcAddr( device, "vkCmdSetCoverageReductionModeNV" ) );
 
-          //=== VK_ARM_tensors ===
-          vkCreateTensorARM                = PFN_vkCreateTensorARM( vkGetDeviceProcAddr( device, "vkCreateTensorARM" ) );
-          vkDestroyTensorARM               = PFN_vkDestroyTensorARM( vkGetDeviceProcAddr( device, "vkDestroyTensorARM" ) );
-          vkCreateTensorViewARM            = PFN_vkCreateTensorViewARM( vkGetDeviceProcAddr( device, "vkCreateTensorViewARM" ) );
-          vkDestroyTensorViewARM           = PFN_vkDestroyTensorViewARM( vkGetDeviceProcAddr( device, "vkDestroyTensorViewARM" ) );
-          vkGetTensorMemoryRequirementsARM = PFN_vkGetTensorMemoryRequirementsARM( vkGetDeviceProcAddr( device, "vkGetTensorMemoryRequirementsARM" ) );
-          vkBindTensorMemoryARM            = PFN_vkBindTensorMemoryARM( vkGetDeviceProcAddr( device, "vkBindTensorMemoryARM" ) );
-          vkGetDeviceTensorMemoryRequirementsARM =
-            PFN_vkGetDeviceTensorMemoryRequirementsARM( vkGetDeviceProcAddr( device, "vkGetDeviceTensorMemoryRequirementsARM" ) );
-          vkCmdCopyTensorARM = PFN_vkCmdCopyTensorARM( vkGetDeviceProcAddr( device, "vkCmdCopyTensorARM" ) );
-          vkGetTensorOpaqueCaptureDescriptorDataARM =
-            PFN_vkGetTensorOpaqueCaptureDescriptorDataARM( vkGetDeviceProcAddr( device, "vkGetTensorOpaqueCaptureDescriptorDataARM" ) );
-          vkGetTensorViewOpaqueCaptureDescriptorDataARM =
-            PFN_vkGetTensorViewOpaqueCaptureDescriptorDataARM( vkGetDeviceProcAddr( device, "vkGetTensorViewOpaqueCaptureDescriptorDataARM" ) );
-
           //=== VK_EXT_shader_module_identifier ===
           vkGetShaderModuleIdentifierEXT = PFN_vkGetShaderModuleIdentifierEXT( vkGetDeviceProcAddr( device, "vkGetShaderModuleIdentifierEXT" ) );
           vkGetShaderModuleCreateInfoIdentifierEXT =
@@ -1826,52 +1656,22 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkCmdOpticalFlowExecuteNV       = PFN_vkCmdOpticalFlowExecuteNV( vkGetDeviceProcAddr( device, "vkCmdOpticalFlowExecuteNV" ) );
 
           //=== VK_KHR_maintenance5 ===
-          vkCmdBindIndexBuffer2KHR = PFN_vkCmdBindIndexBuffer2KHR( vkGetDeviceProcAddr( device, "vkCmdBindIndexBuffer2KHR" ) );
-          if ( !vkCmdBindIndexBuffer2 )
-            vkCmdBindIndexBuffer2 = vkCmdBindIndexBuffer2KHR;
+          vkCmdBindIndexBuffer2KHR         = PFN_vkCmdBindIndexBuffer2KHR( vkGetDeviceProcAddr( device, "vkCmdBindIndexBuffer2KHR" ) );
           vkGetRenderingAreaGranularityKHR = PFN_vkGetRenderingAreaGranularityKHR( vkGetDeviceProcAddr( device, "vkGetRenderingAreaGranularityKHR" ) );
-          if ( !vkGetRenderingAreaGranularity )
-            vkGetRenderingAreaGranularity = vkGetRenderingAreaGranularityKHR;
           vkGetDeviceImageSubresourceLayoutKHR =
             PFN_vkGetDeviceImageSubresourceLayoutKHR( vkGetDeviceProcAddr( device, "vkGetDeviceImageSubresourceLayoutKHR" ) );
-          if ( !vkGetDeviceImageSubresourceLayout )
-            vkGetDeviceImageSubresourceLayout = vkGetDeviceImageSubresourceLayoutKHR;
           vkGetImageSubresourceLayout2KHR = PFN_vkGetImageSubresourceLayout2KHR( vkGetDeviceProcAddr( device, "vkGetImageSubresourceLayout2KHR" ) );
-          if ( !vkGetImageSubresourceLayout2 )
-            vkGetImageSubresourceLayout2 = vkGetImageSubresourceLayout2KHR;
-
-          //=== VK_AMD_anti_lag ===
-          vkAntiLagUpdateAMD = PFN_vkAntiLagUpdateAMD( vkGetDeviceProcAddr( device, "vkAntiLagUpdateAMD" ) );
-
-          //=== VK_KHR_present_wait2 ===
-          vkWaitForPresent2KHR = PFN_vkWaitForPresent2KHR( vkGetDeviceProcAddr( device, "vkWaitForPresent2KHR" ) );
 
           //=== VK_EXT_shader_object ===
-          vkCreateShadersEXT         = PFN_vkCreateShadersEXT( vkGetDeviceProcAddr( device, "vkCreateShadersEXT" ) );
-          vkDestroyShaderEXT         = PFN_vkDestroyShaderEXT( vkGetDeviceProcAddr( device, "vkDestroyShaderEXT" ) );
-          vkGetShaderBinaryDataEXT   = PFN_vkGetShaderBinaryDataEXT( vkGetDeviceProcAddr( device, "vkGetShaderBinaryDataEXT" ) );
-          vkCmdBindShadersEXT        = PFN_vkCmdBindShadersEXT( vkGetDeviceProcAddr( device, "vkCmdBindShadersEXT" ) );
-          vkCmdSetDepthClampRangeEXT = PFN_vkCmdSetDepthClampRangeEXT( vkGetDeviceProcAddr( device, "vkCmdSetDepthClampRangeEXT" ) );
-
-          //=== VK_KHR_pipeline_binary ===
-          vkCreatePipelineBinariesKHR      = PFN_vkCreatePipelineBinariesKHR( vkGetDeviceProcAddr( device, "vkCreatePipelineBinariesKHR" ) );
-          vkDestroyPipelineBinaryKHR       = PFN_vkDestroyPipelineBinaryKHR( vkGetDeviceProcAddr( device, "vkDestroyPipelineBinaryKHR" ) );
-          vkGetPipelineKeyKHR              = PFN_vkGetPipelineKeyKHR( vkGetDeviceProcAddr( device, "vkGetPipelineKeyKHR" ) );
-          vkGetPipelineBinaryDataKHR       = PFN_vkGetPipelineBinaryDataKHR( vkGetDeviceProcAddr( device, "vkGetPipelineBinaryDataKHR" ) );
-          vkReleaseCapturedPipelineDataKHR = PFN_vkReleaseCapturedPipelineDataKHR( vkGetDeviceProcAddr( device, "vkReleaseCapturedPipelineDataKHR" ) );
+          vkCreateShadersEXT       = PFN_vkCreateShadersEXT( vkGetDeviceProcAddr( device, "vkCreateShadersEXT" ) );
+          vkDestroyShaderEXT       = PFN_vkDestroyShaderEXT( vkGetDeviceProcAddr( device, "vkDestroyShaderEXT" ) );
+          vkGetShaderBinaryDataEXT = PFN_vkGetShaderBinaryDataEXT( vkGetDeviceProcAddr( device, "vkGetShaderBinaryDataEXT" ) );
+          vkCmdBindShadersEXT      = PFN_vkCmdBindShadersEXT( vkGetDeviceProcAddr( device, "vkCmdBindShadersEXT" ) );
 
           //=== VK_QCOM_tile_properties ===
           vkGetFramebufferTilePropertiesQCOM = PFN_vkGetFramebufferTilePropertiesQCOM( vkGetDeviceProcAddr( device, "vkGetFramebufferTilePropertiesQCOM" ) );
           vkGetDynamicRenderingTilePropertiesQCOM =
             PFN_vkGetDynamicRenderingTilePropertiesQCOM( vkGetDeviceProcAddr( device, "vkGetDynamicRenderingTilePropertiesQCOM" ) );
-
-          //=== VK_KHR_swapchain_maintenance1 ===
-          vkReleaseSwapchainImagesKHR = PFN_vkReleaseSwapchainImagesKHR( vkGetDeviceProcAddr( device, "vkReleaseSwapchainImagesKHR" ) );
-
-          //=== VK_NV_cooperative_vector ===
-          vkConvertCooperativeVectorMatrixNV = PFN_vkConvertCooperativeVectorMatrixNV( vkGetDeviceProcAddr( device, "vkConvertCooperativeVectorMatrixNV" ) );
-          vkCmdConvertCooperativeVectorMatrixNV =
-            PFN_vkCmdConvertCooperativeVectorMatrixNV( vkGetDeviceProcAddr( device, "vkCmdConvertCooperativeVectorMatrixNV" ) );
 
           //=== VK_NV_low_latency2 ===
           vkSetLatencySleepModeNV  = PFN_vkSetLatencySleepModeNV( vkGetDeviceProcAddr( device, "vkSetLatencySleepModeNV" ) );
@@ -1879,22 +1679,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkSetLatencyMarkerNV     = PFN_vkSetLatencyMarkerNV( vkGetDeviceProcAddr( device, "vkSetLatencyMarkerNV" ) );
           vkGetLatencyTimingsNV    = PFN_vkGetLatencyTimingsNV( vkGetDeviceProcAddr( device, "vkGetLatencyTimingsNV" ) );
           vkQueueNotifyOutOfBandNV = PFN_vkQueueNotifyOutOfBandNV( vkGetDeviceProcAddr( device, "vkQueueNotifyOutOfBandNV" ) );
-
-          //=== VK_ARM_data_graph ===
-          vkCreateDataGraphPipelinesARM       = PFN_vkCreateDataGraphPipelinesARM( vkGetDeviceProcAddr( device, "vkCreateDataGraphPipelinesARM" ) );
-          vkCreateDataGraphPipelineSessionARM = PFN_vkCreateDataGraphPipelineSessionARM( vkGetDeviceProcAddr( device, "vkCreateDataGraphPipelineSessionARM" ) );
-          vkGetDataGraphPipelineSessionBindPointRequirementsARM =
-            PFN_vkGetDataGraphPipelineSessionBindPointRequirementsARM( vkGetDeviceProcAddr( device, "vkGetDataGraphPipelineSessionBindPointRequirementsARM" ) );
-          vkGetDataGraphPipelineSessionMemoryRequirementsARM =
-            PFN_vkGetDataGraphPipelineSessionMemoryRequirementsARM( vkGetDeviceProcAddr( device, "vkGetDataGraphPipelineSessionMemoryRequirementsARM" ) );
-          vkBindDataGraphPipelineSessionMemoryARM =
-            PFN_vkBindDataGraphPipelineSessionMemoryARM( vkGetDeviceProcAddr( device, "vkBindDataGraphPipelineSessionMemoryARM" ) );
-          vkDestroyDataGraphPipelineSessionARM =
-            PFN_vkDestroyDataGraphPipelineSessionARM( vkGetDeviceProcAddr( device, "vkDestroyDataGraphPipelineSessionARM" ) );
-          vkCmdDispatchDataGraphARM = PFN_vkCmdDispatchDataGraphARM( vkGetDeviceProcAddr( device, "vkCmdDispatchDataGraphARM" ) );
-          vkGetDataGraphPipelineAvailablePropertiesARM =
-            PFN_vkGetDataGraphPipelineAvailablePropertiesARM( vkGetDeviceProcAddr( device, "vkGetDataGraphPipelineAvailablePropertiesARM" ) );
-          vkGetDataGraphPipelinePropertiesARM = PFN_vkGetDataGraphPipelinePropertiesARM( vkGetDeviceProcAddr( device, "vkGetDataGraphPipelinePropertiesARM" ) );
 
           //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
           vkCmdSetAttachmentFeedbackLoopEnableEXT =
@@ -1905,94 +1689,18 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           vkGetScreenBufferPropertiesQNX = PFN_vkGetScreenBufferPropertiesQNX( vkGetDeviceProcAddr( device, "vkGetScreenBufferPropertiesQNX" ) );
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-          //=== VK_KHR_line_rasterization ===
-          vkCmdSetLineStippleKHR = PFN_vkCmdSetLineStippleKHR( vkGetDeviceProcAddr( device, "vkCmdSetLineStippleKHR" ) );
-          if ( !vkCmdSetLineStipple )
-            vkCmdSetLineStipple = vkCmdSetLineStippleKHR;
-
           //=== VK_KHR_calibrated_timestamps ===
           vkGetCalibratedTimestampsKHR = PFN_vkGetCalibratedTimestampsKHR( vkGetDeviceProcAddr( device, "vkGetCalibratedTimestampsKHR" ) );
 
           //=== VK_KHR_maintenance6 ===
           vkCmdBindDescriptorSets2KHR = PFN_vkCmdBindDescriptorSets2KHR( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorSets2KHR" ) );
-          if ( !vkCmdBindDescriptorSets2 )
-            vkCmdBindDescriptorSets2 = vkCmdBindDescriptorSets2KHR;
-          vkCmdPushConstants2KHR = PFN_vkCmdPushConstants2KHR( vkGetDeviceProcAddr( device, "vkCmdPushConstants2KHR" ) );
-          if ( !vkCmdPushConstants2 )
-            vkCmdPushConstants2 = vkCmdPushConstants2KHR;
-          vkCmdPushDescriptorSet2KHR = PFN_vkCmdPushDescriptorSet2KHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSet2KHR" ) );
-          if ( !vkCmdPushDescriptorSet2 )
-            vkCmdPushDescriptorSet2 = vkCmdPushDescriptorSet2KHR;
+          vkCmdPushConstants2KHR      = PFN_vkCmdPushConstants2KHR( vkGetDeviceProcAddr( device, "vkCmdPushConstants2KHR" ) );
+          vkCmdPushDescriptorSet2KHR  = PFN_vkCmdPushDescriptorSet2KHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSet2KHR" ) );
           vkCmdPushDescriptorSetWithTemplate2KHR =
             PFN_vkCmdPushDescriptorSetWithTemplate2KHR( vkGetDeviceProcAddr( device, "vkCmdPushDescriptorSetWithTemplate2KHR" ) );
-          if ( !vkCmdPushDescriptorSetWithTemplate2 )
-            vkCmdPushDescriptorSetWithTemplate2 = vkCmdPushDescriptorSetWithTemplate2KHR;
           vkCmdSetDescriptorBufferOffsets2EXT = PFN_vkCmdSetDescriptorBufferOffsets2EXT( vkGetDeviceProcAddr( device, "vkCmdSetDescriptorBufferOffsets2EXT" ) );
           vkCmdBindDescriptorBufferEmbeddedSamplers2EXT =
             PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorBufferEmbeddedSamplers2EXT" ) );
-
-          //=== VK_QCOM_tile_memory_heap ===
-          vkCmdBindTileMemoryQCOM = PFN_vkCmdBindTileMemoryQCOM( vkGetDeviceProcAddr( device, "vkCmdBindTileMemoryQCOM" ) );
-
-          //=== VK_KHR_copy_memory_indirect ===
-          vkCmdCopyMemoryIndirectKHR        = PFN_vkCmdCopyMemoryIndirectKHR( vkGetDeviceProcAddr( device, "vkCmdCopyMemoryIndirectKHR" ) );
-          vkCmdCopyMemoryToImageIndirectKHR = PFN_vkCmdCopyMemoryToImageIndirectKHR( vkGetDeviceProcAddr( device, "vkCmdCopyMemoryToImageIndirectKHR" ) );
-
-          //=== VK_EXT_memory_decompression ===
-          vkCmdDecompressMemoryEXT = PFN_vkCmdDecompressMemoryEXT( vkGetDeviceProcAddr( device, "vkCmdDecompressMemoryEXT" ) );
-          vkCmdDecompressMemoryIndirectCountEXT =
-            PFN_vkCmdDecompressMemoryIndirectCountEXT( vkGetDeviceProcAddr( device, "vkCmdDecompressMemoryIndirectCountEXT" ) );
-
-          //=== VK_NV_external_compute_queue ===
-          vkCreateExternalComputeQueueNV  = PFN_vkCreateExternalComputeQueueNV( vkGetDeviceProcAddr( device, "vkCreateExternalComputeQueueNV" ) );
-          vkDestroyExternalComputeQueueNV = PFN_vkDestroyExternalComputeQueueNV( vkGetDeviceProcAddr( device, "vkDestroyExternalComputeQueueNV" ) );
-          vkGetExternalComputeQueueDataNV = PFN_vkGetExternalComputeQueueDataNV( vkGetDeviceProcAddr( device, "vkGetExternalComputeQueueDataNV" ) );
-
-          //=== VK_NV_cluster_acceleration_structure ===
-          vkGetClusterAccelerationStructureBuildSizesNV =
-            PFN_vkGetClusterAccelerationStructureBuildSizesNV( vkGetDeviceProcAddr( device, "vkGetClusterAccelerationStructureBuildSizesNV" ) );
-          vkCmdBuildClusterAccelerationStructureIndirectNV =
-            PFN_vkCmdBuildClusterAccelerationStructureIndirectNV( vkGetDeviceProcAddr( device, "vkCmdBuildClusterAccelerationStructureIndirectNV" ) );
-
-          //=== VK_NV_partitioned_acceleration_structure ===
-          vkGetPartitionedAccelerationStructuresBuildSizesNV =
-            PFN_vkGetPartitionedAccelerationStructuresBuildSizesNV( vkGetDeviceProcAddr( device, "vkGetPartitionedAccelerationStructuresBuildSizesNV" ) );
-          vkCmdBuildPartitionedAccelerationStructuresNV =
-            PFN_vkCmdBuildPartitionedAccelerationStructuresNV( vkGetDeviceProcAddr( device, "vkCmdBuildPartitionedAccelerationStructuresNV" ) );
-
-          //=== VK_EXT_device_generated_commands ===
-          vkGetGeneratedCommandsMemoryRequirementsEXT =
-            PFN_vkGetGeneratedCommandsMemoryRequirementsEXT( vkGetDeviceProcAddr( device, "vkGetGeneratedCommandsMemoryRequirementsEXT" ) );
-          vkCmdPreprocessGeneratedCommandsEXT = PFN_vkCmdPreprocessGeneratedCommandsEXT( vkGetDeviceProcAddr( device, "vkCmdPreprocessGeneratedCommandsEXT" ) );
-          vkCmdExecuteGeneratedCommandsEXT    = PFN_vkCmdExecuteGeneratedCommandsEXT( vkGetDeviceProcAddr( device, "vkCmdExecuteGeneratedCommandsEXT" ) );
-          vkCreateIndirectCommandsLayoutEXT   = PFN_vkCreateIndirectCommandsLayoutEXT( vkGetDeviceProcAddr( device, "vkCreateIndirectCommandsLayoutEXT" ) );
-          vkDestroyIndirectCommandsLayoutEXT  = PFN_vkDestroyIndirectCommandsLayoutEXT( vkGetDeviceProcAddr( device, "vkDestroyIndirectCommandsLayoutEXT" ) );
-          vkCreateIndirectExecutionSetEXT     = PFN_vkCreateIndirectExecutionSetEXT( vkGetDeviceProcAddr( device, "vkCreateIndirectExecutionSetEXT" ) );
-          vkDestroyIndirectExecutionSetEXT    = PFN_vkDestroyIndirectExecutionSetEXT( vkGetDeviceProcAddr( device, "vkDestroyIndirectExecutionSetEXT" ) );
-          vkUpdateIndirectExecutionSetPipelineEXT =
-            PFN_vkUpdateIndirectExecutionSetPipelineEXT( vkGetDeviceProcAddr( device, "vkUpdateIndirectExecutionSetPipelineEXT" ) );
-          vkUpdateIndirectExecutionSetShaderEXT =
-            PFN_vkUpdateIndirectExecutionSetShaderEXT( vkGetDeviceProcAddr( device, "vkUpdateIndirectExecutionSetShaderEXT" ) );
-
-#  if defined( VK_USE_PLATFORM_METAL_EXT )
-          //=== VK_EXT_external_memory_metal ===
-          vkGetMemoryMetalHandleEXT           = PFN_vkGetMemoryMetalHandleEXT( vkGetDeviceProcAddr( device, "vkGetMemoryMetalHandleEXT" ) );
-          vkGetMemoryMetalHandlePropertiesEXT = PFN_vkGetMemoryMetalHandlePropertiesEXT( vkGetDeviceProcAddr( device, "vkGetMemoryMetalHandlePropertiesEXT" ) );
-#  endif /*VK_USE_PLATFORM_METAL_EXT*/
-
-          //=== VK_EXT_fragment_density_map_offset ===
-          vkCmdEndRendering2EXT = PFN_vkCmdEndRendering2EXT( vkGetDeviceProcAddr( device, "vkCmdEndRendering2EXT" ) );
-          if ( !vkCmdEndRendering2KHR )
-            vkCmdEndRendering2KHR = vkCmdEndRendering2EXT;
-
-          //=== VK_EXT_custom_resolve ===
-          vkCmdBeginCustomResolveEXT = PFN_vkCmdBeginCustomResolveEXT( vkGetDeviceProcAddr( device, "vkCmdBeginCustomResolveEXT" ) );
-
-          //=== VK_KHR_maintenance10 ===
-          vkCmdEndRendering2KHR = PFN_vkCmdEndRendering2KHR( vkGetDeviceProcAddr( device, "vkCmdEndRendering2KHR" ) );
-
-          //=== VK_NV_compute_occupancy_priority ===
-          vkCmdSetComputeOccupancyPriorityNV = PFN_vkCmdSetComputeOccupancyPriorityNV( vkGetDeviceProcAddr( device, "vkCmdSetComputeOccupancyPriorityNV" ) );
         }
 
       public:
@@ -2023,50 +1731,30 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkWaitForFences                    vkWaitForFences                    = 0;
         PFN_vkCreateSemaphore                  vkCreateSemaphore                  = 0;
         PFN_vkDestroySemaphore                 vkDestroySemaphore                 = 0;
-        PFN_vkCreateQueryPool                  vkCreateQueryPool                  = 0;
-        PFN_vkDestroyQueryPool                 vkDestroyQueryPool                 = 0;
-        PFN_vkGetQueryPoolResults              vkGetQueryPoolResults              = 0;
-        PFN_vkCreateBuffer                     vkCreateBuffer                     = 0;
-        PFN_vkDestroyBuffer                    vkDestroyBuffer                    = 0;
-        PFN_vkCreateImage                      vkCreateImage                      = 0;
-        PFN_vkDestroyImage                     vkDestroyImage                     = 0;
-        PFN_vkGetImageSubresourceLayout        vkGetImageSubresourceLayout        = 0;
-        PFN_vkCreateImageView                  vkCreateImageView                  = 0;
-        PFN_vkDestroyImageView                 vkDestroyImageView                 = 0;
-        PFN_vkCreateCommandPool                vkCreateCommandPool                = 0;
-        PFN_vkDestroyCommandPool               vkDestroyCommandPool               = 0;
-        PFN_vkResetCommandPool                 vkResetCommandPool                 = 0;
-        PFN_vkAllocateCommandBuffers           vkAllocateCommandBuffers           = 0;
-        PFN_vkFreeCommandBuffers               vkFreeCommandBuffers               = 0;
-        PFN_vkBeginCommandBuffer               vkBeginCommandBuffer               = 0;
-        PFN_vkEndCommandBuffer                 vkEndCommandBuffer                 = 0;
-        PFN_vkResetCommandBuffer               vkResetCommandBuffer               = 0;
-        PFN_vkCmdCopyBuffer                    vkCmdCopyBuffer                    = 0;
-        PFN_vkCmdCopyImage                     vkCmdCopyImage                     = 0;
-        PFN_vkCmdCopyBufferToImage             vkCmdCopyBufferToImage             = 0;
-        PFN_vkCmdCopyImageToBuffer             vkCmdCopyImageToBuffer             = 0;
-        PFN_vkCmdUpdateBuffer                  vkCmdUpdateBuffer                  = 0;
-        PFN_vkCmdFillBuffer                    vkCmdFillBuffer                    = 0;
-        PFN_vkCmdPipelineBarrier               vkCmdPipelineBarrier               = 0;
-        PFN_vkCmdBeginQuery                    vkCmdBeginQuery                    = 0;
-        PFN_vkCmdEndQuery                      vkCmdEndQuery                      = 0;
-        PFN_vkCmdResetQueryPool                vkCmdResetQueryPool                = 0;
-        PFN_vkCmdWriteTimestamp                vkCmdWriteTimestamp                = 0;
-        PFN_vkCmdCopyQueryPoolResults          vkCmdCopyQueryPoolResults          = 0;
-        PFN_vkCmdExecuteCommands               vkCmdExecuteCommands               = 0;
         PFN_vkCreateEvent                      vkCreateEvent                      = 0;
         PFN_vkDestroyEvent                     vkDestroyEvent                     = 0;
         PFN_vkGetEventStatus                   vkGetEventStatus                   = 0;
         PFN_vkSetEvent                         vkSetEvent                         = 0;
         PFN_vkResetEvent                       vkResetEvent                       = 0;
+        PFN_vkCreateQueryPool                  vkCreateQueryPool                  = 0;
+        PFN_vkDestroyQueryPool                 vkDestroyQueryPool                 = 0;
+        PFN_vkGetQueryPoolResults              vkGetQueryPoolResults              = 0;
+        PFN_vkCreateBuffer                     vkCreateBuffer                     = 0;
+        PFN_vkDestroyBuffer                    vkDestroyBuffer                    = 0;
         PFN_vkCreateBufferView                 vkCreateBufferView                 = 0;
         PFN_vkDestroyBufferView                vkDestroyBufferView                = 0;
+        PFN_vkCreateImage                      vkCreateImage                      = 0;
+        PFN_vkDestroyImage                     vkDestroyImage                     = 0;
+        PFN_vkGetImageSubresourceLayout        vkGetImageSubresourceLayout        = 0;
+        PFN_vkCreateImageView                  vkCreateImageView                  = 0;
+        PFN_vkDestroyImageView                 vkDestroyImageView                 = 0;
         PFN_vkCreateShaderModule               vkCreateShaderModule               = 0;
         PFN_vkDestroyShaderModule              vkDestroyShaderModule              = 0;
         PFN_vkCreatePipelineCache              vkCreatePipelineCache              = 0;
         PFN_vkDestroyPipelineCache             vkDestroyPipelineCache             = 0;
         PFN_vkGetPipelineCacheData             vkGetPipelineCacheData             = 0;
         PFN_vkMergePipelineCaches              vkMergePipelineCaches              = 0;
+        PFN_vkCreateGraphicsPipelines          vkCreateGraphicsPipelines          = 0;
         PFN_vkCreateComputePipelines           vkCreateComputePipelines           = 0;
         PFN_vkDestroyPipeline                  vkDestroyPipeline                  = 0;
         PFN_vkCreatePipelineLayout             vkCreatePipelineLayout             = 0;
@@ -2081,21 +1769,20 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkAllocateDescriptorSets           vkAllocateDescriptorSets           = 0;
         PFN_vkFreeDescriptorSets               vkFreeDescriptorSets               = 0;
         PFN_vkUpdateDescriptorSets             vkUpdateDescriptorSets             = 0;
-        PFN_vkCmdBindPipeline                  vkCmdBindPipeline                  = 0;
-        PFN_vkCmdBindDescriptorSets            vkCmdBindDescriptorSets            = 0;
-        PFN_vkCmdClearColorImage               vkCmdClearColorImage               = 0;
-        PFN_vkCmdDispatch                      vkCmdDispatch                      = 0;
-        PFN_vkCmdDispatchIndirect              vkCmdDispatchIndirect              = 0;
-        PFN_vkCmdSetEvent                      vkCmdSetEvent                      = 0;
-        PFN_vkCmdResetEvent                    vkCmdResetEvent                    = 0;
-        PFN_vkCmdWaitEvents                    vkCmdWaitEvents                    = 0;
-        PFN_vkCmdPushConstants                 vkCmdPushConstants                 = 0;
-        PFN_vkCreateGraphicsPipelines          vkCreateGraphicsPipelines          = 0;
         PFN_vkCreateFramebuffer                vkCreateFramebuffer                = 0;
         PFN_vkDestroyFramebuffer               vkDestroyFramebuffer               = 0;
         PFN_vkCreateRenderPass                 vkCreateRenderPass                 = 0;
         PFN_vkDestroyRenderPass                vkDestroyRenderPass                = 0;
         PFN_vkGetRenderAreaGranularity         vkGetRenderAreaGranularity         = 0;
+        PFN_vkCreateCommandPool                vkCreateCommandPool                = 0;
+        PFN_vkDestroyCommandPool               vkDestroyCommandPool               = 0;
+        PFN_vkResetCommandPool                 vkResetCommandPool                 = 0;
+        PFN_vkAllocateCommandBuffers           vkAllocateCommandBuffers           = 0;
+        PFN_vkFreeCommandBuffers               vkFreeCommandBuffers               = 0;
+        PFN_vkBeginCommandBuffer               vkBeginCommandBuffer               = 0;
+        PFN_vkEndCommandBuffer                 vkEndCommandBuffer                 = 0;
+        PFN_vkResetCommandBuffer               vkResetCommandBuffer               = 0;
+        PFN_vkCmdBindPipeline                  vkCmdBindPipeline                  = 0;
         PFN_vkCmdSetViewport                   vkCmdSetViewport                   = 0;
         PFN_vkCmdSetScissor                    vkCmdSetScissor                    = 0;
         PFN_vkCmdSetLineWidth                  vkCmdSetLineWidth                  = 0;
@@ -2105,39 +1792,66 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdSetStencilCompareMask         vkCmdSetStencilCompareMask         = 0;
         PFN_vkCmdSetStencilWriteMask           vkCmdSetStencilWriteMask           = 0;
         PFN_vkCmdSetStencilReference           vkCmdSetStencilReference           = 0;
+        PFN_vkCmdBindDescriptorSets            vkCmdBindDescriptorSets            = 0;
         PFN_vkCmdBindIndexBuffer               vkCmdBindIndexBuffer               = 0;
         PFN_vkCmdBindVertexBuffers             vkCmdBindVertexBuffers             = 0;
         PFN_vkCmdDraw                          vkCmdDraw                          = 0;
         PFN_vkCmdDrawIndexed                   vkCmdDrawIndexed                   = 0;
         PFN_vkCmdDrawIndirect                  vkCmdDrawIndirect                  = 0;
         PFN_vkCmdDrawIndexedIndirect           vkCmdDrawIndexedIndirect           = 0;
+        PFN_vkCmdDispatch                      vkCmdDispatch                      = 0;
+        PFN_vkCmdDispatchIndirect              vkCmdDispatchIndirect              = 0;
+        PFN_vkCmdCopyBuffer                    vkCmdCopyBuffer                    = 0;
+        PFN_vkCmdCopyImage                     vkCmdCopyImage                     = 0;
         PFN_vkCmdBlitImage                     vkCmdBlitImage                     = 0;
+        PFN_vkCmdCopyBufferToImage             vkCmdCopyBufferToImage             = 0;
+        PFN_vkCmdCopyImageToBuffer             vkCmdCopyImageToBuffer             = 0;
+        PFN_vkCmdUpdateBuffer                  vkCmdUpdateBuffer                  = 0;
+        PFN_vkCmdFillBuffer                    vkCmdFillBuffer                    = 0;
+        PFN_vkCmdClearColorImage               vkCmdClearColorImage               = 0;
         PFN_vkCmdClearDepthStencilImage        vkCmdClearDepthStencilImage        = 0;
         PFN_vkCmdClearAttachments              vkCmdClearAttachments              = 0;
         PFN_vkCmdResolveImage                  vkCmdResolveImage                  = 0;
+        PFN_vkCmdSetEvent                      vkCmdSetEvent                      = 0;
+        PFN_vkCmdResetEvent                    vkCmdResetEvent                    = 0;
+        PFN_vkCmdWaitEvents                    vkCmdWaitEvents                    = 0;
+        PFN_vkCmdPipelineBarrier               vkCmdPipelineBarrier               = 0;
+        PFN_vkCmdBeginQuery                    vkCmdBeginQuery                    = 0;
+        PFN_vkCmdEndQuery                      vkCmdEndQuery                      = 0;
+        PFN_vkCmdResetQueryPool                vkCmdResetQueryPool                = 0;
+        PFN_vkCmdWriteTimestamp                vkCmdWriteTimestamp                = 0;
+        PFN_vkCmdCopyQueryPoolResults          vkCmdCopyQueryPoolResults          = 0;
+        PFN_vkCmdPushConstants                 vkCmdPushConstants                 = 0;
         PFN_vkCmdBeginRenderPass               vkCmdBeginRenderPass               = 0;
         PFN_vkCmdNextSubpass                   vkCmdNextSubpass                   = 0;
         PFN_vkCmdEndRenderPass                 vkCmdEndRenderPass                 = 0;
+        PFN_vkCmdExecuteCommands               vkCmdExecuteCommands               = 0;
 
         //=== VK_VERSION_1_1 ===
         PFN_vkBindBufferMemory2                 vkBindBufferMemory2                 = 0;
         PFN_vkBindImageMemory2                  vkBindImageMemory2                  = 0;
         PFN_vkGetDeviceGroupPeerMemoryFeatures  vkGetDeviceGroupPeerMemoryFeatures  = 0;
         PFN_vkCmdSetDeviceMask                  vkCmdSetDeviceMask                  = 0;
+        PFN_vkCmdDispatchBase                   vkCmdDispatchBase                   = 0;
         PFN_vkGetImageMemoryRequirements2       vkGetImageMemoryRequirements2       = 0;
         PFN_vkGetBufferMemoryRequirements2      vkGetBufferMemoryRequirements2      = 0;
         PFN_vkGetImageSparseMemoryRequirements2 vkGetImageSparseMemoryRequirements2 = 0;
         PFN_vkTrimCommandPool                   vkTrimCommandPool                   = 0;
         PFN_vkGetDeviceQueue2                   vkGetDeviceQueue2                   = 0;
-        PFN_vkCmdDispatchBase                   vkCmdDispatchBase                   = 0;
+        PFN_vkCreateSamplerYcbcrConversion      vkCreateSamplerYcbcrConversion      = 0;
+        PFN_vkDestroySamplerYcbcrConversion     vkDestroySamplerYcbcrConversion     = 0;
         PFN_vkCreateDescriptorUpdateTemplate    vkCreateDescriptorUpdateTemplate    = 0;
         PFN_vkDestroyDescriptorUpdateTemplate   vkDestroyDescriptorUpdateTemplate   = 0;
         PFN_vkUpdateDescriptorSetWithTemplate   vkUpdateDescriptorSetWithTemplate   = 0;
         PFN_vkGetDescriptorSetLayoutSupport     vkGetDescriptorSetLayoutSupport     = 0;
-        PFN_vkCreateSamplerYcbcrConversion      vkCreateSamplerYcbcrConversion      = 0;
-        PFN_vkDestroySamplerYcbcrConversion     vkDestroySamplerYcbcrConversion     = 0;
 
         //=== VK_VERSION_1_2 ===
+        PFN_vkCmdDrawIndirectCount                vkCmdDrawIndirectCount                = 0;
+        PFN_vkCmdDrawIndexedIndirectCount         vkCmdDrawIndexedIndirectCount         = 0;
+        PFN_vkCreateRenderPass2                   vkCreateRenderPass2                   = 0;
+        PFN_vkCmdBeginRenderPass2                 vkCmdBeginRenderPass2                 = 0;
+        PFN_vkCmdNextSubpass2                     vkCmdNextSubpass2                     = 0;
+        PFN_vkCmdEndRenderPass2                   vkCmdEndRenderPass2                   = 0;
         PFN_vkResetQueryPool                      vkResetQueryPool                      = 0;
         PFN_vkGetSemaphoreCounterValue            vkGetSemaphoreCounterValue            = 0;
         PFN_vkWaitSemaphores                      vkWaitSemaphores                      = 0;
@@ -2145,18 +1859,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkGetBufferDeviceAddress              vkGetBufferDeviceAddress              = 0;
         PFN_vkGetBufferOpaqueCaptureAddress       vkGetBufferOpaqueCaptureAddress       = 0;
         PFN_vkGetDeviceMemoryOpaqueCaptureAddress vkGetDeviceMemoryOpaqueCaptureAddress = 0;
-        PFN_vkCmdDrawIndirectCount                vkCmdDrawIndirectCount                = 0;
-        PFN_vkCmdDrawIndexedIndirectCount         vkCmdDrawIndexedIndirectCount         = 0;
-        PFN_vkCreateRenderPass2                   vkCreateRenderPass2                   = 0;
-        PFN_vkCmdBeginRenderPass2                 vkCmdBeginRenderPass2                 = 0;
-        PFN_vkCmdNextSubpass2                     vkCmdNextSubpass2                     = 0;
-        PFN_vkCmdEndRenderPass2                   vkCmdEndRenderPass2                   = 0;
 
         //=== VK_VERSION_1_3 ===
         PFN_vkCreatePrivateDataSlot                  vkCreatePrivateDataSlot                  = 0;
         PFN_vkDestroyPrivateDataSlot                 vkDestroyPrivateDataSlot                 = 0;
         PFN_vkSetPrivateData                         vkSetPrivateData                         = 0;
         PFN_vkGetPrivateData                         vkGetPrivateData                         = 0;
+        PFN_vkCmdSetEvent2                           vkCmdSetEvent2                           = 0;
+        PFN_vkCmdResetEvent2                         vkCmdResetEvent2                         = 0;
+        PFN_vkCmdWaitEvents2                         vkCmdWaitEvents2                         = 0;
         PFN_vkCmdPipelineBarrier2                    vkCmdPipelineBarrier2                    = 0;
         PFN_vkCmdWriteTimestamp2                     vkCmdWriteTimestamp2                     = 0;
         PFN_vkQueueSubmit2                           vkQueueSubmit2                           = 0;
@@ -2164,12 +1875,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdCopyImage2                          vkCmdCopyImage2                          = 0;
         PFN_vkCmdCopyBufferToImage2                  vkCmdCopyBufferToImage2                  = 0;
         PFN_vkCmdCopyImageToBuffer2                  vkCmdCopyImageToBuffer2                  = 0;
-        PFN_vkGetDeviceBufferMemoryRequirements      vkGetDeviceBufferMemoryRequirements      = 0;
-        PFN_vkGetDeviceImageMemoryRequirements       vkGetDeviceImageMemoryRequirements       = 0;
-        PFN_vkGetDeviceImageSparseMemoryRequirements vkGetDeviceImageSparseMemoryRequirements = 0;
-        PFN_vkCmdSetEvent2                           vkCmdSetEvent2                           = 0;
-        PFN_vkCmdResetEvent2                         vkCmdResetEvent2                         = 0;
-        PFN_vkCmdWaitEvents2                         vkCmdWaitEvents2                         = 0;
         PFN_vkCmdBlitImage2                          vkCmdBlitImage2                          = 0;
         PFN_vkCmdResolveImage2                       vkCmdResolveImage2                       = 0;
         PFN_vkCmdBeginRendering                      vkCmdBeginRendering                      = 0;
@@ -2189,27 +1894,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdSetRasterizerDiscardEnable          vkCmdSetRasterizerDiscardEnable          = 0;
         PFN_vkCmdSetDepthBiasEnable                  vkCmdSetDepthBiasEnable                  = 0;
         PFN_vkCmdSetPrimitiveRestartEnable           vkCmdSetPrimitiveRestartEnable           = 0;
-
-        //=== VK_VERSION_1_4 ===
-        PFN_vkMapMemory2                            vkMapMemory2                            = 0;
-        PFN_vkUnmapMemory2                          vkUnmapMemory2                          = 0;
-        PFN_vkGetDeviceImageSubresourceLayout       vkGetDeviceImageSubresourceLayout       = 0;
-        PFN_vkGetImageSubresourceLayout2            vkGetImageSubresourceLayout2            = 0;
-        PFN_vkCopyMemoryToImage                     vkCopyMemoryToImage                     = 0;
-        PFN_vkCopyImageToMemory                     vkCopyImageToMemory                     = 0;
-        PFN_vkCopyImageToImage                      vkCopyImageToImage                      = 0;
-        PFN_vkTransitionImageLayout                 vkTransitionImageLayout                 = 0;
-        PFN_vkCmdPushDescriptorSet                  vkCmdPushDescriptorSet                  = 0;
-        PFN_vkCmdPushDescriptorSetWithTemplate      vkCmdPushDescriptorSetWithTemplate      = 0;
-        PFN_vkCmdBindDescriptorSets2                vkCmdBindDescriptorSets2                = 0;
-        PFN_vkCmdPushConstants2                     vkCmdPushConstants2                     = 0;
-        PFN_vkCmdPushDescriptorSet2                 vkCmdPushDescriptorSet2                 = 0;
-        PFN_vkCmdPushDescriptorSetWithTemplate2     vkCmdPushDescriptorSetWithTemplate2     = 0;
-        PFN_vkCmdSetLineStipple                     vkCmdSetLineStipple                     = 0;
-        PFN_vkCmdBindIndexBuffer2                   vkCmdBindIndexBuffer2                   = 0;
-        PFN_vkGetRenderingAreaGranularity           vkGetRenderingAreaGranularity           = 0;
-        PFN_vkCmdSetRenderingAttachmentLocations    vkCmdSetRenderingAttachmentLocations    = 0;
-        PFN_vkCmdSetRenderingInputAttachmentIndices vkCmdSetRenderingInputAttachmentIndices = 0;
+        PFN_vkGetDeviceBufferMemoryRequirements      vkGetDeviceBufferMemoryRequirements      = 0;
+        PFN_vkGetDeviceImageMemoryRequirements       vkGetDeviceImageMemoryRequirements       = 0;
+        PFN_vkGetDeviceImageSparseMemoryRequirements vkGetDeviceImageSparseMemoryRequirements = 0;
 
         //=== VK_KHR_swapchain ===
         PFN_vkCreateSwapchainKHR                   vkCreateSwapchainKHR                   = 0;
@@ -2262,10 +1949,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdCuLaunchKernelNVX vkCmdCuLaunchKernelNVX = 0;
 
         //=== VK_NVX_image_view_handle ===
-        PFN_vkGetImageViewHandleNVX                 vkGetImageViewHandleNVX                 = 0;
-        PFN_vkGetImageViewHandle64NVX               vkGetImageViewHandle64NVX               = 0;
-        PFN_vkGetImageViewAddressNVX                vkGetImageViewAddressNVX                = 0;
-        PFN_vkGetDeviceCombinedImageSamplerIndexNVX vkGetDeviceCombinedImageSamplerIndexNVX = 0;
+        PFN_vkGetImageViewHandleNVX  vkGetImageViewHandleNVX  = 0;
+        PFN_vkGetImageViewAddressNVX vkGetImageViewAddressNVX = 0;
 
         //=== VK_AMD_draw_indirect_count ===
         PFN_vkCmdDrawIndirectCountAMD        vkCmdDrawIndirectCountAMD        = 0;
@@ -2321,6 +2006,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
         //=== VK_KHR_push_descriptor ===
         PFN_vkCmdPushDescriptorSetKHR             vkCmdPushDescriptorSetKHR             = 0;
+        PFN_vkCmdPushDescriptorSetWithTemplateKHR vkCmdPushDescriptorSetWithTemplateKHR = 0;
         PFN_vkCmdPushDescriptorSetWithTemplateKHR vkCmdPushDescriptorSetWithTemplateKHR = 0;
 
         //=== VK_EXT_conditional_rendering ===
@@ -2417,17 +2103,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_dummy vkCmdDispatchGraphIndirectCountAMDX_placeholder        = 0;
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-        //=== VK_EXT_descriptor_heap ===
-        PFN_vkWriteSamplerDescriptorsEXT     vkWriteSamplerDescriptorsEXT     = 0;
-        PFN_vkWriteResourceDescriptorsEXT    vkWriteResourceDescriptorsEXT    = 0;
-        PFN_vkCmdBindSamplerHeapEXT          vkCmdBindSamplerHeapEXT          = 0;
-        PFN_vkCmdBindResourceHeapEXT         vkCmdBindResourceHeapEXT         = 0;
-        PFN_vkCmdPushDataEXT                 vkCmdPushDataEXT                 = 0;
-        PFN_vkGetImageOpaqueCaptureDataEXT   vkGetImageOpaqueCaptureDataEXT   = 0;
-        PFN_vkRegisterCustomBorderColorEXT   vkRegisterCustomBorderColorEXT   = 0;
-        PFN_vkUnregisterCustomBorderColorEXT vkUnregisterCustomBorderColorEXT = 0;
-        PFN_vkGetTensorOpaqueCaptureDataARM  vkGetTensorOpaqueCaptureDataARM  = 0;
-
         //=== VK_EXT_sample_locations ===
         PFN_vkCmdSetSampleLocationsEXT vkCmdSetSampleLocationsEXT = 0;
 
@@ -2510,8 +2185,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkGetMemoryHostPointerPropertiesEXT vkGetMemoryHostPointerPropertiesEXT = 0;
 
         //=== VK_AMD_buffer_marker ===
-        PFN_vkCmdWriteBufferMarkerAMD  vkCmdWriteBufferMarkerAMD  = 0;
-        PFN_vkCmdWriteBufferMarker2AMD vkCmdWriteBufferMarker2AMD = 0;
+        PFN_vkCmdWriteBufferMarkerAMD vkCmdWriteBufferMarkerAMD = 0;
 
         //=== VK_EXT_calibrated_timestamps ===
         PFN_vkGetCalibratedTimestampsEXT vkGetCalibratedTimestampsEXT = 0;
@@ -2526,20 +2200,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdSetExclusiveScissorNV       vkCmdSetExclusiveScissorNV       = 0;
 
         //=== VK_NV_device_diagnostic_checkpoints ===
-        PFN_vkCmdSetCheckpointNV        vkCmdSetCheckpointNV        = 0;
-        PFN_vkGetQueueCheckpointDataNV  vkGetQueueCheckpointDataNV  = 0;
-        PFN_vkGetQueueCheckpointData2NV vkGetQueueCheckpointData2NV = 0;
+        PFN_vkCmdSetCheckpointNV       vkCmdSetCheckpointNV       = 0;
+        PFN_vkGetQueueCheckpointDataNV vkGetQueueCheckpointDataNV = 0;
 
         //=== VK_KHR_timeline_semaphore ===
         PFN_vkGetSemaphoreCounterValueKHR vkGetSemaphoreCounterValueKHR = 0;
         PFN_vkWaitSemaphoresKHR           vkWaitSemaphoresKHR           = 0;
         PFN_vkSignalSemaphoreKHR          vkSignalSemaphoreKHR          = 0;
-
-        //=== VK_EXT_present_timing ===
-        PFN_vkSetSwapchainPresentTimingQueueSizeEXT vkSetSwapchainPresentTimingQueueSizeEXT = 0;
-        PFN_vkGetSwapchainTimingPropertiesEXT       vkGetSwapchainTimingPropertiesEXT       = 0;
-        PFN_vkGetSwapchainTimeDomainPropertiesEXT   vkGetSwapchainTimeDomainPropertiesEXT   = 0;
-        PFN_vkGetPastPresentationTimingEXT          vkGetPastPresentationTimingEXT          = 0;
 
         //=== VK_INTEL_performance_query ===
         PFN_vkInitializePerformanceApiINTEL         vkInitializePerformanceApiINTEL         = 0;
@@ -2558,10 +2225,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         //=== VK_KHR_fragment_shading_rate ===
         PFN_vkCmdSetFragmentShadingRateKHR vkCmdSetFragmentShadingRateKHR = 0;
 
-        //=== VK_KHR_dynamic_rendering_local_read ===
-        PFN_vkCmdSetRenderingAttachmentLocationsKHR    vkCmdSetRenderingAttachmentLocationsKHR    = 0;
-        PFN_vkCmdSetRenderingInputAttachmentIndicesKHR vkCmdSetRenderingInputAttachmentIndicesKHR = 0;
-
         //=== VK_EXT_buffer_device_address ===
         PFN_vkGetBufferDeviceAddressEXT vkGetBufferDeviceAddressEXT = 0;
 
@@ -2573,9 +2236,11 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkAcquireFullScreenExclusiveModeEXT     vkAcquireFullScreenExclusiveModeEXT     = 0;
         PFN_vkReleaseFullScreenExclusiveModeEXT     vkReleaseFullScreenExclusiveModeEXT     = 0;
         PFN_vkGetDeviceGroupSurfacePresentModes2EXT vkGetDeviceGroupSurfacePresentModes2EXT = 0;
+        PFN_vkGetDeviceGroupSurfacePresentModes2EXT vkGetDeviceGroupSurfacePresentModes2EXT = 0;
 #  else
         PFN_dummy vkAcquireFullScreenExclusiveModeEXT_placeholder     = 0;
         PFN_dummy vkReleaseFullScreenExclusiveModeEXT_placeholder     = 0;
+        PFN_dummy vkGetDeviceGroupSurfacePresentModes2EXT_placeholder = 0;
         PFN_dummy vkGetDeviceGroupSurfacePresentModes2EXT_placeholder = 0;
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
@@ -2668,11 +2333,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_dummy vkCmdCudaLaunchKernelNV_placeholder = 0;
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-        //=== VK_QCOM_tile_shading ===
-        PFN_vkCmdDispatchTileQCOM          vkCmdDispatchTileQCOM          = 0;
-        PFN_vkCmdBeginPerTileExecutionQCOM vkCmdBeginPerTileExecutionQCOM = 0;
-        PFN_vkCmdEndPerTileExecutionQCOM   vkCmdEndPerTileExecutionQCOM   = 0;
-
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
         //=== VK_EXT_metal_objects ===
         PFN_vkExportMetalObjectsEXT vkExportMetalObjectsEXT = 0;
@@ -2681,12 +2341,14 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
         //=== VK_KHR_synchronization2 ===
-        PFN_vkCmdSetEvent2KHR        vkCmdSetEvent2KHR        = 0;
-        PFN_vkCmdResetEvent2KHR      vkCmdResetEvent2KHR      = 0;
-        PFN_vkCmdWaitEvents2KHR      vkCmdWaitEvents2KHR      = 0;
-        PFN_vkCmdPipelineBarrier2KHR vkCmdPipelineBarrier2KHR = 0;
-        PFN_vkCmdWriteTimestamp2KHR  vkCmdWriteTimestamp2KHR  = 0;
-        PFN_vkQueueSubmit2KHR        vkQueueSubmit2KHR        = 0;
+        PFN_vkCmdSetEvent2KHR           vkCmdSetEvent2KHR           = 0;
+        PFN_vkCmdResetEvent2KHR         vkCmdResetEvent2KHR         = 0;
+        PFN_vkCmdWaitEvents2KHR         vkCmdWaitEvents2KHR         = 0;
+        PFN_vkCmdPipelineBarrier2KHR    vkCmdPipelineBarrier2KHR    = 0;
+        PFN_vkCmdWriteTimestamp2KHR     vkCmdWriteTimestamp2KHR     = 0;
+        PFN_vkQueueSubmit2KHR           vkQueueSubmit2KHR           = 0;
+        PFN_vkCmdWriteBufferMarker2AMD  vkCmdWriteBufferMarker2AMD  = 0;
+        PFN_vkGetQueueCheckpointData2NV vkGetQueueCheckpointData2NV = 0;
 
         //=== VK_EXT_descriptor_buffer ===
         PFN_vkGetDescriptorSetLayoutSizeEXT                          vkGetDescriptorSetLayoutSizeEXT                          = 0;
@@ -2831,16 +2493,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdUpdatePipelineIndirectBufferNV       vkCmdUpdatePipelineIndirectBufferNV       = 0;
         PFN_vkGetPipelineIndirectDeviceAddressNV      vkGetPipelineIndirectDeviceAddressNV      = 0;
 
-#  if defined( VK_USE_PLATFORM_OHOS )
-        //=== VK_OHOS_external_memory ===
-        PFN_vkGetNativeBufferPropertiesOHOS vkGetNativeBufferPropertiesOHOS = 0;
-        PFN_vkGetMemoryNativeBufferOHOS     vkGetMemoryNativeBufferOHOS     = 0;
-#  else
-        PFN_dummy vkGetNativeBufferPropertiesOHOS_placeholder = 0;
-        PFN_dummy vkGetMemoryNativeBufferOHOS_placeholder     = 0;
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
         //=== VK_EXT_extended_dynamic_state3 ===
+        PFN_vkCmdSetTessellationDomainOriginEXT         vkCmdSetTessellationDomainOriginEXT         = 0;
         PFN_vkCmdSetDepthClampEnableEXT                 vkCmdSetDepthClampEnableEXT                 = 0;
         PFN_vkCmdSetPolygonModeEXT                      vkCmdSetPolygonModeEXT                      = 0;
         PFN_vkCmdSetRasterizationSamplesEXT             vkCmdSetRasterizationSamplesEXT             = 0;
@@ -2851,7 +2505,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdSetColorBlendEnableEXT                 vkCmdSetColorBlendEnableEXT                 = 0;
         PFN_vkCmdSetColorBlendEquationEXT               vkCmdSetColorBlendEquationEXT               = 0;
         PFN_vkCmdSetColorWriteMaskEXT                   vkCmdSetColorWriteMaskEXT                   = 0;
-        PFN_vkCmdSetTessellationDomainOriginEXT         vkCmdSetTessellationDomainOriginEXT         = 0;
         PFN_vkCmdSetRasterizationStreamEXT              vkCmdSetRasterizationStreamEXT              = 0;
         PFN_vkCmdSetConservativeRasterizationModeEXT    vkCmdSetConservativeRasterizationModeEXT    = 0;
         PFN_vkCmdSetExtraPrimitiveOverestimationSizeEXT vkCmdSetExtraPrimitiveOverestimationSizeEXT = 0;
@@ -2873,18 +2526,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdSetRepresentativeFragmentTestEnableNV  vkCmdSetRepresentativeFragmentTestEnableNV  = 0;
         PFN_vkCmdSetCoverageReductionModeNV             vkCmdSetCoverageReductionModeNV             = 0;
 
-        //=== VK_ARM_tensors ===
-        PFN_vkCreateTensorARM                             vkCreateTensorARM                             = 0;
-        PFN_vkDestroyTensorARM                            vkDestroyTensorARM                            = 0;
-        PFN_vkCreateTensorViewARM                         vkCreateTensorViewARM                         = 0;
-        PFN_vkDestroyTensorViewARM                        vkDestroyTensorViewARM                        = 0;
-        PFN_vkGetTensorMemoryRequirementsARM              vkGetTensorMemoryRequirementsARM              = 0;
-        PFN_vkBindTensorMemoryARM                         vkBindTensorMemoryARM                         = 0;
-        PFN_vkGetDeviceTensorMemoryRequirementsARM        vkGetDeviceTensorMemoryRequirementsARM        = 0;
-        PFN_vkCmdCopyTensorARM                            vkCmdCopyTensorARM                            = 0;
-        PFN_vkGetTensorOpaqueCaptureDescriptorDataARM     vkGetTensorOpaqueCaptureDescriptorDataARM     = 0;
-        PFN_vkGetTensorViewOpaqueCaptureDescriptorDataARM vkGetTensorViewOpaqueCaptureDescriptorDataARM = 0;
-
         //=== VK_EXT_shader_module_identifier ===
         PFN_vkGetShaderModuleIdentifierEXT           vkGetShaderModuleIdentifierEXT           = 0;
         PFN_vkGetShaderModuleCreateInfoIdentifierEXT vkGetShaderModuleCreateInfoIdentifierEXT = 0;
@@ -2901,36 +2542,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkGetDeviceImageSubresourceLayoutKHR vkGetDeviceImageSubresourceLayoutKHR = 0;
         PFN_vkGetImageSubresourceLayout2KHR      vkGetImageSubresourceLayout2KHR      = 0;
 
-        //=== VK_AMD_anti_lag ===
-        PFN_vkAntiLagUpdateAMD vkAntiLagUpdateAMD = 0;
-
-        //=== VK_KHR_present_wait2 ===
-        PFN_vkWaitForPresent2KHR vkWaitForPresent2KHR = 0;
-
         //=== VK_EXT_shader_object ===
-        PFN_vkCreateShadersEXT         vkCreateShadersEXT         = 0;
-        PFN_vkDestroyShaderEXT         vkDestroyShaderEXT         = 0;
-        PFN_vkGetShaderBinaryDataEXT   vkGetShaderBinaryDataEXT   = 0;
-        PFN_vkCmdBindShadersEXT        vkCmdBindShadersEXT        = 0;
-        PFN_vkCmdSetDepthClampRangeEXT vkCmdSetDepthClampRangeEXT = 0;
-
-        //=== VK_KHR_pipeline_binary ===
-        PFN_vkCreatePipelineBinariesKHR      vkCreatePipelineBinariesKHR      = 0;
-        PFN_vkDestroyPipelineBinaryKHR       vkDestroyPipelineBinaryKHR       = 0;
-        PFN_vkGetPipelineKeyKHR              vkGetPipelineKeyKHR              = 0;
-        PFN_vkGetPipelineBinaryDataKHR       vkGetPipelineBinaryDataKHR       = 0;
-        PFN_vkReleaseCapturedPipelineDataKHR vkReleaseCapturedPipelineDataKHR = 0;
+        PFN_vkCreateShadersEXT       vkCreateShadersEXT       = 0;
+        PFN_vkDestroyShaderEXT       vkDestroyShaderEXT       = 0;
+        PFN_vkGetShaderBinaryDataEXT vkGetShaderBinaryDataEXT = 0;
+        PFN_vkCmdBindShadersEXT      vkCmdBindShadersEXT      = 0;
 
         //=== VK_QCOM_tile_properties ===
         PFN_vkGetFramebufferTilePropertiesQCOM      vkGetFramebufferTilePropertiesQCOM      = 0;
         PFN_vkGetDynamicRenderingTilePropertiesQCOM vkGetDynamicRenderingTilePropertiesQCOM = 0;
-
-        //=== VK_KHR_swapchain_maintenance1 ===
-        PFN_vkReleaseSwapchainImagesKHR vkReleaseSwapchainImagesKHR = 0;
-
-        //=== VK_NV_cooperative_vector ===
-        PFN_vkConvertCooperativeVectorMatrixNV    vkConvertCooperativeVectorMatrixNV    = 0;
-        PFN_vkCmdConvertCooperativeVectorMatrixNV vkCmdConvertCooperativeVectorMatrixNV = 0;
 
         //=== VK_NV_low_latency2 ===
         PFN_vkSetLatencySleepModeNV  vkSetLatencySleepModeNV  = 0;
@@ -2938,17 +2558,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkSetLatencyMarkerNV     vkSetLatencyMarkerNV     = 0;
         PFN_vkGetLatencyTimingsNV    vkGetLatencyTimingsNV    = 0;
         PFN_vkQueueNotifyOutOfBandNV vkQueueNotifyOutOfBandNV = 0;
-
-        //=== VK_ARM_data_graph ===
-        PFN_vkCreateDataGraphPipelinesARM                         vkCreateDataGraphPipelinesARM                         = 0;
-        PFN_vkCreateDataGraphPipelineSessionARM                   vkCreateDataGraphPipelineSessionARM                   = 0;
-        PFN_vkGetDataGraphPipelineSessionBindPointRequirementsARM vkGetDataGraphPipelineSessionBindPointRequirementsARM = 0;
-        PFN_vkGetDataGraphPipelineSessionMemoryRequirementsARM    vkGetDataGraphPipelineSessionMemoryRequirementsARM    = 0;
-        PFN_vkBindDataGraphPipelineSessionMemoryARM               vkBindDataGraphPipelineSessionMemoryARM               = 0;
-        PFN_vkDestroyDataGraphPipelineSessionARM                  vkDestroyDataGraphPipelineSessionARM                  = 0;
-        PFN_vkCmdDispatchDataGraphARM                             vkCmdDispatchDataGraphARM                             = 0;
-        PFN_vkGetDataGraphPipelineAvailablePropertiesARM          vkGetDataGraphPipelineAvailablePropertiesARM          = 0;
-        PFN_vkGetDataGraphPipelinePropertiesARM                   vkGetDataGraphPipelinePropertiesARM                   = 0;
 
         //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
         PFN_vkCmdSetAttachmentFeedbackLoopEnableEXT vkCmdSetAttachmentFeedbackLoopEnableEXT = 0;
@@ -2960,9 +2569,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_dummy vkGetScreenBufferPropertiesQNX_placeholder = 0;
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-        //=== VK_KHR_line_rasterization ===
-        PFN_vkCmdSetLineStippleKHR vkCmdSetLineStippleKHR = 0;
-
         //=== VK_KHR_calibrated_timestamps ===
         PFN_vkGetCalibratedTimestampsKHR vkGetCalibratedTimestampsKHR = 0;
 
@@ -2973,62 +2579,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         PFN_vkCmdPushDescriptorSetWithTemplate2KHR        vkCmdPushDescriptorSetWithTemplate2KHR        = 0;
         PFN_vkCmdSetDescriptorBufferOffsets2EXT           vkCmdSetDescriptorBufferOffsets2EXT           = 0;
         PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT vkCmdBindDescriptorBufferEmbeddedSamplers2EXT = 0;
-
-        //=== VK_QCOM_tile_memory_heap ===
-        PFN_vkCmdBindTileMemoryQCOM vkCmdBindTileMemoryQCOM = 0;
-
-        //=== VK_KHR_copy_memory_indirect ===
-        PFN_vkCmdCopyMemoryIndirectKHR        vkCmdCopyMemoryIndirectKHR        = 0;
-        PFN_vkCmdCopyMemoryToImageIndirectKHR vkCmdCopyMemoryToImageIndirectKHR = 0;
-
-        //=== VK_EXT_memory_decompression ===
-        PFN_vkCmdDecompressMemoryEXT              vkCmdDecompressMemoryEXT              = 0;
-        PFN_vkCmdDecompressMemoryIndirectCountEXT vkCmdDecompressMemoryIndirectCountEXT = 0;
-
-        //=== VK_NV_external_compute_queue ===
-        PFN_vkCreateExternalComputeQueueNV  vkCreateExternalComputeQueueNV  = 0;
-        PFN_vkDestroyExternalComputeQueueNV vkDestroyExternalComputeQueueNV = 0;
-        PFN_vkGetExternalComputeQueueDataNV vkGetExternalComputeQueueDataNV = 0;
-
-        //=== VK_NV_cluster_acceleration_structure ===
-        PFN_vkGetClusterAccelerationStructureBuildSizesNV    vkGetClusterAccelerationStructureBuildSizesNV    = 0;
-        PFN_vkCmdBuildClusterAccelerationStructureIndirectNV vkCmdBuildClusterAccelerationStructureIndirectNV = 0;
-
-        //=== VK_NV_partitioned_acceleration_structure ===
-        PFN_vkGetPartitionedAccelerationStructuresBuildSizesNV vkGetPartitionedAccelerationStructuresBuildSizesNV = 0;
-        PFN_vkCmdBuildPartitionedAccelerationStructuresNV      vkCmdBuildPartitionedAccelerationStructuresNV      = 0;
-
-        //=== VK_EXT_device_generated_commands ===
-        PFN_vkGetGeneratedCommandsMemoryRequirementsEXT vkGetGeneratedCommandsMemoryRequirementsEXT = 0;
-        PFN_vkCmdPreprocessGeneratedCommandsEXT         vkCmdPreprocessGeneratedCommandsEXT         = 0;
-        PFN_vkCmdExecuteGeneratedCommandsEXT            vkCmdExecuteGeneratedCommandsEXT            = 0;
-        PFN_vkCreateIndirectCommandsLayoutEXT           vkCreateIndirectCommandsLayoutEXT           = 0;
-        PFN_vkDestroyIndirectCommandsLayoutEXT          vkDestroyIndirectCommandsLayoutEXT          = 0;
-        PFN_vkCreateIndirectExecutionSetEXT             vkCreateIndirectExecutionSetEXT             = 0;
-        PFN_vkDestroyIndirectExecutionSetEXT            vkDestroyIndirectExecutionSetEXT            = 0;
-        PFN_vkUpdateIndirectExecutionSetPipelineEXT     vkUpdateIndirectExecutionSetPipelineEXT     = 0;
-        PFN_vkUpdateIndirectExecutionSetShaderEXT       vkUpdateIndirectExecutionSetShaderEXT       = 0;
-
-#  if defined( VK_USE_PLATFORM_METAL_EXT )
-        //=== VK_EXT_external_memory_metal ===
-        PFN_vkGetMemoryMetalHandleEXT           vkGetMemoryMetalHandleEXT           = 0;
-        PFN_vkGetMemoryMetalHandlePropertiesEXT vkGetMemoryMetalHandlePropertiesEXT = 0;
-#  else
-        PFN_dummy vkGetMemoryMetalHandleEXT_placeholder           = 0;
-        PFN_dummy vkGetMemoryMetalHandlePropertiesEXT_placeholder = 0;
-#  endif /*VK_USE_PLATFORM_METAL_EXT*/
-
-        //=== VK_EXT_fragment_density_map_offset ===
-        PFN_vkCmdEndRendering2EXT vkCmdEndRendering2EXT = 0;
-
-        //=== VK_EXT_custom_resolve ===
-        PFN_vkCmdBeginCustomResolveEXT vkCmdBeginCustomResolveEXT = 0;
-
-        //=== VK_KHR_maintenance10 ===
-        PFN_vkCmdEndRendering2KHR vkCmdEndRendering2KHR = 0;
-
-        //=== VK_NV_compute_occupancy_priority ===
-        PFN_vkCmdSetComputeOccupancyPriorityNV vkCmdSetComputeOccupancyPriorityNV = 0;
       };
     }  // namespace detail
 
@@ -3044,14 +2594,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     class DeviceMemory;
     class Fence;
     class Semaphore;
+    class Event;
     class QueryPool;
     class Buffer;
+    class BufferView;
     class Image;
     class ImageView;
-    class CommandPool;
-    class CommandBuffer;
-    class Event;
-    class BufferView;
     class ShaderModule;
     class PipelineCache;
     class Pipeline;
@@ -3062,10 +2610,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     class DescriptorSetLayout;
     class Framebuffer;
     class RenderPass;
+    class CommandPool;
+    class CommandBuffer;
 
     //=== VK_VERSION_1_1 ===
-    class DescriptorUpdateTemplate;
     class SamplerYcbcrConversion;
+    class DescriptorUpdateTemplate;
 
     //=== VK_VERSION_1_3 ===
     class PrivateDataSlot;
@@ -3096,9 +2646,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     //=== VK_EXT_debug_utils ===
     class DebugUtilsMessengerEXT;
-
-    //=== VK_EXT_descriptor_heap ===
-    class TensorARM;
 
     //=== VK_KHR_acceleration_structure ===
     class AccelerationStructureKHR;
@@ -3138,28 +2685,11 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     //=== VK_EXT_opacity_micromap ===
     class MicromapEXT;
 
-    //=== VK_ARM_tensors ===
-    class TensorARM;
-    class TensorViewARM;
-
     //=== VK_NV_optical_flow ===
     class OpticalFlowSessionNV;
 
     //=== VK_EXT_shader_object ===
     class ShaderEXT;
-
-    //=== VK_KHR_pipeline_binary ===
-    class PipelineBinaryKHR;
-
-    //=== VK_ARM_data_graph ===
-    class DataGraphPipelineSessionARM;
-
-    //=== VK_NV_external_compute_queue ===
-    class ExternalComputeQueueNV;
-
-    //=== VK_EXT_device_generated_commands ===
-    class IndirectCommandsLayoutEXT;
-    class IndirectExecutionSetEXT;
 
     //====================
     //=== RAII HANDLES ===
@@ -3535,24 +3065,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                 Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-#  if defined( VK_USE_PLATFORM_OHOS )
-      //=== VK_OHOS_surface ===
-
-      // wrapper function for command vkCreateSurfaceOHOS, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSurfaceOHOS.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<SurfaceKHR>::type
-        createSurfaceOHOS( SurfaceCreateInfoOHOS const &       createInfo,
-                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
-#  if defined( VK_USE_PLATFORM_UBM_SEC )
-      //=== VK_SEC_ubm_surface ===
-
-      // wrapper function for command vkCreateUbmSurfaceSEC, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateUbmSurfaceSEC.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<SurfaceKHR>::type
-        createUbmSurfaceSEC( UbmSurfaceCreateInfoSEC const &     createInfo,
-                             Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-#  endif /*VK_USE_PLATFORM_UBM_SEC*/
-
     private:
       VULKAN_HPP_NAMESPACE::Instance              m_instance  = {};
       AllocationCallbacks const *                 m_allocator = {};
@@ -3706,46 +3218,17 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2.html
       VULKAN_HPP_NODISCARD PhysicalDeviceFeatures2 getFeatures2() const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetPhysicalDeviceFeatures2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getFeatures2() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
-      void getProperties2( PhysicalDeviceProperties2 * pProperties ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetPhysicalDeviceProperties2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
       VULKAN_HPP_NODISCARD PhysicalDeviceProperties2 getProperties2() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getProperties2() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
-      void getFormatProperties2( Format format, FormatProperties2 * pFormatProperties ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
       VULKAN_HPP_NODISCARD FormatProperties2 getFormatProperties2( Format format ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getFormatProperties2( Format format ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2.html
       VULKAN_HPP_NODISCARD typename ResultValueType<ImageFormatProperties2>::type
-        getImageFormatProperties2( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const;
-
-      // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
         getImageFormatProperties2( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const;
 
       // wrapper function for command vkGetPhysicalDeviceQueueFamilyProperties2, see
@@ -3760,11 +3243,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetPhysicalDeviceMemoryProperties2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2.html
       VULKAN_HPP_NODISCARD PhysicalDeviceMemoryProperties2 getMemoryProperties2() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceMemoryProperties2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getMemoryProperties2() const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetPhysicalDeviceSparseImageFormatProperties2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html
@@ -3873,20 +3351,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<VideoCapabilitiesKHR>::type getVideoCapabilitiesKHR( VideoProfileInfoKHR const & videoProfile ) const;
 
-      // wrapper function for command vkGetPhysicalDeviceVideoCapabilitiesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type getVideoCapabilitiesKHR( VideoProfileInfoKHR const & videoProfile ) const;
-
       // wrapper function for command vkGetPhysicalDeviceVideoFormatPropertiesKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<VideoFormatPropertiesKHR>>::type
-        getVideoFormatPropertiesKHR( PhysicalDeviceVideoFormatInfoKHR const & videoFormatInfo ) const;
-
-      // wrapper function for command vkGetPhysicalDeviceVideoFormatPropertiesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html
-      template <typename StructureChain>
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<StructureChain>>::type
         getVideoFormatPropertiesKHR( PhysicalDeviceVideoFormatInfoKHR const & videoFormatInfo ) const;
 
       //=== VK_NV_external_memory_capabilities ===
@@ -3907,46 +3374,17 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2KHR.html
       VULKAN_HPP_NODISCARD PhysicalDeviceFeatures2 getFeatures2KHR() const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetPhysicalDeviceFeatures2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getFeatures2KHR() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
-      void getProperties2KHR( PhysicalDeviceProperties2 * pProperties ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
       VULKAN_HPP_NODISCARD PhysicalDeviceProperties2 getProperties2KHR() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getProperties2KHR() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
-      void getFormatProperties2KHR( Format format, FormatProperties2 * pFormatProperties ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
       VULKAN_HPP_NODISCARD FormatProperties2 getFormatProperties2KHR( Format format ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getFormatProperties2KHR( Format format ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<ImageFormatProperties2>::type
-        getImageFormatProperties2KHR( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const;
-
-      // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
         getImageFormatProperties2KHR( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const;
 
       // wrapper function for command vkGetPhysicalDeviceQueueFamilyProperties2KHR, see
@@ -3961,11 +3399,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetPhysicalDeviceMemoryProperties2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2KHR.html
       VULKAN_HPP_NODISCARD PhysicalDeviceMemoryProperties2 getMemoryProperties2KHR() const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceMemoryProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getMemoryProperties2KHR() const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetPhysicalDeviceSparseImageFormatProperties2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html
@@ -4026,18 +3459,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
-      VULKAN_HPP_NODISCARD Result getSurfaceCapabilities2KHR( PhysicalDeviceSurfaceInfo2KHR const * pSurfaceInfo,
-                                                              SurfaceCapabilities2KHR *             pSurfaceCapabilities ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<SurfaceCapabilities2KHR>::type
-        getSurfaceCapabilities2KHR( PhysicalDeviceSurfaceInfo2KHR const & surfaceInfo ) const;
-
-      // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
         getSurfaceCapabilities2KHR( PhysicalDeviceSurfaceInfo2KHR const & surfaceInfo ) const;
 
       // wrapper function for command vkGetPhysicalDeviceSurfaceFormats2KHR, see
@@ -4065,12 +3487,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDisplayPlaneCapabilities2KHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<DisplayPlaneCapabilities2KHR>::type
         getDisplayPlaneCapabilities2KHR( DisplayPlaneInfo2KHR const & displayPlaneInfo ) const;
-
-      //=== VK_EXT_descriptor_heap ===
-
-      // wrapper function for command vkGetPhysicalDeviceDescriptorSizeEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceDescriptorSizeEXT.html
-      VULKAN_HPP_NODISCARD DeviceSize getDescriptorSizeEXT( DescriptorType descriptorType ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_sample_locations ===
 
@@ -4134,12 +3550,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<VideoEncodeQualityLevelPropertiesKHR>::type
         getVideoEncodeQualityLevelPropertiesKHR( PhysicalDeviceVideoEncodeQualityLevelInfoKHR const & qualityLevelInfo ) const;
 
-      // wrapper function for command vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
-        getVideoEncodeQualityLevelPropertiesKHR( PhysicalDeviceVideoEncodeQualityLevelInfoKHR const & qualityLevelInfo ) const;
-
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
       //=== VK_NV_acquire_winrt_display ===
 
@@ -4164,13 +3574,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD Bool32 getScreenPresentationSupportQNX( uint32_t queueFamilyIndex, struct _screen_window & window ) const VULKAN_HPP_NOEXCEPT;
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-      //=== VK_ARM_tensors ===
-
-      // wrapper function for command vkGetPhysicalDeviceExternalTensorPropertiesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceExternalTensorPropertiesARM.html
-      VULKAN_HPP_NODISCARD ExternalTensorPropertiesARM
-        getExternalTensorPropertiesARM( PhysicalDeviceExternalTensorInfoARM const & externalTensorInfo ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_NV_optical_flow ===
 
       // wrapper function for command vkGetPhysicalDeviceOpticalFlowImageFormatsNV, see
@@ -4178,57 +3581,17 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<OpticalFlowImageFormatPropertiesNV>>::type
         getOpticalFlowImageFormatsNV( OpticalFlowImageFormatInfoNV const & opticalFlowImageFormatInfo ) const;
 
-      //=== VK_NV_cooperative_vector ===
-
-      // wrapper function for command vkGetPhysicalDeviceCooperativeVectorPropertiesNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCooperativeVectorPropertiesNV.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<CooperativeVectorPropertiesNV>>::type getCooperativeVectorPropertiesNV() const;
-
       //=== VK_KHR_cooperative_matrix ===
 
       // wrapper function for command vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<CooperativeMatrixPropertiesKHR>>::type getCooperativeMatrixPropertiesKHR() const;
 
-      //=== VK_ARM_data_graph ===
-
-      // wrapper function for command vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<QueueFamilyDataGraphPropertiesARM>>::type
-        getQueueFamilyDataGraphPropertiesARM( uint32_t queueFamilyIndex ) const;
-
-      // wrapper function for command vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM.html
-      VULKAN_HPP_NODISCARD QueueFamilyDataGraphProcessingEnginePropertiesARM getQueueFamilyDataGraphProcessingEnginePropertiesARM(
-        PhysicalDeviceQueueFamilyDataGraphProcessingEngineInfoARM const & queueFamilyDataGraphProcessingEngineInfo ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_KHR_calibrated_timestamps ===
 
       // wrapper function for command vkGetPhysicalDeviceCalibrateableTimeDomainsKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCalibrateableTimeDomainsKHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<TimeDomainKHR>>::type getCalibrateableTimeDomainsKHR() const;
-
-      //=== VK_NV_cooperative_matrix2 ===
-
-      // wrapper function for command vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<CooperativeMatrixFlexibleDimensionsPropertiesNV>>::type
-        getCooperativeMatrixFlexibleDimensionsPropertiesNV() const;
-
-      //=== VK_ARM_performance_counters_by_region ===
-
-      // wrapper function for command vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::pair<std::vector<PerformanceCounterARM>, std::vector<PerformanceCounterDescriptionARM>>>::type
-        enumerateQueueFamilyPerformanceCountersByRegionARM( uint32_t queueFamilyIndex ) const;
-
-#  if defined( VK_USE_PLATFORM_UBM_SEC )
-      //=== VK_SEC_ubm_surface ===
-
-      // wrapper function for command vkGetPhysicalDeviceUbmPresentationSupportSEC, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceUbmPresentationSupportSEC.html
-      VULKAN_HPP_NODISCARD std::pair<Bool32, struct ubm_device> getUbmPresentationSupportSEC( uint32_t queueFamilyIndex ) const VULKAN_HPP_NOEXCEPT;
-#  endif /*VK_USE_PLATFORM_UBM_SEC*/
 
     private:
       VULKAN_HPP_NAMESPACE::PhysicalDevice m_physicalDevice = {};
@@ -4403,6 +3766,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         createSemaphore( SemaphoreCreateInfo const &         createInfo,
                          Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
+      // wrapper function for command vkCreateEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateEvent.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<Event>::type
+        createEvent( EventCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
       // wrapper function for command vkCreateQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateQueryPool.html
       VULKAN_HPP_NODISCARD typename ResultValueType<QueryPool>::type
         createQueryPool( QueryPoolCreateInfo const &         createInfo,
@@ -4413,6 +3780,11 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         createBuffer( BufferCreateInfo const &            createInfo,
                       Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
+      // wrapper function for command vkCreateBufferView, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateBufferView.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<BufferView>::type
+        createBufferView( BufferViewCreateInfo const &        createInfo,
+                          Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
       // wrapper function for command vkCreateImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateImage.html
       VULKAN_HPP_NODISCARD typename ResultValueType<Image>::type
         createImage( ImageCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
@@ -4421,24 +3793,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<ImageView>::type
         createImageView( ImageViewCreateInfo const &         createInfo,
                          Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkCreateCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateCommandPool.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<CommandPool>::type
-        createCommandPool( CommandPoolCreateInfo const &       createInfo,
-                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkAllocateCommandBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAllocateCommandBuffers.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<CommandBuffer>>::type
-        allocateCommandBuffers( CommandBufferAllocateInfo const & allocateInfo ) const;
-
-      // wrapper function for command vkCreateEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateEvent.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<Event>::type
-        createEvent( EventCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkCreateBufferView, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateBufferView.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<BufferView>::type
-        createBufferView( BufferViewCreateInfo const &        createInfo,
-                          Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
       // wrapper function for command vkCreateShaderModule, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateShaderModule.html
       VULKAN_HPP_NODISCARD typename ResultValueType<ShaderModule>::type
@@ -4449,6 +3803,18 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<PipelineCache>::type
         createPipelineCache( PipelineCacheCreateInfo const &     createInfo,
                              Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
+      // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<Pipeline>>::type
+        createGraphicsPipelines( Optional<PipelineCache const> const &          pipelineCache,
+                                 ArrayProxy<GraphicsPipelineCreateInfo> const & createInfos,
+                                 Optional<AllocationCallbacks const>            allocator = nullptr ) const;
+
+      // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<Pipeline>::type
+        createGraphicsPipeline( Optional<PipelineCache const> const & pipelineCache,
+                                GraphicsPipelineCreateInfo const &    createInfo,
+                                Optional<AllocationCallbacks const>   allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
       // wrapper function for command vkCreateComputePipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateComputePipelines.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<Pipeline>>::type
@@ -4491,18 +3857,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       void updateDescriptorSets( ArrayProxy<WriteDescriptorSet const> const & descriptorWrites,
                                  ArrayProxy<CopyDescriptorSet const> const &  descriptorCopies ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<Pipeline>>::type
-        createGraphicsPipelines( Optional<PipelineCache const> const &          pipelineCache,
-                                 ArrayProxy<GraphicsPipelineCreateInfo> const & createInfos,
-                                 Optional<AllocationCallbacks const>            allocator = nullptr ) const;
-
-      // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<Pipeline>::type
-        createGraphicsPipeline( Optional<PipelineCache const> const & pipelineCache,
-                                GraphicsPipelineCreateInfo const &    createInfo,
-                                Optional<AllocationCallbacks const>   allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
       // wrapper function for command vkCreateFramebuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateFramebuffer.html
       VULKAN_HPP_NODISCARD typename ResultValueType<Framebuffer>::type
         createFramebuffer( FramebufferCreateInfo const &       createInfo,
@@ -4512,6 +3866,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<RenderPass>::type
         createRenderPass( RenderPassCreateInfo const &        createInfo,
                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
+      // wrapper function for command vkCreateCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateCommandPool.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<CommandPool>::type
+        createCommandPool( CommandPoolCreateInfo const &       createInfo,
+                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
+      // wrapper function for command vkAllocateCommandBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAllocateCommandBuffers.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<CommandBuffer>>::type
+        allocateCommandBuffers( CommandBufferAllocateInfo const & allocateInfo ) const;
 
       //=== VK_VERSION_1_1 ===
 
@@ -4531,19 +3894,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getImageMemoryRequirements2( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetImageMemoryRequirements2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageMemoryRequirements2( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetBufferMemoryRequirements2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getBufferMemoryRequirements2( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetBufferMemoryRequirements2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getBufferMemoryRequirements2( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetImageSparseMemoryRequirements2, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSparseMemoryRequirements2.html
@@ -4552,6 +3905,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetDeviceQueue2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceQueue2.html
       VULKAN_HPP_NODISCARD Queue getQueue2( DeviceQueueInfo2 const & queueInfo ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
+
+      // wrapper function for command vkCreateSamplerYcbcrConversion, see
+      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSamplerYcbcrConversion.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<SamplerYcbcrConversion>::type
+        createSamplerYcbcrConversion( SamplerYcbcrConversionCreateInfo const & createInfo,
+                                      Optional<AllocationCallbacks const>      allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
       // wrapper function for command vkCreateDescriptorUpdateTemplate, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDescriptorUpdateTemplate.html
@@ -4564,19 +3923,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD DescriptorSetLayoutSupport
         getDescriptorSetLayoutSupport( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetDescriptorSetLayoutSupport, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupport.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getDescriptorSetLayoutSupport( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCreateSamplerYcbcrConversion, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSamplerYcbcrConversion.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<SamplerYcbcrConversion>::type
-        createSamplerYcbcrConversion( SamplerYcbcrConversionCreateInfo const & createInfo,
-                                      Optional<AllocationCallbacks const>      allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
       //=== VK_VERSION_1_2 ===
+
+      // wrapper function for command vkCreateRenderPass2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateRenderPass2.html
+      VULKAN_HPP_NODISCARD typename ResultValueType<RenderPass>::type
+        createRenderPass2( RenderPassCreateInfo2 const &       createInfo,
+                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
       // wrapper function for command vkWaitSemaphores, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkWaitSemaphores.html
       VULKAN_HPP_NODISCARD Result waitSemaphores( SemaphoreWaitInfo const & waitInfo, uint64_t timeout ) const;
@@ -4594,11 +3946,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetDeviceMemoryOpaqueCaptureAddress, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html
       VULKAN_HPP_NODISCARD uint64_t getMemoryOpaqueCaptureAddress( DeviceMemoryOpaqueCaptureAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCreateRenderPass2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateRenderPass2.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<RenderPass>::type
-        createRenderPass2( RenderPassCreateInfo2 const &       createInfo,
-                           Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
       //=== VK_VERSION_1_3 ===
 
@@ -4620,56 +3967,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirements.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getBufferMemoryRequirements( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetDeviceBufferMemoryRequirements, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirements.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getBufferMemoryRequirements( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetDeviceImageMemoryRequirements, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirements.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getImageMemoryRequirements( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetDeviceImageMemoryRequirements, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirements.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageMemoryRequirements( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetDeviceImageSparseMemoryRequirements, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSparseMemoryRequirements.html
       VULKAN_HPP_NODISCARD std::vector<SparseImageMemoryRequirements2> getImageSparseMemoryRequirements( DeviceImageMemoryRequirements const & info ) const;
-
-      //=== VK_VERSION_1_4 ===
-
-      // wrapper function for command vkMapMemory2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkMapMemory2.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<void *>::type mapMemory2( MemoryMapInfo const & memoryMapInfo ) const;
-
-      // wrapper function for command vkUnmapMemory2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnmapMemory2.html
-      typename ResultValueType<void>::type unmapMemory2( MemoryUnmapInfo const & memoryUnmapInfo ) const;
-
-      // wrapper function for command vkGetDeviceImageSubresourceLayout, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayout.html
-      VULKAN_HPP_NODISCARD SubresourceLayout2 getImageSubresourceLayout( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDeviceImageSubresourceLayout, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayout.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageSubresourceLayout( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCopyMemoryToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyMemoryToImage.html
-      typename ResultValueType<void>::type copyMemoryToImage( CopyMemoryToImageInfo const & copyMemoryToImageInfo ) const;
-
-      // wrapper function for command vkCopyImageToMemory, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToMemory.html
-      typename ResultValueType<void>::type copyImageToMemory( CopyImageToMemoryInfo const & copyImageToMemoryInfo ) const;
-
-      // wrapper function for command vkCopyImageToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToImage.html
-      typename ResultValueType<void>::type copyImageToImage( CopyImageToImageInfo const & copyImageToImageInfo ) const;
-
-      // wrapper function for command vkTransitionImageLayout, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkTransitionImageLayout.html
-      typename ResultValueType<void>::type transitionImageLayout( ArrayProxy<HostImageLayoutTransitionInfo const> const & transitions ) const;
-
-      // wrapper function for command vkGetRenderingAreaGranularity, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetRenderingAreaGranularity.html
-      VULKAN_HPP_NODISCARD Extent2D getRenderingAreaGranularity( RenderingAreaInfo const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_KHR_swapchain ===
 
@@ -4742,13 +4046,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetImageViewHandleNVX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageViewHandleNVX.html
       VULKAN_HPP_NODISCARD uint32_t getImageViewHandleNVX( ImageViewHandleInfoNVX const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetImageViewHandle64NVX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageViewHandle64NVX.html
-      VULKAN_HPP_NODISCARD uint64_t getImageViewHandle64NVX( ImageViewHandleInfoNVX const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDeviceCombinedImageSamplerIndexNVX, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceCombinedImageSamplerIndexNVX.html
-      VULKAN_HPP_NODISCARD uint64_t getCombinedImageSamplerIndexNVX( uint64_t imageViewIndex, uint64_t samplerIndex ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_KHR_device_group ===
 
@@ -4898,12 +4195,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<AndroidHardwareBufferPropertiesANDROID>::type
         getAndroidHardwareBufferPropertiesANDROID( struct AHardwareBuffer const & buffer ) const;
 
-      // wrapper function for command vkGetAndroidHardwareBufferPropertiesANDROID, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
-        getAndroidHardwareBufferPropertiesANDROID( struct AHardwareBuffer const & buffer ) const;
-
       // wrapper function for command vkGetMemoryAndroidHardwareBufferANDROID, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html
       VULKAN_HPP_NODISCARD typename ResultValueType<struct AHardwareBuffer *>::type
@@ -4928,58 +4219,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                           Optional<AllocationCallbacks const>          allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-      //=== VK_EXT_descriptor_heap ===
-
-      // wrapper function for command vkWriteSamplerDescriptorsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkWriteSamplerDescriptorsEXT.html
-      typename ResultValueType<void>::type writeSamplerDescriptorsEXT( ArrayProxy<SamplerCreateInfo const> const &   samplers,
-                                                                       ArrayProxy<HostAddressRangeEXT const> const & descriptors ) const;
-
-      // wrapper function for command vkWriteResourceDescriptorsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkWriteResourceDescriptorsEXT.html
-      typename ResultValueType<void>::type writeResourceDescriptorsEXT( ArrayProxy<ResourceDescriptorInfoEXT const> const & resources,
-                                                                        ArrayProxy<HostAddressRangeEXT const> const &       descriptors ) const;
-
-      // wrapper function for command vkGetImageOpaqueCaptureDataEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageOpaqueCaptureDataEXT.html
-      VULKAN_HPP_NODISCARD Result getImageOpaqueCaptureDataEXT( uint32_t                            imageCount,
-                                                                VULKAN_HPP_NAMESPACE::Image const * pImages,
-                                                                HostAddressRangeEXT *               pDatas ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkRegisterCustomBorderColorEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkRegisterCustomBorderColorEXT.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<uint32_t>::type registerCustomBorderColorEXT( SamplerCustomBorderColorCreateInfoEXT const & borderColor,
-                                                                                                  Bool32 requestIndex ) const;
-
-      // wrapper function for command vkUnregisterCustomBorderColorEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnregisterCustomBorderColorEXT.html
-      void unregisterCustomBorderColorEXT( uint32_t index ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetTensorOpaqueCaptureDataARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorOpaqueCaptureDataARM.html
-      VULKAN_HPP_NODISCARD Result getTensorOpaqueCaptureDataARM( uint32_t                                tensorCount,
-                                                                 VULKAN_HPP_NAMESPACE::TensorARM const * pTensors,
-                                                                 HostAddressRangeEXT *                   pDatas ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_KHR_get_memory_requirements2 ===
 
       // wrapper function for command vkGetImageMemoryRequirements2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2KHR.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getImageMemoryRequirements2KHR( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetImageMemoryRequirements2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageMemoryRequirements2KHR( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetBufferMemoryRequirements2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2KHR.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getBufferMemoryRequirements2KHR( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetBufferMemoryRequirements2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getBufferMemoryRequirements2KHR( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetImageSparseMemoryRequirements2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSparseMemoryRequirements2KHR.html
@@ -5115,12 +4363,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD MemoryRequirements2KHR
         getAccelerationStructureMemoryRequirementsNV( AccelerationStructureMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetAccelerationStructureMemoryRequirementsNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getAccelerationStructureMemoryRequirementsNV( AccelerationStructureMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkBindAccelerationStructureMemoryNV, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindAccelerationStructureMemoryNV.html
       typename ResultValueType<void>::type bindAccelerationStructureMemoryNV( ArrayProxy<BindAccelerationStructureMemoryInfoNV const> const & bindInfos ) const;
@@ -5145,12 +4387,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupportKHR.html
       VULKAN_HPP_NODISCARD DescriptorSetLayoutSupport
         getDescriptorSetLayoutSupportKHR( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDescriptorSetLayoutSupportKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupportKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getDescriptorSetLayoutSupportKHR( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_external_memory_host ===
 
@@ -5178,14 +4414,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkSignalSemaphoreKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSignalSemaphoreKHR.html
       typename ResultValueType<void>::type signalSemaphoreKHR( SemaphoreSignalInfo const & signalInfo ) const;
-
-      //=== VK_EXT_present_timing ===
-
-      // wrapper function for command vkGetPastPresentationTimingEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPastPresentationTimingEXT.html
-      VULKAN_HPP_NODISCARD Result
-        getPastPresentationTimingEXT( PastPresentationTimingInfoEXT const * pPastPresentationTimingInfo,
-                                      PastPresentationTimingPropertiesEXT * pPastPresentationTimingProperties ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_INTEL_performance_query ===
 
@@ -5264,30 +4492,30 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       //=== VK_EXT_host_image_copy ===
 
       // wrapper function for command vkCopyMemoryToImageEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyMemoryToImageEXT.html
-      typename ResultValueType<void>::type copyMemoryToImageEXT( CopyMemoryToImageInfo const & copyMemoryToImageInfo ) const;
+      typename ResultValueType<void>::type copyMemoryToImageEXT( CopyMemoryToImageInfoEXT const & copyMemoryToImageInfo ) const;
 
       // wrapper function for command vkCopyImageToMemoryEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToMemoryEXT.html
-      typename ResultValueType<void>::type copyImageToMemoryEXT( CopyImageToMemoryInfo const & copyImageToMemoryInfo ) const;
+      typename ResultValueType<void>::type copyImageToMemoryEXT( CopyImageToMemoryInfoEXT const & copyImageToMemoryInfo ) const;
 
       // wrapper function for command vkCopyImageToImageEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToImageEXT.html
-      typename ResultValueType<void>::type copyImageToImageEXT( CopyImageToImageInfo const & copyImageToImageInfo ) const;
+      typename ResultValueType<void>::type copyImageToImageEXT( CopyImageToImageInfoEXT const & copyImageToImageInfo ) const;
 
       // wrapper function for command vkTransitionImageLayoutEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkTransitionImageLayoutEXT.html
-      typename ResultValueType<void>::type transitionImageLayoutEXT( ArrayProxy<HostImageLayoutTransitionInfo const> const & transitions ) const;
+      typename ResultValueType<void>::type transitionImageLayoutEXT( ArrayProxy<HostImageLayoutTransitionInfoEXT const> const & transitions ) const;
 
       //=== VK_KHR_map_memory2 ===
 
       // wrapper function for command vkMapMemory2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkMapMemory2KHR.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<void *>::type mapMemory2KHR( MemoryMapInfo const & memoryMapInfo ) const;
+      VULKAN_HPP_NODISCARD typename ResultValueType<void *>::type mapMemory2KHR( MemoryMapInfoKHR const & memoryMapInfo ) const;
 
       // wrapper function for command vkUnmapMemory2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnmapMemory2KHR.html
-      typename ResultValueType<void>::type unmapMemory2KHR( MemoryUnmapInfo const & memoryUnmapInfo ) const;
+      void unmapMemory2KHR( MemoryUnmapInfoKHR const & memoryUnmapInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_swapchain_maintenance1 ===
 
       // wrapper function for command vkReleaseSwapchainImagesEXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseSwapchainImagesEXT.html
-      typename ResultValueType<void>::type releaseSwapchainImagesEXT( ReleaseSwapchainImagesInfoKHR const & releaseInfo ) const;
+      typename ResultValueType<void>::type releaseSwapchainImagesEXT( ReleaseSwapchainImagesInfoEXT const & releaseInfo ) const;
 
       //=== VK_NV_device_generated_commands ===
 
@@ -5295,12 +4523,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html
       VULKAN_HPP_NODISCARD MemoryRequirements2
         getGeneratedCommandsMemoryRequirementsNV( GeneratedCommandsMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getGeneratedCommandsMemoryRequirementsNV( GeneratedCommandsMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCreateIndirectCommandsLayoutNV, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateIndirectCommandsLayoutNV.html
@@ -5517,19 +4739,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirementsKHR.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getBufferMemoryRequirementsKHR( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetDeviceBufferMemoryRequirementsKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirementsKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getBufferMemoryRequirementsKHR( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetDeviceImageMemoryRequirementsKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirementsKHR.html
       VULKAN_HPP_NODISCARD MemoryRequirements2 getImageMemoryRequirementsKHR( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDeviceImageMemoryRequirementsKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirementsKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageMemoryRequirementsKHR( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetDeviceImageSparseMemoryRequirementsKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSparseMemoryRequirementsKHR.html
@@ -5549,81 +4761,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD MemoryRequirements2
         getPipelineIndirectMemoryRequirementsNV( ComputePipelineCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkGetPipelineIndirectMemoryRequirementsNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineIndirectMemoryRequirementsNV.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getPipelineIndirectMemoryRequirementsNV( ComputePipelineCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkGetPipelineIndirectDeviceAddressNV, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineIndirectDeviceAddressNV.html
       VULKAN_HPP_NODISCARD DeviceAddress getPipelineIndirectAddressNV( PipelineIndirectDeviceAddressInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
-
-#  if defined( VK_USE_PLATFORM_OHOS )
-      //=== VK_OHOS_external_memory ===
-
-      // wrapper function for command vkGetNativeBufferPropertiesOHOS, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetNativeBufferPropertiesOHOS.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<NativeBufferPropertiesOHOS>::type
-        getNativeBufferPropertiesOHOS( struct OH_NativeBuffer const & buffer ) const;
-
-      // wrapper function for command vkGetNativeBufferPropertiesOHOS, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetNativeBufferPropertiesOHOS.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
-        getNativeBufferPropertiesOHOS( struct OH_NativeBuffer const & buffer ) const;
-
-      // wrapper function for command vkGetMemoryNativeBufferOHOS, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryNativeBufferOHOS.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<struct OH_NativeBuffer *>::type
-        getMemoryNativeBufferOHOS( MemoryGetNativeBufferInfoOHOS const & info ) const;
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
-      //=== VK_ARM_tensors ===
-
-      // wrapper function for command vkCreateTensorARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateTensorARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<TensorARM>::type
-        createTensorARM( TensorCreateInfoARM const &         createInfo,
-                         Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkCreateTensorViewARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateTensorViewARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<TensorViewARM>::type
-        createTensorViewARM( TensorViewCreateInfoARM const &     createInfo,
-                             Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkGetTensorMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorMemoryRequirementsARM.html
-      VULKAN_HPP_NODISCARD MemoryRequirements2 getTensorMemoryRequirementsARM( TensorMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetTensorMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorMemoryRequirementsARM.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getTensorMemoryRequirementsARM( TensorMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkBindTensorMemoryARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindTensorMemoryARM.html
-      typename ResultValueType<void>::type bindTensorMemoryARM( ArrayProxy<BindTensorMemoryInfoARM const> const & bindInfos ) const;
-
-      // wrapper function for command vkGetDeviceTensorMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceTensorMemoryRequirementsARM.html
-      VULKAN_HPP_NODISCARD MemoryRequirements2 getTensorMemoryRequirementsARM( DeviceTensorMemoryRequirementsARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDeviceTensorMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceTensorMemoryRequirementsARM.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getTensorMemoryRequirementsARM( DeviceTensorMemoryRequirementsARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetTensorOpaqueCaptureDescriptorDataARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorOpaqueCaptureDescriptorDataARM.html
-      template <typename DataType>
-      VULKAN_HPP_NODISCARD typename ResultValueType<DataType>::type
-        getTensorOpaqueCaptureDescriptorDataARM( TensorCaptureDescriptorDataInfoARM const & info ) const;
-
-      // wrapper function for command vkGetTensorViewOpaqueCaptureDescriptorDataARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorViewOpaqueCaptureDescriptorDataARM.html
-      template <typename DataType>
-      VULKAN_HPP_NODISCARD typename ResultValueType<DataType>::type
-        getTensorViewOpaqueCaptureDescriptorDataARM( TensorViewCaptureDescriptorDataInfoARM const & info ) const;
 
       //=== VK_EXT_shader_module_identifier ===
 
@@ -5644,21 +4784,11 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetRenderingAreaGranularityKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetRenderingAreaGranularityKHR.html
-      VULKAN_HPP_NODISCARD Extent2D getRenderingAreaGranularityKHR( RenderingAreaInfo const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT;
+      VULKAN_HPP_NODISCARD Extent2D getRenderingAreaGranularityKHR( RenderingAreaInfoKHR const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkGetDeviceImageSubresourceLayoutKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayoutKHR.html
-      VULKAN_HPP_NODISCARD SubresourceLayout2 getImageSubresourceLayoutKHR( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDeviceImageSubresourceLayoutKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayoutKHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getImageSubresourceLayoutKHR( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_AMD_anti_lag ===
-
-      // wrapper function for command vkAntiLagUpdateAMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAntiLagUpdateAMD.html
-      void antiLagUpdateAMD( AntiLagDataAMD const & data ) const VULKAN_HPP_NOEXCEPT;
+      VULKAN_HPP_NODISCARD SubresourceLayout2KHR getImageSubresourceLayoutKHR( DeviceImageSubresourceInfoKHR const & info ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_shader_object ===
 
@@ -5671,101 +4801,11 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         createShaderEXT( ShaderCreateInfoEXT const &         createInfo,
                          Optional<AllocationCallbacks const> allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
 
-      //=== VK_KHR_pipeline_binary ===
-
-      // wrapper function for command vkCreatePipelineBinariesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreatePipelineBinariesKHR.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<PipelineBinaryKHR>>::type
-        createPipelineBinariesKHR( PipelineBinaryCreateInfoKHR const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr ) const;
-
-      // wrapper function for command vkGetPipelineKeyKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineKeyKHR.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<PipelineBinaryKeyKHR>::type
-        getPipelineKeyKHR( Optional<PipelineCreateInfoKHR const> pipelineCreateInfo VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const;
-
-      // wrapper function for command vkGetPipelineBinaryDataKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineBinaryDataKHR.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::pair<PipelineBinaryKeyKHR, std::vector<uint8_t>>>::type
-        getPipelineBinaryDataKHR( PipelineBinaryDataInfoKHR const & info ) const;
-
-      // wrapper function for command vkReleaseCapturedPipelineDataKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseCapturedPipelineDataKHR.html
-      typename ResultValueType<void>::type
-        releaseCapturedPipelineDataKHR( ReleaseCapturedPipelineDataInfoKHR const &    info,
-                                        Optional<AllocationCallbacks const> allocator VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const;
-
       //=== VK_QCOM_tile_properties ===
 
       // wrapper function for command vkGetDynamicRenderingTilePropertiesQCOM, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDynamicRenderingTilePropertiesQCOM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<TilePropertiesQCOM>::type
-        getDynamicRenderingTilePropertiesQCOM( RenderingInfo const & renderingInfo ) const;
-
-      //=== VK_KHR_swapchain_maintenance1 ===
-
-      // wrapper function for command vkReleaseSwapchainImagesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseSwapchainImagesKHR.html
-      typename ResultValueType<void>::type releaseSwapchainImagesKHR( ReleaseSwapchainImagesInfoKHR const & releaseInfo ) const;
-
-      //=== VK_NV_cooperative_vector ===
-
-      // wrapper function for command vkConvertCooperativeVectorMatrixNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkConvertCooperativeVectorMatrixNV.html
-      VULKAN_HPP_NODISCARD Result convertCooperativeVectorMatrixNV( ConvertCooperativeVectorMatrixInfoNV const & info ) const;
-
-      //=== VK_ARM_data_graph ===
-
-      // wrapper function for command vkCreateDataGraphPipelinesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelinesARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<Pipeline>>::type
-        createDataGraphPipelinesARM( Optional<DeferredOperationKHR const> const &       deferredOperation,
-                                     Optional<PipelineCache const> const &              pipelineCache,
-                                     ArrayProxy<DataGraphPipelineCreateInfoARM> const & createInfos,
-                                     Optional<AllocationCallbacks const>                allocator = nullptr ) const;
-
-      // wrapper function for command vkCreateDataGraphPipelinesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelinesARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<Pipeline>::type
-        createDataGraphPipelineARM( Optional<DeferredOperationKHR const> const & deferredOperation,
-                                    Optional<PipelineCache const> const &        pipelineCache,
-                                    DataGraphPipelineCreateInfoARM const &       createInfo,
-                                    Optional<AllocationCallbacks const>          allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkCreateDataGraphPipelineSessionARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelineSessionARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<DataGraphPipelineSessionARM>::type
-        createDataGraphPipelineSessionARM( DataGraphPipelineSessionCreateInfoARM const & createInfo,
-                                           Optional<AllocationCallbacks const>           allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkGetDataGraphPipelineSessionBindPointRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionBindPointRequirementsARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<DataGraphPipelineSessionBindPointRequirementARM>>::type
-        getDataGraphPipelineSessionBindPointRequirementsARM( DataGraphPipelineSessionBindPointRequirementsInfoARM const & info ) const;
-
-      // wrapper function for command vkGetDataGraphPipelineSessionMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionMemoryRequirementsARM.html
-      VULKAN_HPP_NODISCARD MemoryRequirements2
-        getDataGraphPipelineSessionMemoryRequirementsARM( DataGraphPipelineSessionMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetDataGraphPipelineSessionMemoryRequirementsARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionMemoryRequirementsARM.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-        getDataGraphPipelineSessionMemoryRequirementsARM( DataGraphPipelineSessionMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkBindDataGraphPipelineSessionMemoryARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindDataGraphPipelineSessionMemoryARM.html
-      typename ResultValueType<void>::type
-        bindDataGraphPipelineSessionMemoryARM( ArrayProxy<BindDataGraphPipelineSessionMemoryInfoARM const> const & bindInfos ) const;
-
-      // wrapper function for command vkGetDataGraphPipelineAvailablePropertiesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineAvailablePropertiesARM.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<DataGraphPipelinePropertyARM>>::type
-        getDataGraphPipelineAvailablePropertiesARM( DataGraphPipelineInfoARM const & pipelineInfo ) const;
-
-      // wrapper function for command vkGetDataGraphPipelinePropertiesARM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelinePropertiesARM.html
-      VULKAN_HPP_NODISCARD Result getDataGraphPipelinePropertiesARM( DataGraphPipelineInfoARM const *          pPipelineInfo,
-                                                                     uint32_t                                  propertiesCount,
-                                                                     DataGraphPipelinePropertyQueryResultARM * pProperties ) const VULKAN_HPP_NOEXCEPT;
+      VULKAN_HPP_NODISCARD TilePropertiesQCOM getDynamicRenderingTilePropertiesQCOM( RenderingInfo const & renderingInfo ) const VULKAN_HPP_NOEXCEPT;
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
       //=== VK_QNX_external_memory_screen_buffer ===
@@ -5773,12 +4813,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetScreenBufferPropertiesQNX, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetScreenBufferPropertiesQNX.html
       VULKAN_HPP_NODISCARD typename ResultValueType<ScreenBufferPropertiesQNX>::type getScreenBufferPropertiesQNX( struct _screen_buffer const & buffer ) const;
-
-      // wrapper function for command vkGetScreenBufferPropertiesQNX, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetScreenBufferPropertiesQNX.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD typename ResultValueType<StructureChain<X, Y, Z...>>::type
-        getScreenBufferPropertiesQNX( struct _screen_buffer const & buffer ) const;
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
       //=== VK_KHR_calibrated_timestamps ===
@@ -5792,66 +4826,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetCalibratedTimestampsKHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::pair<uint64_t, uint64_t>>::type
         getCalibratedTimestampKHR( CalibratedTimestampInfoKHR const & timestampInfo ) const;
-
-      //=== VK_NV_external_compute_queue ===
-
-      // wrapper function for command vkCreateExternalComputeQueueNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateExternalComputeQueueNV.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<ExternalComputeQueueNV>::type
-        createExternalComputeQueueNV( ExternalComputeQueueCreateInfoNV const & createInfo,
-                                      Optional<AllocationCallbacks const>      allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      //=== VK_NV_cluster_acceleration_structure ===
-
-      // wrapper function for command vkGetClusterAccelerationStructureBuildSizesNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetClusterAccelerationStructureBuildSizesNV.html
-      VULKAN_HPP_NODISCARD AccelerationStructureBuildSizesInfoKHR
-        getClusterAccelerationStructureBuildSizesNV( ClusterAccelerationStructureInputInfoNV const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_NV_partitioned_acceleration_structure ===
-
-      // wrapper function for command vkGetPartitionedAccelerationStructuresBuildSizesNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPartitionedAccelerationStructuresBuildSizesNV.html
-      VULKAN_HPP_NODISCARD AccelerationStructureBuildSizesInfoKHR
-        getPartitionedAccelerationStructuresBuildSizesNV( PartitionedAccelerationStructureInstancesInputNV const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_EXT_device_generated_commands ===
-
-      // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsEXT.html
-      VULKAN_HPP_NODISCARD MemoryRequirements2
-        getGeneratedCommandsMemoryRequirementsEXT( GeneratedCommandsMemoryRequirementsInfoEXT const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsEXT.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...>
-                           getGeneratedCommandsMemoryRequirementsEXT( GeneratedCommandsMemoryRequirementsInfoEXT const & info ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCreateIndirectCommandsLayoutEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateIndirectCommandsLayoutEXT.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<IndirectCommandsLayoutEXT>::type
-        createIndirectCommandsLayoutEXT( IndirectCommandsLayoutCreateInfoEXT const & createInfo,
-                                         Optional<AllocationCallbacks const>         allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-      // wrapper function for command vkCreateIndirectExecutionSetEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateIndirectExecutionSetEXT.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<IndirectExecutionSetEXT>::type
-        createIndirectExecutionSetEXT( IndirectExecutionSetCreateInfoEXT const & createInfo,
-                                       Optional<AllocationCallbacks const>       allocator = nullptr ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS;
-
-#  if defined( VK_USE_PLATFORM_METAL_EXT )
-      //=== VK_EXT_external_memory_metal ===
-
-      // wrapper function for command vkGetMemoryMetalHandleEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryMetalHandleEXT.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<void *>::type getMemoryMetalHandleEXT( MemoryGetMetalHandleInfoEXT const & getMetalHandleInfo ) const;
-
-      // wrapper function for command vkGetMemoryMetalHandlePropertiesEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryMetalHandlePropertiesEXT.html
-      template <typename HandleType>
-      VULKAN_HPP_NODISCARD typename ResultValueType<MemoryMetalHandlePropertiesEXT>::type
-        getMemoryMetalHandlePropertiesEXT( ExternalMemoryHandleTypeFlagBits handleType, HandleType const & handle ) const;
-#  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
     private:
       VULKAN_HPP_NAMESPACE::Device              m_device    = {};
@@ -6812,6 +5786,70 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkResetCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetCommandBuffer.html
       typename ResultValueType<void>::type reset( CommandBufferResetFlags flags VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const;
 
+      // wrapper function for command vkCmdBindPipeline, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindPipeline.html
+      void bindPipeline( PipelineBindPoint pipelineBindPoint, VULKAN_HPP_NAMESPACE::Pipeline pipeline ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetViewport, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetViewport.html
+      void setViewport( uint32_t firstViewport, ArrayProxy<Viewport const> const & viewports ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetScissor, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetScissor.html
+      void setScissor( uint32_t firstScissor, ArrayProxy<Rect2D const> const & scissors ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetLineWidth, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineWidth.html
+      void setLineWidth( float lineWidth ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetDepthBias, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthBias.html
+      void setDepthBias( float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetBlendConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetBlendConstants.html
+      void setBlendConstants( float const blendConstants[4] ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetDepthBounds, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthBounds.html
+      void setDepthBounds( float minDepthBounds, float maxDepthBounds ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetStencilCompareMask, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilCompareMask.html
+      void setStencilCompareMask( StencilFaceFlags faceMask, uint32_t compareMask ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetStencilWriteMask, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilWriteMask.html
+      void setStencilWriteMask( StencilFaceFlags faceMask, uint32_t writeMask ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetStencilReference, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilReference.html
+      void setStencilReference( StencilFaceFlags faceMask, uint32_t reference ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdBindDescriptorSets, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets.html
+      void bindDescriptorSets( PipelineBindPoint                                             pipelineBindPoint,
+                               VULKAN_HPP_NAMESPACE::PipelineLayout                          layout,
+                               uint32_t                                                      firstSet,
+                               ArrayProxy<VULKAN_HPP_NAMESPACE::DescriptorSet const> const & descriptorSets,
+                               ArrayProxy<uint32_t const> const &                            dynamicOffsets ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdBindIndexBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindIndexBuffer.html
+      void bindIndexBuffer( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, IndexType indexType ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdBindVertexBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindVertexBuffers.html
+      void bindVertexBuffers( uint32_t                                               firstBinding,
+                              ArrayProxy<VULKAN_HPP_NAMESPACE::Buffer const> const & buffers,
+                              ArrayProxy<DeviceSize const> const &                   offsets ) const;
+
+      // wrapper function for command vkCmdDraw, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDraw.html
+      void draw( uint32_t vertexCount, uint32_t instanceCount, uint32_t firstVertex, uint32_t firstInstance ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdDrawIndexed, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndexed.html
+      void
+        drawIndexed( uint32_t indexCount, uint32_t instanceCount, uint32_t firstIndex, int32_t vertexOffset, uint32_t firstInstance ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdDrawIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndirect.html
+      void drawIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, uint32_t drawCount, uint32_t stride ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdDrawIndexedIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndexedIndirect.html
+      void drawIndexedIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, uint32_t drawCount, uint32_t stride ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdDispatch, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatch.html
+      void dispatch( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdDispatchIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchIndirect.html
+      void dispatchIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset ) const VULKAN_HPP_NOEXCEPT;
+
       // wrapper function for command vkCmdCopyBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBuffer.html
       void copyBuffer( VULKAN_HPP_NAMESPACE::Buffer         srcBuffer,
                        VULKAN_HPP_NAMESPACE::Buffer         dstBuffer,
@@ -6823,6 +5861,14 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                       VULKAN_HPP_NAMESPACE::Image         dstImage,
                       ImageLayout                         dstImageLayout,
                       ArrayProxy<ImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdBlitImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBlitImage.html
+      void blitImage( VULKAN_HPP_NAMESPACE::Image         srcImage,
+                      ImageLayout                         srcImageLayout,
+                      VULKAN_HPP_NAMESPACE::Image         dstImage,
+                      ImageLayout                         dstImageLayout,
+                      ArrayProxy<ImageBlit const> const & regions,
+                      Filter                              filter ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdCopyBufferToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBufferToImage.html
       void copyBufferToImage( VULKAN_HPP_NAMESPACE::Buffer              srcBuffer,
@@ -6845,6 +5891,43 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdFillBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdFillBuffer.html
       void fillBuffer( VULKAN_HPP_NAMESPACE::Buffer dstBuffer, DeviceSize dstOffset, DeviceSize size, uint32_t data ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdClearColorImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearColorImage.html
+      void clearColorImage( VULKAN_HPP_NAMESPACE::Image                     image,
+                            ImageLayout                                     imageLayout,
+                            ClearColorValue const &                         color,
+                            ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdClearDepthStencilImage, see
+      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearDepthStencilImage.html
+      void clearDepthStencilImage( VULKAN_HPP_NAMESPACE::Image                     image,
+                                   ImageLayout                                     imageLayout,
+                                   ClearDepthStencilValue const &                  depthStencil,
+                                   ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdClearAttachments, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearAttachments.html
+      void clearAttachments( ArrayProxy<ClearAttachment const> const & attachments, ArrayProxy<ClearRect const> const & rects ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdResolveImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResolveImage.html
+      void resolveImage( VULKAN_HPP_NAMESPACE::Image            srcImage,
+                         ImageLayout                            srcImageLayout,
+                         VULKAN_HPP_NAMESPACE::Image            dstImage,
+                         ImageLayout                            dstImageLayout,
+                         ArrayProxy<ImageResolve const> const & regions ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent.html
+      void setEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent.html
+      void resetEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdWaitEvents, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents.html
+      void waitEvents( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
+                       PipelineStageFlags                                    srcStageMask,
+                       PipelineStageFlags                                    dstStageMask,
+                       ArrayProxy<MemoryBarrier const> const &               memoryBarriers,
+                       ArrayProxy<BufferMemoryBarrier const> const &         bufferMemoryBarriers,
+                       ArrayProxy<ImageMemoryBarrier const> const &          imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdPipelineBarrier, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPipelineBarrier.html
       void pipelineBarrier( PipelineStageFlags                            srcStageMask,
@@ -6877,45 +5960,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                  DeviceSize                      stride,
                                  QueryResultFlags flags          VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkCmdExecuteCommands, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteCommands.html
-      void executeCommands( ArrayProxy<VULKAN_HPP_NAMESPACE::CommandBuffer const> const & commandBuffers ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindPipeline, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindPipeline.html
-      void bindPipeline( PipelineBindPoint pipelineBindPoint, VULKAN_HPP_NAMESPACE::Pipeline pipeline ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindDescriptorSets, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets.html
-      void bindDescriptorSets( PipelineBindPoint                                             pipelineBindPoint,
-                               VULKAN_HPP_NAMESPACE::PipelineLayout                          layout,
-                               uint32_t                                                      firstSet,
-                               ArrayProxy<VULKAN_HPP_NAMESPACE::DescriptorSet const> const & descriptorSets,
-                               ArrayProxy<uint32_t const> const &                            dynamicOffsets ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdClearColorImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearColorImage.html
-      void clearColorImage( VULKAN_HPP_NAMESPACE::Image                     image,
-                            ImageLayout                                     imageLayout,
-                            ClearColorValue const &                         color,
-                            ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDispatch, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatch.html
-      void dispatch( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDispatchIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchIndirect.html
-      void dispatchIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent.html
-      void setEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent.html
-      void resetEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdWaitEvents, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents.html
-      void waitEvents( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
-                       PipelineStageFlags                                    srcStageMask,
-                       PipelineStageFlags                                    dstStageMask,
-                       ArrayProxy<MemoryBarrier const> const &               memoryBarriers,
-                       ArrayProxy<BufferMemoryBarrier const> const &         bufferMemoryBarriers,
-                       ArrayProxy<ImageMemoryBarrier const> const &          imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkCmdPushConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants.html
       void pushConstants( VULKAN_HPP_NAMESPACE::PipelineLayout layout, ShaderStageFlags stageFlags, uint32_t offset, uint32_t size, void const * pValues ) const
         VULKAN_HPP_NOEXCEPT;
@@ -6927,79 +5971,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                           uint32_t                             offset,
                           ArrayProxy<ValuesType const> const & values ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkCmdSetViewport, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetViewport.html
-      void setViewport( uint32_t firstViewport, ArrayProxy<Viewport const> const & viewports ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetScissor, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetScissor.html
-      void setScissor( uint32_t firstScissor, ArrayProxy<Rect2D const> const & scissors ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetLineWidth, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineWidth.html
-      void setLineWidth( float lineWidth ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetDepthBias, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthBias.html
-      void setDepthBias( float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetBlendConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetBlendConstants.html
-      void setBlendConstants( float const blendConstants[4] ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetDepthBounds, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthBounds.html
-      void setDepthBounds( float minDepthBounds, float maxDepthBounds ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetStencilCompareMask, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilCompareMask.html
-      void setStencilCompareMask( StencilFaceFlags faceMask, uint32_t compareMask ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetStencilWriteMask, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilWriteMask.html
-      void setStencilWriteMask( StencilFaceFlags faceMask, uint32_t writeMask ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetStencilReference, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetStencilReference.html
-      void setStencilReference( StencilFaceFlags faceMask, uint32_t reference ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindIndexBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindIndexBuffer.html
-      void bindIndexBuffer( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, IndexType indexType ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindVertexBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindVertexBuffers.html
-      void bindVertexBuffers( uint32_t                                               firstBinding,
-                              ArrayProxy<VULKAN_HPP_NAMESPACE::Buffer const> const & buffers,
-                              ArrayProxy<DeviceSize const> const &                   offsets ) const;
-
-      // wrapper function for command vkCmdDraw, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDraw.html
-      void draw( uint32_t vertexCount, uint32_t instanceCount, uint32_t firstVertex, uint32_t firstInstance ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDrawIndexed, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndexed.html
-      void
-        drawIndexed( uint32_t indexCount, uint32_t instanceCount, uint32_t firstIndex, int32_t vertexOffset, uint32_t firstInstance ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDrawIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndirect.html
-      void drawIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, uint32_t drawCount, uint32_t stride ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDrawIndexedIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndexedIndirect.html
-      void drawIndexedIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, uint32_t drawCount, uint32_t stride ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBlitImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBlitImage.html
-      void blitImage( VULKAN_HPP_NAMESPACE::Image         srcImage,
-                      ImageLayout                         srcImageLayout,
-                      VULKAN_HPP_NAMESPACE::Image         dstImage,
-                      ImageLayout                         dstImageLayout,
-                      ArrayProxy<ImageBlit const> const & regions,
-                      Filter                              filter ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdClearDepthStencilImage, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearDepthStencilImage.html
-      void clearDepthStencilImage( VULKAN_HPP_NAMESPACE::Image                     image,
-                                   ImageLayout                                     imageLayout,
-                                   ClearDepthStencilValue const &                  depthStencil,
-                                   ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdClearAttachments, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearAttachments.html
-      void clearAttachments( ArrayProxy<ClearAttachment const> const & attachments, ArrayProxy<ClearRect const> const & rects ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdResolveImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResolveImage.html
-      void resolveImage( VULKAN_HPP_NAMESPACE::Image            srcImage,
-                         ImageLayout                            srcImageLayout,
-                         VULKAN_HPP_NAMESPACE::Image            dstImage,
-                         ImageLayout                            dstImageLayout,
-                         ArrayProxy<ImageResolve const> const & regions ) const VULKAN_HPP_NOEXCEPT;
-
       // wrapper function for command vkCmdBeginRenderPass, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginRenderPass.html
       void beginRenderPass( RenderPassBeginInfo const & renderPassBegin, SubpassContents contents ) const VULKAN_HPP_NOEXCEPT;
 
@@ -7008,6 +5979,9 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdEndRenderPass, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndRenderPass.html
       void endRenderPass() const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdExecuteCommands, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteCommands.html
+      void executeCommands( ArrayProxy<VULKAN_HPP_NAMESPACE::CommandBuffer const> const & commandBuffers ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_VERSION_1_1 ===
 
@@ -7048,6 +6022,15 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       //=== VK_VERSION_1_3 ===
 
+      // wrapper function for command vkCmdSetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent2.html
+      void setEvent2( VULKAN_HPP_NAMESPACE::Event event, DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdResetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent2.html
+      void resetEvent2( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags2 stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdWaitEvents2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents2.html
+      void waitEvents2( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events, ArrayProxy<DependencyInfo const> const & dependencyInfos ) const;
+
       // wrapper function for command vkCmdPipelineBarrier2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPipelineBarrier2.html
       void pipelineBarrier2( DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT;
 
@@ -7065,15 +6048,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdCopyImageToBuffer2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyImageToBuffer2.html
       void copyImageToBuffer2( CopyImageToBufferInfo2 const & copyImageToBufferInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent2.html
-      void setEvent2( VULKAN_HPP_NAMESPACE::Event event, DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdResetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent2.html
-      void resetEvent2( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags2 stageMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdWaitEvents2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents2.html
-      void waitEvents2( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events, ArrayProxy<DependencyInfo const> const & dependencyInfos ) const;
 
       // wrapper function for command vkCmdBlitImage2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBlitImage2.html
       void blitImage2( BlitImageInfo2 const & blitImageInfo ) const VULKAN_HPP_NOEXCEPT;
@@ -7138,49 +6112,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkCmdSetPrimitiveRestartEnable, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetPrimitiveRestartEnable.html
       void setPrimitiveRestartEnable( Bool32 primitiveRestartEnable ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_VERSION_1_4 ===
-
-      // wrapper function for command vkCmdPushDescriptorSet, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet.html
-      void pushDescriptorSet( PipelineBindPoint                            pipelineBindPoint,
-                              VULKAN_HPP_NAMESPACE::PipelineLayout         layout,
-                              uint32_t                                     set,
-                              ArrayProxy<WriteDescriptorSet const> const & descriptorWrites ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdPushDescriptorSetWithTemplate, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate.html
-      template <typename DataType>
-      void pushDescriptorSetWithTemplate( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
-                                          VULKAN_HPP_NAMESPACE::PipelineLayout           layout,
-                                          uint32_t                                       set,
-                                          DataType const &                               data ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindDescriptorSets2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets2.html
-      void bindDescriptorSets2( BindDescriptorSetsInfo const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdPushConstants2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants2.html
-      void pushConstants2( PushConstantsInfo const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdPushDescriptorSet2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet2.html
-      void pushDescriptorSet2( PushDescriptorSetInfo const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdPushDescriptorSetWithTemplate2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate2.html
-      void pushDescriptorSetWithTemplate2( PushDescriptorSetWithTemplateInfo const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetLineStipple, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineStipple.html
-      void setLineStipple( uint32_t lineStippleFactor, uint16_t lineStipplePattern ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindIndexBuffer2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindIndexBuffer2.html
-      void bindIndexBuffer2( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, DeviceSize size, IndexType indexType ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetRenderingAttachmentLocations, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingAttachmentLocations.html
-      void setRenderingAttachmentLocations( RenderingAttachmentLocationInfo const & locationInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetRenderingInputAttachmentIndices, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingInputAttachmentIndices.html
-      void setRenderingInputAttachmentIndices( RenderingInputAttachmentIndexInfo const & inputAttachmentIndexInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_debug_marker ===
 
@@ -7360,32 +6291,19 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdInitializeGraphScratchMemoryAMDX, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdInitializeGraphScratchMemoryAMDX.html
-      void initializeGraphScratchMemoryAMDX( VULKAN_HPP_NAMESPACE::Pipeline executionGraph,
-                                             DeviceAddress                  scratch,
-                                             DeviceSize                     scratchSize ) const VULKAN_HPP_NOEXCEPT;
+      void initializeGraphScratchMemoryAMDX( DeviceAddress scratch ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdDispatchGraphAMDX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphAMDX.html
-      void dispatchGraphAMDX( DeviceAddress scratch, DeviceSize scratchSize, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT;
+      void dispatchGraphAMDX( DeviceAddress scratch, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdDispatchGraphIndirectAMDX, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphIndirectAMDX.html
-      void dispatchGraphIndirectAMDX( DeviceAddress scratch, DeviceSize scratchSize, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT;
+      void dispatchGraphIndirectAMDX( DeviceAddress scratch, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdDispatchGraphIndirectCountAMDX, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphIndirectCountAMDX.html
-      void dispatchGraphIndirectCountAMDX( DeviceAddress scratch, DeviceSize scratchSize, DeviceAddress countInfo ) const VULKAN_HPP_NOEXCEPT;
+      void dispatchGraphIndirectCountAMDX( DeviceAddress scratch, DeviceAddress countInfo ) const VULKAN_HPP_NOEXCEPT;
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
-
-      //=== VK_EXT_descriptor_heap ===
-
-      // wrapper function for command vkCmdBindSamplerHeapEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindSamplerHeapEXT.html
-      void bindSamplerHeapEXT( BindHeapInfoEXT const & bindInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBindResourceHeapEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindResourceHeapEXT.html
-      void bindResourceHeapEXT( BindHeapInfoEXT const & bindInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdPushDataEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDataEXT.html
-      void pushDataEXT( PushDataInfoEXT const & pushDataInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_sample_locations ===
 
@@ -7532,12 +6450,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                  DeviceSize                   dstOffset,
                                  uint32_t                     marker ) const VULKAN_HPP_NOEXCEPT;
 
-      // wrapper function for command vkCmdWriteBufferMarker2AMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteBufferMarker2AMD.html
-      void writeBufferMarker2AMD( PipelineStageFlags2          stage,
-                                  VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
-                                  DeviceSize                   dstOffset,
-                                  uint32_t                     marker ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_NV_mesh_shader ===
 
       // wrapper function for command vkCmdDrawMeshTasksNV, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawMeshTasksNV.html
@@ -7590,16 +6502,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkCmdSetFragmentShadingRateKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetFragmentShadingRateKHR.html
       void setFragmentShadingRateKHR( Extent2D const & fragmentSize, FragmentShadingRateCombinerOpKHR const combinerOps[2] ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_KHR_dynamic_rendering_local_read ===
-
-      // wrapper function for command vkCmdSetRenderingAttachmentLocationsKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingAttachmentLocationsKHR.html
-      void setRenderingAttachmentLocationsKHR( RenderingAttachmentLocationInfo const & locationInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetRenderingInputAttachmentIndicesKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingInputAttachmentIndicesKHR.html
-      void setRenderingInputAttachmentIndicesKHR( RenderingInputAttachmentIndexInfo const & inputAttachmentIndexInfo ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_line_rasterization ===
 
@@ -7688,19 +6590,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       void cudaLaunchKernelNV( CudaLaunchInfoNV const & launchInfo ) const VULKAN_HPP_NOEXCEPT;
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-      //=== VK_QCOM_tile_shading ===
-
-      // wrapper function for command vkCmdDispatchTileQCOM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchTileQCOM.html
-      void dispatchTileQCOM( DispatchTileInfoQCOM const & dispatchTileInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdBeginPerTileExecutionQCOM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginPerTileExecutionQCOM.html
-      void beginPerTileExecutionQCOM( PerTileBeginInfoQCOM const & perTileBeginInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdEndPerTileExecutionQCOM, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndPerTileExecutionQCOM.html
-      void endPerTileExecutionQCOM( PerTileEndInfoQCOM const & perTileEndInfo ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_KHR_synchronization2 ===
 
       // wrapper function for command vkCmdSetEvent2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent2KHR.html
@@ -7717,6 +6606,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdWriteTimestamp2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteTimestamp2KHR.html
       void writeTimestamp2KHR( PipelineStageFlags2 stage, VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query ) const VULKAN_HPP_NOEXCEPT;
+
+      // wrapper function for command vkCmdWriteBufferMarker2AMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteBufferMarker2AMD.html
+      void writeBufferMarker2AMD( PipelineStageFlags2          stage,
+                                  VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
+                                  DeviceSize                   dstOffset,
+                                  uint32_t                     marker ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_EXT_descriptor_buffer ===
 
@@ -7906,6 +6801,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       //=== VK_EXT_extended_dynamic_state3 ===
 
+      // wrapper function for command vkCmdSetTessellationDomainOriginEXT, see
+      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetTessellationDomainOriginEXT.html
+      void setTessellationDomainOriginEXT( TessellationDomainOrigin domainOrigin ) const VULKAN_HPP_NOEXCEPT;
+
       // wrapper function for command vkCmdSetDepthClampEnableEXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthClampEnableEXT.html
       void setDepthClampEnableEXT( Bool32 depthClampEnable ) const VULKAN_HPP_NOEXCEPT;
@@ -7918,7 +6817,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       void setRasterizationSamplesEXT( SampleCountFlagBits rasterizationSamples ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdSetSampleMaskEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetSampleMaskEXT.html
-      void setSampleMaskEXT( SampleCountFlagBits samples, ArrayProxy<SampleMask const> const & sampleMask VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const;
+      void setSampleMaskEXT( SampleCountFlagBits samples, ArrayProxy<SampleMask const> const & sampleMask ) const;
 
       // wrapper function for command vkCmdSetAlphaToCoverageEnableEXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetAlphaToCoverageEnableEXT.html
@@ -7941,10 +6840,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkCmdSetColorWriteMaskEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetColorWriteMaskEXT.html
       void setColorWriteMaskEXT( uint32_t firstAttachment, ArrayProxy<ColorComponentFlags const> const & colorWriteMasks ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdSetTessellationDomainOriginEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetTessellationDomainOriginEXT.html
-      void setTessellationDomainOriginEXT( TessellationDomainOrigin domainOrigin ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdSetRasterizationStreamEXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRasterizationStreamEXT.html
@@ -8024,11 +6919,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetCoverageReductionModeNV.html
       void setCoverageReductionModeNV( CoverageReductionModeNV coverageReductionMode ) const VULKAN_HPP_NOEXCEPT;
 
-      //=== VK_ARM_tensors ===
-
-      // wrapper function for command vkCmdCopyTensorARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyTensorARM.html
-      void copyTensorARM( CopyTensorInfoARM const & copyTensorInfo ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_NV_optical_flow ===
 
       // wrapper function for command vkCmdOpticalFlowExecuteNV, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdOpticalFlowExecuteNV.html
@@ -8044,48 +6934,27 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkCmdBindShadersEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindShadersEXT.html
       void bindShadersEXT( ArrayProxy<ShaderStageFlagBits const> const & stages, ArrayProxy<VULKAN_HPP_NAMESPACE::ShaderEXT const> const & shaders ) const;
 
-      // wrapper function for command vkCmdSetDepthClampRangeEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthClampRangeEXT.html
-      void setDepthClampRangeEXT( DepthClampModeEXT                                  depthClampMode,
-                                  Optional<DepthClampRangeEXT const> depthClampRange VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_NV_cooperative_vector ===
-
-      // wrapper function for command vkCmdConvertCooperativeVectorMatrixNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdConvertCooperativeVectorMatrixNV.html
-      void convertCooperativeVectorMatrixNV( ArrayProxy<ConvertCooperativeVectorMatrixInfoNV const> const & infos ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_ARM_data_graph ===
-
-      // wrapper function for command vkCmdDispatchDataGraphARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchDataGraphARM.html
-      void dispatchDataGraphARM( VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM     session,
-                                 Optional<DataGraphPipelineDispatchInfoARM const> info VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
 
       // wrapper function for command vkCmdSetAttachmentFeedbackLoopEnableEXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetAttachmentFeedbackLoopEnableEXT.html
       void setAttachmentFeedbackLoopEnableEXT( ImageAspectFlags aspectMask VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
 
-      //=== VK_KHR_line_rasterization ===
-
-      // wrapper function for command vkCmdSetLineStippleKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineStippleKHR.html
-      void setLineStippleKHR( uint32_t lineStippleFactor, uint16_t lineStipplePattern ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_KHR_maintenance6 ===
 
       // wrapper function for command vkCmdBindDescriptorSets2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets2KHR.html
-      void bindDescriptorSets2KHR( BindDescriptorSetsInfo const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT;
+      void bindDescriptorSets2KHR( BindDescriptorSetsInfoKHR const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdPushConstants2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants2KHR.html
-      void pushConstants2KHR( PushConstantsInfo const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT;
+      void pushConstants2KHR( PushConstantsInfoKHR const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdPushDescriptorSet2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet2KHR.html
-      void pushDescriptorSet2KHR( PushDescriptorSetInfo const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT;
+      void pushDescriptorSet2KHR( PushDescriptorSetInfoKHR const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdPushDescriptorSetWithTemplate2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate2KHR.html
-      void pushDescriptorSetWithTemplate2KHR( PushDescriptorSetWithTemplateInfo const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT;
+      void pushDescriptorSetWithTemplate2KHR( PushDescriptorSetWithTemplateInfoKHR const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkCmdSetDescriptorBufferOffsets2EXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDescriptorBufferOffsets2EXT.html
@@ -8095,78 +6964,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorBufferEmbeddedSamplers2EXT.html
       void bindDescriptorBufferEmbeddedSamplers2EXT( BindDescriptorBufferEmbeddedSamplersInfoEXT const & bindDescriptorBufferEmbeddedSamplersInfo ) const
         VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_QCOM_tile_memory_heap ===
-
-      // wrapper function for command vkCmdBindTileMemoryQCOM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindTileMemoryQCOM.html
-      void bindTileMemoryQCOM( Optional<TileMemoryBindInfoQCOM const> tileMemoryBindInfo VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_KHR_copy_memory_indirect ===
-
-      // wrapper function for command vkCmdCopyMemoryIndirectKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyMemoryIndirectKHR.html
-      void copyMemoryIndirectKHR( CopyMemoryIndirectInfoKHR const & copyMemoryIndirectInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdCopyMemoryToImageIndirectKHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyMemoryToImageIndirectKHR.html
-      void copyMemoryToImageIndirectKHR( CopyMemoryToImageIndirectInfoKHR const & copyMemoryToImageIndirectInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_EXT_memory_decompression ===
-
-      // wrapper function for command vkCmdDecompressMemoryEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDecompressMemoryEXT.html
-      void decompressMemoryEXT( DecompressMemoryInfoEXT const & decompressMemoryInfoEXT ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdDecompressMemoryIndirectCountEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDecompressMemoryIndirectCountEXT.html
-      void decompressMemoryIndirectCountEXT( MemoryDecompressionMethodFlagsEXT decompressionMethod,
-                                             DeviceAddress                     indirectCommandsAddress,
-                                             DeviceAddress                     indirectCommandsCountAddress,
-                                             uint32_t                          maxDecompressionCount,
-                                             uint32_t                          stride ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_NV_cluster_acceleration_structure ===
-
-      // wrapper function for command vkCmdBuildClusterAccelerationStructureIndirectNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBuildClusterAccelerationStructureIndirectNV.html
-      void buildClusterAccelerationStructureIndirectNV( ClusterAccelerationStructureCommandsInfoNV const & commandInfos ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_NV_partitioned_acceleration_structure ===
-
-      // wrapper function for command vkCmdBuildPartitionedAccelerationStructuresNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBuildPartitionedAccelerationStructuresNV.html
-      void buildPartitionedAccelerationStructuresNV( BuildPartitionedAccelerationStructureInfoNV const & buildInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_EXT_device_generated_commands ===
-
-      // wrapper function for command vkCmdPreprocessGeneratedCommandsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPreprocessGeneratedCommandsEXT.html
-      void preprocessGeneratedCommandsEXT( GeneratedCommandsInfoEXT const &    generatedCommandsInfo,
-                                           VULKAN_HPP_NAMESPACE::CommandBuffer stateCommandBuffer ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkCmdExecuteGeneratedCommandsEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteGeneratedCommandsEXT.html
-      void executeGeneratedCommandsEXT( Bool32 isPreprocessed, GeneratedCommandsInfoEXT const & generatedCommandsInfo ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_EXT_fragment_density_map_offset ===
-
-      // wrapper function for command vkCmdEndRendering2EXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndRendering2EXT.html
-      void endRendering2EXT( Optional<RenderingEndInfoKHR const> renderingEndInfo VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_EXT_custom_resolve ===
-
-      // wrapper function for command vkCmdBeginCustomResolveEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginCustomResolveEXT.html
-      void beginCustomResolveEXT( Optional<BeginCustomResolveInfoEXT const> beginCustomResolveInfo VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const
-        VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_KHR_maintenance10 ===
-
-      // wrapper function for command vkCmdEndRendering2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndRendering2KHR.html
-      void endRendering2KHR( Optional<RenderingEndInfoKHR const> renderingEndInfo VULKAN_HPP_DEFAULT_ASSIGNMENT( nullptr ) ) const VULKAN_HPP_NOEXCEPT;
-
-      //=== VK_NV_compute_occupancy_priority ===
-
-      // wrapper function for command vkCmdSetComputeOccupancyPriorityNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetComputeOccupancyPriorityNV.html
-      void setComputeOccupancyPriorityNV( ComputeOccupancyPriorityParametersNV const & parameters ) const VULKAN_HPP_NOEXCEPT;
 
     private:
       VULKAN_HPP_NAMESPACE::Device        m_device        = {};
@@ -8722,135 +7519,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-    // wrapper class for handle VkDataGraphPipelineSessionARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkDataGraphPipelineSessionARM.html
-    class DataGraphPipelineSessionARM
-    {
-    public:
-      using CType   = VkDataGraphPipelineSessionARM;
-      using CppType = VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eDataGraphPipelineSessionARM;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      DataGraphPipelineSessionARM( Device const &                                device,
-                                   DataGraphPipelineSessionCreateInfoARM const & createInfo,
-                                   Optional<AllocationCallbacks const>           allocator = nullptr )
-      {
-        *this = device.createDataGraphPipelineSessionARM( createInfo, allocator );
-      }
-#  endif
-
-      DataGraphPipelineSessionARM( Device const & device, VkDataGraphPipelineSessionARM session, Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_dataGraphPipelineSessionARM( session )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      DataGraphPipelineSessionARM( std::nullptr_t ) {}
-
-      ~DataGraphPipelineSessionARM()
-      {
-        clear();
-      }
-
-      DataGraphPipelineSessionARM()                                      = delete;
-      DataGraphPipelineSessionARM( DataGraphPipelineSessionARM const & ) = delete;
-
-      DataGraphPipelineSessionARM( DataGraphPipelineSessionARM && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_dataGraphPipelineSessionARM( exchange( rhs.m_dataGraphPipelineSessionARM, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      DataGraphPipelineSessionARM & operator=( DataGraphPipelineSessionARM const & ) = delete;
-
-      DataGraphPipelineSessionARM & operator=( DataGraphPipelineSessionARM && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_dataGraphPipelineSessionARM, rhs.m_dataGraphPipelineSessionARM );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_dataGraphPipelineSessionARM;
-      }
-
-      VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_dataGraphPipelineSessionARM );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_dataGraphPipelineSessionARM;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_dataGraphPipelineSessionARM )
-        {
-          getDispatcher()->vkDestroyDataGraphPipelineSessionARM( static_cast<VkDevice>( m_device ),
-                                                                 static_cast<VkDataGraphPipelineSessionARM>( m_dataGraphPipelineSessionARM ),
-                                                                 reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device                      = nullptr;
-        m_dataGraphPipelineSessionARM = nullptr;
-        m_allocator                   = nullptr;
-        m_dispatcher                  = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_dataGraphPipelineSessionARM, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( DataGraphPipelineSessionARM & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_dataGraphPipelineSessionARM, rhs.m_dataGraphPipelineSessionARM );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device                      m_device                      = {};
-      VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM m_dataGraphPipelineSessionARM = {};
-      AllocationCallbacks const *                       m_allocator                   = {};
-      detail::DeviceDispatcher const *                  m_dispatcher                  = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<DataGraphPipelineSessionARM>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
     // wrapper class for handle VkDebugReportCallbackEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkDebugReportCallbackEXT.html
     class DebugReportCallbackEXT
     {
@@ -9231,7 +7899,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetDeferredOperationResultKHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeferredOperationResultKHR.html
-      VULKAN_HPP_NODISCARD Result getResult() const;
+      VULKAN_HPP_NODISCARD Result getResult() const VULKAN_HPP_NOEXCEPT;
 
       // wrapper function for command vkDeferredOperationJoinKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkDeferredOperationJoinKHR.html
       VULKAN_HPP_NODISCARD Result join() const;
@@ -9366,7 +8034,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       //=== VK_VERSION_1_0 ===
 
       // wrapper function for command vkResetDescriptorPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetDescriptorPool.html
-      typename ResultValueType<void>::type reset( DescriptorPoolResetFlags flags VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const;
+      void reset( DescriptorPoolResetFlags flags VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const VULKAN_HPP_NOEXCEPT;
 
     private:
       VULKAN_HPP_NAMESPACE::Device         m_device         = {};
@@ -10102,11 +8770,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDisplayModeProperties2KHR.html
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<DisplayModeProperties2KHR>>::type getModeProperties2() const;
 
-      // wrapper function for command vkGetDisplayModeProperties2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDisplayModeProperties2KHR.html
-      template <typename StructureChain>
-      VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<StructureChain>>::type getModeProperties2() const;
-
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
       //=== VK_NV_acquire_winrt_display ===
 
@@ -10399,142 +9062,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     template <>
     struct isVulkanRAIIHandleType<Event>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
-    // wrapper class for handle VkExternalComputeQueueNV, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkExternalComputeQueueNV.html
-    class ExternalComputeQueueNV
-    {
-    public:
-      using CType   = VkExternalComputeQueueNV;
-      using CppType = VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eExternalComputeQueueNV;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      ExternalComputeQueueNV( Device const &                           device,
-                              ExternalComputeQueueCreateInfoNV const & createInfo,
-                              Optional<AllocationCallbacks const>      allocator = nullptr )
-      {
-        *this = device.createExternalComputeQueueNV( createInfo, allocator );
-      }
-#  endif
-
-      ExternalComputeQueueNV( Device const & device, VkExternalComputeQueueNV externalQueue, Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_externalComputeQueueNV( externalQueue )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      ExternalComputeQueueNV( std::nullptr_t ) {}
-
-      ~ExternalComputeQueueNV()
-      {
-        clear();
-      }
-
-      ExternalComputeQueueNV()                                 = delete;
-      ExternalComputeQueueNV( ExternalComputeQueueNV const & ) = delete;
-
-      ExternalComputeQueueNV( ExternalComputeQueueNV && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_externalComputeQueueNV( exchange( rhs.m_externalComputeQueueNV, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      ExternalComputeQueueNV & operator=( ExternalComputeQueueNV const & ) = delete;
-
-      ExternalComputeQueueNV & operator=( ExternalComputeQueueNV && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_externalComputeQueueNV, rhs.m_externalComputeQueueNV );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_externalComputeQueueNV;
-      }
-
-      VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_externalComputeQueueNV );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_externalComputeQueueNV;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_externalComputeQueueNV )
-        {
-          getDispatcher()->vkDestroyExternalComputeQueueNV( static_cast<VkDevice>( m_device ),
-                                                            static_cast<VkExternalComputeQueueNV>( m_externalComputeQueueNV ),
-                                                            reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device                 = nullptr;
-        m_externalComputeQueueNV = nullptr;
-        m_allocator              = nullptr;
-        m_dispatcher             = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_externalComputeQueueNV, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( ExternalComputeQueueNV & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_externalComputeQueueNV, rhs.m_externalComputeQueueNV );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-      //=== VK_NV_external_compute_queue ===
-
-      // wrapper function for command vkGetExternalComputeQueueDataNV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetExternalComputeQueueDataNV.html
-      template <typename DataType>
-      VULKAN_HPP_NODISCARD std::pair<ExternalComputeQueueDataParamsNV, DataType> getData() const VULKAN_HPP_NOEXCEPT;
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device                 m_device                 = {};
-      VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV m_externalComputeQueueNV = {};
-      AllocationCallbacks const *                  m_allocator              = {};
-      detail::DeviceDispatcher const *             m_dispatcher             = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<ExternalComputeQueueNV>
     {
       static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
     };
@@ -10943,17 +9470,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout.html
       VULKAN_HPP_NODISCARD SubresourceLayout getSubresourceLayout( ImageSubresource const & subresource ) const VULKAN_HPP_NOEXCEPT;
 
-      //=== VK_VERSION_1_4 ===
-
-      // wrapper function for command vkGetImageSubresourceLayout2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2.html
-      VULKAN_HPP_NODISCARD SubresourceLayout2 getSubresourceLayout2( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetImageSubresourceLayout2, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getSubresourceLayout2( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_EXT_image_drm_format_modifier ===
 
       // wrapper function for command vkGetImageDrmFormatModifierPropertiesEXT, see
@@ -10964,23 +9480,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetImageSubresourceLayout2EXT, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2EXT.html
-      VULKAN_HPP_NODISCARD SubresourceLayout2 getSubresourceLayout2EXT( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetImageSubresourceLayout2EXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2EXT.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getSubresourceLayout2EXT( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
+      VULKAN_HPP_NODISCARD SubresourceLayout2KHR getSubresourceLayout2EXT( ImageSubresource2KHR const & subresource ) const VULKAN_HPP_NOEXCEPT;
 
       //=== VK_KHR_maintenance5 ===
 
       // wrapper function for command vkGetImageSubresourceLayout2KHR, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2KHR.html
-      VULKAN_HPP_NODISCARD SubresourceLayout2 getSubresourceLayout2KHR( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkGetImageSubresourceLayout2KHR, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2KHR.html
-      template <typename X, typename Y, typename... Z>
-      VULKAN_HPP_NODISCARD StructureChain<X, Y, Z...> getSubresourceLayout2KHR( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT;
+      VULKAN_HPP_NODISCARD SubresourceLayout2KHR getSubresourceLayout2KHR( ImageSubresource2KHR const & subresource ) const VULKAN_HPP_NOEXCEPT;
 
     protected:
       Image( VULKAN_HPP_NAMESPACE::Device     device,
@@ -11138,137 +9644,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
     };
 
-    // wrapper class for handle VkIndirectCommandsLayoutEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkIndirectCommandsLayoutEXT.html
-    class IndirectCommandsLayoutEXT
-    {
-    public:
-      using CType   = VkIndirectCommandsLayoutEXT;
-      using CppType = VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eIndirectCommandsLayoutEXT;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      IndirectCommandsLayoutEXT( Device const &                              device,
-                                 IndirectCommandsLayoutCreateInfoEXT const & createInfo,
-                                 Optional<AllocationCallbacks const>         allocator = nullptr )
-      {
-        *this = device.createIndirectCommandsLayoutEXT( createInfo, allocator );
-      }
-#  endif
-
-      IndirectCommandsLayoutEXT( Device const &                      device,
-                                 VkIndirectCommandsLayoutEXT         indirectCommandsLayout,
-                                 Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_indirectCommandsLayoutEXT( indirectCommandsLayout )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      IndirectCommandsLayoutEXT( std::nullptr_t ) {}
-
-      ~IndirectCommandsLayoutEXT()
-      {
-        clear();
-      }
-
-      IndirectCommandsLayoutEXT()                                    = delete;
-      IndirectCommandsLayoutEXT( IndirectCommandsLayoutEXT const & ) = delete;
-
-      IndirectCommandsLayoutEXT( IndirectCommandsLayoutEXT && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_indirectCommandsLayoutEXT( exchange( rhs.m_indirectCommandsLayoutEXT, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      IndirectCommandsLayoutEXT & operator=( IndirectCommandsLayoutEXT const & ) = delete;
-
-      IndirectCommandsLayoutEXT & operator=( IndirectCommandsLayoutEXT && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_indirectCommandsLayoutEXT, rhs.m_indirectCommandsLayoutEXT );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_indirectCommandsLayoutEXT;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_indirectCommandsLayoutEXT );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_indirectCommandsLayoutEXT;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_indirectCommandsLayoutEXT )
-        {
-          getDispatcher()->vkDestroyIndirectCommandsLayoutEXT( static_cast<VkDevice>( m_device ),
-                                                               static_cast<VkIndirectCommandsLayoutEXT>( m_indirectCommandsLayoutEXT ),
-                                                               reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device                    = nullptr;
-        m_indirectCommandsLayoutEXT = nullptr;
-        m_allocator                 = nullptr;
-        m_dispatcher                = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_indirectCommandsLayoutEXT, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( IndirectCommandsLayoutEXT & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_indirectCommandsLayoutEXT, rhs.m_indirectCommandsLayoutEXT );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device                    m_device                    = {};
-      VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT m_indirectCommandsLayoutEXT = {};
-      AllocationCallbacks const *                     m_allocator                 = {};
-      detail::DeviceDispatcher const *                m_dispatcher                = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<IndirectCommandsLayoutEXT>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
     // wrapper class for handle VkIndirectCommandsLayoutNV, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkIndirectCommandsLayoutNV.html
     class IndirectCommandsLayoutNV
     {
@@ -11396,145 +9771,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     template <>
     struct isVulkanRAIIHandleType<IndirectCommandsLayoutNV>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
-    // wrapper class for handle VkIndirectExecutionSetEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkIndirectExecutionSetEXT.html
-    class IndirectExecutionSetEXT
-    {
-    public:
-      using CType   = VkIndirectExecutionSetEXT;
-      using CppType = VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eIndirectExecutionSetEXT;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      IndirectExecutionSetEXT( Device const &                            device,
-                               IndirectExecutionSetCreateInfoEXT const & createInfo,
-                               Optional<AllocationCallbacks const>       allocator = nullptr )
-      {
-        *this = device.createIndirectExecutionSetEXT( createInfo, allocator );
-      }
-#  endif
-
-      IndirectExecutionSetEXT( Device const & device, VkIndirectExecutionSetEXT indirectExecutionSet, Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_indirectExecutionSetEXT( indirectExecutionSet )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      IndirectExecutionSetEXT( std::nullptr_t ) {}
-
-      ~IndirectExecutionSetEXT()
-      {
-        clear();
-      }
-
-      IndirectExecutionSetEXT()                                  = delete;
-      IndirectExecutionSetEXT( IndirectExecutionSetEXT const & ) = delete;
-
-      IndirectExecutionSetEXT( IndirectExecutionSetEXT && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_indirectExecutionSetEXT( exchange( rhs.m_indirectExecutionSetEXT, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      IndirectExecutionSetEXT & operator=( IndirectExecutionSetEXT const & ) = delete;
-
-      IndirectExecutionSetEXT & operator=( IndirectExecutionSetEXT && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_indirectExecutionSetEXT, rhs.m_indirectExecutionSetEXT );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_indirectExecutionSetEXT;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_indirectExecutionSetEXT );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_indirectExecutionSetEXT;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_indirectExecutionSetEXT )
-        {
-          getDispatcher()->vkDestroyIndirectExecutionSetEXT( static_cast<VkDevice>( m_device ),
-                                                             static_cast<VkIndirectExecutionSetEXT>( m_indirectExecutionSetEXT ),
-                                                             reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device                  = nullptr;
-        m_indirectExecutionSetEXT = nullptr;
-        m_allocator               = nullptr;
-        m_dispatcher              = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_indirectExecutionSetEXT, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( IndirectExecutionSetEXT & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_indirectExecutionSetEXT, rhs.m_indirectExecutionSetEXT );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-      //=== VK_EXT_device_generated_commands ===
-
-      // wrapper function for command vkUpdateIndirectExecutionSetPipelineEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateIndirectExecutionSetPipelineEXT.html
-      void updatePipeline( ArrayProxy<WriteIndirectExecutionSetPipelineEXT const> const & executionSetWrites ) const VULKAN_HPP_NOEXCEPT;
-
-      // wrapper function for command vkUpdateIndirectExecutionSetShaderEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateIndirectExecutionSetShaderEXT.html
-      void updateShader( ArrayProxy<WriteIndirectExecutionSetShaderEXT const> const & executionSetWrites ) const VULKAN_HPP_NOEXCEPT;
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device                  m_device                  = {};
-      VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT m_indirectExecutionSetEXT = {};
-      AllocationCallbacks const *                   m_allocator               = {};
-      detail::DeviceDispatcher const *              m_dispatcher              = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<IndirectExecutionSetEXT>
     {
       static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
     };
@@ -12074,17 +10310,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 #  endif
 
 #  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      Pipeline( Device const &                               device,
-                Optional<DeferredOperationKHR const> const & deferredOperation,
-                Optional<PipelineCache const> const &        pipelineCache,
-                DataGraphPipelineCreateInfoARM const &       createInfo,
-                Optional<AllocationCallbacks const>          allocator = nullptr )
-      {
-        *this = device.createDataGraphPipelineARM( deferredOperation, pipelineCache, createInfo, allocator );
-      }
-#  endif
-
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
 #    if defined( VK_ENABLE_BETA_EXTENSIONS )
       Pipeline( Device const &                               device,
                 Optional<PipelineCache const> const &        pipelineCache,
@@ -12346,17 +10571,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 #  endif
 
 #  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      Pipelines( Device const &                                     device,
-                 Optional<DeferredOperationKHR const> const &       deferredOperation,
-                 Optional<PipelineCache const> const &              pipelineCache,
-                 ArrayProxy<DataGraphPipelineCreateInfoARM> const & createInfos,
-                 Optional<AllocationCallbacks const>                allocator = nullptr )
-      {
-        *this = device.createDataGraphPipelinesARM( deferredOperation, pipelineCache, createInfos, allocator );
-      }
-#  endif
-
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
 #    if defined( VK_ENABLE_BETA_EXTENSIONS )
       Pipelines( Device const &                                           device,
                  Optional<PipelineCache const> const &                    pipelineCache,
@@ -12408,165 +10622,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       Pipelines & operator=( Pipelines && rhs )  = default;
 
       Pipelines( std::vector<Pipeline> && rhs )
-      {
-        std::swap( *this, rhs );
-      }
-    };
-
-    // wrapper class for handle VkPipelineBinaryKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkPipelineBinaryKHR.html
-    class PipelineBinaryKHR
-    {
-    public:
-      using CType   = VkPipelineBinaryKHR;
-      using CppType = VULKAN_HPP_NAMESPACE::PipelineBinaryKHR;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::ePipelineBinaryKHR;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-      PipelineBinaryKHR( Device const &                      device,
-                         VkPipelineBinaryKHR                 pipelineBinary,
-                         Optional<AllocationCallbacks const> allocator   = nullptr,
-                         Result                              successCode = Result::eSuccess )
-        : m_device( device )
-        , m_pipelineBinaryKHR( pipelineBinary )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_constructorSuccessCode( successCode )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      PipelineBinaryKHR( std::nullptr_t ) {}
-
-      ~PipelineBinaryKHR()
-      {
-        clear();
-      }
-
-      PipelineBinaryKHR()                            = delete;
-      PipelineBinaryKHR( PipelineBinaryKHR const & ) = delete;
-
-      PipelineBinaryKHR( PipelineBinaryKHR && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_pipelineBinaryKHR( exchange( rhs.m_pipelineBinaryKHR, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_constructorSuccessCode( exchange( rhs.m_constructorSuccessCode, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      PipelineBinaryKHR & operator=( PipelineBinaryKHR const & ) = delete;
-
-      PipelineBinaryKHR & operator=( PipelineBinaryKHR && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_pipelineBinaryKHR, rhs.m_pipelineBinaryKHR );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_constructorSuccessCode, rhs.m_constructorSuccessCode );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::PipelineBinaryKHR const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_pipelineBinaryKHR;
-      }
-
-      VULKAN_HPP_NAMESPACE::PipelineBinaryKHR const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_pipelineBinaryKHR );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::PipelineBinaryKHR() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_pipelineBinaryKHR;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_pipelineBinaryKHR )
-        {
-          getDispatcher()->vkDestroyPipelineBinaryKHR( static_cast<VkDevice>( m_device ),
-                                                       static_cast<VkPipelineBinaryKHR>( m_pipelineBinaryKHR ),
-                                                       reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device                 = nullptr;
-        m_pipelineBinaryKHR      = nullptr;
-        m_allocator              = nullptr;
-        m_constructorSuccessCode = Result::eErrorUnknown;
-        m_dispatcher             = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::PipelineBinaryKHR release()
-      {
-        m_device                 = nullptr;
-        m_allocator              = nullptr;
-        m_constructorSuccessCode = Result::eErrorUnknown;
-        m_dispatcher             = nullptr;
-        return exchange( m_pipelineBinaryKHR, nullptr );
-      }
-
-      Result getConstructorSuccessCode() const
-      {
-        return m_constructorSuccessCode;
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( PipelineBinaryKHR & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_pipelineBinaryKHR, rhs.m_pipelineBinaryKHR );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_constructorSuccessCode, rhs.m_constructorSuccessCode );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device            m_device                 = {};
-      VULKAN_HPP_NAMESPACE::PipelineBinaryKHR m_pipelineBinaryKHR      = {};
-      AllocationCallbacks const *             m_allocator              = {};
-      Result                                  m_constructorSuccessCode = Result::eErrorUnknown;
-      detail::DeviceDispatcher const *        m_dispatcher             = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<PipelineBinaryKHR>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
-    class PipelineBinaryKHRs : public std::vector<PipelineBinaryKHR>
-    {
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      PipelineBinaryKHRs( Device const & device, PipelineBinaryCreateInfoKHR const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr )
-      {
-        *this = device.createPipelineBinariesKHR( createInfo, allocator );
-      }
-#  endif
-
-      PipelineBinaryKHRs( std::nullptr_t ) {}
-
-      PipelineBinaryKHRs()                                         = delete;
-      PipelineBinaryKHRs( PipelineBinaryKHRs const & )             = delete;
-      PipelineBinaryKHRs( PipelineBinaryKHRs && rhs )              = default;
-      PipelineBinaryKHRs & operator=( PipelineBinaryKHRs const & ) = delete;
-      PipelineBinaryKHRs & operator=( PipelineBinaryKHRs && rhs )  = default;
-
-      PipelineBinaryKHRs( std::vector<PipelineBinaryKHR> && rhs )
       {
         std::swap( *this, rhs );
       }
@@ -13121,10 +11176,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetQueueCheckpointDataNV, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetQueueCheckpointDataNV.html
       VULKAN_HPP_NODISCARD std::vector<CheckpointDataNV> getCheckpointDataNV() const;
 
-      // wrapper function for command vkGetQueueCheckpointData2NV, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetQueueCheckpointData2NV.html
-      VULKAN_HPP_NODISCARD std::vector<CheckpointData2NV> getCheckpointData2NV() const;
-
       //=== VK_INTEL_performance_query ===
 
       // wrapper function for command vkQueueSetPerformanceConfigurationINTEL, see
@@ -13136,6 +11187,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkQueueSubmit2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkQueueSubmit2KHR.html
       typename ResultValueType<void>::type submit2KHR( ArrayProxy<SubmitInfo2 const> const & submits,
                                                        VULKAN_HPP_NAMESPACE::Fence fence     VULKAN_HPP_DEFAULT_ASSIGNMENT( {} ) ) const;
+
+      // wrapper function for command vkGetQueueCheckpointData2NV, see
+      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetQueueCheckpointData2NV.html
+      VULKAN_HPP_NODISCARD std::vector<CheckpointData2NV> getCheckpointData2NV() const;
 
       //=== VK_NV_low_latency2 ===
 
@@ -13282,7 +11337,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       // wrapper function for command vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI, see
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html
-      VULKAN_HPP_NODISCARD typename ResultValueType<Extent2D>::type getSubpassShadingMaxWorkgroupSizeHUAWEI() const;
+      VULKAN_HPP_NODISCARD ResultValue<Extent2D> getSubpassShadingMaxWorkgroupSizeHUAWEI() const;
 
     private:
       VULKAN_HPP_NAMESPACE::Device     m_device     = {};
@@ -13704,11 +11759,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       }
 #  endif
 
-      ShaderEXT( Device const & device, VkShaderEXT shader, Optional<AllocationCallbacks const> allocator = nullptr, Result successCode = Result::eSuccess )
+      ShaderEXT( Device const & device, VkShaderEXT shader, Optional<AllocationCallbacks const> allocator = nullptr )
         : m_device( device )
         , m_shaderEXT( shader )
         , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_constructorSuccessCode( successCode )
         , m_dispatcher( device.getDispatcher() )
       {
       }
@@ -13727,7 +11781,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         : m_device( exchange( rhs.m_device, {} ) )
         , m_shaderEXT( exchange( rhs.m_shaderEXT, {} ) )
         , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_constructorSuccessCode( exchange( rhs.m_constructorSuccessCode, {} ) )
         , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
       {
       }
@@ -13741,7 +11794,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           std::swap( m_device, rhs.m_device );
           std::swap( m_shaderEXT, rhs.m_shaderEXT );
           std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_constructorSuccessCode, rhs.m_constructorSuccessCode );
           std::swap( m_dispatcher, rhs.m_dispatcher );
         }
         return *this;
@@ -13769,25 +11821,18 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
           getDispatcher()->vkDestroyShaderEXT(
             static_cast<VkDevice>( m_device ), static_cast<VkShaderEXT>( m_shaderEXT ), reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
         }
-        m_device                 = nullptr;
-        m_shaderEXT              = nullptr;
-        m_allocator              = nullptr;
-        m_constructorSuccessCode = Result::eErrorUnknown;
-        m_dispatcher             = nullptr;
+        m_device     = nullptr;
+        m_shaderEXT  = nullptr;
+        m_allocator  = nullptr;
+        m_dispatcher = nullptr;
       }
 
       VULKAN_HPP_NAMESPACE::ShaderEXT release()
       {
-        m_device                 = nullptr;
-        m_allocator              = nullptr;
-        m_constructorSuccessCode = Result::eErrorUnknown;
-        m_dispatcher             = nullptr;
+        m_device     = nullptr;
+        m_allocator  = nullptr;
+        m_dispatcher = nullptr;
         return exchange( m_shaderEXT, nullptr );
-      }
-
-      Result getConstructorSuccessCode() const
-      {
-        return m_constructorSuccessCode;
       }
 
       VULKAN_HPP_NAMESPACE::Device getDevice() const
@@ -13806,7 +11851,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         std::swap( m_device, rhs.m_device );
         std::swap( m_shaderEXT, rhs.m_shaderEXT );
         std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_constructorSuccessCode, rhs.m_constructorSuccessCode );
         std::swap( m_dispatcher, rhs.m_dispatcher );
       }
 
@@ -13816,11 +11860,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NODISCARD typename ResultValueType<std::vector<uint8_t>>::type getBinaryData() const;
 
     private:
-      VULKAN_HPP_NAMESPACE::Device     m_device                 = {};
-      VULKAN_HPP_NAMESPACE::ShaderEXT  m_shaderEXT              = {};
-      AllocationCallbacks const *      m_allocator              = {};
-      Result                           m_constructorSuccessCode = Result::eErrorUnknown;
-      detail::DeviceDispatcher const * m_dispatcher             = nullptr;
+      VULKAN_HPP_NAMESPACE::Device     m_device     = {};
+      VULKAN_HPP_NAMESPACE::ShaderEXT  m_shaderEXT  = {};
+      AllocationCallbacks const *      m_allocator  = {};
+      detail::DeviceDispatcher const * m_dispatcher = nullptr;
     };
 
     template <>
@@ -14080,24 +12123,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         *this = instance.createStreamDescriptorSurfaceGGP( createInfo, allocator );
       }
 #    endif /*VK_USE_PLATFORM_GGP*/
-#  endif
-
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-#    if defined( VK_USE_PLATFORM_OHOS )
-      SurfaceKHR( Instance const & instance, SurfaceCreateInfoOHOS const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr )
-      {
-        *this = instance.createSurfaceOHOS( createInfo, allocator );
-      }
-#    endif /*VK_USE_PLATFORM_OHOS*/
-#  endif
-
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-#    if defined( VK_USE_PLATFORM_UBM_SEC )
-      SurfaceKHR( Instance const & instance, UbmSurfaceCreateInfoSEC const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr )
-      {
-        *this = instance.createUbmSurfaceSEC( createInfo, allocator );
-      }
-#    endif /*VK_USE_PLATFORM_UBM_SEC*/
 #  endif
 
 #  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
@@ -14408,21 +12433,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // wrapper function for command vkGetSwapchainStatusKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSwapchainStatusKHR.html
       VULKAN_HPP_NODISCARD Result getStatus() const;
 
-      //=== VK_EXT_present_timing ===
-
-      // wrapper function for command vkSetSwapchainPresentTimingQueueSizeEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkSetSwapchainPresentTimingQueueSizeEXT.html
-      VULKAN_HPP_NODISCARD Result setPresentTimingQueueSizeEXT( uint32_t size ) const;
-
-      // wrapper function for command vkGetSwapchainTimingPropertiesEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSwapchainTimingPropertiesEXT.html
-      VULKAN_HPP_NODISCARD ResultValue<std::pair<SwapchainTimingPropertiesEXT, uint64_t>> getTimingPropertiesEXT() const;
-
-      // wrapper function for command vkGetSwapchainTimeDomainPropertiesEXT, see
-      // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSwapchainTimeDomainPropertiesEXT.html
-      VULKAN_HPP_NODISCARD Result getTimeDomainPropertiesEXT( SwapchainTimeDomainPropertiesEXT * pSwapchainTimeDomainProperties,
-                                                              uint64_t *                         pTimeDomainsCounter ) const VULKAN_HPP_NOEXCEPT;
-
       //=== VK_AMD_display_native_hdr ===
 
       // wrapper function for command vkSetLocalDimmingAMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSetLocalDimmingAMD.html
@@ -14444,11 +12454,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseFullScreenExclusiveModeEXT.html
       typename ResultValueType<void>::type releaseFullScreenExclusiveModeEXT() const;
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
-
-      //=== VK_KHR_present_wait2 ===
-
-      // wrapper function for command vkWaitForPresent2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkWaitForPresent2KHR.html
-      VULKAN_HPP_NODISCARD Result waitForPresent2( PresentWait2InfoKHR const & presentWait2Info ) const;
 
       //=== VK_NV_low_latency2 ===
 
@@ -14499,259 +12504,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       {
         std::swap( *this, rhs );
       }
-    };
-
-    // wrapper class for handle VkTensorARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkTensorARM.html
-    class TensorARM
-    {
-    public:
-      using CType   = VkTensorARM;
-      using CppType = VULKAN_HPP_NAMESPACE::TensorARM;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eTensorARM;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      TensorARM( Device const & device, TensorCreateInfoARM const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr )
-      {
-        *this = device.createTensorARM( createInfo, allocator );
-      }
-#  endif
-
-      TensorARM( Device const & device, VkTensorARM tensor, Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_tensorARM( tensor )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      TensorARM( std::nullptr_t ) {}
-
-      ~TensorARM()
-      {
-        clear();
-      }
-
-      TensorARM()                    = delete;
-      TensorARM( TensorARM const & ) = delete;
-
-      TensorARM( TensorARM && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_tensorARM( exchange( rhs.m_tensorARM, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      TensorARM & operator=( TensorARM const & ) = delete;
-
-      TensorARM & operator=( TensorARM && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_tensorARM, rhs.m_tensorARM );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorARM const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_tensorARM;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorARM const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_tensorARM );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::TensorARM() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_tensorARM;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_tensorARM )
-        {
-          getDispatcher()->vkDestroyTensorARM(
-            static_cast<VkDevice>( m_device ), static_cast<VkTensorARM>( m_tensorARM ), reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device     = nullptr;
-        m_tensorARM  = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorARM release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_tensorARM, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( TensorARM & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_tensorARM, rhs.m_tensorARM );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device     m_device     = {};
-      VULKAN_HPP_NAMESPACE::TensorARM  m_tensorARM  = {};
-      AllocationCallbacks const *      m_allocator  = {};
-      detail::DeviceDispatcher const * m_dispatcher = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<TensorARM>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
-    };
-
-    // wrapper class for handle VkTensorViewARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkTensorViewARM.html
-    class TensorViewARM
-    {
-    public:
-      using CType   = VkTensorViewARM;
-      using CppType = VULKAN_HPP_NAMESPACE::TensorViewARM;
-
-      static VULKAN_HPP_CONST_OR_CONSTEXPR ObjectType               objectType            = ObjectType::eTensorViewARM;
-      static VULKAN_HPP_CONST_OR_CONSTEXPR DebugReportObjectTypeEXT debugReportObjectType = DebugReportObjectTypeEXT::eUnknown;
-
-    public:
-#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-      TensorViewARM( Device const & device, TensorViewCreateInfoARM const & createInfo, Optional<AllocationCallbacks const> allocator = nullptr )
-      {
-        *this = device.createTensorViewARM( createInfo, allocator );
-      }
-#  endif
-
-      TensorViewARM( Device const & device, VkTensorViewARM tensorView, Optional<AllocationCallbacks const> allocator = nullptr )
-        : m_device( device )
-        , m_tensorViewARM( tensorView )
-        , m_allocator( static_cast<const AllocationCallbacks *>( allocator ) )
-        , m_dispatcher( device.getDispatcher() )
-      {
-      }
-
-      TensorViewARM( std::nullptr_t ) {}
-
-      ~TensorViewARM()
-      {
-        clear();
-      }
-
-      TensorViewARM()                        = delete;
-      TensorViewARM( TensorViewARM const & ) = delete;
-
-      TensorViewARM( TensorViewARM && rhs ) VULKAN_HPP_NOEXCEPT
-        : m_device( exchange( rhs.m_device, {} ) )
-        , m_tensorViewARM( exchange( rhs.m_tensorViewARM, {} ) )
-        , m_allocator( exchange( rhs.m_allocator, {} ) )
-        , m_dispatcher( exchange( rhs.m_dispatcher, nullptr ) )
-      {
-      }
-
-      TensorViewARM & operator=( TensorViewARM const & ) = delete;
-
-      TensorViewARM & operator=( TensorViewARM && rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        if ( this != &rhs )
-        {
-          std::swap( m_device, rhs.m_device );
-          std::swap( m_tensorViewARM, rhs.m_tensorViewARM );
-          std::swap( m_allocator, rhs.m_allocator );
-          std::swap( m_dispatcher, rhs.m_dispatcher );
-        }
-        return *this;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorViewARM const & operator*() const & VULKAN_HPP_NOEXCEPT
-      {
-        return m_tensorViewARM;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorViewARM const && operator*() const && VULKAN_HPP_NOEXCEPT
-      {
-        return std::move( m_tensorViewARM );
-      }
-
-      operator VULKAN_HPP_NAMESPACE::TensorViewARM() const VULKAN_HPP_NOEXCEPT
-      {
-        return m_tensorViewARM;
-      }
-
-      void clear() VULKAN_HPP_NOEXCEPT
-      {
-        if ( m_tensorViewARM )
-        {
-          getDispatcher()->vkDestroyTensorViewARM( static_cast<VkDevice>( m_device ),
-                                                   static_cast<VkTensorViewARM>( m_tensorViewARM ),
-                                                   reinterpret_cast<VkAllocationCallbacks const *>( m_allocator ) );
-        }
-        m_device        = nullptr;
-        m_tensorViewARM = nullptr;
-        m_allocator     = nullptr;
-        m_dispatcher    = nullptr;
-      }
-
-      VULKAN_HPP_NAMESPACE::TensorViewARM release()
-      {
-        m_device     = nullptr;
-        m_allocator  = nullptr;
-        m_dispatcher = nullptr;
-        return exchange( m_tensorViewARM, nullptr );
-      }
-
-      VULKAN_HPP_NAMESPACE::Device getDevice() const
-      {
-        return m_device;
-      }
-
-      detail::DeviceDispatcher const * getDispatcher() const
-      {
-        VULKAN_HPP_ASSERT( m_dispatcher->getVkHeaderVersion() == VK_HEADER_VERSION );
-        return m_dispatcher;
-      }
-
-      void swap( TensorViewARM & rhs ) VULKAN_HPP_NOEXCEPT
-      {
-        std::swap( m_device, rhs.m_device );
-        std::swap( m_tensorViewARM, rhs.m_tensorViewARM );
-        std::swap( m_allocator, rhs.m_allocator );
-        std::swap( m_dispatcher, rhs.m_dispatcher );
-      }
-
-    private:
-      VULKAN_HPP_NAMESPACE::Device        m_device        = {};
-      VULKAN_HPP_NAMESPACE::TensorViewARM m_tensorViewARM = {};
-      AllocationCallbacks const *         m_allocator     = {};
-      detail::DeviceDispatcher const *    m_dispatcher    = nullptr;
-    };
-
-    template <>
-    struct isVulkanRAIIHandleType<TensorViewARM>
-    {
-      static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
     };
 
     // wrapper class for handle VkValidationCacheEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/VkValidationCacheEXT.html
@@ -15841,6 +13593,54 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Semaphore( *this, *reinterpret_cast<VkSemaphore *>( &semaphore ), allocator ) );
     }
 
+    // wrapper function for command vkCreateEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateEvent.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Event>::type
+      Device::createEvent( EventCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateEvent && "Function <vkCreateEvent> requires <VK_VERSION_1_0>" );
+
+      VULKAN_HPP_NAMESPACE::Event event;
+      Result                      result = static_cast<Result>( getDispatcher()->vkCreateEvent( static_cast<VkDevice>( m_device ),
+                                                                           reinterpret_cast<VkEventCreateInfo const *>( &createInfo ),
+                                                                           reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                           reinterpret_cast<VkEvent *>( &event ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createEvent" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Event( *this, *reinterpret_cast<VkEvent *>( &event ), allocator ) );
+    }
+
+    // wrapper function for command vkGetEventStatus, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetEventStatus.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Event::getStatus() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetEventStatus && "Function <vkGetEventStatus> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkGetEventStatus( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::getStatus", { Result::eEventSet, Result::eEventReset } );
+
+      return static_cast<Result>( result );
+    }
+
+    // wrapper function for command vkSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSetEvent.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Event::set() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkSetEvent && "Function <vkSetEvent> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkSetEvent( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::set" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetEvent.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Event::reset() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkResetEvent && "Function <vkResetEvent> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkResetEvent( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::reset" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
     // wrapper function for command vkCreateQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateQueryPool.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<QueryPool>::type
                          Device::createQueryPool( QueryPoolCreateInfo const &         createInfo,
@@ -15930,6 +13730,22 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Buffer( *this, *reinterpret_cast<VkBuffer *>( &buffer ), allocator ) );
     }
 
+    // wrapper function for command vkCreateBufferView, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateBufferView.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<BufferView>::type
+                         Device::createBufferView( BufferViewCreateInfo const &        createInfo,
+                                Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateBufferView && "Function <vkCreateBufferView> requires <VK_VERSION_1_0>" );
+
+      VULKAN_HPP_NAMESPACE::BufferView view;
+      Result                           result = static_cast<Result>( getDispatcher()->vkCreateBufferView( static_cast<VkDevice>( m_device ),
+                                                                                reinterpret_cast<VkBufferViewCreateInfo const *>( &createInfo ),
+                                                                                reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                                reinterpret_cast<VkBufferView *>( &view ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createBufferView" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, BufferView( *this, *reinterpret_cast<VkBufferView *>( &view ), allocator ) );
+    }
+
     // wrapper function for command vkCreateImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateImage.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Image>::type
       Device::createImage( ImageCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
@@ -15973,353 +13789,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                                reinterpret_cast<VkImageView *>( &view ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createImageView" );
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, ImageView( *this, *reinterpret_cast<VkImageView *>( &view ), allocator ) );
-    }
-
-    // wrapper function for command vkCreateCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateCommandPool.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<CommandPool>::type
-                         Device::createCommandPool( CommandPoolCreateInfo const &       createInfo,
-                                 Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateCommandPool && "Function <vkCreateCommandPool> requires <VK_VERSION_1_0>" );
-
-      VULKAN_HPP_NAMESPACE::CommandPool commandPool;
-      Result                            result = static_cast<Result>( getDispatcher()->vkCreateCommandPool( static_cast<VkDevice>( m_device ),
-                                                                                 reinterpret_cast<VkCommandPoolCreateInfo const *>( &createInfo ),
-                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                 reinterpret_cast<VkCommandPool *>( &commandPool ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createCommandPool" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, CommandPool( *this, *reinterpret_cast<VkCommandPool *>( &commandPool ), allocator ) );
-    }
-
-    // wrapper function for command vkResetCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetCommandPool.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandPool::reset( CommandPoolResetFlags flags ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkResetCommandPool && "Function <vkResetCommandPool> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkResetCommandPool(
-        static_cast<VkDevice>( m_device ), static_cast<VkCommandPool>( m_commandPool ), static_cast<VkCommandPoolResetFlags>( flags ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandPool::reset" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkAllocateCommandBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAllocateCommandBuffers.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<CommandBuffer>>::type
-                         Device::allocateCommandBuffers( CommandBufferAllocateInfo const & allocateInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkAllocateCommandBuffers && "Function <vkAllocateCommandBuffers> requires <VK_VERSION_1_0>" );
-
-      std::vector<VULKAN_HPP_NAMESPACE::CommandBuffer> commandBuffers( allocateInfo.commandBufferCount );
-      Result result = static_cast<Result>( getDispatcher()->vkAllocateCommandBuffers( static_cast<VkDevice>( m_device ),
-                                                                                      reinterpret_cast<VkCommandBufferAllocateInfo const *>( &allocateInfo ),
-                                                                                      reinterpret_cast<VkCommandBuffer *>( commandBuffers.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::allocateCommandBuffers" );
-      std::vector<CommandBuffer> commandBuffersRAII;
-      if ( result == Result::eSuccess )
-      {
-        commandBuffersRAII.reserve( commandBuffers.size() );
-        for ( auto & commandBuffer : commandBuffers )
-        {
-          commandBuffersRAII.emplace_back(
-            *this, *reinterpret_cast<VkCommandBuffer *>( &commandBuffer ), static_cast<VkCommandPool>( allocateInfo.commandPool ) );
-        }
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( commandBuffersRAII ) );
-    }
-
-    // wrapper function for command vkBeginCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkBeginCommandBuffer.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::begin( CommandBufferBeginInfo const & beginInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkBeginCommandBuffer && "Function <vkBeginCommandBuffer> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkBeginCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                                                  reinterpret_cast<VkCommandBufferBeginInfo const *>( &beginInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::begin" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkEndCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkEndCommandBuffer.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::end() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkEndCommandBuffer && "Function <vkEndCommandBuffer> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkEndCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::end" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkResetCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetCommandBuffer.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::reset( CommandBufferResetFlags flags ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkResetCommandBuffer && "Function <vkResetCommandBuffer> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>(
-        getDispatcher()->vkResetCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkCommandBufferResetFlags>( flags ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::reset" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCmdCopyBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBuffer.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyBuffer( VULKAN_HPP_NAMESPACE::Buffer         srcBuffer,
-                                                      VULKAN_HPP_NAMESPACE::Buffer         dstBuffer,
-                                                      ArrayProxy<BufferCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyBuffer && "Function <vkCmdCopyBuffer> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdCopyBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                        static_cast<VkBuffer>( srcBuffer ),
-                                        static_cast<VkBuffer>( dstBuffer ),
-                                        regions.size(),
-                                        reinterpret_cast<VkBufferCopy const *>( regions.data() ) );
-    }
-
-    // wrapper function for command vkCmdCopyImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyImage.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyImage( VULKAN_HPP_NAMESPACE::Image         srcImage,
-                                                     ImageLayout                         srcImageLayout,
-                                                     VULKAN_HPP_NAMESPACE::Image         dstImage,
-                                                     ImageLayout                         dstImageLayout,
-                                                     ArrayProxy<ImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyImage && "Function <vkCmdCopyImage> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdCopyImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                       static_cast<VkImage>( srcImage ),
-                                       static_cast<VkImageLayout>( srcImageLayout ),
-                                       static_cast<VkImage>( dstImage ),
-                                       static_cast<VkImageLayout>( dstImageLayout ),
-                                       regions.size(),
-                                       reinterpret_cast<VkImageCopy const *>( regions.data() ) );
-    }
-
-    // wrapper function for command vkCmdCopyBufferToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBufferToImage.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyBufferToImage( VULKAN_HPP_NAMESPACE::Buffer              srcBuffer,
-                                                             VULKAN_HPP_NAMESPACE::Image               dstImage,
-                                                             ImageLayout                               dstImageLayout,
-                                                             ArrayProxy<BufferImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyBufferToImage && "Function <vkCmdCopyBufferToImage> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdCopyBufferToImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                               static_cast<VkBuffer>( srcBuffer ),
-                                               static_cast<VkImage>( dstImage ),
-                                               static_cast<VkImageLayout>( dstImageLayout ),
-                                               regions.size(),
-                                               reinterpret_cast<VkBufferImageCopy const *>( regions.data() ) );
-    }
-
-    // wrapper function for command vkCmdCopyImageToBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyImageToBuffer.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyImageToBuffer( VULKAN_HPP_NAMESPACE::Image               srcImage,
-                                                             ImageLayout                               srcImageLayout,
-                                                             VULKAN_HPP_NAMESPACE::Buffer              dstBuffer,
-                                                             ArrayProxy<BufferImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyImageToBuffer && "Function <vkCmdCopyImageToBuffer> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdCopyImageToBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                               static_cast<VkImage>( srcImage ),
-                                               static_cast<VkImageLayout>( srcImageLayout ),
-                                               static_cast<VkBuffer>( dstBuffer ),
-                                               regions.size(),
-                                               reinterpret_cast<VkBufferImageCopy const *>( regions.data() ) );
-    }
-
-    // wrapper function for command vkCmdUpdateBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdUpdateBuffer.html
-    VULKAN_HPP_INLINE void CommandBuffer::updateBuffer( VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
-                                                        DeviceSize                   dstOffset,
-                                                        DeviceSize                   dataSize,
-                                                        void const *                 pData ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdUpdateBuffer && "Function <vkCmdUpdateBuffer> requires <VK_VERSION_1_0>" );
-      getDispatcher()->vkCmdUpdateBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                          static_cast<VkBuffer>( dstBuffer ),
-                                          static_cast<VkDeviceSize>( dstOffset ),
-                                          static_cast<VkDeviceSize>( dataSize ),
-                                          pData );
-    }
-
-    // wrapper function for command vkCmdUpdateBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdUpdateBuffer.html
-    template <typename DataType>
-    VULKAN_HPP_INLINE void CommandBuffer::updateBuffer( VULKAN_HPP_NAMESPACE::Buffer       dstBuffer,
-                                                        DeviceSize                         dstOffset,
-                                                        ArrayProxy<DataType const> const & data ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdUpdateBuffer && "Function <vkCmdUpdateBuffer> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdUpdateBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                          static_cast<VkBuffer>( dstBuffer ),
-                                          static_cast<VkDeviceSize>( dstOffset ),
-                                          data.size() * sizeof( DataType ),
-                                          reinterpret_cast<void const *>( data.data() ) );
-    }
-
-    // wrapper function for command vkCmdFillBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdFillBuffer.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::fillBuffer( VULKAN_HPP_NAMESPACE::Buffer dstBuffer, DeviceSize dstOffset, DeviceSize size, uint32_t data ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdFillBuffer && "Function <vkCmdFillBuffer> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdFillBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                        static_cast<VkBuffer>( dstBuffer ),
-                                        static_cast<VkDeviceSize>( dstOffset ),
-                                        static_cast<VkDeviceSize>( size ),
-                                        data );
-    }
-
-    // wrapper function for command vkCmdPipelineBarrier, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPipelineBarrier.html
-    VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier( PipelineStageFlags                            srcStageMask,
-                                                           PipelineStageFlags                            dstStageMask,
-                                                           DependencyFlags                               dependencyFlags,
-                                                           ArrayProxy<MemoryBarrier const> const &       memoryBarriers,
-                                                           ArrayProxy<BufferMemoryBarrier const> const & bufferMemoryBarriers,
-                                                           ArrayProxy<ImageMemoryBarrier const> const &  imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPipelineBarrier && "Function <vkCmdPipelineBarrier> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdPipelineBarrier( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                             static_cast<VkPipelineStageFlags>( srcStageMask ),
-                                             static_cast<VkPipelineStageFlags>( dstStageMask ),
-                                             static_cast<VkDependencyFlags>( dependencyFlags ),
-                                             memoryBarriers.size(),
-                                             reinterpret_cast<VkMemoryBarrier const *>( memoryBarriers.data() ),
-                                             bufferMemoryBarriers.size(),
-                                             reinterpret_cast<VkBufferMemoryBarrier const *>( bufferMemoryBarriers.data() ),
-                                             imageMemoryBarriers.size(),
-                                             reinterpret_cast<VkImageMemoryBarrier const *>( imageMemoryBarriers.data() ) );
-    }
-
-    // wrapper function for command vkCmdBeginQuery, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginQuery.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::beginQuery( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query, QueryControlFlags flags ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBeginQuery && "Function <vkCmdBeginQuery> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdBeginQuery(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), query, static_cast<VkQueryControlFlags>( flags ) );
-    }
-
-    // wrapper function for command vkCmdEndQuery, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndQuery.html
-    VULKAN_HPP_INLINE void CommandBuffer::endQuery( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndQuery && "Function <vkCmdEndQuery> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdEndQuery( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), query );
-    }
-
-    // wrapper function for command vkCmdResetQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetQueryPool.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::resetQueryPool( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t firstQuery, uint32_t queryCount ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetQueryPool && "Function <vkCmdResetQueryPool> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdResetQueryPool( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), firstQuery, queryCount );
-    }
-
-    // wrapper function for command vkCmdWriteTimestamp, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteTimestamp.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::writeTimestamp( PipelineStageFlagBits pipelineStage, VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWriteTimestamp && "Function <vkCmdWriteTimestamp> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdWriteTimestamp(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkPipelineStageFlagBits>( pipelineStage ), static_cast<VkQueryPool>( queryPool ), query );
-    }
-
-    // wrapper function for command vkCmdCopyQueryPoolResults, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyQueryPoolResults.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyQueryPoolResults( VULKAN_HPP_NAMESPACE::QueryPool queryPool,
-                                                                uint32_t                        firstQuery,
-                                                                uint32_t                        queryCount,
-                                                                VULKAN_HPP_NAMESPACE::Buffer    dstBuffer,
-                                                                DeviceSize                      dstOffset,
-                                                                DeviceSize                      stride,
-                                                                QueryResultFlags                flags ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyQueryPoolResults && "Function <vkCmdCopyQueryPoolResults> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdCopyQueryPoolResults( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                  static_cast<VkQueryPool>( queryPool ),
-                                                  firstQuery,
-                                                  queryCount,
-                                                  static_cast<VkBuffer>( dstBuffer ),
-                                                  static_cast<VkDeviceSize>( dstOffset ),
-                                                  static_cast<VkDeviceSize>( stride ),
-                                                  static_cast<VkQueryResultFlags>( flags ) );
-    }
-
-    // wrapper function for command vkCmdExecuteCommands, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteCommands.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::executeCommands( ArrayProxy<VULKAN_HPP_NAMESPACE::CommandBuffer const> const & commandBuffers ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdExecuteCommands && "Function <vkCmdExecuteCommands> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdExecuteCommands(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), commandBuffers.size(), reinterpret_cast<VkCommandBuffer const *>( commandBuffers.data() ) );
-    }
-
-    // wrapper function for command vkCreateEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateEvent.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Event>::type
-      Device::createEvent( EventCreateInfo const & createInfo, Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateEvent && "Function <vkCreateEvent> requires <VK_VERSION_1_0>" );
-
-      VULKAN_HPP_NAMESPACE::Event event;
-      Result                      result = static_cast<Result>( getDispatcher()->vkCreateEvent( static_cast<VkDevice>( m_device ),
-                                                                           reinterpret_cast<VkEventCreateInfo const *>( &createInfo ),
-                                                                           reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                           reinterpret_cast<VkEvent *>( &event ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createEvent" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Event( *this, *reinterpret_cast<VkEvent *>( &event ), allocator ) );
-    }
-
-    // wrapper function for command vkGetEventStatus, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetEventStatus.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Event::getStatus() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetEventStatus && "Function <vkGetEventStatus> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkGetEventStatus( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::getStatus", { Result::eEventSet, Result::eEventReset } );
-
-      return static_cast<Result>( result );
-    }
-
-    // wrapper function for command vkSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSetEvent.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Event::set() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkSetEvent && "Function <vkSetEvent> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkSetEvent( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::set" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetEvent.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Event::reset() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkResetEvent && "Function <vkResetEvent> requires <VK_VERSION_1_0>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkResetEvent( static_cast<VkDevice>( m_device ), static_cast<VkEvent>( m_event ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Event::reset" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCreateBufferView, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateBufferView.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<BufferView>::type
-                         Device::createBufferView( BufferViewCreateInfo const &        createInfo,
-                                Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateBufferView && "Function <vkCreateBufferView> requires <VK_VERSION_1_0>" );
-
-      VULKAN_HPP_NAMESPACE::BufferView view;
-      Result                           result = static_cast<Result>( getDispatcher()->vkCreateBufferView( static_cast<VkDevice>( m_device ),
-                                                                                reinterpret_cast<VkBufferViewCreateInfo const *>( &createInfo ),
-                                                                                reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                reinterpret_cast<VkBufferView *>( &view ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createBufferView" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, BufferView( *this, *reinterpret_cast<VkBufferView *>( &view ), allocator ) );
     }
 
     // wrapper function for command vkCreateShaderModule, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateShaderModule.html
@@ -16396,6 +13865,56 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PipelineCache::merge" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<Pipeline>>::type
+                         Device::createGraphicsPipelines( Optional<PipelineCache const> const &          pipelineCache,
+                                       ArrayProxy<GraphicsPipelineCreateInfo> const & createInfos,
+                                       Optional<AllocationCallbacks const>            allocator ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateGraphicsPipelines && "Function <vkCreateGraphicsPipelines> requires <VK_VERSION_1_0>" );
+
+      std::vector<VULKAN_HPP_NAMESPACE::Pipeline> pipelines( createInfos.size() );
+      Result                                      result =
+        static_cast<Result>( getDispatcher()->vkCreateGraphicsPipelines( static_cast<VkDevice>( m_device ),
+                                                                         pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
+                                                                         createInfos.size(),
+                                                                         reinterpret_cast<VkGraphicsPipelineCreateInfo const *>( createInfos.data() ),
+                                                                         reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                         reinterpret_cast<VkPipeline *>( pipelines.data() ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck(
+        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createGraphicsPipelines", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
+      std::vector<Pipeline> pipelinesRAII;
+      if ( result == Result::eSuccess )
+      {
+        pipelinesRAII.reserve( pipelines.size() );
+        for ( auto & pipeline : pipelines )
+        {
+          pipelinesRAII.emplace_back( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result );
+        }
+      }
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pipelinesRAII ) );
+    }
+
+    // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Pipeline>::type
+                         Device::createGraphicsPipeline( Optional<PipelineCache const> const & pipelineCache,
+                                      GraphicsPipelineCreateInfo const &    createInfo,
+                                      Optional<AllocationCallbacks const>   allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateGraphicsPipelines && "Function <vkCreateGraphicsPipelines> requires <VK_VERSION_1_0>" );
+
+      VULKAN_HPP_NAMESPACE::Pipeline pipeline;
+      Result                         result = static_cast<Result>( getDispatcher()->vkCreateGraphicsPipelines( static_cast<VkDevice>( m_device ),
+                                                                                       pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
+                                                                                       1,
+                                                                                       reinterpret_cast<VkGraphicsPipelineCreateInfo const *>( &createInfo ),
+                                                                                       reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                                       reinterpret_cast<VkPipeline *>( &pipeline ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck(
+        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createGraphicsPipeline", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Pipeline( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result ) );
     }
 
     // wrapper function for command vkCreateComputePipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateComputePipelines.html
@@ -16516,15 +14035,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     }
 
     // wrapper function for command vkResetDescriptorPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetDescriptorPool.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type DescriptorPool::reset( DescriptorPoolResetFlags flags ) const
+    VULKAN_HPP_INLINE void DescriptorPool::reset( DescriptorPoolResetFlags flags ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkResetDescriptorPool && "Function <vkResetDescriptorPool> requires <VK_VERSION_1_0>" );
 
-      Result result = static_cast<Result>( getDispatcher()->vkResetDescriptorPool(
-        static_cast<VkDevice>( m_device ), static_cast<VkDescriptorPool>( m_descriptorPool ), static_cast<VkDescriptorPoolResetFlags>( flags ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::DescriptorPool::reset" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+      getDispatcher()->vkResetDescriptorPool(
+        static_cast<VkDevice>( m_device ), static_cast<VkDescriptorPool>( m_descriptorPool ), static_cast<VkDescriptorPoolResetFlags>( flags ) );
     }
 
     // wrapper function for command vkAllocateDescriptorSets, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAllocateDescriptorSets.html
@@ -16562,188 +14078,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                reinterpret_cast<VkWriteDescriptorSet const *>( descriptorWrites.data() ),
                                                descriptorCopies.size(),
                                                reinterpret_cast<VkCopyDescriptorSet const *>( descriptorCopies.data() ) );
-    }
-
-    // wrapper function for command vkCmdBindPipeline, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindPipeline.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindPipeline( PipelineBindPoint pipelineBindPoint, VULKAN_HPP_NAMESPACE::Pipeline pipeline ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindPipeline && "Function <vkCmdBindPipeline> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdBindPipeline(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipeline>( pipeline ) );
-    }
-
-    // wrapper function for command vkCmdBindDescriptorSets, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets( PipelineBindPoint                                             pipelineBindPoint,
-                                                              VULKAN_HPP_NAMESPACE::PipelineLayout                          layout,
-                                                              uint32_t                                                      firstSet,
-                                                              ArrayProxy<VULKAN_HPP_NAMESPACE::DescriptorSet const> const & descriptorSets,
-                                                              ArrayProxy<uint32_t const> const & dynamicOffsets ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindDescriptorSets && "Function <vkCmdBindDescriptorSets> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdBindDescriptorSets( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                static_cast<VkPipelineBindPoint>( pipelineBindPoint ),
-                                                static_cast<VkPipelineLayout>( layout ),
-                                                firstSet,
-                                                descriptorSets.size(),
-                                                reinterpret_cast<VkDescriptorSet const *>( descriptorSets.data() ),
-                                                dynamicOffsets.size(),
-                                                dynamicOffsets.data() );
-    }
-
-    // wrapper function for command vkCmdClearColorImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearColorImage.html
-    VULKAN_HPP_INLINE void CommandBuffer::clearColorImage( VULKAN_HPP_NAMESPACE::Image                     image,
-                                                           ImageLayout                                     imageLayout,
-                                                           ClearColorValue const &                         color,
-                                                           ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdClearColorImage && "Function <vkCmdClearColorImage> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdClearColorImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                             static_cast<VkImage>( image ),
-                                             static_cast<VkImageLayout>( imageLayout ),
-                                             reinterpret_cast<VkClearColorValue const *>( &color ),
-                                             ranges.size(),
-                                             reinterpret_cast<VkImageSubresourceRange const *>( ranges.data() ) );
-    }
-
-    // wrapper function for command vkCmdDispatch, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatch.html
-    VULKAN_HPP_INLINE void CommandBuffer::dispatch( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatch && "Function <vkCmdDispatch> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdDispatch( static_cast<VkCommandBuffer>( m_commandBuffer ), groupCountX, groupCountY, groupCountZ );
-    }
-
-    // wrapper function for command vkCmdDispatchIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchIndirect.html
-    VULKAN_HPP_INLINE void CommandBuffer::dispatchIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchIndirect && "Function <vkCmdDispatchIndirect> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdDispatchIndirect(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ) );
-    }
-
-    // wrapper function for command vkCmdSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent.html
-    VULKAN_HPP_INLINE void CommandBuffer::setEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetEvent && "Function <vkCmdSetEvent> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdSetEvent(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
-    }
-
-    // wrapper function for command vkCmdResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent.html
-    VULKAN_HPP_INLINE void CommandBuffer::resetEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetEvent && "Function <vkCmdResetEvent> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdResetEvent(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
-    }
-
-    // wrapper function for command vkCmdWaitEvents, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents.html
-    VULKAN_HPP_INLINE void CommandBuffer::waitEvents( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
-                                                      PipelineStageFlags                                    srcStageMask,
-                                                      PipelineStageFlags                                    dstStageMask,
-                                                      ArrayProxy<MemoryBarrier const> const &               memoryBarriers,
-                                                      ArrayProxy<BufferMemoryBarrier const> const &         bufferMemoryBarriers,
-                                                      ArrayProxy<ImageMemoryBarrier const> const &          imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWaitEvents && "Function <vkCmdWaitEvents> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdWaitEvents( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                        events.size(),
-                                        reinterpret_cast<VkEvent const *>( events.data() ),
-                                        static_cast<VkPipelineStageFlags>( srcStageMask ),
-                                        static_cast<VkPipelineStageFlags>( dstStageMask ),
-                                        memoryBarriers.size(),
-                                        reinterpret_cast<VkMemoryBarrier const *>( memoryBarriers.data() ),
-                                        bufferMemoryBarriers.size(),
-                                        reinterpret_cast<VkBufferMemoryBarrier const *>( bufferMemoryBarriers.data() ),
-                                        imageMemoryBarriers.size(),
-                                        reinterpret_cast<VkImageMemoryBarrier const *>( imageMemoryBarriers.data() ) );
-    }
-
-    // wrapper function for command vkCmdPushConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushConstants(
-      VULKAN_HPP_NAMESPACE::PipelineLayout layout, ShaderStageFlags stageFlags, uint32_t offset, uint32_t size, void const * pValues ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants && "Function <vkCmdPushConstants> requires <VK_VERSION_1_0>" );
-      getDispatcher()->vkCmdPushConstants( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                           static_cast<VkPipelineLayout>( layout ),
-                                           static_cast<VkShaderStageFlags>( stageFlags ),
-                                           offset,
-                                           size,
-                                           pValues );
-    }
-
-    // wrapper function for command vkCmdPushConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants.html
-    template <typename ValuesType>
-    VULKAN_HPP_INLINE void CommandBuffer::pushConstants( VULKAN_HPP_NAMESPACE::PipelineLayout layout,
-                                                         ShaderStageFlags                     stageFlags,
-                                                         uint32_t                             offset,
-                                                         ArrayProxy<ValuesType const> const & values ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants && "Function <vkCmdPushConstants> requires <VK_VERSION_1_0>" );
-
-      getDispatcher()->vkCmdPushConstants( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                           static_cast<VkPipelineLayout>( layout ),
-                                           static_cast<VkShaderStageFlags>( stageFlags ),
-                                           offset,
-                                           values.size() * sizeof( ValuesType ),
-                                           reinterpret_cast<void const *>( values.data() ) );
-    }
-
-    // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<Pipeline>>::type
-                         Device::createGraphicsPipelines( Optional<PipelineCache const> const &          pipelineCache,
-                                       ArrayProxy<GraphicsPipelineCreateInfo> const & createInfos,
-                                       Optional<AllocationCallbacks const>            allocator ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateGraphicsPipelines && "Function <vkCreateGraphicsPipelines> requires <VK_VERSION_1_0>" );
-
-      std::vector<VULKAN_HPP_NAMESPACE::Pipeline> pipelines( createInfos.size() );
-      Result                                      result =
-        static_cast<Result>( getDispatcher()->vkCreateGraphicsPipelines( static_cast<VkDevice>( m_device ),
-                                                                         pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
-                                                                         createInfos.size(),
-                                                                         reinterpret_cast<VkGraphicsPipelineCreateInfo const *>( createInfos.data() ),
-                                                                         reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                         reinterpret_cast<VkPipeline *>( pipelines.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createGraphicsPipelines", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
-      std::vector<Pipeline> pipelinesRAII;
-      if ( result == Result::eSuccess )
-      {
-        pipelinesRAII.reserve( pipelines.size() );
-        for ( auto & pipeline : pipelines )
-        {
-          pipelinesRAII.emplace_back( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result );
-        }
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pipelinesRAII ) );
-    }
-
-    // wrapper function for command vkCreateGraphicsPipelines, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateGraphicsPipelines.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Pipeline>::type
-                         Device::createGraphicsPipeline( Optional<PipelineCache const> const & pipelineCache,
-                                      GraphicsPipelineCreateInfo const &    createInfo,
-                                      Optional<AllocationCallbacks const>   allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateGraphicsPipelines && "Function <vkCreateGraphicsPipelines> requires <VK_VERSION_1_0>" );
-
-      VULKAN_HPP_NAMESPACE::Pipeline pipeline;
-      Result                         result = static_cast<Result>( getDispatcher()->vkCreateGraphicsPipelines( static_cast<VkDevice>( m_device ),
-                                                                                       pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
-                                                                                       1,
-                                                                                       reinterpret_cast<VkGraphicsPipelineCreateInfo const *>( &createInfo ),
-                                                                                       reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                       reinterpret_cast<VkPipeline *>( &pipeline ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createGraphicsPipeline", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Pipeline( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result ) );
     }
 
     // wrapper function for command vkCreateFramebuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateFramebuffer.html
@@ -16788,6 +14122,102 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkDevice>( m_device ), static_cast<VkRenderPass>( m_renderPass ), reinterpret_cast<VkExtent2D *>( &granularity ) );
 
       return granularity;
+    }
+
+    // wrapper function for command vkCreateCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateCommandPool.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<CommandPool>::type
+                         Device::createCommandPool( CommandPoolCreateInfo const &       createInfo,
+                                 Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateCommandPool && "Function <vkCreateCommandPool> requires <VK_VERSION_1_0>" );
+
+      VULKAN_HPP_NAMESPACE::CommandPool commandPool;
+      Result                            result = static_cast<Result>( getDispatcher()->vkCreateCommandPool( static_cast<VkDevice>( m_device ),
+                                                                                 reinterpret_cast<VkCommandPoolCreateInfo const *>( &createInfo ),
+                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                                 reinterpret_cast<VkCommandPool *>( &commandPool ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createCommandPool" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, CommandPool( *this, *reinterpret_cast<VkCommandPool *>( &commandPool ), allocator ) );
+    }
+
+    // wrapper function for command vkResetCommandPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetCommandPool.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandPool::reset( CommandPoolResetFlags flags ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkResetCommandPool && "Function <vkResetCommandPool> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkResetCommandPool(
+        static_cast<VkDevice>( m_device ), static_cast<VkCommandPool>( m_commandPool ), static_cast<VkCommandPoolResetFlags>( flags ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandPool::reset" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkAllocateCommandBuffers, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAllocateCommandBuffers.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<CommandBuffer>>::type
+                         Device::allocateCommandBuffers( CommandBufferAllocateInfo const & allocateInfo ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkAllocateCommandBuffers && "Function <vkAllocateCommandBuffers> requires <VK_VERSION_1_0>" );
+
+      std::vector<VULKAN_HPP_NAMESPACE::CommandBuffer> commandBuffers( allocateInfo.commandBufferCount );
+      Result result = static_cast<Result>( getDispatcher()->vkAllocateCommandBuffers( static_cast<VkDevice>( m_device ),
+                                                                                      reinterpret_cast<VkCommandBufferAllocateInfo const *>( &allocateInfo ),
+                                                                                      reinterpret_cast<VkCommandBuffer *>( commandBuffers.data() ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::allocateCommandBuffers" );
+      std::vector<CommandBuffer> commandBuffersRAII;
+      if ( result == Result::eSuccess )
+      {
+        commandBuffersRAII.reserve( commandBuffers.size() );
+        for ( auto & commandBuffer : commandBuffers )
+        {
+          commandBuffersRAII.emplace_back(
+            *this, *reinterpret_cast<VkCommandBuffer *>( &commandBuffer ), static_cast<VkCommandPool>( allocateInfo.commandPool ) );
+        }
+      }
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( commandBuffersRAII ) );
+    }
+
+    // wrapper function for command vkBeginCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkBeginCommandBuffer.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::begin( CommandBufferBeginInfo const & beginInfo ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkBeginCommandBuffer && "Function <vkBeginCommandBuffer> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkBeginCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                                                                  reinterpret_cast<VkCommandBufferBeginInfo const *>( &beginInfo ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::begin" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkEndCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkEndCommandBuffer.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::end() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkEndCommandBuffer && "Function <vkEndCommandBuffer> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>( getDispatcher()->vkEndCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::end" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkResetCommandBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetCommandBuffer.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type CommandBuffer::reset( CommandBufferResetFlags flags ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkResetCommandBuffer && "Function <vkResetCommandBuffer> requires <VK_VERSION_1_0>" );
+
+      Result result = static_cast<Result>(
+        getDispatcher()->vkResetCommandBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkCommandBufferResetFlags>( flags ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::CommandBuffer::reset" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkCmdBindPipeline, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindPipeline.html
+    VULKAN_HPP_INLINE void CommandBuffer::bindPipeline( PipelineBindPoint pipelineBindPoint, VULKAN_HPP_NAMESPACE::Pipeline pipeline ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindPipeline && "Function <vkCmdBindPipeline> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdBindPipeline(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipeline>( pipeline ) );
     }
 
     // wrapper function for command vkCmdSetViewport, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetViewport.html
@@ -16865,6 +14295,25 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       getDispatcher()->vkCmdSetStencilReference( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkStencilFaceFlags>( faceMask ), reference );
     }
 
+    // wrapper function for command vkCmdBindDescriptorSets, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets.html
+    VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets( PipelineBindPoint                                             pipelineBindPoint,
+                                                              VULKAN_HPP_NAMESPACE::PipelineLayout                          layout,
+                                                              uint32_t                                                      firstSet,
+                                                              ArrayProxy<VULKAN_HPP_NAMESPACE::DescriptorSet const> const & descriptorSets,
+                                                              ArrayProxy<uint32_t const> const & dynamicOffsets ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindDescriptorSets && "Function <vkCmdBindDescriptorSets> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdBindDescriptorSets( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                                static_cast<VkPipelineBindPoint>( pipelineBindPoint ),
+                                                static_cast<VkPipelineLayout>( layout ),
+                                                firstSet,
+                                                descriptorSets.size(),
+                                                reinterpret_cast<VkDescriptorSet const *>( descriptorSets.data() ),
+                                                dynamicOffsets.size(),
+                                                dynamicOffsets.data() );
+    }
+
     // wrapper function for command vkCmdBindIndexBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindIndexBuffer.html
     VULKAN_HPP_INLINE void
       CommandBuffer::bindIndexBuffer( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, IndexType indexType ) const VULKAN_HPP_NOEXCEPT
@@ -16939,6 +14388,55 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), drawCount, stride );
     }
 
+    // wrapper function for command vkCmdDispatch, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatch.html
+    VULKAN_HPP_INLINE void CommandBuffer::dispatch( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatch && "Function <vkCmdDispatch> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdDispatch( static_cast<VkCommandBuffer>( m_commandBuffer ), groupCountX, groupCountY, groupCountZ );
+    }
+
+    // wrapper function for command vkCmdDispatchIndirect, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchIndirect.html
+    VULKAN_HPP_INLINE void CommandBuffer::dispatchIndirect( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchIndirect && "Function <vkCmdDispatchIndirect> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdDispatchIndirect(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ) );
+    }
+
+    // wrapper function for command vkCmdCopyBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBuffer.html
+    VULKAN_HPP_INLINE void CommandBuffer::copyBuffer( VULKAN_HPP_NAMESPACE::Buffer         srcBuffer,
+                                                      VULKAN_HPP_NAMESPACE::Buffer         dstBuffer,
+                                                      ArrayProxy<BufferCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyBuffer && "Function <vkCmdCopyBuffer> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdCopyBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                        static_cast<VkBuffer>( srcBuffer ),
+                                        static_cast<VkBuffer>( dstBuffer ),
+                                        regions.size(),
+                                        reinterpret_cast<VkBufferCopy const *>( regions.data() ) );
+    }
+
+    // wrapper function for command vkCmdCopyImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyImage.html
+    VULKAN_HPP_INLINE void CommandBuffer::copyImage( VULKAN_HPP_NAMESPACE::Image         srcImage,
+                                                     ImageLayout                         srcImageLayout,
+                                                     VULKAN_HPP_NAMESPACE::Image         dstImage,
+                                                     ImageLayout                         dstImageLayout,
+                                                     ArrayProxy<ImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyImage && "Function <vkCmdCopyImage> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdCopyImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                       static_cast<VkImage>( srcImage ),
+                                       static_cast<VkImageLayout>( srcImageLayout ),
+                                       static_cast<VkImage>( dstImage ),
+                                       static_cast<VkImageLayout>( dstImageLayout ),
+                                       regions.size(),
+                                       reinterpret_cast<VkImageCopy const *>( regions.data() ) );
+    }
+
     // wrapper function for command vkCmdBlitImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBlitImage.html
     VULKAN_HPP_INLINE void CommandBuffer::blitImage( VULKAN_HPP_NAMESPACE::Image         srcImage,
                                                      ImageLayout                         srcImageLayout,
@@ -16957,6 +14455,96 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                        regions.size(),
                                        reinterpret_cast<VkImageBlit const *>( regions.data() ),
                                        static_cast<VkFilter>( filter ) );
+    }
+
+    // wrapper function for command vkCmdCopyBufferToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyBufferToImage.html
+    VULKAN_HPP_INLINE void CommandBuffer::copyBufferToImage( VULKAN_HPP_NAMESPACE::Buffer              srcBuffer,
+                                                             VULKAN_HPP_NAMESPACE::Image               dstImage,
+                                                             ImageLayout                               dstImageLayout,
+                                                             ArrayProxy<BufferImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyBufferToImage && "Function <vkCmdCopyBufferToImage> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdCopyBufferToImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                               static_cast<VkBuffer>( srcBuffer ),
+                                               static_cast<VkImage>( dstImage ),
+                                               static_cast<VkImageLayout>( dstImageLayout ),
+                                               regions.size(),
+                                               reinterpret_cast<VkBufferImageCopy const *>( regions.data() ) );
+    }
+
+    // wrapper function for command vkCmdCopyImageToBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyImageToBuffer.html
+    VULKAN_HPP_INLINE void CommandBuffer::copyImageToBuffer( VULKAN_HPP_NAMESPACE::Image               srcImage,
+                                                             ImageLayout                               srcImageLayout,
+                                                             VULKAN_HPP_NAMESPACE::Buffer              dstBuffer,
+                                                             ArrayProxy<BufferImageCopy const> const & regions ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyImageToBuffer && "Function <vkCmdCopyImageToBuffer> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdCopyImageToBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                               static_cast<VkImage>( srcImage ),
+                                               static_cast<VkImageLayout>( srcImageLayout ),
+                                               static_cast<VkBuffer>( dstBuffer ),
+                                               regions.size(),
+                                               reinterpret_cast<VkBufferImageCopy const *>( regions.data() ) );
+    }
+
+    // wrapper function for command vkCmdUpdateBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdUpdateBuffer.html
+    VULKAN_HPP_INLINE void CommandBuffer::updateBuffer( VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
+                                                        DeviceSize                   dstOffset,
+                                                        DeviceSize                   dataSize,
+                                                        void const *                 pData ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdUpdateBuffer && "Function <vkCmdUpdateBuffer> requires <VK_VERSION_1_0>" );
+      getDispatcher()->vkCmdUpdateBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                          static_cast<VkBuffer>( dstBuffer ),
+                                          static_cast<VkDeviceSize>( dstOffset ),
+                                          static_cast<VkDeviceSize>( dataSize ),
+                                          pData );
+    }
+
+    // wrapper function for command vkCmdUpdateBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdUpdateBuffer.html
+    template <typename DataType>
+    VULKAN_HPP_INLINE void CommandBuffer::updateBuffer( VULKAN_HPP_NAMESPACE::Buffer       dstBuffer,
+                                                        DeviceSize                         dstOffset,
+                                                        ArrayProxy<DataType const> const & data ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdUpdateBuffer && "Function <vkCmdUpdateBuffer> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdUpdateBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                          static_cast<VkBuffer>( dstBuffer ),
+                                          static_cast<VkDeviceSize>( dstOffset ),
+                                          data.size() * sizeof( DataType ),
+                                          reinterpret_cast<void const *>( data.data() ) );
+    }
+
+    // wrapper function for command vkCmdFillBuffer, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdFillBuffer.html
+    VULKAN_HPP_INLINE void
+      CommandBuffer::fillBuffer( VULKAN_HPP_NAMESPACE::Buffer dstBuffer, DeviceSize dstOffset, DeviceSize size, uint32_t data ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdFillBuffer && "Function <vkCmdFillBuffer> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdFillBuffer( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                        static_cast<VkBuffer>( dstBuffer ),
+                                        static_cast<VkDeviceSize>( dstOffset ),
+                                        static_cast<VkDeviceSize>( size ),
+                                        data );
+    }
+
+    // wrapper function for command vkCmdClearColorImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearColorImage.html
+    VULKAN_HPP_INLINE void CommandBuffer::clearColorImage( VULKAN_HPP_NAMESPACE::Image                     image,
+                                                           ImageLayout                                     imageLayout,
+                                                           ClearColorValue const &                         color,
+                                                           ArrayProxy<ImageSubresourceRange const> const & ranges ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdClearColorImage && "Function <vkCmdClearColorImage> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdClearColorImage( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                             static_cast<VkImage>( image ),
+                                             static_cast<VkImageLayout>( imageLayout ),
+                                             reinterpret_cast<VkClearColorValue const *>( &color ),
+                                             ranges.size(),
+                                             reinterpret_cast<VkImageSubresourceRange const *>( ranges.data() ) );
     }
 
     // wrapper function for command vkCmdClearDepthStencilImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdClearDepthStencilImage.html
@@ -17006,6 +14594,157 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                           reinterpret_cast<VkImageResolve const *>( regions.data() ) );
     }
 
+    // wrapper function for command vkCmdSetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent.html
+    VULKAN_HPP_INLINE void CommandBuffer::setEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetEvent && "Function <vkCmdSetEvent> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdSetEvent(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
+    }
+
+    // wrapper function for command vkCmdResetEvent, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent.html
+    VULKAN_HPP_INLINE void CommandBuffer::resetEvent( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags stageMask ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetEvent && "Function <vkCmdResetEvent> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdResetEvent(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
+    }
+
+    // wrapper function for command vkCmdWaitEvents, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents.html
+    VULKAN_HPP_INLINE void CommandBuffer::waitEvents( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
+                                                      PipelineStageFlags                                    srcStageMask,
+                                                      PipelineStageFlags                                    dstStageMask,
+                                                      ArrayProxy<MemoryBarrier const> const &               memoryBarriers,
+                                                      ArrayProxy<BufferMemoryBarrier const> const &         bufferMemoryBarriers,
+                                                      ArrayProxy<ImageMemoryBarrier const> const &          imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWaitEvents && "Function <vkCmdWaitEvents> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdWaitEvents( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                        events.size(),
+                                        reinterpret_cast<VkEvent const *>( events.data() ),
+                                        static_cast<VkPipelineStageFlags>( srcStageMask ),
+                                        static_cast<VkPipelineStageFlags>( dstStageMask ),
+                                        memoryBarriers.size(),
+                                        reinterpret_cast<VkMemoryBarrier const *>( memoryBarriers.data() ),
+                                        bufferMemoryBarriers.size(),
+                                        reinterpret_cast<VkBufferMemoryBarrier const *>( bufferMemoryBarriers.data() ),
+                                        imageMemoryBarriers.size(),
+                                        reinterpret_cast<VkImageMemoryBarrier const *>( imageMemoryBarriers.data() ) );
+    }
+
+    // wrapper function for command vkCmdPipelineBarrier, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPipelineBarrier.html
+    VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier( PipelineStageFlags                            srcStageMask,
+                                                           PipelineStageFlags                            dstStageMask,
+                                                           DependencyFlags                               dependencyFlags,
+                                                           ArrayProxy<MemoryBarrier const> const &       memoryBarriers,
+                                                           ArrayProxy<BufferMemoryBarrier const> const & bufferMemoryBarriers,
+                                                           ArrayProxy<ImageMemoryBarrier const> const &  imageMemoryBarriers ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPipelineBarrier && "Function <vkCmdPipelineBarrier> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdPipelineBarrier( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                             static_cast<VkPipelineStageFlags>( srcStageMask ),
+                                             static_cast<VkPipelineStageFlags>( dstStageMask ),
+                                             static_cast<VkDependencyFlags>( dependencyFlags ),
+                                             memoryBarriers.size(),
+                                             reinterpret_cast<VkMemoryBarrier const *>( memoryBarriers.data() ),
+                                             bufferMemoryBarriers.size(),
+                                             reinterpret_cast<VkBufferMemoryBarrier const *>( bufferMemoryBarriers.data() ),
+                                             imageMemoryBarriers.size(),
+                                             reinterpret_cast<VkImageMemoryBarrier const *>( imageMemoryBarriers.data() ) );
+    }
+
+    // wrapper function for command vkCmdBeginQuery, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginQuery.html
+    VULKAN_HPP_INLINE void
+      CommandBuffer::beginQuery( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query, QueryControlFlags flags ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBeginQuery && "Function <vkCmdBeginQuery> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdBeginQuery(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), query, static_cast<VkQueryControlFlags>( flags ) );
+    }
+
+    // wrapper function for command vkCmdEndQuery, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndQuery.html
+    VULKAN_HPP_INLINE void CommandBuffer::endQuery( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndQuery && "Function <vkCmdEndQuery> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdEndQuery( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), query );
+    }
+
+    // wrapper function for command vkCmdResetQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetQueryPool.html
+    VULKAN_HPP_INLINE void
+      CommandBuffer::resetQueryPool( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t firstQuery, uint32_t queryCount ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetQueryPool && "Function <vkCmdResetQueryPool> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdResetQueryPool( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkQueryPool>( queryPool ), firstQuery, queryCount );
+    }
+
+    // wrapper function for command vkCmdWriteTimestamp, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteTimestamp.html
+    VULKAN_HPP_INLINE void
+      CommandBuffer::writeTimestamp( PipelineStageFlagBits pipelineStage, VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWriteTimestamp && "Function <vkCmdWriteTimestamp> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdWriteTimestamp(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkPipelineStageFlagBits>( pipelineStage ), static_cast<VkQueryPool>( queryPool ), query );
+    }
+
+    // wrapper function for command vkCmdCopyQueryPoolResults, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyQueryPoolResults.html
+    VULKAN_HPP_INLINE void CommandBuffer::copyQueryPoolResults( VULKAN_HPP_NAMESPACE::QueryPool queryPool,
+                                                                uint32_t                        firstQuery,
+                                                                uint32_t                        queryCount,
+                                                                VULKAN_HPP_NAMESPACE::Buffer    dstBuffer,
+                                                                DeviceSize                      dstOffset,
+                                                                DeviceSize                      stride,
+                                                                QueryResultFlags                flags ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyQueryPoolResults && "Function <vkCmdCopyQueryPoolResults> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdCopyQueryPoolResults( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                                  static_cast<VkQueryPool>( queryPool ),
+                                                  firstQuery,
+                                                  queryCount,
+                                                  static_cast<VkBuffer>( dstBuffer ),
+                                                  static_cast<VkDeviceSize>( dstOffset ),
+                                                  static_cast<VkDeviceSize>( stride ),
+                                                  static_cast<VkQueryResultFlags>( flags ) );
+    }
+
+    // wrapper function for command vkCmdPushConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants.html
+    VULKAN_HPP_INLINE void CommandBuffer::pushConstants(
+      VULKAN_HPP_NAMESPACE::PipelineLayout layout, ShaderStageFlags stageFlags, uint32_t offset, uint32_t size, void const * pValues ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants && "Function <vkCmdPushConstants> requires <VK_VERSION_1_0>" );
+      getDispatcher()->vkCmdPushConstants( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                           static_cast<VkPipelineLayout>( layout ),
+                                           static_cast<VkShaderStageFlags>( stageFlags ),
+                                           offset,
+                                           size,
+                                           pValues );
+    }
+
+    // wrapper function for command vkCmdPushConstants, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants.html
+    template <typename ValuesType>
+    VULKAN_HPP_INLINE void CommandBuffer::pushConstants( VULKAN_HPP_NAMESPACE::PipelineLayout layout,
+                                                         ShaderStageFlags                     stageFlags,
+                                                         uint32_t                             offset,
+                                                         ArrayProxy<ValuesType const> const & values ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants && "Function <vkCmdPushConstants> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdPushConstants( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                           static_cast<VkPipelineLayout>( layout ),
+                                           static_cast<VkShaderStageFlags>( stageFlags ),
+                                           offset,
+                                           values.size() * sizeof( ValuesType ),
+                                           reinterpret_cast<void const *>( values.data() ) );
+    }
+
     // wrapper function for command vkCmdBeginRenderPass, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginRenderPass.html
     VULKAN_HPP_INLINE void CommandBuffer::beginRenderPass( RenderPassBeginInfo const & renderPassBegin, SubpassContents contents ) const VULKAN_HPP_NOEXCEPT
     {
@@ -17030,6 +14769,16 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndRenderPass && "Function <vkCmdEndRenderPass> requires <VK_VERSION_1_0>" );
 
       getDispatcher()->vkCmdEndRenderPass( static_cast<VkCommandBuffer>( m_commandBuffer ) );
+    }
+
+    // wrapper function for command vkCmdExecuteCommands, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteCommands.html
+    VULKAN_HPP_INLINE void
+      CommandBuffer::executeCommands( ArrayProxy<VULKAN_HPP_NAMESPACE::CommandBuffer const> const & commandBuffers ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdExecuteCommands && "Function <vkCmdExecuteCommands> requires <VK_VERSION_1_0>" );
+
+      getDispatcher()->vkCmdExecuteCommands(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), commandBuffers.size(), reinterpret_cast<VkCommandBuffer const *>( commandBuffers.data() ) );
     }
 
     //=== VK_VERSION_1_1 ===
@@ -17097,6 +14846,20 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       getDispatcher()->vkCmdSetDeviceMask( static_cast<VkCommandBuffer>( m_commandBuffer ), deviceMask );
     }
 
+    // wrapper function for command vkCmdDispatchBase, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchBase.html
+    VULKAN_HPP_INLINE void CommandBuffer::dispatchBase( uint32_t baseGroupX,
+                                                        uint32_t baseGroupY,
+                                                        uint32_t baseGroupZ,
+                                                        uint32_t groupCountX,
+                                                        uint32_t groupCountY,
+                                                        uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchBase && "Function <vkCmdDispatchBase> requires <VK_KHR_device_group> or <VK_VERSION_1_1>" );
+
+      getDispatcher()->vkCmdDispatchBase(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ );
+    }
+
     // wrapper function for command vkEnumeratePhysicalDeviceGroups, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkEnumeratePhysicalDeviceGroups.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<PhysicalDeviceGroupProperties>>::type
@@ -17146,24 +14909,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryRequirements;
     }
 
-    // wrapper function for command vkGetImageMemoryRequirements2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageMemoryRequirements2( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetImageMemoryRequirements2 &&
-                         "Function <vkGetImageMemoryRequirements2> requires <VK_KHR_get_memory_requirements2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetImageMemoryRequirements2( static_cast<VkDevice>( m_device ),
-                                                      reinterpret_cast<VkImageMemoryRequirementsInfo2 const *>( &info ),
-                                                      reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkGetBufferMemoryRequirements2, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
@@ -17178,24 +14923,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                        reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
       return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetBufferMemoryRequirements2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getBufferMemoryRequirements2( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferMemoryRequirements2 &&
-                         "Function <vkGetBufferMemoryRequirements2> requires <VK_KHR_get_memory_requirements2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetBufferMemoryRequirements2( static_cast<VkDevice>( m_device ),
-                                                       reinterpret_cast<VkBufferMemoryRequirementsInfo2 const *>( &info ),
-                                                       reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetImageSparseMemoryRequirements2, see
@@ -17238,32 +14965,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return features;
     }
 
-    // wrapper function for command vkGetPhysicalDeviceFeatures2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getFeatures2() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFeatures2 &&
-                         "Function <vkGetPhysicalDeviceFeatures2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      PhysicalDeviceFeatures2 &  features = structureChain.template get<PhysicalDeviceFeatures2>();
-      getDispatcher()->vkGetPhysicalDeviceFeatures2( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                     reinterpret_cast<VkPhysicalDeviceFeatures2 *>( &features ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
-    VULKAN_HPP_INLINE void PhysicalDevice::getProperties2( PhysicalDeviceProperties2 * pProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceProperties2 &&
-                         "Function <vkGetPhysicalDeviceProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-      getDispatcher()->vkGetPhysicalDeviceProperties2( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                       reinterpret_cast<VkPhysicalDeviceProperties2 *>( pProperties ) );
-    }
-
     // wrapper function for command vkGetPhysicalDeviceProperties2, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE PhysicalDeviceProperties2 PhysicalDevice::getProperties2() const VULKAN_HPP_NOEXCEPT
@@ -17278,32 +14979,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return properties;
     }
 
-    // wrapper function for command vkGetPhysicalDeviceProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getProperties2() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceProperties2 &&
-                         "Function <vkGetPhysicalDeviceProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>  structureChain;
-      PhysicalDeviceProperties2 & properties = structureChain.template get<PhysicalDeviceProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceProperties2( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                       reinterpret_cast<VkPhysicalDeviceProperties2 *>( &properties ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
-    VULKAN_HPP_INLINE void PhysicalDevice::getFormatProperties2( Format format, FormatProperties2 * pFormatProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFormatProperties2 &&
-                         "Function <vkGetPhysicalDeviceFormatProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-      getDispatcher()->vkGetPhysicalDeviceFormatProperties2(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( pFormatProperties ) );
-    }
-
     // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE FormatProperties2 PhysicalDevice::getFormatProperties2( Format format ) const VULKAN_HPP_NOEXCEPT
@@ -17316,22 +14991,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( &formatProperties ) );
 
       return formatProperties;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceFormatProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getFormatProperties2( Format format ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFormatProperties2 &&
-                         "Function <vkGetPhysicalDeviceFormatProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      FormatProperties2 &        formatProperties = structureChain.template get<FormatProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceFormatProperties2(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( &formatProperties ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2, see
@@ -17350,26 +15009,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( imageFormatProperties ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         PhysicalDevice::getImageFormatProperties2( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceImageFormatProperties2 &&
-                         "Function <vkGetPhysicalDeviceImageFormatProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      ImageFormatProperties2 &   imageFormatProperties = structureChain.template get<ImageFormatProperties2>();
-      Result                     result                = static_cast<Result>(
-        getDispatcher()->vkGetPhysicalDeviceImageFormatProperties2( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                    reinterpret_cast<VkPhysicalDeviceImageFormatInfo2 const *>( &imageFormatInfo ),
-                                                                    reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
     }
 
     // wrapper function for command vkGetPhysicalDeviceQueueFamilyProperties2, see
@@ -17443,22 +15082,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryProperties;
     }
 
-    // wrapper function for command vkGetPhysicalDeviceMemoryProperties2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getMemoryProperties2() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceMemoryProperties2 &&
-                         "Function <vkGetPhysicalDeviceMemoryProperties2> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>        structureChain;
-      PhysicalDeviceMemoryProperties2 & memoryProperties = structureChain.template get<PhysicalDeviceMemoryProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceMemoryProperties2( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                             reinterpret_cast<VkPhysicalDeviceMemoryProperties2 *>( &memoryProperties ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkGetPhysicalDeviceSparseImageFormatProperties2, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::vector<SparseImageFormatProperties2>
@@ -17506,6 +15129,61 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkDevice>( m_device ), reinterpret_cast<VkDeviceQueueInfo2 const *>( &queueInfo ), reinterpret_cast<VkQueue *>( &queue ) );
 
       return Queue( *this, *reinterpret_cast<VkQueue *>( &queue ) );
+    }
+
+    // wrapper function for command vkCreateSamplerYcbcrConversion, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSamplerYcbcrConversion.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<SamplerYcbcrConversion>::type
+                         Device::createSamplerYcbcrConversion( SamplerYcbcrConversionCreateInfo const & createInfo,
+                                            Optional<AllocationCallbacks const>      allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateSamplerYcbcrConversion &&
+                         "Function <vkCreateSamplerYcbcrConversion> requires <VK_KHR_sampler_ycbcr_conversion> or <VK_VERSION_1_1>" );
+
+      VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion ycbcrConversion;
+      Result                                       result =
+        static_cast<Result>( getDispatcher()->vkCreateSamplerYcbcrConversion( static_cast<VkDevice>( m_device ),
+                                                                              reinterpret_cast<VkSamplerYcbcrConversionCreateInfo const *>( &createInfo ),
+                                                                              reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                              reinterpret_cast<VkSamplerYcbcrConversion *>( &ycbcrConversion ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createSamplerYcbcrConversion" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
+        result, SamplerYcbcrConversion( *this, *reinterpret_cast<VkSamplerYcbcrConversion *>( &ycbcrConversion ), allocator ) );
+    }
+
+    // wrapper function for command vkCreateDescriptorUpdateTemplate, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDescriptorUpdateTemplate.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<DescriptorUpdateTemplate>::type
+                         Device::createDescriptorUpdateTemplate( DescriptorUpdateTemplateCreateInfo const & createInfo,
+                                              Optional<AllocationCallbacks const>        allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateDescriptorUpdateTemplate &&
+                         "Function <vkCreateDescriptorUpdateTemplate> requires <VK_KHR_descriptor_update_template> or <VK_VERSION_1_1>" );
+
+      VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate;
+      Result                                         result =
+        static_cast<Result>( getDispatcher()->vkCreateDescriptorUpdateTemplate( static_cast<VkDevice>( m_device ),
+                                                                                reinterpret_cast<VkDescriptorUpdateTemplateCreateInfo const *>( &createInfo ),
+                                                                                reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
+                                                                                reinterpret_cast<VkDescriptorUpdateTemplate *>( &descriptorUpdateTemplate ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createDescriptorUpdateTemplate" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
+        result, DescriptorUpdateTemplate( *this, *reinterpret_cast<VkDescriptorUpdateTemplate *>( &descriptorUpdateTemplate ), allocator ) );
+    }
+
+    // wrapper function for command vkUpdateDescriptorSetWithTemplate, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateDescriptorSetWithTemplate.html
+    template <typename DataType>
+    VULKAN_HPP_INLINE void DescriptorSet::updateWithTemplate( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
+                                                              DataType const &                               data ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkUpdateDescriptorSetWithTemplate &&
+                         "Function <vkUpdateDescriptorSetWithTemplate> requires <VK_KHR_descriptor_update_template> or <VK_VERSION_1_1>" );
+
+      getDispatcher()->vkUpdateDescriptorSetWithTemplate( static_cast<VkDevice>( m_device ),
+                                                          static_cast<VkDescriptorSet>( m_descriptorSet ),
+                                                          static_cast<VkDescriptorUpdateTemplate>( descriptorUpdateTemplate ),
+                                                          reinterpret_cast<void const *>( &data ) );
     }
 
     // wrapper function for command vkGetPhysicalDeviceExternalBufferProperties, see
@@ -17557,55 +15235,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return externalSemaphoreProperties;
     }
 
-    // wrapper function for command vkCmdDispatchBase, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchBase.html
-    VULKAN_HPP_INLINE void CommandBuffer::dispatchBase( uint32_t baseGroupX,
-                                                        uint32_t baseGroupY,
-                                                        uint32_t baseGroupZ,
-                                                        uint32_t groupCountX,
-                                                        uint32_t groupCountY,
-                                                        uint32_t groupCountZ ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchBase && "Function <vkCmdDispatchBase> requires <VK_KHR_device_group> or <VK_VERSION_1_1>" );
-
-      getDispatcher()->vkCmdDispatchBase(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ );
-    }
-
-    // wrapper function for command vkCreateDescriptorUpdateTemplate, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDescriptorUpdateTemplate.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<DescriptorUpdateTemplate>::type
-                         Device::createDescriptorUpdateTemplate( DescriptorUpdateTemplateCreateInfo const & createInfo,
-                                              Optional<AllocationCallbacks const>        allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateDescriptorUpdateTemplate &&
-                         "Function <vkCreateDescriptorUpdateTemplate> requires <VK_KHR_descriptor_update_template> or <VK_VERSION_1_1>" );
-
-      VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate;
-      Result                                         result =
-        static_cast<Result>( getDispatcher()->vkCreateDescriptorUpdateTemplate( static_cast<VkDevice>( m_device ),
-                                                                                reinterpret_cast<VkDescriptorUpdateTemplateCreateInfo const *>( &createInfo ),
-                                                                                reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                reinterpret_cast<VkDescriptorUpdateTemplate *>( &descriptorUpdateTemplate ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createDescriptorUpdateTemplate" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, DescriptorUpdateTemplate( *this, *reinterpret_cast<VkDescriptorUpdateTemplate *>( &descriptorUpdateTemplate ), allocator ) );
-    }
-
-    // wrapper function for command vkUpdateDescriptorSetWithTemplate, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateDescriptorSetWithTemplate.html
-    template <typename DataType>
-    VULKAN_HPP_INLINE void DescriptorSet::updateWithTemplate( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
-                                                              DataType const &                               data ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUpdateDescriptorSetWithTemplate &&
-                         "Function <vkUpdateDescriptorSetWithTemplate> requires <VK_KHR_descriptor_update_template> or <VK_VERSION_1_1>" );
-
-      getDispatcher()->vkUpdateDescriptorSetWithTemplate( static_cast<VkDevice>( m_device ),
-                                                          static_cast<VkDescriptorSet>( m_descriptorSet ),
-                                                          static_cast<VkDescriptorUpdateTemplate>( descriptorUpdateTemplate ),
-                                                          reinterpret_cast<void const *>( &data ) );
-    }
-
     // wrapper function for command vkGetDescriptorSetLayoutSupport, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupport.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE DescriptorSetLayoutSupport
@@ -17622,130 +15251,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return support;
     }
 
-    // wrapper function for command vkGetDescriptorSetLayoutSupport, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupport.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getDescriptorSetLayoutSupport( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDescriptorSetLayoutSupport &&
-                         "Function <vkGetDescriptorSetLayoutSupport> requires <VK_KHR_maintenance3> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>   structureChain;
-      DescriptorSetLayoutSupport & support = structureChain.template get<DescriptorSetLayoutSupport>();
-      getDispatcher()->vkGetDescriptorSetLayoutSupport( static_cast<VkDevice>( m_device ),
-                                                        reinterpret_cast<VkDescriptorSetLayoutCreateInfo const *>( &createInfo ),
-                                                        reinterpret_cast<VkDescriptorSetLayoutSupport *>( &support ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkCreateSamplerYcbcrConversion, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSamplerYcbcrConversion.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<SamplerYcbcrConversion>::type
-                         Device::createSamplerYcbcrConversion( SamplerYcbcrConversionCreateInfo const & createInfo,
-                                            Optional<AllocationCallbacks const>      allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateSamplerYcbcrConversion &&
-                         "Function <vkCreateSamplerYcbcrConversion> requires <VK_KHR_sampler_ycbcr_conversion> or <VK_VERSION_1_1>" );
-
-      VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion ycbcrConversion;
-      Result                                       result =
-        static_cast<Result>( getDispatcher()->vkCreateSamplerYcbcrConversion( static_cast<VkDevice>( m_device ),
-                                                                              reinterpret_cast<VkSamplerYcbcrConversionCreateInfo const *>( &createInfo ),
-                                                                              reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                              reinterpret_cast<VkSamplerYcbcrConversion *>( &ycbcrConversion ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createSamplerYcbcrConversion" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, SamplerYcbcrConversion( *this, *reinterpret_cast<VkSamplerYcbcrConversion *>( &ycbcrConversion ), allocator ) );
-    }
-
     //=== VK_VERSION_1_2 ===
-
-    // wrapper function for command vkResetQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetQueryPool.html
-    VULKAN_HPP_INLINE void QueryPool::reset( uint32_t firstQuery, uint32_t queryCount ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkResetQueryPool && "Function <vkResetQueryPool> requires <VK_EXT_host_query_reset> or <VK_VERSION_1_2>" );
-
-      getDispatcher()->vkResetQueryPool( static_cast<VkDevice>( m_device ), static_cast<VkQueryPool>( m_queryPool ), firstQuery, queryCount );
-    }
-
-    // wrapper function for command vkGetSemaphoreCounterValue, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSemaphoreCounterValue.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<uint64_t>::type Semaphore::getCounterValue() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetSemaphoreCounterValue &&
-                         "Function <vkGetSemaphoreCounterValue> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
-
-      uint64_t value;
-      Result   result = static_cast<Result>(
-        getDispatcher()->vkGetSemaphoreCounterValue( static_cast<VkDevice>( m_device ), static_cast<VkSemaphore>( m_semaphore ), &value ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Semaphore::getCounterValue" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( value ) );
-    }
-
-    // wrapper function for command vkWaitSemaphores, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkWaitSemaphores.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitSemaphores( SemaphoreWaitInfo const & waitInfo, uint64_t timeout ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkWaitSemaphores && "Function <vkWaitSemaphores> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
-
-      Result result = static_cast<Result>(
-        getDispatcher()->vkWaitSemaphores( static_cast<VkDevice>( m_device ), reinterpret_cast<VkSemaphoreWaitInfo const *>( &waitInfo ), timeout ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::waitSemaphores", { Result::eSuccess, Result::eTimeout } );
-
-      return static_cast<Result>( result );
-    }
-
-    // wrapper function for command vkSignalSemaphore, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSignalSemaphore.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::signalSemaphore( SemaphoreSignalInfo const & signalInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkSignalSemaphore && "Function <vkSignalSemaphore> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
-
-      Result result = static_cast<Result>(
-        getDispatcher()->vkSignalSemaphore( static_cast<VkDevice>( m_device ), reinterpret_cast<VkSemaphoreSignalInfo const *>( &signalInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::signalSemaphore" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkGetBufferDeviceAddress, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferDeviceAddress.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE DeviceAddress Device::getBufferAddress( BufferDeviceAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferDeviceAddress &&
-                         "Function <vkGetBufferDeviceAddress> requires <VK_EXT_buffer_device_address> or <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
-
-      VkDeviceAddress result =
-        getDispatcher()->vkGetBufferDeviceAddress( static_cast<VkDevice>( m_device ), reinterpret_cast<VkBufferDeviceAddressInfo const *>( &info ) );
-
-      return static_cast<DeviceAddress>( result );
-    }
-
-    // wrapper function for command vkGetBufferOpaqueCaptureAddress, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferOpaqueCaptureAddress.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t Device::getBufferOpaqueCaptureAddress( BufferDeviceAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferOpaqueCaptureAddress &&
-                         "Function <vkGetBufferOpaqueCaptureAddress> requires <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
-
-      uint64_t result =
-        getDispatcher()->vkGetBufferOpaqueCaptureAddress( static_cast<VkDevice>( m_device ), reinterpret_cast<VkBufferDeviceAddressInfo const *>( &info ) );
-
-      return result;
-    }
-
-    // wrapper function for command vkGetDeviceMemoryOpaqueCaptureAddress, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t
-      Device::getMemoryOpaqueCaptureAddress( DeviceMemoryOpaqueCaptureAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceMemoryOpaqueCaptureAddress &&
-                         "Function <vkGetDeviceMemoryOpaqueCaptureAddress> requires <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
-
-      uint64_t result = getDispatcher()->vkGetDeviceMemoryOpaqueCaptureAddress( static_cast<VkDevice>( m_device ),
-                                                                                reinterpret_cast<VkDeviceMemoryOpaqueCaptureAddressInfo const *>( &info ) );
-
-      return result;
-    }
 
     // wrapper function for command vkCmdDrawIndirectCount, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndirectCount.html
     VULKAN_HPP_INLINE void CommandBuffer::drawIndirectCount( VULKAN_HPP_NAMESPACE::Buffer buffer,
@@ -17835,6 +15341,91 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       getDispatcher()->vkCmdEndRenderPass2( static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkSubpassEndInfo const *>( &subpassEndInfo ) );
     }
 
+    // wrapper function for command vkResetQueryPool, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkResetQueryPool.html
+    VULKAN_HPP_INLINE void QueryPool::reset( uint32_t firstQuery, uint32_t queryCount ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkResetQueryPool && "Function <vkResetQueryPool> requires <VK_EXT_host_query_reset> or <VK_VERSION_1_2>" );
+
+      getDispatcher()->vkResetQueryPool( static_cast<VkDevice>( m_device ), static_cast<VkQueryPool>( m_queryPool ), firstQuery, queryCount );
+    }
+
+    // wrapper function for command vkGetSemaphoreCounterValue, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSemaphoreCounterValue.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<uint64_t>::type Semaphore::getCounterValue() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetSemaphoreCounterValue &&
+                         "Function <vkGetSemaphoreCounterValue> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
+
+      uint64_t value;
+      Result   result = static_cast<Result>(
+        getDispatcher()->vkGetSemaphoreCounterValue( static_cast<VkDevice>( m_device ), static_cast<VkSemaphore>( m_semaphore ), &value ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Semaphore::getCounterValue" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( value ) );
+    }
+
+    // wrapper function for command vkWaitSemaphores, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkWaitSemaphores.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitSemaphores( SemaphoreWaitInfo const & waitInfo, uint64_t timeout ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkWaitSemaphores && "Function <vkWaitSemaphores> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
+
+      Result result = static_cast<Result>(
+        getDispatcher()->vkWaitSemaphores( static_cast<VkDevice>( m_device ), reinterpret_cast<VkSemaphoreWaitInfo const *>( &waitInfo ), timeout ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::waitSemaphores", { Result::eSuccess, Result::eTimeout } );
+
+      return static_cast<Result>( result );
+    }
+
+    // wrapper function for command vkSignalSemaphore, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkSignalSemaphore.html
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::signalSemaphore( SemaphoreSignalInfo const & signalInfo ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkSignalSemaphore && "Function <vkSignalSemaphore> requires <VK_KHR_timeline_semaphore> or <VK_VERSION_1_2>" );
+
+      Result result = static_cast<Result>(
+        getDispatcher()->vkSignalSemaphore( static_cast<VkDevice>( m_device ), reinterpret_cast<VkSemaphoreSignalInfo const *>( &signalInfo ) ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::signalSemaphore" );
+
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkGetBufferDeviceAddress, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferDeviceAddress.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE DeviceAddress Device::getBufferAddress( BufferDeviceAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferDeviceAddress &&
+                         "Function <vkGetBufferDeviceAddress> requires <VK_EXT_buffer_device_address> or <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
+
+      VkDeviceAddress result =
+        getDispatcher()->vkGetBufferDeviceAddress( static_cast<VkDevice>( m_device ), reinterpret_cast<VkBufferDeviceAddressInfo const *>( &info ) );
+
+      return static_cast<DeviceAddress>( result );
+    }
+
+    // wrapper function for command vkGetBufferOpaqueCaptureAddress, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferOpaqueCaptureAddress.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t Device::getBufferOpaqueCaptureAddress( BufferDeviceAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferOpaqueCaptureAddress &&
+                         "Function <vkGetBufferOpaqueCaptureAddress> requires <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
+
+      uint64_t result =
+        getDispatcher()->vkGetBufferOpaqueCaptureAddress( static_cast<VkDevice>( m_device ), reinterpret_cast<VkBufferDeviceAddressInfo const *>( &info ) );
+
+      return result;
+    }
+
+    // wrapper function for command vkGetDeviceMemoryOpaqueCaptureAddress, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t
+      Device::getMemoryOpaqueCaptureAddress( DeviceMemoryOpaqueCaptureAddressInfo const & info ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceMemoryOpaqueCaptureAddress &&
+                         "Function <vkGetDeviceMemoryOpaqueCaptureAddress> requires <VK_KHR_buffer_device_address> or <VK_VERSION_1_2>" );
+
+      uint64_t result = getDispatcher()->vkGetDeviceMemoryOpaqueCaptureAddress( static_cast<VkDevice>( m_device ),
+                                                                                reinterpret_cast<VkDeviceMemoryOpaqueCaptureAddressInfo const *>( &info ) );
+
+      return result;
+    }
+
     //=== VK_VERSION_1_3 ===
 
     // wrapper function for command vkGetPhysicalDeviceToolProperties, see
@@ -17911,6 +15502,44 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return data;
     }
 
+    // wrapper function for command vkCmdSetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent2.html
+    VULKAN_HPP_INLINE void CommandBuffer::setEvent2( VULKAN_HPP_NAMESPACE::Event event, DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetEvent2 && "Function <vkCmdSetEvent2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
+
+      getDispatcher()->vkCmdSetEvent2(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), reinterpret_cast<VkDependencyInfo const *>( &dependencyInfo ) );
+    }
+
+    // wrapper function for command vkCmdResetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent2.html
+    VULKAN_HPP_INLINE void CommandBuffer::resetEvent2( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags2 stageMask ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetEvent2 && "Function <vkCmdResetEvent2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
+
+      getDispatcher()->vkCmdResetEvent2(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags2>( stageMask ) );
+    }
+
+    // wrapper function for command vkCmdWaitEvents2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents2.html
+    VULKAN_HPP_INLINE void CommandBuffer::waitEvents2( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
+                                                       ArrayProxy<DependencyInfo const> const &              dependencyInfos ) const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWaitEvents2 && "Function <vkCmdWaitEvents2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
+#  ifdef VULKAN_HPP_NO_EXCEPTIONS
+      VULKAN_HPP_ASSERT( events.size() == dependencyInfos.size() );
+#  else
+      if ( events.size() != dependencyInfos.size() )
+      {
+        throw LogicError( VULKAN_HPP_NAMESPACE_STRING "::CommandBuffer::waitEvents2: events.size() != dependencyInfos.size()" );
+      }
+#  endif /*VULKAN_HPP_NO_EXCEPTIONS*/
+
+      getDispatcher()->vkCmdWaitEvents2( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                         events.size(),
+                                         reinterpret_cast<VkEvent const *>( events.data() ),
+                                         reinterpret_cast<VkDependencyInfo const *>( dependencyInfos.data() ) );
+    }
+
     // wrapper function for command vkCmdPipelineBarrier2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPipelineBarrier2.html
     VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier2( DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT
     {
@@ -17976,138 +15605,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       getDispatcher()->vkCmdCopyImageToBuffer2( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                 reinterpret_cast<VkCopyImageToBufferInfo2 const *>( &copyImageToBufferInfo ) );
-    }
-
-    // wrapper function for command vkGetDeviceBufferMemoryRequirements, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirements.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getBufferMemoryRequirements( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceBufferMemoryRequirements &&
-                         "Function <vkGetDeviceBufferMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetDeviceBufferMemoryRequirements( static_cast<VkDevice>( m_device ),
-                                                            reinterpret_cast<VkDeviceBufferMemoryRequirements const *>( &info ),
-                                                            reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetDeviceBufferMemoryRequirements, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirements.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getBufferMemoryRequirements( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceBufferMemoryRequirements &&
-                         "Function <vkGetDeviceBufferMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDeviceBufferMemoryRequirements( static_cast<VkDevice>( m_device ),
-                                                            reinterpret_cast<VkDeviceBufferMemoryRequirements const *>( &info ),
-                                                            reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetDeviceImageMemoryRequirements, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirements.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getImageMemoryRequirements( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageMemoryRequirements &&
-                         "Function <vkGetDeviceImageMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetDeviceImageMemoryRequirements( static_cast<VkDevice>( m_device ),
-                                                           reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
-                                                           reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetDeviceImageMemoryRequirements, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirements.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageMemoryRequirements( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageMemoryRequirements &&
-                         "Function <vkGetDeviceImageMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDeviceImageMemoryRequirements( static_cast<VkDevice>( m_device ),
-                                                           reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
-                                                           reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetDeviceImageSparseMemoryRequirements, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSparseMemoryRequirements.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::vector<SparseImageMemoryRequirements2>
-                                           Device::getImageSparseMemoryRequirements( DeviceImageMemoryRequirements const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSparseMemoryRequirements &&
-                         "Function <vkGetDeviceImageSparseMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      std::vector<SparseImageMemoryRequirements2> sparseMemoryRequirements;
-      uint32_t                                    sparseMemoryRequirementCount;
-      getDispatcher()->vkGetDeviceImageSparseMemoryRequirements(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ), &sparseMemoryRequirementCount, nullptr );
-      sparseMemoryRequirements.resize( sparseMemoryRequirementCount );
-      getDispatcher()->vkGetDeviceImageSparseMemoryRequirements( static_cast<VkDevice>( m_device ),
-                                                                 reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
-                                                                 &sparseMemoryRequirementCount,
-                                                                 reinterpret_cast<VkSparseImageMemoryRequirements2 *>( sparseMemoryRequirements.data() ) );
-
-      VULKAN_HPP_ASSERT( sparseMemoryRequirementCount <= sparseMemoryRequirements.size() );
-      if ( sparseMemoryRequirementCount < sparseMemoryRequirements.size() )
-      {
-        sparseMemoryRequirements.resize( sparseMemoryRequirementCount );
-      }
-      return sparseMemoryRequirements;
-    }
-
-    // wrapper function for command vkCmdSetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetEvent2.html
-    VULKAN_HPP_INLINE void CommandBuffer::setEvent2( VULKAN_HPP_NAMESPACE::Event event, DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetEvent2 && "Function <vkCmdSetEvent2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
-
-      getDispatcher()->vkCmdSetEvent2(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), reinterpret_cast<VkDependencyInfo const *>( &dependencyInfo ) );
-    }
-
-    // wrapper function for command vkCmdResetEvent2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdResetEvent2.html
-    VULKAN_HPP_INLINE void CommandBuffer::resetEvent2( VULKAN_HPP_NAMESPACE::Event event, PipelineStageFlags2 stageMask ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdResetEvent2 && "Function <vkCmdResetEvent2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
-
-      getDispatcher()->vkCmdResetEvent2(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags2>( stageMask ) );
-    }
-
-    // wrapper function for command vkCmdWaitEvents2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWaitEvents2.html
-    VULKAN_HPP_INLINE void CommandBuffer::waitEvents2( ArrayProxy<VULKAN_HPP_NAMESPACE::Event const> const & events,
-                                                       ArrayProxy<DependencyInfo const> const &              dependencyInfos ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWaitEvents2 && "Function <vkCmdWaitEvents2> requires <VK_KHR_synchronization2> or <VK_VERSION_1_3>" );
-#  ifdef VULKAN_HPP_NO_EXCEPTIONS
-      VULKAN_HPP_ASSERT( events.size() == dependencyInfos.size() );
-#  else
-      if ( events.size() != dependencyInfos.size() )
-      {
-        throw LogicError( VULKAN_HPP_NAMESPACE_STRING "::CommandBuffer::waitEvents2: events.size() != dependencyInfos.size()" );
-      }
-#  endif /*VULKAN_HPP_NO_EXCEPTIONS*/
-
-      getDispatcher()->vkCmdWaitEvents2( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                         events.size(),
-                                         reinterpret_cast<VkEvent const *>( events.data() ),
-                                         reinterpret_cast<VkDependencyInfo const *>( dependencyInfos.data() ) );
     }
 
     // wrapper function for command vkCmdBlitImage2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBlitImage2.html
@@ -18317,287 +15814,62 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       getDispatcher()->vkCmdSetPrimitiveRestartEnable( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkBool32>( primitiveRestartEnable ) );
     }
 
-    //=== VK_VERSION_1_4 ===
-
-    // wrapper function for command vkMapMemory2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkMapMemory2.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<void *>::type Device::mapMemory2( MemoryMapInfo const & memoryMapInfo ) const
+    // wrapper function for command vkGetDeviceBufferMemoryRequirements, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirements.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
+      Device::getBufferMemoryRequirements( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkMapMemory2 && "Function <vkMapMemory2> requires <VK_KHR_map_memory2> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceBufferMemoryRequirements &&
+                         "Function <vkGetDeviceBufferMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
 
-      void * pData;
-      Result result = static_cast<Result>(
-        getDispatcher()->vkMapMemory2( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryMapInfo const *>( &memoryMapInfo ), &pData ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::mapMemory2" );
+      MemoryRequirements2 memoryRequirements;
+      getDispatcher()->vkGetDeviceBufferMemoryRequirements( static_cast<VkDevice>( m_device ),
+                                                            reinterpret_cast<VkDeviceBufferMemoryRequirements const *>( &info ),
+                                                            reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pData ) );
+      return memoryRequirements;
     }
 
-    // wrapper function for command vkUnmapMemory2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnmapMemory2.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::unmapMemory2( MemoryUnmapInfo const & memoryUnmapInfo ) const
+    // wrapper function for command vkGetDeviceImageMemoryRequirements, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirements.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
+      Device::getImageMemoryRequirements( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUnmapMemory2 && "Function <vkUnmapMemory2> requires <VK_KHR_map_memory2> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageMemoryRequirements &&
+                         "Function <vkGetDeviceImageMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
 
-      Result result = static_cast<Result>(
-        getDispatcher()->vkUnmapMemory2( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryUnmapInfo const *>( &memoryUnmapInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::unmapMemory2" );
+      MemoryRequirements2 memoryRequirements;
+      getDispatcher()->vkGetDeviceImageMemoryRequirements( static_cast<VkDevice>( m_device ),
+                                                           reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
+                                                           reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+      return memoryRequirements;
     }
 
-    // wrapper function for command vkGetDeviceImageSubresourceLayout, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayout.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2
-      Device::getImageSubresourceLayout( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT
+    // wrapper function for command vkGetDeviceImageSparseMemoryRequirements, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSparseMemoryRequirements.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::vector<SparseImageMemoryRequirements2>
+                                           Device::getImageSparseMemoryRequirements( DeviceImageMemoryRequirements const & info ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSubresourceLayout &&
-                         "Function <vkGetDeviceImageSubresourceLayout> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSparseMemoryRequirements &&
+                         "Function <vkGetDeviceImageSparseMemoryRequirements> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
 
-      SubresourceLayout2 layout;
-      getDispatcher()->vkGetDeviceImageSubresourceLayout( static_cast<VkDevice>( m_device ),
-                                                          reinterpret_cast<VkDeviceImageSubresourceInfo const *>( &info ),
-                                                          reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
+      std::vector<SparseImageMemoryRequirements2> sparseMemoryRequirements;
+      uint32_t                                    sparseMemoryRequirementCount;
+      getDispatcher()->vkGetDeviceImageSparseMemoryRequirements(
+        static_cast<VkDevice>( m_device ), reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ), &sparseMemoryRequirementCount, nullptr );
+      sparseMemoryRequirements.resize( sparseMemoryRequirementCount );
+      getDispatcher()->vkGetDeviceImageSparseMemoryRequirements( static_cast<VkDevice>( m_device ),
+                                                                 reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
+                                                                 &sparseMemoryRequirementCount,
+                                                                 reinterpret_cast<VkSparseImageMemoryRequirements2 *>( sparseMemoryRequirements.data() ) );
 
-      return layout;
-    }
-
-    // wrapper function for command vkGetDeviceImageSubresourceLayout, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayout.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageSubresourceLayout( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSubresourceLayout &&
-                         "Function <vkGetDeviceImageSubresourceLayout> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      SubresourceLayout2 &       layout = structureChain.template get<SubresourceLayout2>();
-      getDispatcher()->vkGetDeviceImageSubresourceLayout( static_cast<VkDevice>( m_device ),
-                                                          reinterpret_cast<VkDeviceImageSubresourceInfo const *>( &info ),
-                                                          reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetImageSubresourceLayout2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2 Image::getSubresourceLayout2( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkGetImageSubresourceLayout2 &&
-        "Function <vkGetImageSubresourceLayout2> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      SubresourceLayout2 layout;
-      getDispatcher()->vkGetImageSubresourceLayout2( static_cast<VkDevice>( m_device ),
-                                                     static_cast<VkImage>( m_image ),
-                                                     reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                     reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return layout;
-    }
-
-    // wrapper function for command vkGetImageSubresourceLayout2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Image::getSubresourceLayout2( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkGetImageSubresourceLayout2 &&
-        "Function <vkGetImageSubresourceLayout2> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      SubresourceLayout2 &       layout = structureChain.template get<SubresourceLayout2>();
-      getDispatcher()->vkGetImageSubresourceLayout2( static_cast<VkDevice>( m_device ),
-                                                     static_cast<VkImage>( m_image ),
-                                                     reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                     reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkCopyMemoryToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyMemoryToImage.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyMemoryToImage( CopyMemoryToImageInfo const & copyMemoryToImageInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyMemoryToImage && "Function <vkCopyMemoryToImage> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkCopyMemoryToImage(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyMemoryToImageInfo const *>( &copyMemoryToImageInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyMemoryToImage" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCopyImageToMemory, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToMemory.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToMemory( CopyImageToMemoryInfo const & copyImageToMemoryInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToMemory && "Function <vkCopyImageToMemory> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkCopyImageToMemory(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToMemoryInfo const *>( &copyImageToMemoryInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyImageToMemory" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCopyImageToImage, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToImage.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToImage( CopyImageToImageInfo const & copyImageToImageInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToImage && "Function <vkCopyImageToImage> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
-
-      Result result = static_cast<Result>(
-        getDispatcher()->vkCopyImageToImage( static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToImageInfo const *>( &copyImageToImageInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyImageToImage" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkTransitionImageLayout, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkTransitionImageLayout.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type
-      Device::transitionImageLayout( ArrayProxy<HostImageLayoutTransitionInfo const> const & transitions ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkTransitionImageLayout &&
-                         "Function <vkTransitionImageLayout> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkTransitionImageLayout(
-        static_cast<VkDevice>( m_device ), transitions.size(), reinterpret_cast<VkHostImageLayoutTransitionInfo const *>( transitions.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::transitionImageLayout" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCmdPushDescriptorSet, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSet( PipelineBindPoint                            pipelineBindPoint,
-                                                             VULKAN_HPP_NAMESPACE::PipelineLayout         layout,
-                                                             uint32_t                                     set,
-                                                             ArrayProxy<WriteDescriptorSet const> const & descriptorWrites ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSet && "Function <vkCmdPushDescriptorSet> requires <VK_KHR_push_descriptor> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdPushDescriptorSet( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                               static_cast<VkPipelineBindPoint>( pipelineBindPoint ),
-                                               static_cast<VkPipelineLayout>( layout ),
-                                               set,
-                                               descriptorWrites.size(),
-                                               reinterpret_cast<VkWriteDescriptorSet const *>( descriptorWrites.data() ) );
-    }
-
-    // wrapper function for command vkCmdPushDescriptorSetWithTemplate, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate.html
-    template <typename DataType>
-    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSetWithTemplate( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
-                                                                         VULKAN_HPP_NAMESPACE::PipelineLayout           layout,
-                                                                         uint32_t                                       set,
-                                                                         DataType const &                               data ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkCmdPushDescriptorSetWithTemplate &&
-        "Function <vkCmdPushDescriptorSetWithTemplate> requires <VK_KHR_descriptor_update_template> or <VK_KHR_push_descriptor> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdPushDescriptorSetWithTemplate( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                           static_cast<VkDescriptorUpdateTemplate>( descriptorUpdateTemplate ),
-                                                           static_cast<VkPipelineLayout>( layout ),
-                                                           set,
-                                                           reinterpret_cast<void const *>( &data ) );
-    }
-
-    // wrapper function for command vkCmdBindDescriptorSets2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets2.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets2( BindDescriptorSetsInfo const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindDescriptorSets2 &&
-                         "Function <vkCmdBindDescriptorSets2> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdBindDescriptorSets2( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                 reinterpret_cast<VkBindDescriptorSetsInfo const *>( &bindDescriptorSetsInfo ) );
-    }
-
-    // wrapper function for command vkCmdPushConstants2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants2.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushConstants2( PushConstantsInfo const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants2 && "Function <vkCmdPushConstants2> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdPushConstants2( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                            reinterpret_cast<VkPushConstantsInfo const *>( &pushConstantsInfo ) );
-    }
-
-    // wrapper function for command vkCmdPushDescriptorSet2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet2.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSet2( PushDescriptorSetInfo const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSet2 && "Function <vkCmdPushDescriptorSet2> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdPushDescriptorSet2( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                reinterpret_cast<VkPushDescriptorSetInfo const *>( &pushDescriptorSetInfo ) );
-    }
-
-    // wrapper function for command vkCmdPushDescriptorSetWithTemplate2, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate2.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::pushDescriptorSetWithTemplate2( PushDescriptorSetWithTemplateInfo const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSetWithTemplate2 &&
-                         "Function <vkCmdPushDescriptorSetWithTemplate2> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdPushDescriptorSetWithTemplate2(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkPushDescriptorSetWithTemplateInfo const *>( &pushDescriptorSetWithTemplateInfo ) );
-    }
-
-    // wrapper function for command vkCmdSetLineStipple, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineStipple.html
-    VULKAN_HPP_INLINE void CommandBuffer::setLineStipple( uint32_t lineStippleFactor, uint16_t lineStipplePattern ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetLineStipple &&
-                         "Function <vkCmdSetLineStipple> requires <VK_EXT_line_rasterization> or <VK_KHR_line_rasterization> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetLineStipple( static_cast<VkCommandBuffer>( m_commandBuffer ), lineStippleFactor, lineStipplePattern );
-    }
-
-    // wrapper function for command vkCmdBindIndexBuffer2, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindIndexBuffer2.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::bindIndexBuffer2( VULKAN_HPP_NAMESPACE::Buffer buffer, DeviceSize offset, DeviceSize size, IndexType indexType ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindIndexBuffer2 && "Function <vkCmdBindIndexBuffer2> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdBindIndexBuffer2( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                              static_cast<VkBuffer>( buffer ),
-                                              static_cast<VkDeviceSize>( offset ),
-                                              static_cast<VkDeviceSize>( size ),
-                                              static_cast<VkIndexType>( indexType ) );
-    }
-
-    // wrapper function for command vkGetRenderingAreaGranularity, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetRenderingAreaGranularity.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Extent2D Device::getRenderingAreaGranularity( RenderingAreaInfo const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetRenderingAreaGranularity &&
-                         "Function <vkGetRenderingAreaGranularity> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      Extent2D granularity;
-      getDispatcher()->vkGetRenderingAreaGranularity( static_cast<VkDevice>( m_device ),
-                                                      reinterpret_cast<VkRenderingAreaInfo const *>( &renderingAreaInfo ),
-                                                      reinterpret_cast<VkExtent2D *>( &granularity ) );
-
-      return granularity;
-    }
-
-    // wrapper function for command vkCmdSetRenderingAttachmentLocations, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingAttachmentLocations.html
-    VULKAN_HPP_INLINE void CommandBuffer::setRenderingAttachmentLocations( RenderingAttachmentLocationInfo const & locationInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetRenderingAttachmentLocations &&
-                         "Function <vkCmdSetRenderingAttachmentLocations> requires <VK_KHR_dynamic_rendering_local_read> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetRenderingAttachmentLocations( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                             reinterpret_cast<VkRenderingAttachmentLocationInfo const *>( &locationInfo ) );
-    }
-
-    // wrapper function for command vkCmdSetRenderingInputAttachmentIndices, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingInputAttachmentIndices.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::setRenderingInputAttachmentIndices( RenderingInputAttachmentIndexInfo const & inputAttachmentIndexInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetRenderingInputAttachmentIndices &&
-                         "Function <vkCmdSetRenderingInputAttachmentIndices> requires <VK_KHR_dynamic_rendering_local_read> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetRenderingInputAttachmentIndices( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                                reinterpret_cast<VkRenderingInputAttachmentIndexInfo const *>( &inputAttachmentIndexInfo ) );
+      VULKAN_HPP_ASSERT( sparseMemoryRequirementCount <= sparseMemoryRequirements.size() );
+      if ( sparseMemoryRequirementCount < sparseMemoryRequirements.size() )
+      {
+        sparseMemoryRequirements.resize( sparseMemoryRequirementCount );
+      }
+      return sparseMemoryRequirements;
     }
 
     //=== VK_KHR_surface ===
@@ -19384,26 +16656,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( capabilities ) );
     }
 
-    // wrapper function for command vkGetPhysicalDeviceVideoCapabilitiesKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         PhysicalDevice::getVideoCapabilitiesKHR( VideoProfileInfoKHR const & videoProfile ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceVideoCapabilitiesKHR &&
-                         "Function <vkGetPhysicalDeviceVideoCapabilitiesKHR> requires <VK_KHR_video_queue>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      VideoCapabilitiesKHR &     capabilities = structureChain.template get<VideoCapabilitiesKHR>();
-      Result                     result =
-        static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceVideoCapabilitiesKHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                                       reinterpret_cast<VkVideoProfileInfoKHR const *>( &videoProfile ),
-                                                                                       reinterpret_cast<VkVideoCapabilitiesKHR *>( &capabilities ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getVideoCapabilitiesKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
-    }
-
     // wrapper function for command vkGetPhysicalDeviceVideoFormatPropertiesKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<VideoFormatPropertiesKHR>>::type
@@ -19439,54 +16691,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         videoFormatProperties.resize( videoFormatPropertyCount );
       }
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( videoFormatProperties ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceVideoFormatPropertiesKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html
-    template <typename StructureChain>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<StructureChain>>::type
-                         PhysicalDevice::getVideoFormatPropertiesKHR( PhysicalDeviceVideoFormatInfoKHR const & videoFormatInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceVideoFormatPropertiesKHR &&
-                         "Function <vkGetPhysicalDeviceVideoFormatPropertiesKHR> requires <VK_KHR_video_queue>" );
-
-      std::vector<StructureChain>           structureChains;
-      std::vector<VideoFormatPropertiesKHR> videoFormatProperties;
-      uint32_t                              videoFormatPropertyCount;
-      Result                                result;
-      do
-      {
-        result = static_cast<Result>(
-          getDispatcher()->vkGetPhysicalDeviceVideoFormatPropertiesKHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                        reinterpret_cast<VkPhysicalDeviceVideoFormatInfoKHR const *>( &videoFormatInfo ),
-                                                                        &videoFormatPropertyCount,
-                                                                        nullptr ) );
-        if ( ( result == Result::eSuccess ) && videoFormatPropertyCount )
-        {
-          structureChains.resize( videoFormatPropertyCount );
-          videoFormatProperties.resize( videoFormatPropertyCount );
-          for ( uint32_t i = 0; i < videoFormatPropertyCount; i++ )
-          {
-            videoFormatProperties[i].pNext = structureChains[i].template get<VideoFormatPropertiesKHR>().pNext;
-          }
-          result = static_cast<Result>(
-            getDispatcher()->vkGetPhysicalDeviceVideoFormatPropertiesKHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                          reinterpret_cast<VkPhysicalDeviceVideoFormatInfoKHR const *>( &videoFormatInfo ),
-                                                                          &videoFormatPropertyCount,
-                                                                          reinterpret_cast<VkVideoFormatPropertiesKHR *>( videoFormatProperties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getVideoFormatPropertiesKHR" );
-      VULKAN_HPP_ASSERT( videoFormatPropertyCount <= videoFormatProperties.size() );
-      if ( videoFormatPropertyCount < videoFormatProperties.size() )
-      {
-        structureChains.resize( videoFormatPropertyCount );
-      }
-      for ( uint32_t i = 0; i < videoFormatPropertyCount; i++ )
-      {
-        structureChains[i].template get<VideoFormatPropertiesKHR>() = videoFormatProperties[i];
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChains ) );
     }
 
     // wrapper function for command vkCreateVideoSessionKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateVideoSessionKHR.html
@@ -19531,13 +16735,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                      reinterpret_cast<VkVideoSessionMemoryRequirementsKHR *>( memoryRequirements.data() ) ) );
         }
       } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::VideoSessionKHR::getMemoryRequirements" );
+
       VULKAN_HPP_ASSERT( memoryRequirementsCount <= memoryRequirements.size() );
       if ( memoryRequirementsCount < memoryRequirements.size() )
       {
         memoryRequirements.resize( memoryRequirementsCount );
       }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( memoryRequirements ) );
+      return memoryRequirements;
     }
 
     // wrapper function for command vkBindVideoSessionMemoryKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindVideoSessionMemoryKHR.html
@@ -19803,17 +17007,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return result;
     }
 
-    // wrapper function for command vkGetImageViewHandle64NVX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageViewHandle64NVX.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t Device::getImageViewHandle64NVX( ImageViewHandleInfoNVX const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetImageViewHandle64NVX && "Function <vkGetImageViewHandle64NVX> requires <VK_NVX_image_view_handle>" );
-
-      uint64_t result =
-        getDispatcher()->vkGetImageViewHandle64NVX( static_cast<VkDevice>( m_device ), reinterpret_cast<VkImageViewHandleInfoNVX const *>( &info ) );
-
-      return result;
-    }
-
     // wrapper function for command vkGetImageViewAddressNVX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageViewAddressNVX.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<ImageViewAddressPropertiesNVX>::type ImageView::getAddressNVX() const
     {
@@ -19825,19 +17018,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::ImageView::getAddressNVX" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    // wrapper function for command vkGetDeviceCombinedImageSamplerIndexNVX, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceCombinedImageSamplerIndexNVX.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE uint64_t Device::getCombinedImageSamplerIndexNVX( uint64_t imageViewIndex,
-                                                                                             uint64_t samplerIndex ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceCombinedImageSamplerIndexNVX &&
-                         "Function <vkGetDeviceCombinedImageSamplerIndexNVX> requires <VK_NVX_image_view_handle>" );
-
-      uint64_t result = getDispatcher()->vkGetDeviceCombinedImageSamplerIndexNVX( static_cast<VkDevice>( m_device ), imageViewIndex, samplerIndex );
-
-      return result;
     }
 
     //=== VK_AMD_draw_indirect_count ===
@@ -20031,32 +17211,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return features;
     }
 
-    // wrapper function for command vkGetPhysicalDeviceFeatures2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFeatures2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getFeatures2KHR() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFeatures2KHR &&
-                         "Function <vkGetPhysicalDeviceFeatures2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      PhysicalDeviceFeatures2 &  features = structureChain.template get<PhysicalDeviceFeatures2>();
-      getDispatcher()->vkGetPhysicalDeviceFeatures2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                        reinterpret_cast<VkPhysicalDeviceFeatures2 *>( &features ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
-    VULKAN_HPP_INLINE void PhysicalDevice::getProperties2KHR( PhysicalDeviceProperties2 * pProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-      getDispatcher()->vkGetPhysicalDeviceProperties2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                          reinterpret_cast<VkPhysicalDeviceProperties2 *>( pProperties ) );
-    }
-
     // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE PhysicalDeviceProperties2 PhysicalDevice::getProperties2KHR() const VULKAN_HPP_NOEXCEPT
@@ -20071,32 +17225,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return properties;
     }
 
-    // wrapper function for command vkGetPhysicalDeviceProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceProperties2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getProperties2KHR() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>  structureChain;
-      PhysicalDeviceProperties2 & properties = structureChain.template get<PhysicalDeviceProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceProperties2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                          reinterpret_cast<VkPhysicalDeviceProperties2 *>( &properties ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
-    VULKAN_HPP_INLINE void PhysicalDevice::getFormatProperties2KHR( Format format, FormatProperties2 * pFormatProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFormatProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceFormatProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-      getDispatcher()->vkGetPhysicalDeviceFormatProperties2KHR(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( pFormatProperties ) );
-    }
-
     // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE FormatProperties2 PhysicalDevice::getFormatProperties2KHR( Format format ) const VULKAN_HPP_NOEXCEPT
@@ -20109,22 +17237,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( &formatProperties ) );
 
       return formatProperties;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceFormatProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceFormatProperties2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getFormatProperties2KHR( Format format ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceFormatProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceFormatProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      FormatProperties2 &        formatProperties = structureChain.template get<FormatProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceFormatProperties2KHR(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkFormat>( format ), reinterpret_cast<VkFormatProperties2 *>( &formatProperties ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2KHR, see
@@ -20143,26 +17255,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2KHR" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( imageFormatProperties ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceImageFormatProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceImageFormatProperties2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         PhysicalDevice::getImageFormatProperties2KHR( PhysicalDeviceImageFormatInfo2 const & imageFormatInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceImageFormatProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceImageFormatProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      ImageFormatProperties2 &   imageFormatProperties = structureChain.template get<ImageFormatProperties2>();
-      Result                     result                = static_cast<Result>(
-        getDispatcher()->vkGetPhysicalDeviceImageFormatProperties2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                       reinterpret_cast<VkPhysicalDeviceImageFormatInfo2 const *>( &imageFormatInfo ),
-                                                                       reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2KHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
     }
 
     // wrapper function for command vkGetPhysicalDeviceQueueFamilyProperties2KHR, see
@@ -20234,22 +17326,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                 reinterpret_cast<VkPhysicalDeviceMemoryProperties2 *>( &memoryProperties ) );
 
       return memoryProperties;
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceMemoryProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceMemoryProperties2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...> PhysicalDevice::getMemoryProperties2KHR() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceMemoryProperties2KHR &&
-                         "Function <vkGetPhysicalDeviceMemoryProperties2KHR> requires <VK_KHR_get_physical_device_properties2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>        structureChain;
-      PhysicalDeviceMemoryProperties2 & memoryProperties = structureChain.template get<PhysicalDeviceMemoryProperties2>();
-      getDispatcher()->vkGetPhysicalDeviceMemoryProperties2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                reinterpret_cast<VkPhysicalDeviceMemoryProperties2 *>( &memoryProperties ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetPhysicalDeviceSparseImageFormatProperties2KHR, see
@@ -20565,8 +17641,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                 uint32_t                                     set,
                                                                 ArrayProxy<WriteDescriptorSet const> const & descriptorWrites ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSetKHR &&
-                         "Function <vkCmdPushDescriptorSetKHR> requires <VK_KHR_push_descriptor> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSetKHR && "Function <vkCmdPushDescriptorSetKHR> requires <VK_KHR_push_descriptor>" );
 
       getDispatcher()->vkCmdPushDescriptorSetKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                   static_cast<VkPipelineBindPoint>( pipelineBindPoint ),
@@ -20584,9 +17659,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                             uint32_t                                       set,
                                                                             DataType const &                               data ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkCmdPushDescriptorSetWithTemplateKHR &&
-        "Function <vkCmdPushDescriptorSetWithTemplateKHR> requires <VK_KHR_descriptor_update_template> or <VK_KHR_push_descriptor> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSetWithTemplateKHR &&
+                         "Function <vkCmdPushDescriptorSetWithTemplateKHR> requires <VK_KHR_descriptor_update_template> or <VK_KHR_push_descriptor>" );
 
       getDispatcher()->vkCmdPushDescriptorSetWithTemplateKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                               static_cast<VkDescriptorUpdateTemplate>( descriptorUpdateTemplate ),
@@ -21168,18 +18242,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     }
 
     //=== VK_KHR_get_surface_capabilities2 ===
-    // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfaceCapabilities2KHR(
-      PhysicalDeviceSurfaceInfo2KHR const * pSurfaceInfo, SurfaceCapabilities2KHR * pSurfaceCapabilities ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceSurfaceCapabilities2KHR &&
-                         "Function <vkGetPhysicalDeviceSurfaceCapabilities2KHR> requires <VK_KHR_get_surface_capabilities2>" );
-      return static_cast<Result>(
-        getDispatcher()->vkGetPhysicalDeviceSurfaceCapabilities2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                     reinterpret_cast<VkPhysicalDeviceSurfaceInfo2KHR const *>( pSurfaceInfo ),
-                                                                     reinterpret_cast<VkSurfaceCapabilities2KHR *>( pSurfaceCapabilities ) ) );
-    }
 
     // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
@@ -21197,26 +18259,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getSurfaceCapabilities2KHR" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( surfaceCapabilities ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceSurfaceCapabilities2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         PhysicalDevice::getSurfaceCapabilities2KHR( PhysicalDeviceSurfaceInfo2KHR const & surfaceInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceSurfaceCapabilities2KHR &&
-                         "Function <vkGetPhysicalDeviceSurfaceCapabilities2KHR> requires <VK_KHR_get_surface_capabilities2>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      SurfaceCapabilities2KHR &  surfaceCapabilities = structureChain.template get<SurfaceCapabilities2KHR>();
-      Result                     result              = static_cast<Result>(
-        getDispatcher()->vkGetPhysicalDeviceSurfaceCapabilities2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                     reinterpret_cast<VkPhysicalDeviceSurfaceInfo2KHR const *>( &surfaceInfo ),
-                                                                     reinterpret_cast<VkSurfaceCapabilities2KHR *>( &surfaceCapabilities ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getSurfaceCapabilities2KHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
     }
 
     // wrapper function for command vkGetPhysicalDeviceSurfaceFormats2KHR, see
@@ -21398,50 +18440,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         properties.resize( propertyCount );
       }
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    // wrapper function for command vkGetDisplayModeProperties2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDisplayModeProperties2KHR.html
-    template <typename StructureChain>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<StructureChain>>::type DisplayKHR::getModeProperties2() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDisplayModeProperties2KHR &&
-                         "Function <vkGetDisplayModeProperties2KHR> requires <VK_KHR_get_display_properties2>" );
-
-      std::vector<StructureChain>            structureChains;
-      std::vector<DisplayModeProperties2KHR> properties;
-      uint32_t                               propertyCount;
-      Result                                 result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkGetDisplayModeProperties2KHR(
-          static_cast<VkPhysicalDevice>( m_physicalDevice ), static_cast<VkDisplayKHR>( m_displayKHR ), &propertyCount, nullptr ) );
-        if ( ( result == Result::eSuccess ) && propertyCount )
-        {
-          structureChains.resize( propertyCount );
-          properties.resize( propertyCount );
-          for ( uint32_t i = 0; i < propertyCount; i++ )
-          {
-            properties[i].pNext = structureChains[i].template get<DisplayModeProperties2KHR>().pNext;
-          }
-          result =
-            static_cast<Result>( getDispatcher()->vkGetDisplayModeProperties2KHR( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                                  static_cast<VkDisplayKHR>( m_displayKHR ),
-                                                                                  &propertyCount,
-                                                                                  reinterpret_cast<VkDisplayModeProperties2KHR *>( properties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::DisplayKHR::getModeProperties2" );
-      VULKAN_HPP_ASSERT( propertyCount <= properties.size() );
-      if ( propertyCount < properties.size() )
-      {
-        structureChains.resize( propertyCount );
-      }
-      for ( uint32_t i = 0; i < propertyCount; i++ )
-      {
-        structureChains[i].template get<DisplayModeProperties2KHR>() = properties[i];
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChains ) );
     }
 
     // wrapper function for command vkGetDisplayPlaneCapabilities2KHR, see
@@ -21667,24 +18665,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
     }
 
-    // wrapper function for command vkGetAndroidHardwareBufferPropertiesANDROID, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         Device::getAndroidHardwareBufferPropertiesANDROID( struct AHardwareBuffer const & buffer ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetAndroidHardwareBufferPropertiesANDROID &&
-                         "Function <vkGetAndroidHardwareBufferPropertiesANDROID> requires <VK_ANDROID_external_memory_android_hardware_buffer>" );
-
-      StructureChain<X, Y, Z...>               structureChain;
-      AndroidHardwareBufferPropertiesANDROID & properties = structureChain.template get<AndroidHardwareBufferPropertiesANDROID>();
-      Result                                   result     = static_cast<Result>( getDispatcher()->vkGetAndroidHardwareBufferPropertiesANDROID(
-        static_cast<VkDevice>( m_device ), &buffer, reinterpret_cast<VkAndroidHardwareBufferPropertiesANDROID *>( &properties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getAndroidHardwareBufferPropertiesANDROID" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
-    }
-
     // wrapper function for command vkGetMemoryAndroidHardwareBufferANDROID, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<struct AHardwareBuffer *>::type
@@ -21797,200 +18777,47 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkCmdInitializeGraphScratchMemoryAMDX, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdInitializeGraphScratchMemoryAMDX.html
-    VULKAN_HPP_INLINE void CommandBuffer::initializeGraphScratchMemoryAMDX( VULKAN_HPP_NAMESPACE::Pipeline executionGraph,
-                                                                            DeviceAddress                  scratch,
-                                                                            DeviceSize                     scratchSize ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::initializeGraphScratchMemoryAMDX( DeviceAddress scratch ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdInitializeGraphScratchMemoryAMDX &&
                          "Function <vkCmdInitializeGraphScratchMemoryAMDX> requires <VK_AMDX_shader_enqueue>" );
 
-      getDispatcher()->vkCmdInitializeGraphScratchMemoryAMDX( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                              static_cast<VkPipeline>( executionGraph ),
-                                                              static_cast<VkDeviceAddress>( scratch ),
-                                                              static_cast<VkDeviceSize>( scratchSize ) );
+      getDispatcher()->vkCmdInitializeGraphScratchMemoryAMDX( static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkDeviceAddress>( scratch ) );
     }
 
     // wrapper function for command vkCmdDispatchGraphAMDX, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphAMDX.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::dispatchGraphAMDX( DeviceAddress scratch, DeviceSize scratchSize, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphAMDX( DeviceAddress scratch, DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchGraphAMDX && "Function <vkCmdDispatchGraphAMDX> requires <VK_AMDX_shader_enqueue>" );
 
       getDispatcher()->vkCmdDispatchGraphAMDX( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                static_cast<VkDeviceAddress>( scratch ),
-                                               static_cast<VkDeviceSize>( scratchSize ),
                                                reinterpret_cast<VkDispatchGraphCountInfoAMDX const *>( &countInfo ) );
     }
 
     // wrapper function for command vkCmdDispatchGraphIndirectAMDX, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphIndirectAMDX.html
     VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphIndirectAMDX( DeviceAddress                      scratch,
-                                                                     DeviceSize                         scratchSize,
                                                                      DispatchGraphCountInfoAMDX const & countInfo ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchGraphIndirectAMDX && "Function <vkCmdDispatchGraphIndirectAMDX> requires <VK_AMDX_shader_enqueue>" );
 
       getDispatcher()->vkCmdDispatchGraphIndirectAMDX( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                        static_cast<VkDeviceAddress>( scratch ),
-                                                       static_cast<VkDeviceSize>( scratchSize ),
                                                        reinterpret_cast<VkDispatchGraphCountInfoAMDX const *>( &countInfo ) );
     }
 
     // wrapper function for command vkCmdDispatchGraphIndirectCountAMDX, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchGraphIndirectCountAMDX.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::dispatchGraphIndirectCountAMDX( DeviceAddress scratch, DeviceSize scratchSize, DeviceAddress countInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphIndirectCountAMDX( DeviceAddress scratch, DeviceAddress countInfo ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchGraphIndirectCountAMDX &&
                          "Function <vkCmdDispatchGraphIndirectCountAMDX> requires <VK_AMDX_shader_enqueue>" );
 
-      getDispatcher()->vkCmdDispatchGraphIndirectCountAMDX( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                            static_cast<VkDeviceAddress>( scratch ),
-                                                            static_cast<VkDeviceSize>( scratchSize ),
-                                                            static_cast<VkDeviceAddress>( countInfo ) );
+      getDispatcher()->vkCmdDispatchGraphIndirectCountAMDX(
+        static_cast<VkCommandBuffer>( m_commandBuffer ), static_cast<VkDeviceAddress>( scratch ), static_cast<VkDeviceAddress>( countInfo ) );
     }
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
-
-    //=== VK_EXT_descriptor_heap ===
-
-    // wrapper function for command vkWriteSamplerDescriptorsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkWriteSamplerDescriptorsEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::writeSamplerDescriptorsEXT( ArrayProxy<SamplerCreateInfo const> const &   samplers,
-                                                                                               ArrayProxy<HostAddressRangeEXT const> const & descriptors ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkWriteSamplerDescriptorsEXT && "Function <vkWriteSamplerDescriptorsEXT> requires <VK_EXT_descriptor_heap>" );
-#  ifdef VULKAN_HPP_NO_EXCEPTIONS
-      VULKAN_HPP_ASSERT( samplers.size() == descriptors.size() );
-#  else
-      if ( samplers.size() != descriptors.size() )
-      {
-        throw LogicError( VULKAN_HPP_NAMESPACE_STRING "::Device::writeSamplerDescriptorsEXT: samplers.size() != descriptors.size()" );
-      }
-#  endif /*VULKAN_HPP_NO_EXCEPTIONS*/
-
-      Result result =
-        static_cast<Result>( getDispatcher()->vkWriteSamplerDescriptorsEXT( static_cast<VkDevice>( m_device ),
-                                                                            samplers.size(),
-                                                                            reinterpret_cast<VkSamplerCreateInfo const *>( samplers.data() ),
-                                                                            reinterpret_cast<VkHostAddressRangeEXT const *>( descriptors.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::writeSamplerDescriptorsEXT" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkWriteResourceDescriptorsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkWriteResourceDescriptorsEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type
-      Device::writeResourceDescriptorsEXT( ArrayProxy<ResourceDescriptorInfoEXT const> const & resources,
-                                           ArrayProxy<HostAddressRangeEXT const> const &       descriptors ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkWriteResourceDescriptorsEXT && "Function <vkWriteResourceDescriptorsEXT> requires <VK_EXT_descriptor_heap>" );
-#  ifdef VULKAN_HPP_NO_EXCEPTIONS
-      VULKAN_HPP_ASSERT( resources.size() == descriptors.size() );
-#  else
-      if ( resources.size() != descriptors.size() )
-      {
-        throw LogicError( VULKAN_HPP_NAMESPACE_STRING "::Device::writeResourceDescriptorsEXT: resources.size() != descriptors.size()" );
-      }
-#  endif /*VULKAN_HPP_NO_EXCEPTIONS*/
-
-      Result result =
-        static_cast<Result>( getDispatcher()->vkWriteResourceDescriptorsEXT( static_cast<VkDevice>( m_device ),
-                                                                             resources.size(),
-                                                                             reinterpret_cast<VkResourceDescriptorInfoEXT const *>( resources.data() ),
-                                                                             reinterpret_cast<VkHostAddressRangeEXT const *>( descriptors.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::writeResourceDescriptorsEXT" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCmdBindSamplerHeapEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindSamplerHeapEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindSamplerHeapEXT( BindHeapInfoEXT const & bindInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindSamplerHeapEXT && "Function <vkCmdBindSamplerHeapEXT> requires <VK_EXT_descriptor_heap>" );
-
-      getDispatcher()->vkCmdBindSamplerHeapEXT( static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkBindHeapInfoEXT const *>( &bindInfo ) );
-    }
-
-    // wrapper function for command vkCmdBindResourceHeapEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindResourceHeapEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindResourceHeapEXT( BindHeapInfoEXT const & bindInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindResourceHeapEXT && "Function <vkCmdBindResourceHeapEXT> requires <VK_EXT_descriptor_heap>" );
-
-      getDispatcher()->vkCmdBindResourceHeapEXT( static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkBindHeapInfoEXT const *>( &bindInfo ) );
-    }
-
-    // wrapper function for command vkCmdPushDataEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDataEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushDataEXT( PushDataInfoEXT const & pushDataInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDataEXT && "Function <vkCmdPushDataEXT> requires <VK_EXT_descriptor_heap>" );
-
-      getDispatcher()->vkCmdPushDataEXT( static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkPushDataInfoEXT const *>( &pushDataInfo ) );
-    }
-
-    // wrapper function for command vkGetImageOpaqueCaptureDataEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageOpaqueCaptureDataEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getImageOpaqueCaptureDataEXT( uint32_t                            imageCount,
-                                                                                        VULKAN_HPP_NAMESPACE::Image const * pImages,
-                                                                                        HostAddressRangeEXT *               pDatas ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetImageOpaqueCaptureDataEXT && "Function <vkGetImageOpaqueCaptureDataEXT> requires <VK_EXT_descriptor_heap>" );
-      return static_cast<Result>( getDispatcher()->vkGetImageOpaqueCaptureDataEXT(
-        static_cast<VkDevice>( m_device ), imageCount, reinterpret_cast<VkImage const *>( pImages ), reinterpret_cast<VkHostAddressRangeEXT *>( pDatas ) ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceDescriptorSizeEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceDescriptorSizeEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE DeviceSize PhysicalDevice::getDescriptorSizeEXT( DescriptorType descriptorType ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceDescriptorSizeEXT &&
-                         "Function <vkGetPhysicalDeviceDescriptorSizeEXT> requires <VK_EXT_descriptor_heap>" );
-
-      VkDeviceSize result = getDispatcher()->vkGetPhysicalDeviceDescriptorSizeEXT( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                                   static_cast<VkDescriptorType>( descriptorType ) );
-
-      return static_cast<DeviceSize>( result );
-    }
-
-    // wrapper function for command vkRegisterCustomBorderColorEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkRegisterCustomBorderColorEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<uint32_t>::type
-                         Device::registerCustomBorderColorEXT( SamplerCustomBorderColorCreateInfoEXT const & borderColor, Bool32 requestIndex ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkRegisterCustomBorderColorEXT && "Function <vkRegisterCustomBorderColorEXT> requires <VK_EXT_descriptor_heap>" );
-
-      uint32_t index;
-      Result   result =
-        static_cast<Result>( getDispatcher()->vkRegisterCustomBorderColorEXT( static_cast<VkDevice>( m_device ),
-                                                                              reinterpret_cast<VkSamplerCustomBorderColorCreateInfoEXT const *>( &borderColor ),
-                                                                              static_cast<VkBool32>( requestIndex ),
-                                                                              &index ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::registerCustomBorderColorEXT" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( index ) );
-    }
-
-    // wrapper function for command vkUnregisterCustomBorderColorEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnregisterCustomBorderColorEXT.html
-    VULKAN_HPP_INLINE void Device::unregisterCustomBorderColorEXT( uint32_t index ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUnregisterCustomBorderColorEXT && "Function <vkUnregisterCustomBorderColorEXT> requires <VK_EXT_descriptor_heap>" );
-
-      getDispatcher()->vkUnregisterCustomBorderColorEXT( static_cast<VkDevice>( m_device ), index );
-    }
-
-    // wrapper function for command vkGetTensorOpaqueCaptureDataARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorOpaqueCaptureDataARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getTensorOpaqueCaptureDataARM( uint32_t                                tensorCount,
-                                                                                         VULKAN_HPP_NAMESPACE::TensorARM const * pTensors,
-                                                                                         HostAddressRangeEXT * pDatas ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetTensorOpaqueCaptureDataARM && "Function <vkGetTensorOpaqueCaptureDataARM> requires <VK_EXT_descriptor_heap>" );
-      return static_cast<Result>( getDispatcher()->vkGetTensorOpaqueCaptureDataARM( static_cast<VkDevice>( m_device ),
-                                                                                    tensorCount,
-                                                                                    reinterpret_cast<VkTensorARM const *>( pTensors ),
-                                                                                    reinterpret_cast<VkHostAddressRangeEXT *>( pDatas ) ) );
-    }
 
     //=== VK_EXT_sample_locations ===
 
@@ -22037,24 +18864,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryRequirements;
     }
 
-    // wrapper function for command vkGetImageMemoryRequirements2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageMemoryRequirements2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageMemoryRequirements2KHR( ImageMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetImageMemoryRequirements2KHR &&
-                         "Function <vkGetImageMemoryRequirements2KHR> requires <VK_KHR_get_memory_requirements2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetImageMemoryRequirements2KHR( static_cast<VkDevice>( m_device ),
-                                                         reinterpret_cast<VkImageMemoryRequirementsInfo2 const *>( &info ),
-                                                         reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkGetBufferMemoryRequirements2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2KHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
@@ -22069,24 +18878,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                           reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
       return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetBufferMemoryRequirements2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetBufferMemoryRequirements2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getBufferMemoryRequirements2KHR( BufferMemoryRequirementsInfo2 const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetBufferMemoryRequirements2KHR &&
-                         "Function <vkGetBufferMemoryRequirements2KHR> requires <VK_KHR_get_memory_requirements2> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetBufferMemoryRequirements2KHR( static_cast<VkDevice>( m_device ),
-                                                          reinterpret_cast<VkBufferMemoryRequirementsInfo2 const *>( &info ),
-                                                          reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetImageSparseMemoryRequirements2KHR, see
@@ -22927,24 +19718,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryRequirements;
     }
 
-    // wrapper function for command vkGetAccelerationStructureMemoryRequirementsNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getAccelerationStructureMemoryRequirementsNV( AccelerationStructureMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetAccelerationStructureMemoryRequirementsNV &&
-                         "Function <vkGetAccelerationStructureMemoryRequirementsNV> requires <VK_NV_ray_tracing>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2KHR &   memoryRequirements = structureChain.template get<MemoryRequirements2KHR>();
-      getDispatcher()->vkGetAccelerationStructureMemoryRequirementsNV( static_cast<VkDevice>( m_device ),
-                                                                       reinterpret_cast<VkAccelerationStructureMemoryRequirementsInfoNV const *>( &info ),
-                                                                       reinterpret_cast<VkMemoryRequirements2KHR *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkBindAccelerationStructureMemoryNV, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindAccelerationStructureMemoryNV.html
     VULKAN_HPP_INLINE typename ResultValueType<void>::type
@@ -23237,24 +20010,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return support;
     }
 
-    // wrapper function for command vkGetDescriptorSetLayoutSupportKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDescriptorSetLayoutSupportKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getDescriptorSetLayoutSupportKHR( DescriptorSetLayoutCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDescriptorSetLayoutSupportKHR &&
-                         "Function <vkGetDescriptorSetLayoutSupportKHR> requires <VK_KHR_maintenance3> or <VK_VERSION_1_1>" );
-
-      StructureChain<X, Y, Z...>   structureChain;
-      DescriptorSetLayoutSupport & support = structureChain.template get<DescriptorSetLayoutSupport>();
-      getDispatcher()->vkGetDescriptorSetLayoutSupportKHR( static_cast<VkDevice>( m_device ),
-                                                           reinterpret_cast<VkDescriptorSetLayoutCreateInfo const *>( &createInfo ),
-                                                           reinterpret_cast<VkDescriptorSetLayoutSupport *>( &support ) );
-
-      return structureChain;
-    }
-
     //=== VK_KHR_draw_indirect_count ===
 
     // wrapper function for command vkCmdDrawIndirectCountKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDrawIndirectCountKHR.html
@@ -23335,21 +20090,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                   static_cast<VkBuffer>( dstBuffer ),
                                                   static_cast<VkDeviceSize>( dstOffset ),
                                                   marker );
-    }
-
-    // wrapper function for command vkCmdWriteBufferMarker2AMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteBufferMarker2AMD.html
-    VULKAN_HPP_INLINE void CommandBuffer::writeBufferMarker2AMD( PipelineStageFlags2          stage,
-                                                                 VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
-                                                                 DeviceSize                   dstOffset,
-                                                                 uint32_t                     marker ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWriteBufferMarker2AMD && "Function <vkCmdWriteBufferMarker2AMD> requires <VK_AMD_buffer_marker>" );
-
-      getDispatcher()->vkCmdWriteBufferMarker2AMD( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                   static_cast<VkPipelineStageFlags2>( stage ),
-                                                   static_cast<VkBuffer>( dstBuffer ),
-                                                   static_cast<VkDeviceSize>( dstOffset ),
-                                                   marker );
     }
 
     //=== VK_EXT_calibrated_timestamps ===
@@ -23528,27 +20268,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return checkpointData;
     }
 
-    // wrapper function for command vkGetQueueCheckpointData2NV, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetQueueCheckpointData2NV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::vector<CheckpointData2NV> Queue::getCheckpointData2NV() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetQueueCheckpointData2NV &&
-                         "Function <vkGetQueueCheckpointData2NV> requires <VK_NV_device_diagnostic_checkpoints>" );
-
-      std::vector<CheckpointData2NV> checkpointData;
-      uint32_t                       checkpointDataCount;
-      getDispatcher()->vkGetQueueCheckpointData2NV( static_cast<VkQueue>( m_queue ), &checkpointDataCount, nullptr );
-      checkpointData.resize( checkpointDataCount );
-      getDispatcher()->vkGetQueueCheckpointData2NV(
-        static_cast<VkQueue>( m_queue ), &checkpointDataCount, reinterpret_cast<VkCheckpointData2NV *>( checkpointData.data() ) );
-
-      VULKAN_HPP_ASSERT( checkpointDataCount <= checkpointData.size() );
-      if ( checkpointDataCount < checkpointData.size() )
-      {
-        checkpointData.resize( checkpointDataCount );
-      }
-      return checkpointData;
-    }
-
     //=== VK_KHR_timeline_semaphore ===
 
     // wrapper function for command vkGetSemaphoreCounterValueKHR, see
@@ -23589,70 +20308,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::signalSemaphoreKHR" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    //=== VK_EXT_present_timing ===
-
-    // wrapper function for command vkSetSwapchainPresentTimingQueueSizeEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkSetSwapchainPresentTimingQueueSizeEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result SwapchainKHR::setPresentTimingQueueSizeEXT( uint32_t size ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkSetSwapchainPresentTimingQueueSizeEXT &&
-                         "Function <vkSetSwapchainPresentTimingQueueSizeEXT> requires <VK_EXT_present_timing>" );
-
-      Result result = static_cast<Result>(
-        getDispatcher()->vkSetSwapchainPresentTimingQueueSizeEXT( static_cast<VkDevice>( m_device ), static_cast<VkSwapchainKHR>( m_swapchainKHR ), size ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::SwapchainKHR::setPresentTimingQueueSizeEXT", { Result::eSuccess, Result::eNotReady } );
-
-      return static_cast<Result>( result );
-    }
-
-    // wrapper function for command vkGetSwapchainTimingPropertiesEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSwapchainTimingPropertiesEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE ResultValue<std::pair<SwapchainTimingPropertiesEXT, uint64_t>> SwapchainKHR::getTimingPropertiesEXT() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetSwapchainTimingPropertiesEXT &&
-                         "Function <vkGetSwapchainTimingPropertiesEXT> requires <VK_EXT_present_timing>" );
-
-      std::pair<SwapchainTimingPropertiesEXT, uint64_t> data_;
-      SwapchainTimingPropertiesEXT &                    swapchainTimingProperties        = data_.first;
-      uint64_t &                                        swapchainTimingPropertiesCounter = data_.second;
-      Result                                            result                           = static_cast<Result>(
-        getDispatcher()->vkGetSwapchainTimingPropertiesEXT( static_cast<VkDevice>( m_device ),
-                                                            static_cast<VkSwapchainKHR>( m_swapchainKHR ),
-                                                            reinterpret_cast<VkSwapchainTimingPropertiesEXT *>( &swapchainTimingProperties ),
-                                                            &swapchainTimingPropertiesCounter ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::SwapchainKHR::getTimingPropertiesEXT", { Result::eSuccess, Result::eNotReady } );
-
-      return { result, data_ };
-    }
-
-    // wrapper function for command vkGetSwapchainTimeDomainPropertiesEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetSwapchainTimeDomainPropertiesEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result SwapchainKHR::getTimeDomainPropertiesEXT( SwapchainTimeDomainPropertiesEXT * pSwapchainTimeDomainProperties,
-                                                                                            uint64_t * pTimeDomainsCounter ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetSwapchainTimeDomainPropertiesEXT &&
-                         "Function <vkGetSwapchainTimeDomainPropertiesEXT> requires <VK_EXT_present_timing>" );
-      return static_cast<Result>(
-        getDispatcher()->vkGetSwapchainTimeDomainPropertiesEXT( static_cast<VkDevice>( m_device ),
-                                                                static_cast<VkSwapchainKHR>( m_swapchainKHR ),
-                                                                reinterpret_cast<VkSwapchainTimeDomainPropertiesEXT *>( pSwapchainTimeDomainProperties ),
-                                                                pTimeDomainsCounter ) );
-    }  // wrapper function for command vkGetPastPresentationTimingEXT, see
-       // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPastPresentationTimingEXT.html
-
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
-      Device::getPastPresentationTimingEXT( PastPresentationTimingInfoEXT const * pPastPresentationTimingInfo,
-                                            PastPresentationTimingPropertiesEXT * pPastPresentationTimingProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPastPresentationTimingEXT && "Function <vkGetPastPresentationTimingEXT> requires <VK_EXT_present_timing>" );
-      return static_cast<Result>(
-        getDispatcher()->vkGetPastPresentationTimingEXT( static_cast<VkDevice>( m_device ),
-                                                         reinterpret_cast<VkPastPresentationTimingInfoEXT const *>( pPastPresentationTimingInfo ),
-                                                         reinterpret_cast<VkPastPresentationTimingPropertiesEXT *>( pPastPresentationTimingProperties ) ) );
     }
 
     //=== VK_INTEL_performance_query ===
@@ -23872,31 +20527,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       getDispatcher()->vkCmdSetFragmentShadingRateKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                        reinterpret_cast<VkExtent2D const *>( &fragmentSize ),
                                                        reinterpret_cast<VkFragmentShadingRateCombinerOpKHR const *>( combinerOps ) );
-    }
-
-    //=== VK_KHR_dynamic_rendering_local_read ===
-
-    // wrapper function for command vkCmdSetRenderingAttachmentLocationsKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingAttachmentLocationsKHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::setRenderingAttachmentLocationsKHR( RenderingAttachmentLocationInfo const & locationInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetRenderingAttachmentLocationsKHR &&
-                         "Function <vkCmdSetRenderingAttachmentLocationsKHR> requires <VK_KHR_dynamic_rendering_local_read> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetRenderingAttachmentLocationsKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                                reinterpret_cast<VkRenderingAttachmentLocationInfo const *>( &locationInfo ) );
-    }
-
-    // wrapper function for command vkCmdSetRenderingInputAttachmentIndicesKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetRenderingInputAttachmentIndicesKHR.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::setRenderingInputAttachmentIndicesKHR( RenderingInputAttachmentIndexInfo const & inputAttachmentIndexInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetRenderingInputAttachmentIndicesKHR &&
-                         "Function <vkCmdSetRenderingInputAttachmentIndicesKHR> requires <VK_KHR_dynamic_rendering_local_read> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetRenderingInputAttachmentIndicesKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                                   reinterpret_cast<VkRenderingInputAttachmentIndexInfo const *>( &inputAttachmentIndexInfo ) );
     }
 
     //=== VK_EXT_buffer_device_address ===
@@ -24190,8 +20820,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     // wrapper function for command vkCmdSetLineStippleEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineStippleEXT.html
     VULKAN_HPP_INLINE void CommandBuffer::setLineStippleEXT( uint32_t lineStippleFactor, uint16_t lineStipplePattern ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetLineStippleEXT &&
-                         "Function <vkCmdSetLineStippleEXT> requires <VK_EXT_line_rasterization> or <VK_KHR_line_rasterization> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetLineStippleEXT && "Function <vkCmdSetLineStippleEXT> requires <VK_EXT_line_rasterization>" );
 
       getDispatcher()->vkCmdSetLineStippleEXT( static_cast<VkCommandBuffer>( m_commandBuffer ), lineStippleFactor, lineStipplePattern );
     }
@@ -24390,15 +21019,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkGetDeferredOperationResultKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeferredOperationResultKHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result DeferredOperationKHR::getResult() const
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result DeferredOperationKHR::getResult() const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeferredOperationResultKHR &&
                          "Function <vkGetDeferredOperationResultKHR> requires <VK_KHR_deferred_host_operations>" );
 
       Result result = static_cast<Result>(
         getDispatcher()->vkGetDeferredOperationResultKHR( static_cast<VkDevice>( m_device ), static_cast<VkDeferredOperationKHR>( m_deferredOperationKHR ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::DeferredOperationKHR::getResult", { Result::eSuccess, Result::eNotReady } );
 
       return static_cast<Result>( result );
     }
@@ -24505,36 +21132,36 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     //=== VK_EXT_host_image_copy ===
 
     // wrapper function for command vkCopyMemoryToImageEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyMemoryToImageEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyMemoryToImageEXT( CopyMemoryToImageInfo const & copyMemoryToImageInfo ) const
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyMemoryToImageEXT( CopyMemoryToImageInfoEXT const & copyMemoryToImageInfo ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyMemoryToImageEXT && "Function <vkCopyMemoryToImageEXT> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyMemoryToImageEXT && "Function <vkCopyMemoryToImageEXT> requires <VK_EXT_host_image_copy>" );
 
       Result result = static_cast<Result>( getDispatcher()->vkCopyMemoryToImageEXT(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyMemoryToImageInfo const *>( &copyMemoryToImageInfo ) ) );
+        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyMemoryToImageInfoEXT const *>( &copyMemoryToImageInfo ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyMemoryToImageEXT" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
     }
 
     // wrapper function for command vkCopyImageToMemoryEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToMemoryEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToMemoryEXT( CopyImageToMemoryInfo const & copyImageToMemoryInfo ) const
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToMemoryEXT( CopyImageToMemoryInfoEXT const & copyImageToMemoryInfo ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToMemoryEXT && "Function <vkCopyImageToMemoryEXT> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToMemoryEXT && "Function <vkCopyImageToMemoryEXT> requires <VK_EXT_host_image_copy>" );
 
       Result result = static_cast<Result>( getDispatcher()->vkCopyImageToMemoryEXT(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToMemoryInfo const *>( &copyImageToMemoryInfo ) ) );
+        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToMemoryInfoEXT const *>( &copyImageToMemoryInfo ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyImageToMemoryEXT" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
     }
 
     // wrapper function for command vkCopyImageToImageEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCopyImageToImageEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToImageEXT( CopyImageToImageInfo const & copyImageToImageInfo ) const
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::copyImageToImageEXT( CopyImageToImageInfoEXT const & copyImageToImageInfo ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToImageEXT && "Function <vkCopyImageToImageEXT> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCopyImageToImageEXT && "Function <vkCopyImageToImageEXT> requires <VK_EXT_host_image_copy>" );
 
       Result result = static_cast<Result>( getDispatcher()->vkCopyImageToImageEXT(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToImageInfo const *>( &copyImageToImageInfo ) ) );
+        static_cast<VkDevice>( m_device ), reinterpret_cast<VkCopyImageToImageInfoEXT const *>( &copyImageToImageInfo ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::copyImageToImageEXT" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
@@ -24542,13 +21169,12 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkTransitionImageLayoutEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkTransitionImageLayoutEXT.html
     VULKAN_HPP_INLINE typename ResultValueType<void>::type
-      Device::transitionImageLayoutEXT( ArrayProxy<HostImageLayoutTransitionInfo const> const & transitions ) const
+      Device::transitionImageLayoutEXT( ArrayProxy<HostImageLayoutTransitionInfoEXT const> const & transitions ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkTransitionImageLayoutEXT &&
-                         "Function <vkTransitionImageLayoutEXT> requires <VK_EXT_host_image_copy> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkTransitionImageLayoutEXT && "Function <vkTransitionImageLayoutEXT> requires <VK_EXT_host_image_copy>" );
 
       Result result = static_cast<Result>( getDispatcher()->vkTransitionImageLayoutEXT(
-        static_cast<VkDevice>( m_device ), transitions.size(), reinterpret_cast<VkHostImageLayoutTransitionInfo const *>( transitions.data() ) ) );
+        static_cast<VkDevice>( m_device ), transitions.size(), reinterpret_cast<VkHostImageLayoutTransitionInfoEXT const *>( transitions.data() ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::transitionImageLayoutEXT" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
@@ -24556,78 +21182,54 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkGetImageSubresourceLayout2EXT, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2EXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2 Image::getSubresourceLayout2EXT( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2KHR
+      Image::getSubresourceLayout2EXT( ImageSubresource2KHR const & subresource ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT(
         getDispatcher()->vkGetImageSubresourceLayout2EXT &&
-        "Function <vkGetImageSubresourceLayout2EXT> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+        "Function <vkGetImageSubresourceLayout2EXT> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5>" );
 
-      SubresourceLayout2 layout;
+      SubresourceLayout2KHR layout;
       getDispatcher()->vkGetImageSubresourceLayout2EXT( static_cast<VkDevice>( m_device ),
                                                         static_cast<VkImage>( m_image ),
-                                                        reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                        reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
+                                                        reinterpret_cast<VkImageSubresource2KHR const *>( &subresource ),
+                                                        reinterpret_cast<VkSubresourceLayout2KHR *>( &layout ) );
 
       return layout;
-    }
-
-    // wrapper function for command vkGetImageSubresourceLayout2EXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2EXT.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Image::getSubresourceLayout2EXT( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkGetImageSubresourceLayout2EXT &&
-        "Function <vkGetImageSubresourceLayout2EXT> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      SubresourceLayout2 &       layout = structureChain.template get<SubresourceLayout2>();
-      getDispatcher()->vkGetImageSubresourceLayout2EXT( static_cast<VkDevice>( m_device ),
-                                                        static_cast<VkImage>( m_image ),
-                                                        reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                        reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return structureChain;
     }
 
     //=== VK_KHR_map_memory2 ===
 
     // wrapper function for command vkMapMemory2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkMapMemory2KHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<void *>::type Device::mapMemory2KHR( MemoryMapInfo const & memoryMapInfo ) const
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<void *>::type Device::mapMemory2KHR( MemoryMapInfoKHR const & memoryMapInfo ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkMapMemory2KHR && "Function <vkMapMemory2KHR> requires <VK_KHR_map_memory2> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkMapMemory2KHR && "Function <vkMapMemory2KHR> requires <VK_KHR_map_memory2>" );
 
       void * pData;
       Result result = static_cast<Result>(
-        getDispatcher()->vkMapMemory2KHR( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryMapInfo const *>( &memoryMapInfo ), &pData ) );
+        getDispatcher()->vkMapMemory2KHR( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryMapInfoKHR const *>( &memoryMapInfo ), &pData ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::mapMemory2KHR" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pData ) );
     }
 
     // wrapper function for command vkUnmapMemory2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkUnmapMemory2KHR.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::unmapMemory2KHR( MemoryUnmapInfo const & memoryUnmapInfo ) const
+    VULKAN_HPP_INLINE void Device::unmapMemory2KHR( MemoryUnmapInfoKHR const & memoryUnmapInfo ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUnmapMemory2KHR && "Function <vkUnmapMemory2KHR> requires <VK_KHR_map_memory2> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkUnmapMemory2KHR && "Function <vkUnmapMemory2KHR> requires <VK_KHR_map_memory2>" );
 
-      Result result = static_cast<Result>(
-        getDispatcher()->vkUnmapMemory2KHR( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryUnmapInfo const *>( &memoryUnmapInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::unmapMemory2KHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+      getDispatcher()->vkUnmapMemory2KHR( static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryUnmapInfoKHR const *>( &memoryUnmapInfo ) );
     }
 
     //=== VK_EXT_swapchain_maintenance1 ===
 
     // wrapper function for command vkReleaseSwapchainImagesEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseSwapchainImagesEXT.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::releaseSwapchainImagesEXT( ReleaseSwapchainImagesInfoKHR const & releaseInfo ) const
+    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::releaseSwapchainImagesEXT( ReleaseSwapchainImagesInfoEXT const & releaseInfo ) const
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkReleaseSwapchainImagesEXT &&
-                         "Function <vkReleaseSwapchainImagesEXT> requires <VK_EXT_swapchain_maintenance1> or <VK_KHR_swapchain_maintenance1>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkReleaseSwapchainImagesEXT && "Function <vkReleaseSwapchainImagesEXT> requires <VK_EXT_swapchain_maintenance1>" );
 
       Result result = static_cast<Result>( getDispatcher()->vkReleaseSwapchainImagesEXT(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkReleaseSwapchainImagesInfoKHR const *>( &releaseInfo ) ) );
+        static_cast<VkDevice>( m_device ), reinterpret_cast<VkReleaseSwapchainImagesInfoEXT const *>( &releaseInfo ) ) );
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::releaseSwapchainImagesEXT" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
@@ -24649,24 +21251,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                    reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
       return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getGeneratedCommandsMemoryRequirementsNV( GeneratedCommandsMemoryRequirementsInfoNV const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsNV &&
-                         "Function <vkGetGeneratedCommandsMemoryRequirementsNV> requires <VK_NV_device_generated_commands>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsNV( static_cast<VkDevice>( m_device ),
-                                                                   reinterpret_cast<VkGeneratedCommandsMemoryRequirementsInfoNV const *>( &info ),
-                                                                   reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkCmdPreprocessGeneratedCommandsNV, see
@@ -24844,26 +21428,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( qualityLevelProperties ) );
     }
 
-    // wrapper function for command vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         PhysicalDevice::getVideoEncodeQualityLevelPropertiesKHR( PhysicalDeviceVideoEncodeQualityLevelInfoKHR const & qualityLevelInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR &&
-                         "Function <vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR> requires <VK_KHR_video_encode_queue>" );
-
-      StructureChain<X, Y, Z...>             structureChain;
-      VideoEncodeQualityLevelPropertiesKHR & qualityLevelProperties = structureChain.template get<VideoEncodeQualityLevelPropertiesKHR>();
-      Result                                 result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ),
-        reinterpret_cast<VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR const *>( &qualityLevelInfo ),
-        reinterpret_cast<VkVideoEncodeQualityLevelPropertiesKHR *>( &qualityLevelProperties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getVideoEncodeQualityLevelPropertiesKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
-    }
-
     // wrapper function for command vkGetEncodedVideoSessionParametersKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetEncodedVideoSessionParametersKHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::pair<VideoEncodeSessionParametersFeedbackInfoKHR, std::vector<uint8_t>>>::type
@@ -25020,37 +21584,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     }
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-    //=== VK_QCOM_tile_shading ===
-
-    // wrapper function for command vkCmdDispatchTileQCOM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchTileQCOM.html
-    VULKAN_HPP_INLINE void CommandBuffer::dispatchTileQCOM( DispatchTileInfoQCOM const & dispatchTileInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchTileQCOM && "Function <vkCmdDispatchTileQCOM> requires <VK_QCOM_tile_shading>" );
-
-      getDispatcher()->vkCmdDispatchTileQCOM( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                              reinterpret_cast<VkDispatchTileInfoQCOM const *>( &dispatchTileInfo ) );
-    }
-
-    // wrapper function for command vkCmdBeginPerTileExecutionQCOM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginPerTileExecutionQCOM.html
-    VULKAN_HPP_INLINE void CommandBuffer::beginPerTileExecutionQCOM( PerTileBeginInfoQCOM const & perTileBeginInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBeginPerTileExecutionQCOM && "Function <vkCmdBeginPerTileExecutionQCOM> requires <VK_QCOM_tile_shading>" );
-
-      getDispatcher()->vkCmdBeginPerTileExecutionQCOM( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                       reinterpret_cast<VkPerTileBeginInfoQCOM const *>( &perTileBeginInfo ) );
-    }
-
-    // wrapper function for command vkCmdEndPerTileExecutionQCOM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndPerTileExecutionQCOM.html
-    VULKAN_HPP_INLINE void CommandBuffer::endPerTileExecutionQCOM( PerTileEndInfoQCOM const & perTileEndInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndPerTileExecutionQCOM && "Function <vkCmdEndPerTileExecutionQCOM> requires <VK_QCOM_tile_shading>" );
-
-      getDispatcher()->vkCmdEndPerTileExecutionQCOM( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                     reinterpret_cast<VkPerTileEndInfoQCOM const *>( &perTileEndInfo ) );
-    }
-
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
     //=== VK_EXT_metal_objects ===
 
@@ -25135,6 +21668,41 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Queue::submit2KHR" );
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
+    }
+
+    // wrapper function for command vkCmdWriteBufferMarker2AMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdWriteBufferMarker2AMD.html
+    VULKAN_HPP_INLINE void CommandBuffer::writeBufferMarker2AMD( PipelineStageFlags2          stage,
+                                                                 VULKAN_HPP_NAMESPACE::Buffer dstBuffer,
+                                                                 DeviceSize                   dstOffset,
+                                                                 uint32_t                     marker ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdWriteBufferMarker2AMD && "Function <vkCmdWriteBufferMarker2AMD> requires <VK_KHR_synchronization2>" );
+
+      getDispatcher()->vkCmdWriteBufferMarker2AMD( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                                   static_cast<VkPipelineStageFlags2>( stage ),
+                                                   static_cast<VkBuffer>( dstBuffer ),
+                                                   static_cast<VkDeviceSize>( dstOffset ),
+                                                   marker );
+    }
+
+    // wrapper function for command vkGetQueueCheckpointData2NV, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetQueueCheckpointData2NV.html
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::vector<CheckpointData2NV> Queue::getCheckpointData2NV() const
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetQueueCheckpointData2NV && "Function <vkGetQueueCheckpointData2NV> requires <VK_KHR_synchronization2>" );
+
+      std::vector<CheckpointData2NV> checkpointData;
+      uint32_t                       checkpointDataCount;
+      getDispatcher()->vkGetQueueCheckpointData2NV( static_cast<VkQueue>( m_queue ), &checkpointDataCount, nullptr );
+      checkpointData.resize( checkpointDataCount );
+      getDispatcher()->vkGetQueueCheckpointData2NV(
+        static_cast<VkQueue>( m_queue ), &checkpointDataCount, reinterpret_cast<VkCheckpointData2NV *>( checkpointData.data() ) );
+
+      VULKAN_HPP_ASSERT( checkpointDataCount <= checkpointData.size() );
+      if ( checkpointDataCount < checkpointData.size() )
+      {
+        checkpointData.resize( checkpointDataCount );
+      }
+      return checkpointData;
     }
 
     //=== VK_EXT_descriptor_buffer ===
@@ -25694,7 +22262,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Extent2D>::type RenderPass::getSubpassShadingMaxWorkgroupSizeHUAWEI() const
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE ResultValue<Extent2D> RenderPass::getSubpassShadingMaxWorkgroupSizeHUAWEI() const
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI &&
                          "Function <vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI> requires <VK_HUAWEI_subpass_shading>" );
@@ -25702,9 +22270,10 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       Extent2D maxWorkgroupSize;
       Result   result = static_cast<Result>( getDispatcher()->vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI(
         static_cast<VkDevice>( m_device ), static_cast<VkRenderPass>( m_renderPass ), reinterpret_cast<VkExtent2D *>( &maxWorkgroupSize ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::RenderPass::getSubpassShadingMaxWorkgroupSizeHUAWEI" );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck(
+        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::RenderPass::getSubpassShadingMaxWorkgroupSizeHUAWEI", { Result::eSuccess, Result::eIncomplete } );
 
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( maxWorkgroupSize ) );
+      return { result, maxWorkgroupSize };
     }
 
     // wrapper function for command vkCmdSubpassShadingHUAWEI, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSubpassShadingHUAWEI.html
@@ -26186,24 +22755,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryRequirements;
     }
 
-    // wrapper function for command vkGetDeviceBufferMemoryRequirementsKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceBufferMemoryRequirementsKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getBufferMemoryRequirementsKHR( DeviceBufferMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceBufferMemoryRequirementsKHR &&
-                         "Function <vkGetDeviceBufferMemoryRequirementsKHR> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDeviceBufferMemoryRequirementsKHR( static_cast<VkDevice>( m_device ),
-                                                               reinterpret_cast<VkDeviceBufferMemoryRequirements const *>( &info ),
-                                                               reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkGetDeviceImageMemoryRequirementsKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirementsKHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
@@ -26218,24 +22769,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                               reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
 
       return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetDeviceImageMemoryRequirementsKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageMemoryRequirementsKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageMemoryRequirementsKHR( DeviceImageMemoryRequirements const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageMemoryRequirementsKHR &&
-                         "Function <vkGetDeviceImageMemoryRequirementsKHR> requires <VK_KHR_maintenance4> or <VK_VERSION_1_3>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDeviceImageMemoryRequirementsKHR( static_cast<VkDevice>( m_device ),
-                                                              reinterpret_cast<VkDeviceImageMemoryRequirements const *>( &info ),
-                                                              reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
     }
 
     // wrapper function for command vkGetDeviceImageSparseMemoryRequirementsKHR, see
@@ -26373,24 +22906,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return memoryRequirements;
     }
 
-    // wrapper function for command vkGetPipelineIndirectMemoryRequirementsNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineIndirectMemoryRequirementsNV.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getPipelineIndirectMemoryRequirementsNV( ComputePipelineCreateInfo const & createInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPipelineIndirectMemoryRequirementsNV &&
-                         "Function <vkGetPipelineIndirectMemoryRequirementsNV> requires <VK_NV_device_generated_commands_compute>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetPipelineIndirectMemoryRequirementsNV( static_cast<VkDevice>( m_device ),
-                                                                  reinterpret_cast<VkComputePipelineCreateInfo const *>( &createInfo ),
-                                                                  reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
     // wrapper function for command vkCmdUpdatePipelineIndirectBufferNV, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdUpdatePipelineIndirectBufferNV.html
     VULKAN_HPP_INLINE void CommandBuffer::updatePipelineIndirectBufferNV( PipelineBindPoint              pipelineBindPoint,
@@ -26417,57 +22932,18 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return static_cast<DeviceAddress>( result );
     }
 
-#  if defined( VK_USE_PLATFORM_OHOS )
-    //=== VK_OHOS_external_memory ===
-
-    // wrapper function for command vkGetNativeBufferPropertiesOHOS, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetNativeBufferPropertiesOHOS.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<NativeBufferPropertiesOHOS>::type
-                         Device::getNativeBufferPropertiesOHOS( struct OH_NativeBuffer const & buffer ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetNativeBufferPropertiesOHOS && "Function <vkGetNativeBufferPropertiesOHOS> requires <VK_OHOS_external_memory>" );
-
-      NativeBufferPropertiesOHOS properties;
-      Result                     result = static_cast<Result>( getDispatcher()->vkGetNativeBufferPropertiesOHOS(
-        static_cast<VkDevice>( m_device ), &buffer, reinterpret_cast<VkNativeBufferPropertiesOHOS *>( &properties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getNativeBufferPropertiesOHOS" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    // wrapper function for command vkGetNativeBufferPropertiesOHOS, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetNativeBufferPropertiesOHOS.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         Device::getNativeBufferPropertiesOHOS( struct OH_NativeBuffer const & buffer ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetNativeBufferPropertiesOHOS && "Function <vkGetNativeBufferPropertiesOHOS> requires <VK_OHOS_external_memory>" );
-
-      StructureChain<X, Y, Z...>   structureChain;
-      NativeBufferPropertiesOHOS & properties = structureChain.template get<NativeBufferPropertiesOHOS>();
-      Result                       result     = static_cast<Result>( getDispatcher()->vkGetNativeBufferPropertiesOHOS(
-        static_cast<VkDevice>( m_device ), &buffer, reinterpret_cast<VkNativeBufferPropertiesOHOS *>( &properties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getNativeBufferPropertiesOHOS" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
-    }
-
-    // wrapper function for command vkGetMemoryNativeBufferOHOS, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryNativeBufferOHOS.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<struct OH_NativeBuffer *>::type
-                         Device::getMemoryNativeBufferOHOS( MemoryGetNativeBufferInfoOHOS const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetMemoryNativeBufferOHOS && "Function <vkGetMemoryNativeBufferOHOS> requires <VK_OHOS_external_memory>" );
-
-      struct OH_NativeBuffer * buffer;
-      Result                   result = static_cast<Result>( getDispatcher()->vkGetMemoryNativeBufferOHOS(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryGetNativeBufferInfoOHOS const *>( &info ), &buffer ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getMemoryNativeBufferOHOS" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( buffer ) );
-    }
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
     //=== VK_EXT_extended_dynamic_state3 ===
+
+    // wrapper function for command vkCmdSetTessellationDomainOriginEXT, see
+    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetTessellationDomainOriginEXT.html
+    VULKAN_HPP_INLINE void CommandBuffer::setTessellationDomainOriginEXT( TessellationDomainOrigin domainOrigin ) const VULKAN_HPP_NOEXCEPT
+    {
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetTessellationDomainOriginEXT &&
+                         "Function <vkCmdSetTessellationDomainOriginEXT> requires <VK_EXT_extended_dynamic_state3> or <VK_EXT_shader_object>" );
+
+      getDispatcher()->vkCmdSetTessellationDomainOriginEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
+                                                            static_cast<VkTessellationDomainOrigin>( domainOrigin ) );
+    }
 
     // wrapper function for command vkCmdSetDepthClampEnableEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthClampEnableEXT.html
     VULKAN_HPP_INLINE void CommandBuffer::setDepthClampEnableEXT( Bool32 depthClampEnable ) const VULKAN_HPP_NOEXCEPT
@@ -26585,17 +23061,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                   firstAttachment,
                                                   colorWriteMasks.size(),
                                                   reinterpret_cast<VkColorComponentFlags const *>( colorWriteMasks.data() ) );
-    }
-
-    // wrapper function for command vkCmdSetTessellationDomainOriginEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetTessellationDomainOriginEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::setTessellationDomainOriginEXT( TessellationDomainOrigin domainOrigin ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetTessellationDomainOriginEXT &&
-                         "Function <vkCmdSetTessellationDomainOriginEXT> requires <VK_EXT_extended_dynamic_state3> or <VK_EXT_shader_object>" );
-
-      getDispatcher()->vkCmdSetTessellationDomainOriginEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                            static_cast<VkTessellationDomainOrigin>( domainOrigin ) );
     }
 
     // wrapper function for command vkCmdSetRasterizationStreamEXT, see
@@ -26814,176 +23279,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                         static_cast<VkCoverageReductionModeNV>( coverageReductionMode ) );
     }
 
-    //=== VK_ARM_tensors ===
-
-    // wrapper function for command vkCreateTensorARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateTensorARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<TensorARM>::type
-                         Device::createTensorARM( TensorCreateInfoARM const &         createInfo,
-                               Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateTensorARM && "Function <vkCreateTensorARM> requires <VK_ARM_tensors>" );
-
-      VULKAN_HPP_NAMESPACE::TensorARM tensor;
-      Result                          result = static_cast<Result>( getDispatcher()->vkCreateTensorARM( static_cast<VkDevice>( m_device ),
-                                                                               reinterpret_cast<VkTensorCreateInfoARM const *>( &createInfo ),
-                                                                               reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                               reinterpret_cast<VkTensorARM *>( &tensor ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createTensorARM" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, TensorARM( *this, *reinterpret_cast<VkTensorARM *>( &tensor ), allocator ) );
-    }
-
-    // wrapper function for command vkCreateTensorViewARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateTensorViewARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<TensorViewARM>::type
-                         Device::createTensorViewARM( TensorViewCreateInfoARM const &     createInfo,
-                                   Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateTensorViewARM && "Function <vkCreateTensorViewARM> requires <VK_ARM_tensors>" );
-
-      VULKAN_HPP_NAMESPACE::TensorViewARM view;
-      Result                              result = static_cast<Result>( getDispatcher()->vkCreateTensorViewARM( static_cast<VkDevice>( m_device ),
-                                                                                   reinterpret_cast<VkTensorViewCreateInfoARM const *>( &createInfo ),
-                                                                                   reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                   reinterpret_cast<VkTensorViewARM *>( &view ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createTensorViewARM" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, TensorViewARM( *this, *reinterpret_cast<VkTensorViewARM *>( &view ), allocator ) );
-    }
-
-    // wrapper function for command vkGetTensorMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorMemoryRequirementsARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getTensorMemoryRequirementsARM( TensorMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetTensorMemoryRequirementsARM && "Function <vkGetTensorMemoryRequirementsARM> requires <VK_ARM_tensors>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetTensorMemoryRequirementsARM( static_cast<VkDevice>( m_device ),
-                                                         reinterpret_cast<VkTensorMemoryRequirementsInfoARM const *>( &info ),
-                                                         reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetTensorMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorMemoryRequirementsARM.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getTensorMemoryRequirementsARM( TensorMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetTensorMemoryRequirementsARM && "Function <vkGetTensorMemoryRequirementsARM> requires <VK_ARM_tensors>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetTensorMemoryRequirementsARM( static_cast<VkDevice>( m_device ),
-                                                         reinterpret_cast<VkTensorMemoryRequirementsInfoARM const *>( &info ),
-                                                         reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkBindTensorMemoryARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindTensorMemoryARM.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::bindTensorMemoryARM( ArrayProxy<BindTensorMemoryInfoARM const> const & bindInfos ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkBindTensorMemoryARM && "Function <vkBindTensorMemoryARM> requires <VK_ARM_tensors>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkBindTensorMemoryARM(
-        static_cast<VkDevice>( m_device ), bindInfos.size(), reinterpret_cast<VkBindTensorMemoryInfoARM const *>( bindInfos.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::bindTensorMemoryARM" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkGetDeviceTensorMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceTensorMemoryRequirementsARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getTensorMemoryRequirementsARM( DeviceTensorMemoryRequirementsARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceTensorMemoryRequirementsARM &&
-                         "Function <vkGetDeviceTensorMemoryRequirementsARM> requires <VK_ARM_tensors>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetDeviceTensorMemoryRequirementsARM( static_cast<VkDevice>( m_device ),
-                                                               reinterpret_cast<VkDeviceTensorMemoryRequirementsARM const *>( &info ),
-                                                               reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetDeviceTensorMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceTensorMemoryRequirementsARM.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getTensorMemoryRequirementsARM( DeviceTensorMemoryRequirementsARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceTensorMemoryRequirementsARM &&
-                         "Function <vkGetDeviceTensorMemoryRequirementsARM> requires <VK_ARM_tensors>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDeviceTensorMemoryRequirementsARM( static_cast<VkDevice>( m_device ),
-                                                               reinterpret_cast<VkDeviceTensorMemoryRequirementsARM const *>( &info ),
-                                                               reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkCmdCopyTensorARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyTensorARM.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyTensorARM( CopyTensorInfoARM const & copyTensorInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyTensorARM && "Function <vkCmdCopyTensorARM> requires <VK_ARM_tensors>" );
-
-      getDispatcher()->vkCmdCopyTensorARM( static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkCopyTensorInfoARM const *>( &copyTensorInfo ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceExternalTensorPropertiesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceExternalTensorPropertiesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE ExternalTensorPropertiesARM
-      PhysicalDevice::getExternalTensorPropertiesARM( PhysicalDeviceExternalTensorInfoARM const & externalTensorInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceExternalTensorPropertiesARM &&
-                         "Function <vkGetPhysicalDeviceExternalTensorPropertiesARM> requires <VK_ARM_tensors>" );
-
-      ExternalTensorPropertiesARM externalTensorProperties;
-      getDispatcher()->vkGetPhysicalDeviceExternalTensorPropertiesARM( static_cast<VkPhysicalDevice>( m_physicalDevice ),
-                                                                       reinterpret_cast<VkPhysicalDeviceExternalTensorInfoARM const *>( &externalTensorInfo ),
-                                                                       reinterpret_cast<VkExternalTensorPropertiesARM *>( &externalTensorProperties ) );
-
-      return externalTensorProperties;
-    }
-
-    // wrapper function for command vkGetTensorOpaqueCaptureDescriptorDataARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorOpaqueCaptureDescriptorDataARM.html
-    template <typename DataType>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<DataType>::type
-                         Device::getTensorOpaqueCaptureDescriptorDataARM( TensorCaptureDescriptorDataInfoARM const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetTensorOpaqueCaptureDescriptorDataARM &&
-                         "Function <vkGetTensorOpaqueCaptureDescriptorDataARM> requires <VK_ARM_tensors>" );
-
-      DataType data;
-      Result   result = static_cast<Result>( getDispatcher()->vkGetTensorOpaqueCaptureDescriptorDataARM(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkTensorCaptureDescriptorDataInfoARM const *>( &info ), &data ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getTensorOpaqueCaptureDescriptorDataARM" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( data ) );
-    }
-
-    // wrapper function for command vkGetTensorViewOpaqueCaptureDescriptorDataARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetTensorViewOpaqueCaptureDescriptorDataARM.html
-    template <typename DataType>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<DataType>::type
-                         Device::getTensorViewOpaqueCaptureDescriptorDataARM( TensorViewCaptureDescriptorDataInfoARM const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetTensorViewOpaqueCaptureDescriptorDataARM &&
-                         "Function <vkGetTensorViewOpaqueCaptureDescriptorDataARM> requires <VK_ARM_tensors>" );
-
-      DataType data;
-      Result   result = static_cast<Result>( getDispatcher()->vkGetTensorViewOpaqueCaptureDescriptorDataARM(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkTensorViewCaptureDescriptorDataInfoARM const *>( &info ), &data ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getTensorViewOpaqueCaptureDescriptorDataARM" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( data ) );
-    }
-
     //=== VK_EXT_shader_module_identifier ===
 
     // wrapper function for command vkGetShaderModuleIdentifierEXT, see
@@ -27110,8 +23405,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                DeviceSize                   size,
                                                                IndexType                    indexType ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindIndexBuffer2KHR &&
-                         "Function <vkCmdBindIndexBuffer2KHR> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindIndexBuffer2KHR && "Function <vkCmdBindIndexBuffer2KHR> requires <VK_KHR_maintenance5>" );
 
       getDispatcher()->vkCmdBindIndexBuffer2KHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
                                                  static_cast<VkBuffer>( buffer ),
@@ -27123,14 +23417,13 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     // wrapper function for command vkGetRenderingAreaGranularityKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetRenderingAreaGranularityKHR.html
     VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Extent2D
-      Device::getRenderingAreaGranularityKHR( RenderingAreaInfo const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT
+      Device::getRenderingAreaGranularityKHR( RenderingAreaInfoKHR const & renderingAreaInfo ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetRenderingAreaGranularityKHR &&
-                         "Function <vkGetRenderingAreaGranularityKHR> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkGetRenderingAreaGranularityKHR && "Function <vkGetRenderingAreaGranularityKHR> requires <VK_KHR_maintenance5>" );
 
       Extent2D granularity;
       getDispatcher()->vkGetRenderingAreaGranularityKHR( static_cast<VkDevice>( m_device ),
-                                                         reinterpret_cast<VkRenderingAreaInfo const *>( &renderingAreaInfo ),
+                                                         reinterpret_cast<VkRenderingAreaInfoKHR const *>( &renderingAreaInfo ),
                                                          reinterpret_cast<VkExtent2D *>( &granularity ) );
 
       return granularity;
@@ -27138,106 +23431,36 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
     // wrapper function for command vkGetDeviceImageSubresourceLayoutKHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayoutKHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2
-      Device::getImageSubresourceLayoutKHR( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2KHR
+      Device::getImageSubresourceLayoutKHR( DeviceImageSubresourceInfoKHR const & info ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSubresourceLayoutKHR &&
-                         "Function <vkGetDeviceImageSubresourceLayoutKHR> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+                         "Function <vkGetDeviceImageSubresourceLayoutKHR> requires <VK_KHR_maintenance5>" );
 
-      SubresourceLayout2 layout;
+      SubresourceLayout2KHR layout;
       getDispatcher()->vkGetDeviceImageSubresourceLayoutKHR( static_cast<VkDevice>( m_device ),
-                                                             reinterpret_cast<VkDeviceImageSubresourceInfo const *>( &info ),
-                                                             reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return layout;
-    }
-
-    // wrapper function for command vkGetDeviceImageSubresourceLayoutKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDeviceImageSubresourceLayoutKHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Device::getImageSubresourceLayoutKHR( DeviceImageSubresourceInfo const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDeviceImageSubresourceLayoutKHR &&
-                         "Function <vkGetDeviceImageSubresourceLayoutKHR> requires <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      SubresourceLayout2 &       layout = structureChain.template get<SubresourceLayout2>();
-      getDispatcher()->vkGetDeviceImageSubresourceLayoutKHR( static_cast<VkDevice>( m_device ),
-                                                             reinterpret_cast<VkDeviceImageSubresourceInfo const *>( &info ),
-                                                             reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkGetImageSubresourceLayout2KHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2KHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2 Image::getSubresourceLayout2KHR( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT(
-        getDispatcher()->vkGetImageSubresourceLayout2KHR &&
-        "Function <vkGetImageSubresourceLayout2KHR> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
-
-      SubresourceLayout2 layout;
-      getDispatcher()->vkGetImageSubresourceLayout2KHR( static_cast<VkDevice>( m_device ),
-                                                        static_cast<VkImage>( m_image ),
-                                                        reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                        reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
+                                                             reinterpret_cast<VkDeviceImageSubresourceInfoKHR const *>( &info ),
+                                                             reinterpret_cast<VkSubresourceLayout2KHR *>( &layout ) );
 
       return layout;
     }
 
     // wrapper function for command vkGetImageSubresourceLayout2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetImageSubresourceLayout2KHR.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-                                           Image::getSubresourceLayout2KHR( ImageSubresource2 const & subresource ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE SubresourceLayout2KHR
+      Image::getSubresourceLayout2KHR( ImageSubresource2KHR const & subresource ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT(
         getDispatcher()->vkGetImageSubresourceLayout2KHR &&
-        "Function <vkGetImageSubresourceLayout2KHR> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5> or <VK_VERSION_1_4>" );
+        "Function <vkGetImageSubresourceLayout2KHR> requires <VK_EXT_host_image_copy> or <VK_EXT_image_compression_control> or <VK_KHR_maintenance5>" );
 
-      StructureChain<X, Y, Z...> structureChain;
-      SubresourceLayout2 &       layout = structureChain.template get<SubresourceLayout2>();
+      SubresourceLayout2KHR layout;
       getDispatcher()->vkGetImageSubresourceLayout2KHR( static_cast<VkDevice>( m_device ),
                                                         static_cast<VkImage>( m_image ),
-                                                        reinterpret_cast<VkImageSubresource2 const *>( &subresource ),
-                                                        reinterpret_cast<VkSubresourceLayout2 *>( &layout ) );
+                                                        reinterpret_cast<VkImageSubresource2KHR const *>( &subresource ),
+                                                        reinterpret_cast<VkSubresourceLayout2KHR *>( &layout ) );
 
-      return structureChain;
-    }
-
-    //=== VK_AMD_anti_lag ===
-
-    // wrapper function for command vkAntiLagUpdateAMD, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkAntiLagUpdateAMD.html
-    VULKAN_HPP_INLINE void Device::antiLagUpdateAMD( AntiLagDataAMD const & data ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkAntiLagUpdateAMD && "Function <vkAntiLagUpdateAMD> requires <VK_AMD_anti_lag>" );
-
-      getDispatcher()->vkAntiLagUpdateAMD( static_cast<VkDevice>( m_device ), reinterpret_cast<VkAntiLagDataAMD const *>( &data ) );
-    }
-
-    //=== VK_KHR_present_wait2 ===
-
-    // wrapper function for command vkWaitForPresent2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkWaitForPresent2KHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result SwapchainKHR::waitForPresent2( PresentWait2InfoKHR const & presentWait2Info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkWaitForPresent2KHR && "Function <vkWaitForPresent2KHR> requires <VK_KHR_present_wait2>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkWaitForPresent2KHR( static_cast<VkDevice>( m_device ),
-                                                                                  static_cast<VkSwapchainKHR>( m_swapchainKHR ),
-                                                                                  reinterpret_cast<VkPresentWait2InfoKHR const *>( &presentWait2Info ) ) );
-
-#  if defined( VULKAN_HPP_HANDLE_ERROR_OUT_OF_DATE_AS_SUCCESS )
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result,
-                                                 VULKAN_HPP_RAII_NAMESPACE_STRING "::SwapchainKHR::waitForPresent2",
-                                                 { Result::eSuccess, Result::eTimeout, Result::eSuboptimalKHR, Result::eErrorOutOfDateKHR } );
-#  else
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::SwapchainKHR::waitForPresent2", { Result::eSuccess, Result::eTimeout, Result::eSuboptimalKHR } );
-#  endif
-
-      return static_cast<Result>( result );
+      return layout;
     }
 
     //=== VK_EXT_shader_object ===
@@ -27254,15 +23477,14 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                                 reinterpret_cast<VkShaderCreateInfoEXT const *>( createInfos.data() ),
                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
                                                                                 reinterpret_cast<VkShaderEXT *>( shaders.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createShadersEXT", { Result::eSuccess, Result::eIncompatibleShaderBinaryEXT } );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createShadersEXT" );
       std::vector<ShaderEXT> shadersRAII;
       if ( result == Result::eSuccess )
       {
         shadersRAII.reserve( shaders.size() );
         for ( auto & shader : shaders )
         {
-          shadersRAII.emplace_back( *this, *reinterpret_cast<VkShaderEXT *>( &shader ), allocator, result );
+          shadersRAII.emplace_back( *this, *reinterpret_cast<VkShaderEXT *>( &shader ), allocator );
         }
       }
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( shadersRAII ) );
@@ -27281,9 +23503,8 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                                 reinterpret_cast<VkShaderCreateInfoEXT const *>( &createInfo ),
                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
                                                                                 reinterpret_cast<VkShaderEXT *>( &shader ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createShaderEXT", { Result::eSuccess, Result::eIncompatibleShaderBinaryEXT } );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, ShaderEXT( *this, *reinterpret_cast<VkShaderEXT *>( &shader ), allocator, result ) );
+      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createShaderEXT" );
+      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, ShaderEXT( *this, *reinterpret_cast<VkShaderEXT *>( &shader ), allocator ) );
     }
 
     // wrapper function for command vkGetShaderBinaryDataEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetShaderBinaryDataEXT.html
@@ -27334,134 +23555,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                             reinterpret_cast<VkShaderEXT const *>( shaders.data() ) );
     }
 
-    // wrapper function for command vkCmdSetDepthClampRangeEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetDepthClampRangeEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::setDepthClampRangeEXT( DepthClampModeEXT                  depthClampMode,
-                                                                 Optional<DepthClampRangeEXT const> depthClampRange ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetDepthClampRangeEXT &&
-                         "Function <vkCmdSetDepthClampRangeEXT> requires <VK_EXT_depth_clamp_control> or <VK_EXT_shader_object>" );
-
-      getDispatcher()->vkCmdSetDepthClampRangeEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                   static_cast<VkDepthClampModeEXT>( depthClampMode ),
-                                                   reinterpret_cast<VkDepthClampRangeEXT const *>( depthClampRange.get() ) );
-    }
-
-    //=== VK_KHR_pipeline_binary ===
-
-    // wrapper function for command vkCreatePipelineBinariesKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreatePipelineBinariesKHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<PipelineBinaryKHR>>::type
-      Device::createPipelineBinariesKHR( PipelineBinaryCreateInfoKHR const & createInfo, Optional<AllocationCallbacks const> allocator ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreatePipelineBinariesKHR && "Function <vkCreatePipelineBinariesKHR> requires <VK_KHR_pipeline_binary>" );
-
-      std::vector<VULKAN_HPP_NAMESPACE::PipelineBinaryKHR> pipelineBinaries;
-      PipelineBinaryHandlesInfoKHR                         binaries;
-      Result                                               result;
-      if ( createInfo.pKeysAndDataInfo )
-      {
-        VULKAN_HPP_ASSERT( !createInfo.pipeline && !createInfo.pPipelineCreateInfo );
-        pipelineBinaries.resize( createInfo.pKeysAndDataInfo->binaryCount );
-        binaries.pipelineBinaryCount = createInfo.pKeysAndDataInfo->binaryCount;
-        binaries.pPipelineBinaries   = pipelineBinaries.data();
-        result                       = static_cast<Result>( getDispatcher()->vkCreatePipelineBinariesKHR( static_cast<VkDevice>( m_device ),
-                                                                                    reinterpret_cast<VkPipelineBinaryCreateInfoKHR const *>( &createInfo ),
-                                                                                    reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                    reinterpret_cast<VkPipelineBinaryHandlesInfoKHR *>( &binaries ) ) );
-      }
-      else
-      {
-        VULKAN_HPP_ASSERT( !createInfo.pipeline ^ !createInfo.pPipelineCreateInfo );
-        result = static_cast<Result>( getDispatcher()->vkCreatePipelineBinariesKHR( static_cast<VkDevice>( m_device ),
-                                                                                    reinterpret_cast<VkPipelineBinaryCreateInfoKHR const *>( &createInfo ),
-                                                                                    reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                    reinterpret_cast<VkPipelineBinaryHandlesInfoKHR *>( &binaries ) ) );
-        if ( result == Result::eSuccess )
-        {
-          pipelineBinaries.resize( binaries.pipelineBinaryCount );
-          binaries.pPipelineBinaries = pipelineBinaries.data();
-          result                     = static_cast<Result>( getDispatcher()->vkCreatePipelineBinariesKHR( static_cast<VkDevice>( m_device ),
-                                                                                      reinterpret_cast<VkPipelineBinaryCreateInfoKHR const *>( &createInfo ),
-                                                                                      reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                      reinterpret_cast<VkPipelineBinaryHandlesInfoKHR *>( &binaries ) ) );
-        }
-      }
-
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result,
-                                                 VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createPipelineBinariesKHR",
-                                                 { Result::eSuccess, Result::eIncomplete, Result::ePipelineBinaryMissingKHR } );
-      std::vector<PipelineBinaryKHR> pipelineBinariesRAII;
-      if ( result == Result::eSuccess )
-      {
-        pipelineBinariesRAII.reserve( pipelineBinaries.size() );
-        for ( auto & pipelineBinary : pipelineBinaries )
-        {
-          pipelineBinariesRAII.emplace_back( *this, *reinterpret_cast<VkPipelineBinaryKHR *>( &pipelineBinary ), allocator, result );
-        }
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pipelineBinariesRAII ) );
-    }
-
-    // wrapper function for command vkGetPipelineKeyKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineKeyKHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<PipelineBinaryKeyKHR>::type
-                         Device::getPipelineKeyKHR( Optional<PipelineCreateInfoKHR const> pipelineCreateInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPipelineKeyKHR && "Function <vkGetPipelineKeyKHR> requires <VK_KHR_pipeline_binary>" );
-
-      PipelineBinaryKeyKHR pipelineKey;
-      Result               result = static_cast<Result>( getDispatcher()->vkGetPipelineKeyKHR( static_cast<VkDevice>( m_device ),
-                                                                                 reinterpret_cast<VkPipelineCreateInfoKHR const *>( pipelineCreateInfo.get() ),
-                                                                                 reinterpret_cast<VkPipelineBinaryKeyKHR *>( &pipelineKey ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getPipelineKeyKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pipelineKey ) );
-    }
-
-    // wrapper function for command vkGetPipelineBinaryDataKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPipelineBinaryDataKHR.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::pair<PipelineBinaryKeyKHR, std::vector<uint8_t>>>::type
-                         Device::getPipelineBinaryDataKHR( PipelineBinaryDataInfoKHR const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPipelineBinaryDataKHR && "Function <vkGetPipelineBinaryDataKHR> requires <VK_KHR_pipeline_binary>" );
-
-      std::pair<PipelineBinaryKeyKHR, std::vector<uint8_t>> data_;
-      PipelineBinaryKeyKHR &                                pipelineBinaryKey  = data_.first;
-      std::vector<uint8_t> &                                pipelineBinaryData = data_.second;
-      size_t                                                pipelineBinaryDataSize;
-      Result result = static_cast<Result>( getDispatcher()->vkGetPipelineBinaryDataKHR( static_cast<VkDevice>( m_device ),
-                                                                                        reinterpret_cast<VkPipelineBinaryDataInfoKHR const *>( &info ),
-                                                                                        reinterpret_cast<VkPipelineBinaryKeyKHR *>( &pipelineBinaryKey ),
-                                                                                        &pipelineBinaryDataSize,
-                                                                                        nullptr ) );
-      if ( result == Result::eSuccess )
-      {
-        pipelineBinaryData.resize( pipelineBinaryDataSize );
-        result = static_cast<Result>( getDispatcher()->vkGetPipelineBinaryDataKHR( static_cast<VkDevice>( m_device ),
-                                                                                   reinterpret_cast<VkPipelineBinaryDataInfoKHR const *>( &info ),
-                                                                                   reinterpret_cast<VkPipelineBinaryKeyKHR *>( &pipelineBinaryKey ),
-                                                                                   &pipelineBinaryDataSize,
-                                                                                   reinterpret_cast<void *>( pipelineBinaryData.data() ) ) );
-      }
-
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getPipelineBinaryDataKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( data_ ) );
-    }
-
-    // wrapper function for command vkReleaseCapturedPipelineDataKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseCapturedPipelineDataKHR.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::releaseCapturedPipelineDataKHR( ReleaseCapturedPipelineDataInfoKHR const & info,
-                                                                                                   Optional<AllocationCallbacks const>        allocator ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkReleaseCapturedPipelineDataKHR && "Function <vkReleaseCapturedPipelineDataKHR> requires <VK_KHR_pipeline_binary>" );
-
-      Result result =
-        static_cast<Result>( getDispatcher()->vkReleaseCapturedPipelineDataKHR( static_cast<VkDevice>( m_device ),
-                                                                                reinterpret_cast<VkReleaseCapturedPipelineDataInfoKHR const *>( &info ),
-                                                                                reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::releaseCapturedPipelineDataKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
     //=== VK_QCOM_tile_properties ===
 
     // wrapper function for command vkGetFramebufferTilePropertiesQCOM, see
@@ -27487,106 +23580,29 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
                                                                                              reinterpret_cast<VkTilePropertiesQCOM *>( properties.data() ) ) );
         }
       } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Framebuffer::getTilePropertiesQCOM" );
+
       VULKAN_HPP_ASSERT( propertiesCount <= properties.size() );
       if ( propertiesCount < properties.size() )
       {
         properties.resize( propertiesCount );
       }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
+      return properties;
     }
 
     // wrapper function for command vkGetDynamicRenderingTilePropertiesQCOM, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDynamicRenderingTilePropertiesQCOM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<TilePropertiesQCOM>::type
-                         Device::getDynamicRenderingTilePropertiesQCOM( RenderingInfo const & renderingInfo ) const
+    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE TilePropertiesQCOM
+      Device::getDynamicRenderingTilePropertiesQCOM( RenderingInfo const & renderingInfo ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkGetDynamicRenderingTilePropertiesQCOM &&
                          "Function <vkGetDynamicRenderingTilePropertiesQCOM> requires <VK_QCOM_tile_properties>" );
 
       TilePropertiesQCOM properties;
-      Result             result =
-        static_cast<Result>( getDispatcher()->vkGetDynamicRenderingTilePropertiesQCOM( static_cast<VkDevice>( m_device ),
-                                                                                       reinterpret_cast<VkRenderingInfo const *>( &renderingInfo ),
-                                                                                       reinterpret_cast<VkTilePropertiesQCOM *>( &properties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getDynamicRenderingTilePropertiesQCOM" );
+      getDispatcher()->vkGetDynamicRenderingTilePropertiesQCOM( static_cast<VkDevice>( m_device ),
+                                                                reinterpret_cast<VkRenderingInfo const *>( &renderingInfo ),
+                                                                reinterpret_cast<VkTilePropertiesQCOM *>( &properties ) );
 
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    //=== VK_KHR_swapchain_maintenance1 ===
-
-    // wrapper function for command vkReleaseSwapchainImagesKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkReleaseSwapchainImagesKHR.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type Device::releaseSwapchainImagesKHR( ReleaseSwapchainImagesInfoKHR const & releaseInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkReleaseSwapchainImagesKHR &&
-                         "Function <vkReleaseSwapchainImagesKHR> requires <VK_EXT_swapchain_maintenance1> or <VK_KHR_swapchain_maintenance1>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkReleaseSwapchainImagesKHR(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkReleaseSwapchainImagesInfoKHR const *>( &releaseInfo ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::releaseSwapchainImagesKHR" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    //=== VK_NV_cooperative_vector ===
-
-    // wrapper function for command vkGetPhysicalDeviceCooperativeVectorPropertiesNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCooperativeVectorPropertiesNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<CooperativeVectorPropertiesNV>>::type
-                         PhysicalDevice::getCooperativeVectorPropertiesNV() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceCooperativeVectorPropertiesNV &&
-                         "Function <vkGetPhysicalDeviceCooperativeVectorPropertiesNV> requires <VK_NV_cooperative_vector>" );
-
-      std::vector<CooperativeVectorPropertiesNV> properties;
-      uint32_t                                   propertyCount;
-      Result                                     result;
-      do
-      {
-        result = static_cast<Result>(
-          getDispatcher()->vkGetPhysicalDeviceCooperativeVectorPropertiesNV( static_cast<VkPhysicalDevice>( m_physicalDevice ), &propertyCount, nullptr ) );
-        if ( ( result == Result::eSuccess ) && propertyCount )
-        {
-          properties.resize( propertyCount );
-          result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceCooperativeVectorPropertiesNV(
-            static_cast<VkPhysicalDevice>( m_physicalDevice ), &propertyCount, reinterpret_cast<VkCooperativeVectorPropertiesNV *>( properties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getCooperativeVectorPropertiesNV" );
-      VULKAN_HPP_ASSERT( propertyCount <= properties.size() );
-      if ( propertyCount < properties.size() )
-      {
-        properties.resize( propertyCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    // wrapper function for command vkConvertCooperativeVectorMatrixNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkConvertCooperativeVectorMatrixNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::convertCooperativeVectorMatrixNV( ConvertCooperativeVectorMatrixInfoNV const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkConvertCooperativeVectorMatrixNV &&
-                         "Function <vkConvertCooperativeVectorMatrixNV> requires <VK_NV_cooperative_vector>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkConvertCooperativeVectorMatrixNV(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkConvertCooperativeVectorMatrixInfoNV const *>( &info ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::convertCooperativeVectorMatrixNV", { Result::eSuccess, Result::eIncomplete } );
-
-      return static_cast<Result>( result );
-    }
-
-    // wrapper function for command vkCmdConvertCooperativeVectorMatrixNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdConvertCooperativeVectorMatrixNV.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::convertCooperativeVectorMatrixNV( ArrayProxy<ConvertCooperativeVectorMatrixInfoNV const> const & infos ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdConvertCooperativeVectorMatrixNV &&
-                         "Function <vkCmdConvertCooperativeVectorMatrixNV> requires <VK_NV_cooperative_vector>" );
-
-      getDispatcher()->vkCmdConvertCooperativeVectorMatrixNV(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), infos.size(), reinterpret_cast<VkConvertCooperativeVectorMatrixInfoNV const *>( infos.data() ) );
+      return properties;
     }
 
     //=== VK_NV_low_latency2 ===
@@ -27675,286 +23691,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
     }
 
-    //=== VK_ARM_data_graph ===
-
-    // wrapper function for command vkCreateDataGraphPipelinesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelinesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<Pipeline>>::type
-                         Device::createDataGraphPipelinesARM( Optional<DeferredOperationKHR const> const &       deferredOperation,
-                                           Optional<PipelineCache const> const &              pipelineCache,
-                                           ArrayProxy<DataGraphPipelineCreateInfoARM> const & createInfos,
-                                           Optional<AllocationCallbacks const>                allocator ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateDataGraphPipelinesARM && "Function <vkCreateDataGraphPipelinesARM> requires <VK_ARM_data_graph>" );
-
-      std::vector<VULKAN_HPP_NAMESPACE::Pipeline> pipelines( createInfos.size() );
-      Result                                      result =
-        static_cast<Result>( getDispatcher()->vkCreateDataGraphPipelinesARM( static_cast<VkDevice>( m_device ),
-                                                                             deferredOperation ? static_cast<VkDeferredOperationKHR>( **deferredOperation ) : 0,
-                                                                             pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
-                                                                             createInfos.size(),
-                                                                             reinterpret_cast<VkDataGraphPipelineCreateInfoARM const *>( createInfos.data() ),
-                                                                             reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                             reinterpret_cast<VkPipeline *>( pipelines.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createDataGraphPipelinesARM", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
-      std::vector<Pipeline> pipelinesRAII;
-      if ( result == Result::eSuccess )
-      {
-        pipelinesRAII.reserve( pipelines.size() );
-        for ( auto & pipeline : pipelines )
-        {
-          pipelinesRAII.emplace_back( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result );
-        }
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( pipelinesRAII ) );
-    }
-
-    // wrapper function for command vkCreateDataGraphPipelinesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelinesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<Pipeline>::type
-                         Device::createDataGraphPipelineARM( Optional<DeferredOperationKHR const> const & deferredOperation,
-                                          Optional<PipelineCache const> const &        pipelineCache,
-                                          DataGraphPipelineCreateInfoARM const &       createInfo,
-                                          Optional<AllocationCallbacks const>          allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateDataGraphPipelinesARM && "Function <vkCreateDataGraphPipelinesARM> requires <VK_ARM_data_graph>" );
-
-      VULKAN_HPP_NAMESPACE::Pipeline pipeline;
-      Result                         result =
-        static_cast<Result>( getDispatcher()->vkCreateDataGraphPipelinesARM( static_cast<VkDevice>( m_device ),
-                                                                             deferredOperation ? static_cast<VkDeferredOperationKHR>( **deferredOperation ) : 0,
-                                                                             pipelineCache ? static_cast<VkPipelineCache>( **pipelineCache ) : 0,
-                                                                             1,
-                                                                             reinterpret_cast<VkDataGraphPipelineCreateInfoARM const *>( &createInfo ),
-                                                                             reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                             reinterpret_cast<VkPipeline *>( &pipeline ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck(
-        result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createDataGraphPipelineARM", { Result::eSuccess, Result::ePipelineCompileRequiredEXT } );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, Pipeline( *this, *reinterpret_cast<VkPipeline *>( &pipeline ), allocator, result ) );
-    }
-
-    // wrapper function for command vkCreateDataGraphPipelineSessionARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateDataGraphPipelineSessionARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<DataGraphPipelineSessionARM>::type
-                         Device::createDataGraphPipelineSessionARM( DataGraphPipelineSessionCreateInfoARM const & createInfo,
-                                                 Optional<AllocationCallbacks const>           allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateDataGraphPipelineSessionARM &&
-                         "Function <vkCreateDataGraphPipelineSessionARM> requires <VK_ARM_data_graph>" );
-
-      VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM session;
-      Result                                            result = static_cast<Result>(
-        getDispatcher()->vkCreateDataGraphPipelineSessionARM( static_cast<VkDevice>( m_device ),
-                                                              reinterpret_cast<VkDataGraphPipelineSessionCreateInfoARM const *>( &createInfo ),
-                                                              reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                              reinterpret_cast<VkDataGraphPipelineSessionARM *>( &session ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createDataGraphPipelineSessionARM" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, DataGraphPipelineSessionARM( *this, *reinterpret_cast<VkDataGraphPipelineSessionARM *>( &session ), allocator ) );
-    }
-
-    // wrapper function for command vkGetDataGraphPipelineSessionBindPointRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionBindPointRequirementsARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<DataGraphPipelineSessionBindPointRequirementARM>>::type
-                         Device::getDataGraphPipelineSessionBindPointRequirementsARM( DataGraphPipelineSessionBindPointRequirementsInfoARM const & info ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDataGraphPipelineSessionBindPointRequirementsARM &&
-                         "Function <vkGetDataGraphPipelineSessionBindPointRequirementsARM> requires <VK_ARM_data_graph>" );
-
-      std::vector<DataGraphPipelineSessionBindPointRequirementARM> bindPointRequirements;
-      uint32_t                                                     bindPointRequirementCount;
-      Result                                                       result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkGetDataGraphPipelineSessionBindPointRequirementsARM(
-          static_cast<VkDevice>( m_device ),
-          reinterpret_cast<VkDataGraphPipelineSessionBindPointRequirementsInfoARM const *>( &info ),
-          &bindPointRequirementCount,
-          nullptr ) );
-        if ( ( result == Result::eSuccess ) && bindPointRequirementCount )
-        {
-          bindPointRequirements.resize( bindPointRequirementCount );
-          result = static_cast<Result>( getDispatcher()->vkGetDataGraphPipelineSessionBindPointRequirementsARM(
-            static_cast<VkDevice>( m_device ),
-            reinterpret_cast<VkDataGraphPipelineSessionBindPointRequirementsInfoARM const *>( &info ),
-            &bindPointRequirementCount,
-            reinterpret_cast<VkDataGraphPipelineSessionBindPointRequirementARM *>( bindPointRequirements.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getDataGraphPipelineSessionBindPointRequirementsARM" );
-      VULKAN_HPP_ASSERT( bindPointRequirementCount <= bindPointRequirements.size() );
-      if ( bindPointRequirementCount < bindPointRequirements.size() )
-      {
-        bindPointRequirements.resize( bindPointRequirementCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( bindPointRequirements ) );
-    }
-
-    // wrapper function for command vkGetDataGraphPipelineSessionMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionMemoryRequirementsARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getDataGraphPipelineSessionMemoryRequirementsARM( DataGraphPipelineSessionMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDataGraphPipelineSessionMemoryRequirementsARM &&
-                         "Function <vkGetDataGraphPipelineSessionMemoryRequirementsARM> requires <VK_ARM_data_graph>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetDataGraphPipelineSessionMemoryRequirementsARM(
-        static_cast<VkDevice>( m_device ),
-        reinterpret_cast<VkDataGraphPipelineSessionMemoryRequirementsInfoARM const *>( &info ),
-        reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetDataGraphPipelineSessionMemoryRequirementsARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineSessionMemoryRequirementsARM.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getDataGraphPipelineSessionMemoryRequirementsARM( DataGraphPipelineSessionMemoryRequirementsInfoARM const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDataGraphPipelineSessionMemoryRequirementsARM &&
-                         "Function <vkGetDataGraphPipelineSessionMemoryRequirementsARM> requires <VK_ARM_data_graph>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetDataGraphPipelineSessionMemoryRequirementsARM(
-        static_cast<VkDevice>( m_device ),
-        reinterpret_cast<VkDataGraphPipelineSessionMemoryRequirementsInfoARM const *>( &info ),
-        reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkBindDataGraphPipelineSessionMemoryARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkBindDataGraphPipelineSessionMemoryARM.html
-    VULKAN_HPP_INLINE typename ResultValueType<void>::type
-      Device::bindDataGraphPipelineSessionMemoryARM( ArrayProxy<BindDataGraphPipelineSessionMemoryInfoARM const> const & bindInfos ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkBindDataGraphPipelineSessionMemoryARM &&
-                         "Function <vkBindDataGraphPipelineSessionMemoryARM> requires <VK_ARM_data_graph>" );
-
-      Result result = static_cast<Result>( getDispatcher()->vkBindDataGraphPipelineSessionMemoryARM(
-        static_cast<VkDevice>( m_device ), bindInfos.size(), reinterpret_cast<VkBindDataGraphPipelineSessionMemoryInfoARM const *>( bindInfos.data() ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::bindDataGraphPipelineSessionMemoryARM" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result );
-    }
-
-    // wrapper function for command vkCmdDispatchDataGraphARM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDispatchDataGraphARM.html
-    VULKAN_HPP_INLINE void CommandBuffer::dispatchDataGraphARM( VULKAN_HPP_NAMESPACE::DataGraphPipelineSessionARM session,
-                                                                Optional<DataGraphPipelineDispatchInfoARM const>  info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDispatchDataGraphARM && "Function <vkCmdDispatchDataGraphARM> requires <VK_ARM_data_graph>" );
-
-      getDispatcher()->vkCmdDispatchDataGraphARM( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                  static_cast<VkDataGraphPipelineSessionARM>( session ),
-                                                  reinterpret_cast<VkDataGraphPipelineDispatchInfoARM const *>( info.get() ) );
-    }
-
-    // wrapper function for command vkGetDataGraphPipelineAvailablePropertiesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelineAvailablePropertiesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<DataGraphPipelinePropertyARM>>::type
-                         Device::getDataGraphPipelineAvailablePropertiesARM( DataGraphPipelineInfoARM const & pipelineInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDataGraphPipelineAvailablePropertiesARM &&
-                         "Function <vkGetDataGraphPipelineAvailablePropertiesARM> requires <VK_ARM_data_graph>" );
-
-      std::vector<DataGraphPipelinePropertyARM> properties;
-      uint32_t                                  propertiesCount;
-      Result                                    result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkGetDataGraphPipelineAvailablePropertiesARM(
-          static_cast<VkDevice>( m_device ), reinterpret_cast<VkDataGraphPipelineInfoARM const *>( &pipelineInfo ), &propertiesCount, nullptr ) );
-        if ( ( result == Result::eSuccess ) && propertiesCount )
-        {
-          properties.resize( propertiesCount );
-          result = static_cast<Result>(
-            getDispatcher()->vkGetDataGraphPipelineAvailablePropertiesARM( static_cast<VkDevice>( m_device ),
-                                                                           reinterpret_cast<VkDataGraphPipelineInfoARM const *>( &pipelineInfo ),
-                                                                           &propertiesCount,
-                                                                           reinterpret_cast<VkDataGraphPipelinePropertyARM *>( properties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getDataGraphPipelineAvailablePropertiesARM" );
-      VULKAN_HPP_ASSERT( propertiesCount <= properties.size() );
-      if ( propertiesCount < properties.size() )
-      {
-        properties.resize( propertiesCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-    // wrapper function for command vkGetDataGraphPipelinePropertiesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetDataGraphPipelinePropertiesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
-      Device::getDataGraphPipelinePropertiesARM( DataGraphPipelineInfoARM const *          pPipelineInfo,
-                                                 uint32_t                                  propertiesCount,
-                                                 DataGraphPipelinePropertyQueryResultARM * pProperties ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetDataGraphPipelinePropertiesARM &&
-                         "Function <vkGetDataGraphPipelinePropertiesARM> requires <VK_ARM_data_graph>" );
-      return static_cast<Result>(
-        getDispatcher()->vkGetDataGraphPipelinePropertiesARM( static_cast<VkDevice>( m_device ),
-                                                              reinterpret_cast<VkDataGraphPipelineInfoARM const *>( pPipelineInfo ),
-                                                              propertiesCount,
-                                                              reinterpret_cast<VkDataGraphPipelinePropertyQueryResultARM *>( pProperties ) ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<QueueFamilyDataGraphPropertiesARM>>::type
-                         PhysicalDevice::getQueueFamilyDataGraphPropertiesARM( uint32_t queueFamilyIndex ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM &&
-                         "Function <vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM> requires <VK_ARM_data_graph>" );
-
-      std::vector<QueueFamilyDataGraphPropertiesARM> queueFamilyDataGraphProperties;
-      uint32_t                                       queueFamilyDataGraphPropertyCount;
-      Result                                         result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM(
-          static_cast<VkPhysicalDevice>( m_physicalDevice ), queueFamilyIndex, &queueFamilyDataGraphPropertyCount, nullptr ) );
-        if ( ( result == Result::eSuccess ) && queueFamilyDataGraphPropertyCount )
-        {
-          queueFamilyDataGraphProperties.resize( queueFamilyDataGraphPropertyCount );
-          result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM(
-            static_cast<VkPhysicalDevice>( m_physicalDevice ),
-            queueFamilyIndex,
-            &queueFamilyDataGraphPropertyCount,
-            reinterpret_cast<VkQueueFamilyDataGraphPropertiesARM *>( queueFamilyDataGraphProperties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getQueueFamilyDataGraphPropertiesARM" );
-      VULKAN_HPP_ASSERT( queueFamilyDataGraphPropertyCount <= queueFamilyDataGraphProperties.size() );
-      if ( queueFamilyDataGraphPropertyCount < queueFamilyDataGraphProperties.size() )
-      {
-        queueFamilyDataGraphProperties.resize( queueFamilyDataGraphPropertyCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( queueFamilyDataGraphProperties ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE QueueFamilyDataGraphProcessingEnginePropertiesARM
-      PhysicalDevice::getQueueFamilyDataGraphProcessingEnginePropertiesARM(
-        PhysicalDeviceQueueFamilyDataGraphProcessingEngineInfoARM const & queueFamilyDataGraphProcessingEngineInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM &&
-                         "Function <vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM> requires <VK_ARM_data_graph>" );
-
-      QueueFamilyDataGraphProcessingEnginePropertiesARM queueFamilyDataGraphProcessingEngineProperties;
-      getDispatcher()->vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM(
-        static_cast<VkPhysicalDevice>( m_physicalDevice ),
-        reinterpret_cast<VkPhysicalDeviceQueueFamilyDataGraphProcessingEngineInfoARM const *>( &queueFamilyDataGraphProcessingEngineInfo ),
-        reinterpret_cast<VkQueueFamilyDataGraphProcessingEnginePropertiesARM *>( &queueFamilyDataGraphProcessingEngineProperties ) );
-
-      return queueFamilyDataGraphProcessingEngineProperties;
-    }
-
     //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
 
     // wrapper function for command vkCmdSetAttachmentFeedbackLoopEnableEXT, see
@@ -27986,36 +23722,7 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 
       return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
     }
-
-    // wrapper function for command vkGetScreenBufferPropertiesQNX, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetScreenBufferPropertiesQNX.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<StructureChain<X, Y, Z...>>::type
-                         Device::getScreenBufferPropertiesQNX( struct _screen_buffer const & buffer ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetScreenBufferPropertiesQNX &&
-                         "Function <vkGetScreenBufferPropertiesQNX> requires <VK_QNX_external_memory_screen_buffer>" );
-
-      StructureChain<X, Y, Z...>  structureChain;
-      ScreenBufferPropertiesQNX & properties = structureChain.template get<ScreenBufferPropertiesQNX>();
-      Result                      result     = static_cast<Result>( getDispatcher()->vkGetScreenBufferPropertiesQNX(
-        static_cast<VkDevice>( m_device ), &buffer, reinterpret_cast<VkScreenBufferPropertiesQNX *>( &properties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getScreenBufferPropertiesQNX" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( structureChain ) );
-    }
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
-
-    //=== VK_KHR_line_rasterization ===
-
-    // wrapper function for command vkCmdSetLineStippleKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetLineStippleKHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::setLineStippleKHR( uint32_t lineStippleFactor, uint16_t lineStipplePattern ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetLineStippleKHR &&
-                         "Function <vkCmdSetLineStippleKHR> requires <VK_EXT_line_rasterization> or <VK_KHR_line_rasterization> or <VK_VERSION_1_4>" );
-
-      getDispatcher()->vkCmdSetLineStippleKHR( static_cast<VkCommandBuffer>( m_commandBuffer ), lineStippleFactor, lineStipplePattern );
-    }
 
     //=== VK_KHR_calibrated_timestamps ===
 
@@ -28093,44 +23800,43 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
     //=== VK_KHR_maintenance6 ===
 
     // wrapper function for command vkCmdBindDescriptorSets2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindDescriptorSets2KHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets2KHR( BindDescriptorSetsInfo const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets2KHR( BindDescriptorSetsInfoKHR const & bindDescriptorSetsInfo ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindDescriptorSets2KHR &&
-                         "Function <vkCmdBindDescriptorSets2KHR> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindDescriptorSets2KHR && "Function <vkCmdBindDescriptorSets2KHR> requires <VK_KHR_maintenance6>" );
 
       getDispatcher()->vkCmdBindDescriptorSets2KHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                    reinterpret_cast<VkBindDescriptorSetsInfo const *>( &bindDescriptorSetsInfo ) );
+                                                    reinterpret_cast<VkBindDescriptorSetsInfoKHR const *>( &bindDescriptorSetsInfo ) );
     }
 
     // wrapper function for command vkCmdPushConstants2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushConstants2KHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushConstants2KHR( PushConstantsInfo const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::pushConstants2KHR( PushConstantsInfoKHR const & pushConstantsInfo ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants2KHR && "Function <vkCmdPushConstants2KHR> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushConstants2KHR && "Function <vkCmdPushConstants2KHR> requires <VK_KHR_maintenance6>" );
 
       getDispatcher()->vkCmdPushConstants2KHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                               reinterpret_cast<VkPushConstantsInfo const *>( &pushConstantsInfo ) );
+                                               reinterpret_cast<VkPushConstantsInfoKHR const *>( &pushConstantsInfo ) );
     }
 
     // wrapper function for command vkCmdPushDescriptorSet2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSet2KHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSet2KHR( PushDescriptorSetInfo const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSet2KHR( PushDescriptorSetInfoKHR const & pushDescriptorSetInfo ) const VULKAN_HPP_NOEXCEPT
     {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSet2KHR &&
-                         "Function <vkCmdPushDescriptorSet2KHR> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
+      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSet2KHR && "Function <vkCmdPushDescriptorSet2KHR> requires <VK_KHR_maintenance6>" );
 
       getDispatcher()->vkCmdPushDescriptorSet2KHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                   reinterpret_cast<VkPushDescriptorSetInfo const *>( &pushDescriptorSetInfo ) );
+                                                   reinterpret_cast<VkPushDescriptorSetInfoKHR const *>( &pushDescriptorSetInfo ) );
     }
 
     // wrapper function for command vkCmdPushDescriptorSetWithTemplate2KHR, see
     // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPushDescriptorSetWithTemplate2KHR.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::pushDescriptorSetWithTemplate2KHR( PushDescriptorSetWithTemplateInfo const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT
+    VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSetWithTemplate2KHR(
+      PushDescriptorSetWithTemplateInfoKHR const & pushDescriptorSetWithTemplateInfo ) const VULKAN_HPP_NOEXCEPT
     {
       VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPushDescriptorSetWithTemplate2KHR &&
-                         "Function <vkCmdPushDescriptorSetWithTemplate2KHR> requires <VK_KHR_maintenance6> or <VK_VERSION_1_4>" );
+                         "Function <vkCmdPushDescriptorSetWithTemplate2KHR> requires <VK_KHR_maintenance6>" );
 
       getDispatcher()->vkCmdPushDescriptorSetWithTemplate2KHR(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkPushDescriptorSetWithTemplateInfo const *>( &pushDescriptorSetWithTemplateInfo ) );
+        static_cast<VkCommandBuffer>( m_commandBuffer ),
+        reinterpret_cast<VkPushDescriptorSetWithTemplateInfoKHR const *>( &pushDescriptorSetWithTemplateInfo ) );
     }
 
     // wrapper function for command vkCmdSetDescriptorBufferOffsets2EXT, see
@@ -28157,520 +23863,6 @@ VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
         static_cast<VkCommandBuffer>( m_commandBuffer ),
         reinterpret_cast<VkBindDescriptorBufferEmbeddedSamplersInfoEXT const *>( &bindDescriptorBufferEmbeddedSamplersInfo ) );
     }
-
-    //=== VK_QCOM_tile_memory_heap ===
-
-    // wrapper function for command vkCmdBindTileMemoryQCOM, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBindTileMemoryQCOM.html
-    VULKAN_HPP_INLINE void CommandBuffer::bindTileMemoryQCOM( Optional<TileMemoryBindInfoQCOM const> tileMemoryBindInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBindTileMemoryQCOM && "Function <vkCmdBindTileMemoryQCOM> requires <VK_QCOM_tile_memory_heap>" );
-
-      getDispatcher()->vkCmdBindTileMemoryQCOM( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                reinterpret_cast<VkTileMemoryBindInfoQCOM const *>( tileMemoryBindInfo.get() ) );
-    }
-
-    //=== VK_KHR_copy_memory_indirect ===
-
-    // wrapper function for command vkCmdCopyMemoryIndirectKHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyMemoryIndirectKHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::copyMemoryIndirectKHR( CopyMemoryIndirectInfoKHR const & copyMemoryIndirectInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyMemoryIndirectKHR && "Function <vkCmdCopyMemoryIndirectKHR> requires <VK_KHR_copy_memory_indirect>" );
-
-      getDispatcher()->vkCmdCopyMemoryIndirectKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                   reinterpret_cast<VkCopyMemoryIndirectInfoKHR const *>( &copyMemoryIndirectInfo ) );
-    }
-
-    // wrapper function for command vkCmdCopyMemoryToImageIndirectKHR, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdCopyMemoryToImageIndirectKHR.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::copyMemoryToImageIndirectKHR( CopyMemoryToImageIndirectInfoKHR const & copyMemoryToImageIndirectInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdCopyMemoryToImageIndirectKHR &&
-                         "Function <vkCmdCopyMemoryToImageIndirectKHR> requires <VK_KHR_copy_memory_indirect>" );
-
-      getDispatcher()->vkCmdCopyMemoryToImageIndirectKHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                          reinterpret_cast<VkCopyMemoryToImageIndirectInfoKHR const *>( &copyMemoryToImageIndirectInfo ) );
-    }
-
-    //=== VK_EXT_memory_decompression ===
-
-    // wrapper function for command vkCmdDecompressMemoryEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDecompressMemoryEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::decompressMemoryEXT( DecompressMemoryInfoEXT const & decompressMemoryInfoEXT ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDecompressMemoryEXT && "Function <vkCmdDecompressMemoryEXT> requires <VK_EXT_memory_decompression>" );
-
-      getDispatcher()->vkCmdDecompressMemoryEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                 reinterpret_cast<VkDecompressMemoryInfoEXT const *>( &decompressMemoryInfoEXT ) );
-    }
-
-    // wrapper function for command vkCmdDecompressMemoryIndirectCountEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdDecompressMemoryIndirectCountEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::decompressMemoryIndirectCountEXT( MemoryDecompressionMethodFlagsEXT decompressionMethod,
-                                                                            DeviceAddress                     indirectCommandsAddress,
-                                                                            DeviceAddress                     indirectCommandsCountAddress,
-                                                                            uint32_t                          maxDecompressionCount,
-                                                                            uint32_t                          stride ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdDecompressMemoryIndirectCountEXT &&
-                         "Function <vkCmdDecompressMemoryIndirectCountEXT> requires <VK_EXT_memory_decompression>" );
-
-      getDispatcher()->vkCmdDecompressMemoryIndirectCountEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                              static_cast<VkMemoryDecompressionMethodFlagsEXT>( decompressionMethod ),
-                                                              static_cast<VkDeviceAddress>( indirectCommandsAddress ),
-                                                              static_cast<VkDeviceAddress>( indirectCommandsCountAddress ),
-                                                              maxDecompressionCount,
-                                                              stride );
-    }
-
-    //=== VK_NV_external_compute_queue ===
-
-    // wrapper function for command vkCreateExternalComputeQueueNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateExternalComputeQueueNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<ExternalComputeQueueNV>::type
-                         Device::createExternalComputeQueueNV( ExternalComputeQueueCreateInfoNV const & createInfo,
-                                            Optional<AllocationCallbacks const>      allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateExternalComputeQueueNV &&
-                         "Function <vkCreateExternalComputeQueueNV> requires <VK_NV_external_compute_queue>" );
-
-      VULKAN_HPP_NAMESPACE::ExternalComputeQueueNV externalQueue;
-      Result                                       result =
-        static_cast<Result>( getDispatcher()->vkCreateExternalComputeQueueNV( static_cast<VkDevice>( m_device ),
-                                                                              reinterpret_cast<VkExternalComputeQueueCreateInfoNV const *>( &createInfo ),
-                                                                              reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                              reinterpret_cast<VkExternalComputeQueueNV *>( &externalQueue ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createExternalComputeQueueNV" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, ExternalComputeQueueNV( *this, *reinterpret_cast<VkExternalComputeQueueNV *>( &externalQueue ), allocator ) );
-    }
-
-    // wrapper function for command vkGetExternalComputeQueueDataNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetExternalComputeQueueDataNV.html
-    template <typename DataType>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::pair<ExternalComputeQueueDataParamsNV, DataType> ExternalComputeQueueNV::getData() const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetExternalComputeQueueDataNV &&
-                         "Function <vkGetExternalComputeQueueDataNV> requires <VK_NV_external_compute_queue>" );
-
-      std::pair<ExternalComputeQueueDataParamsNV, DataType> data_;
-      ExternalComputeQueueDataParamsNV &                    arams = data_.first;
-      DataType &                                            data  = data_.second;
-      getDispatcher()->vkGetExternalComputeQueueDataNV(
-        static_cast<VkExternalComputeQueueNV>( m_externalComputeQueueNV ), reinterpret_cast<VkExternalComputeQueueDataParamsNV *>( &arams ), &data );
-
-      return data_;
-    }
-
-    //=== VK_NV_cluster_acceleration_structure ===
-
-    // wrapper function for command vkGetClusterAccelerationStructureBuildSizesNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetClusterAccelerationStructureBuildSizesNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE AccelerationStructureBuildSizesInfoKHR
-      Device::getClusterAccelerationStructureBuildSizesNV( ClusterAccelerationStructureInputInfoNV const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetClusterAccelerationStructureBuildSizesNV &&
-                         "Function <vkGetClusterAccelerationStructureBuildSizesNV> requires <VK_NV_cluster_acceleration_structure>" );
-
-      AccelerationStructureBuildSizesInfoKHR sizeInfo;
-      getDispatcher()->vkGetClusterAccelerationStructureBuildSizesNV( static_cast<VkDevice>( m_device ),
-                                                                      reinterpret_cast<VkClusterAccelerationStructureInputInfoNV const *>( &info ),
-                                                                      reinterpret_cast<VkAccelerationStructureBuildSizesInfoKHR *>( &sizeInfo ) );
-
-      return sizeInfo;
-    }
-
-    // wrapper function for command vkCmdBuildClusterAccelerationStructureIndirectNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBuildClusterAccelerationStructureIndirectNV.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::buildClusterAccelerationStructureIndirectNV( ClusterAccelerationStructureCommandsInfoNV const & commandInfos ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBuildClusterAccelerationStructureIndirectNV &&
-                         "Function <vkCmdBuildClusterAccelerationStructureIndirectNV> requires <VK_NV_cluster_acceleration_structure>" );
-
-      getDispatcher()->vkCmdBuildClusterAccelerationStructureIndirectNV(
-        static_cast<VkCommandBuffer>( m_commandBuffer ), reinterpret_cast<VkClusterAccelerationStructureCommandsInfoNV const *>( &commandInfos ) );
-    }
-
-    //=== VK_NV_partitioned_acceleration_structure ===
-
-    // wrapper function for command vkGetPartitionedAccelerationStructuresBuildSizesNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPartitionedAccelerationStructuresBuildSizesNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE AccelerationStructureBuildSizesInfoKHR
-      Device::getPartitionedAccelerationStructuresBuildSizesNV( PartitionedAccelerationStructureInstancesInputNV const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPartitionedAccelerationStructuresBuildSizesNV &&
-                         "Function <vkGetPartitionedAccelerationStructuresBuildSizesNV> requires <VK_NV_partitioned_acceleration_structure>" );
-
-      AccelerationStructureBuildSizesInfoKHR sizeInfo;
-      getDispatcher()->vkGetPartitionedAccelerationStructuresBuildSizesNV(
-        static_cast<VkDevice>( m_device ),
-        reinterpret_cast<VkPartitionedAccelerationStructureInstancesInputNV const *>( &info ),
-        reinterpret_cast<VkAccelerationStructureBuildSizesInfoKHR *>( &sizeInfo ) );
-
-      return sizeInfo;
-    }
-
-    // wrapper function for command vkCmdBuildPartitionedAccelerationStructuresNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBuildPartitionedAccelerationStructuresNV.html
-    VULKAN_HPP_INLINE void
-      CommandBuffer::buildPartitionedAccelerationStructuresNV( BuildPartitionedAccelerationStructureInfoNV const & buildInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBuildPartitionedAccelerationStructuresNV &&
-                         "Function <vkCmdBuildPartitionedAccelerationStructuresNV> requires <VK_NV_partitioned_acceleration_structure>" );
-
-      getDispatcher()->vkCmdBuildPartitionedAccelerationStructuresNV( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                                      reinterpret_cast<VkBuildPartitionedAccelerationStructureInfoNV const *>( &buildInfo ) );
-    }
-
-    //=== VK_EXT_device_generated_commands ===
-
-    // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE MemoryRequirements2
-      Device::getGeneratedCommandsMemoryRequirementsEXT( GeneratedCommandsMemoryRequirementsInfoEXT const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsEXT &&
-                         "Function <vkGetGeneratedCommandsMemoryRequirementsEXT> requires <VK_EXT_device_generated_commands>" );
-
-      MemoryRequirements2 memoryRequirements;
-      getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsEXT( static_cast<VkDevice>( m_device ),
-                                                                    reinterpret_cast<VkGeneratedCommandsMemoryRequirementsInfoEXT const *>( &info ),
-                                                                    reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return memoryRequirements;
-    }
-
-    // wrapper function for command vkGetGeneratedCommandsMemoryRequirementsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetGeneratedCommandsMemoryRequirementsEXT.html
-    template <typename X, typename Y, typename... Z>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE StructureChain<X, Y, Z...>
-      Device::getGeneratedCommandsMemoryRequirementsEXT( GeneratedCommandsMemoryRequirementsInfoEXT const & info ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsEXT &&
-                         "Function <vkGetGeneratedCommandsMemoryRequirementsEXT> requires <VK_EXT_device_generated_commands>" );
-
-      StructureChain<X, Y, Z...> structureChain;
-      MemoryRequirements2 &      memoryRequirements = structureChain.template get<MemoryRequirements2>();
-      getDispatcher()->vkGetGeneratedCommandsMemoryRequirementsEXT( static_cast<VkDevice>( m_device ),
-                                                                    reinterpret_cast<VkGeneratedCommandsMemoryRequirementsInfoEXT const *>( &info ),
-                                                                    reinterpret_cast<VkMemoryRequirements2 *>( &memoryRequirements ) );
-
-      return structureChain;
-    }
-
-    // wrapper function for command vkCmdPreprocessGeneratedCommandsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdPreprocessGeneratedCommandsEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::preprocessGeneratedCommandsEXT( GeneratedCommandsInfoEXT const &    generatedCommandsInfo,
-                                                                          VULKAN_HPP_NAMESPACE::CommandBuffer stateCommandBuffer ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdPreprocessGeneratedCommandsEXT &&
-                         "Function <vkCmdPreprocessGeneratedCommandsEXT> requires <VK_EXT_device_generated_commands>" );
-
-      getDispatcher()->vkCmdPreprocessGeneratedCommandsEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                            reinterpret_cast<VkGeneratedCommandsInfoEXT const *>( &generatedCommandsInfo ),
-                                                            static_cast<VkCommandBuffer>( stateCommandBuffer ) );
-    }
-
-    // wrapper function for command vkCmdExecuteGeneratedCommandsEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdExecuteGeneratedCommandsEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::executeGeneratedCommandsEXT( Bool32                           isPreprocessed,
-                                                                       GeneratedCommandsInfoEXT const & generatedCommandsInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdExecuteGeneratedCommandsEXT &&
-                         "Function <vkCmdExecuteGeneratedCommandsEXT> requires <VK_EXT_device_generated_commands>" );
-
-      getDispatcher()->vkCmdExecuteGeneratedCommandsEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                         static_cast<VkBool32>( isPreprocessed ),
-                                                         reinterpret_cast<VkGeneratedCommandsInfoEXT const *>( &generatedCommandsInfo ) );
-    }
-
-    // wrapper function for command vkCreateIndirectCommandsLayoutEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateIndirectCommandsLayoutEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<IndirectCommandsLayoutEXT>::type
-                         Device::createIndirectCommandsLayoutEXT( IndirectCommandsLayoutCreateInfoEXT const & createInfo,
-                                               Optional<AllocationCallbacks const>         allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateIndirectCommandsLayoutEXT &&
-                         "Function <vkCreateIndirectCommandsLayoutEXT> requires <VK_EXT_device_generated_commands>" );
-
-      VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutEXT indirectCommandsLayout;
-      Result                                          result =
-        static_cast<Result>( getDispatcher()->vkCreateIndirectCommandsLayoutEXT( static_cast<VkDevice>( m_device ),
-                                                                                 reinterpret_cast<VkIndirectCommandsLayoutCreateInfoEXT const *>( &createInfo ),
-                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                 reinterpret_cast<VkIndirectCommandsLayoutEXT *>( &indirectCommandsLayout ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createIndirectCommandsLayoutEXT" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, IndirectCommandsLayoutEXT( *this, *reinterpret_cast<VkIndirectCommandsLayoutEXT *>( &indirectCommandsLayout ), allocator ) );
-    }
-
-    // wrapper function for command vkCreateIndirectExecutionSetEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateIndirectExecutionSetEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<IndirectExecutionSetEXT>::type
-                         Device::createIndirectExecutionSetEXT( IndirectExecutionSetCreateInfoEXT const & createInfo,
-                                             Optional<AllocationCallbacks const>       allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateIndirectExecutionSetEXT &&
-                         "Function <vkCreateIndirectExecutionSetEXT> requires <VK_EXT_device_generated_commands>" );
-
-      VULKAN_HPP_NAMESPACE::IndirectExecutionSetEXT indirectExecutionSet;
-      Result                                        result =
-        static_cast<Result>( getDispatcher()->vkCreateIndirectExecutionSetEXT( static_cast<VkDevice>( m_device ),
-                                                                               reinterpret_cast<VkIndirectExecutionSetCreateInfoEXT const *>( &createInfo ),
-                                                                               reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                               reinterpret_cast<VkIndirectExecutionSetEXT *>( &indirectExecutionSet ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::createIndirectExecutionSetEXT" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType(
-        result, IndirectExecutionSetEXT( *this, *reinterpret_cast<VkIndirectExecutionSetEXT *>( &indirectExecutionSet ), allocator ) );
-    }
-
-    // wrapper function for command vkUpdateIndirectExecutionSetPipelineEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateIndirectExecutionSetPipelineEXT.html
-    VULKAN_HPP_INLINE void
-      IndirectExecutionSetEXT::updatePipeline( ArrayProxy<WriteIndirectExecutionSetPipelineEXT const> const & executionSetWrites ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUpdateIndirectExecutionSetPipelineEXT &&
-                         "Function <vkUpdateIndirectExecutionSetPipelineEXT> requires <VK_EXT_device_generated_commands>" );
-
-      getDispatcher()->vkUpdateIndirectExecutionSetPipelineEXT( static_cast<VkDevice>( m_device ),
-                                                                static_cast<VkIndirectExecutionSetEXT>( m_indirectExecutionSetEXT ),
-                                                                executionSetWrites.size(),
-                                                                reinterpret_cast<VkWriteIndirectExecutionSetPipelineEXT const *>( executionSetWrites.data() ) );
-    }
-
-    // wrapper function for command vkUpdateIndirectExecutionSetShaderEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkUpdateIndirectExecutionSetShaderEXT.html
-    VULKAN_HPP_INLINE void
-      IndirectExecutionSetEXT::updateShader( ArrayProxy<WriteIndirectExecutionSetShaderEXT const> const & executionSetWrites ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkUpdateIndirectExecutionSetShaderEXT &&
-                         "Function <vkUpdateIndirectExecutionSetShaderEXT> requires <VK_EXT_device_generated_commands>" );
-
-      getDispatcher()->vkUpdateIndirectExecutionSetShaderEXT( static_cast<VkDevice>( m_device ),
-                                                              static_cast<VkIndirectExecutionSetEXT>( m_indirectExecutionSetEXT ),
-                                                              executionSetWrites.size(),
-                                                              reinterpret_cast<VkWriteIndirectExecutionSetShaderEXT const *>( executionSetWrites.data() ) );
-    }
-
-#  if defined( VK_USE_PLATFORM_OHOS )
-    //=== VK_OHOS_surface ===
-
-    // wrapper function for command vkCreateSurfaceOHOS, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateSurfaceOHOS.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<SurfaceKHR>::type
-                         Instance::createSurfaceOHOS( SurfaceCreateInfoOHOS const &       createInfo,
-                                   Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateSurfaceOHOS && "Function <vkCreateSurfaceOHOS> requires <VK_OHOS_surface>" );
-
-      VULKAN_HPP_NAMESPACE::SurfaceKHR surface;
-      Result                           result = static_cast<Result>( getDispatcher()->vkCreateSurfaceOHOS( static_cast<VkInstance>( m_instance ),
-                                                                                 reinterpret_cast<VkSurfaceCreateInfoOHOS const *>( &createInfo ),
-                                                                                 reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                 reinterpret_cast<VkSurfaceKHR *>( &surface ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Instance::createSurfaceOHOS" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, SurfaceKHR( *this, *reinterpret_cast<VkSurfaceKHR *>( &surface ), allocator ) );
-    }
-#  endif /*VK_USE_PLATFORM_OHOS*/
-
-    //=== VK_NV_cooperative_matrix2 ===
-
-    // wrapper function for command vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<std::vector<CooperativeMatrixFlexibleDimensionsPropertiesNV>>::type
-                         PhysicalDevice::getCooperativeMatrixFlexibleDimensionsPropertiesNV() const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV &&
-                         "Function <vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV> requires <VK_NV_cooperative_matrix2>" );
-
-      std::vector<CooperativeMatrixFlexibleDimensionsPropertiesNV> properties;
-      uint32_t                                                     propertyCount;
-      Result                                                       result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV(
-          static_cast<VkPhysicalDevice>( m_physicalDevice ), &propertyCount, nullptr ) );
-        if ( ( result == Result::eSuccess ) && propertyCount )
-        {
-          properties.resize( propertyCount );
-          result = static_cast<Result>( getDispatcher()->vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV(
-            static_cast<VkPhysicalDevice>( m_physicalDevice ),
-            &propertyCount,
-            reinterpret_cast<VkCooperativeMatrixFlexibleDimensionsPropertiesNV *>( properties.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result,
-                                                 VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::getCooperativeMatrixFlexibleDimensionsPropertiesNV" );
-      VULKAN_HPP_ASSERT( propertyCount <= properties.size() );
-      if ( propertyCount < properties.size() )
-      {
-        properties.resize( propertyCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( properties ) );
-    }
-
-#  if defined( VK_USE_PLATFORM_METAL_EXT )
-    //=== VK_EXT_external_memory_metal ===
-
-    // wrapper function for command vkGetMemoryMetalHandleEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryMetalHandleEXT.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<void *>::type
-                         Device::getMemoryMetalHandleEXT( MemoryGetMetalHandleInfoEXT const & getMetalHandleInfo ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetMemoryMetalHandleEXT && "Function <vkGetMemoryMetalHandleEXT> requires <VK_EXT_external_memory_metal>" );
-
-      void * handle;
-      Result result = static_cast<Result>( getDispatcher()->vkGetMemoryMetalHandleEXT(
-        static_cast<VkDevice>( m_device ), reinterpret_cast<VkMemoryGetMetalHandleInfoEXT const *>( &getMetalHandleInfo ), &handle ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getMemoryMetalHandleEXT" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( handle ) );
-    }
-
-    // wrapper function for command vkGetMemoryMetalHandlePropertiesEXT, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetMemoryMetalHandlePropertiesEXT.html
-    template <typename HandleType>
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<MemoryMetalHandlePropertiesEXT>::type
-                         Device::getMemoryMetalHandlePropertiesEXT( ExternalMemoryHandleTypeFlagBits handleType, HandleType const & handle ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetMemoryMetalHandlePropertiesEXT &&
-                         "Function <vkGetMemoryMetalHandlePropertiesEXT> requires <VK_EXT_external_memory_metal>" );
-
-      MemoryMetalHandlePropertiesEXT memoryMetalHandleProperties;
-      Result                         result = static_cast<Result>(
-        getDispatcher()->vkGetMemoryMetalHandlePropertiesEXT( static_cast<VkDevice>( m_device ),
-                                                              static_cast<VkExternalMemoryHandleTypeFlagBits>( handleType ),
-                                                              reinterpret_cast<void const *>( &handle ),
-                                                              reinterpret_cast<VkMemoryMetalHandlePropertiesEXT *>( &memoryMetalHandleProperties ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Device::getMemoryMetalHandlePropertiesEXT" );
-
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( memoryMetalHandleProperties ) );
-    }
-#  endif /*VK_USE_PLATFORM_METAL_EXT*/
-
-    //=== VK_ARM_performance_counters_by_region ===
-
-    // wrapper function for command vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE
-      typename ResultValueType<std::pair<std::vector<PerformanceCounterARM>, std::vector<PerformanceCounterDescriptionARM>>>::type
-      PhysicalDevice::enumerateQueueFamilyPerformanceCountersByRegionARM( uint32_t queueFamilyIndex ) const
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM &&
-                         "Function <vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM> requires <VK_ARM_performance_counters_by_region>" );
-
-      std::pair<std::vector<PerformanceCounterARM>, std::vector<PerformanceCounterDescriptionARM>> data_;
-      std::vector<PerformanceCounterARM> &                                                         counters            = data_.first;
-      std::vector<PerformanceCounterDescriptionARM> &                                              counterDescriptions = data_.second;
-      uint32_t                                                                                     counterCount;
-      Result                                                                                       result;
-      do
-      {
-        result = static_cast<Result>( getDispatcher()->vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM(
-          static_cast<VkPhysicalDevice>( m_physicalDevice ), queueFamilyIndex, &counterCount, nullptr, nullptr ) );
-        if ( ( result == Result::eSuccess ) && counterCount )
-        {
-          counters.resize( counterCount );
-          counterDescriptions.resize( counterCount );
-          result = static_cast<Result>( getDispatcher()->vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM(
-            static_cast<VkPhysicalDevice>( m_physicalDevice ),
-            queueFamilyIndex,
-            &counterCount,
-            reinterpret_cast<VkPerformanceCounterARM *>( counters.data() ),
-            reinterpret_cast<VkPerformanceCounterDescriptionARM *>( counterDescriptions.data() ) ) );
-        }
-      } while ( result == Result::eIncomplete );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result,
-                                                 VULKAN_HPP_RAII_NAMESPACE_STRING "::PhysicalDevice::enumerateQueueFamilyPerformanceCountersByRegionARM" );
-      VULKAN_HPP_ASSERT( counterCount <= counters.size() );
-      if ( counterCount < counters.size() )
-      {
-        counters.resize( counterCount );
-        counterDescriptions.resize( counterCount );
-      }
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, std::move( data_ ) );
-    }
-
-    //=== VK_EXT_fragment_density_map_offset ===
-
-    // wrapper function for command vkCmdEndRendering2EXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndRendering2EXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::endRendering2EXT( Optional<RenderingEndInfoKHR const> renderingEndInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndRendering2EXT &&
-                         "Function <vkCmdEndRendering2EXT> requires <VK_EXT_fragment_density_map_offset> or <VK_KHR_maintenance10>" );
-
-      getDispatcher()->vkCmdEndRendering2EXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                              reinterpret_cast<VkRenderingEndInfoKHR const *>( renderingEndInfo.get() ) );
-    }
-
-    //=== VK_EXT_custom_resolve ===
-
-    // wrapper function for command vkCmdBeginCustomResolveEXT, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdBeginCustomResolveEXT.html
-    VULKAN_HPP_INLINE void CommandBuffer::beginCustomResolveEXT( Optional<BeginCustomResolveInfoEXT const> beginCustomResolveInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdBeginCustomResolveEXT && "Function <vkCmdBeginCustomResolveEXT> requires <VK_EXT_custom_resolve>" );
-
-      getDispatcher()->vkCmdBeginCustomResolveEXT( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                   reinterpret_cast<VkBeginCustomResolveInfoEXT const *>( beginCustomResolveInfo.get() ) );
-    }
-
-    //=== VK_KHR_maintenance10 ===
-
-    // wrapper function for command vkCmdEndRendering2KHR, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdEndRendering2KHR.html
-    VULKAN_HPP_INLINE void CommandBuffer::endRendering2KHR( Optional<RenderingEndInfoKHR const> renderingEndInfo ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdEndRendering2KHR &&
-                         "Function <vkCmdEndRendering2KHR> requires <VK_EXT_fragment_density_map_offset> or <VK_KHR_maintenance10>" );
-
-      getDispatcher()->vkCmdEndRendering2KHR( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                              reinterpret_cast<VkRenderingEndInfoKHR const *>( renderingEndInfo.get() ) );
-    }
-
-    //=== VK_NV_compute_occupancy_priority ===
-
-    // wrapper function for command vkCmdSetComputeOccupancyPriorityNV, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkCmdSetComputeOccupancyPriorityNV.html
-    VULKAN_HPP_INLINE void CommandBuffer::setComputeOccupancyPriorityNV( ComputeOccupancyPriorityParametersNV const & parameters ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCmdSetComputeOccupancyPriorityNV &&
-                         "Function <vkCmdSetComputeOccupancyPriorityNV> requires <VK_NV_compute_occupancy_priority>" );
-
-      getDispatcher()->vkCmdSetComputeOccupancyPriorityNV( static_cast<VkCommandBuffer>( m_commandBuffer ),
-                                                           reinterpret_cast<VkComputeOccupancyPriorityParametersNV const *>( &parameters ) );
-    }
-
-#  if defined( VK_USE_PLATFORM_UBM_SEC )
-    //=== VK_SEC_ubm_surface ===
-
-    // wrapper function for command vkCreateUbmSurfaceSEC, see https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateUbmSurfaceSEC.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<SurfaceKHR>::type
-                         Instance::createUbmSurfaceSEC( UbmSurfaceCreateInfoSEC const &     createInfo,
-                                     Optional<AllocationCallbacks const> allocator ) const VULKAN_HPP_NOEXCEPT_WHEN_NO_EXCEPTIONS
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkCreateUbmSurfaceSEC && "Function <vkCreateUbmSurfaceSEC> requires <VK_SEC_ubm_surface>" );
-
-      VULKAN_HPP_NAMESPACE::SurfaceKHR surface;
-      Result                           result = static_cast<Result>( getDispatcher()->vkCreateUbmSurfaceSEC( static_cast<VkInstance>( m_instance ),
-                                                                                   reinterpret_cast<VkUbmSurfaceCreateInfoSEC const *>( &createInfo ),
-                                                                                   reinterpret_cast<VkAllocationCallbacks const *>( allocator.get() ),
-                                                                                   reinterpret_cast<VkSurfaceKHR *>( &surface ) ) );
-      VULKAN_HPP_NAMESPACE::detail::resultCheck( result, VULKAN_HPP_RAII_NAMESPACE_STRING "::Instance::createUbmSurfaceSEC" );
-      return VULKAN_HPP_NAMESPACE::detail::createResultValueType( result, SurfaceKHR( *this, *reinterpret_cast<VkSurfaceKHR *>( &surface ), allocator ) );
-    }
-
-    // wrapper function for command vkGetPhysicalDeviceUbmPresentationSupportSEC, see
-    // https://registry.khronos.org/vulkan/specs/latest/man/html/vkGetPhysicalDeviceUbmPresentationSupportSEC.html
-    VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE std::pair<Bool32, struct ubm_device>
-                                           PhysicalDevice::getUbmPresentationSupportSEC( uint32_t queueFamilyIndex ) const VULKAN_HPP_NOEXCEPT
-    {
-      VULKAN_HPP_ASSERT( getDispatcher()->vkGetPhysicalDeviceUbmPresentationSupportSEC &&
-                         "Function <vkGetPhysicalDeviceUbmPresentationSupportSEC> requires <VK_SEC_ubm_surface>" );
-
-      struct ubm_device device;
-      VkBool32          result =
-        getDispatcher()->vkGetPhysicalDeviceUbmPresentationSupportSEC( static_cast<VkPhysicalDevice>( m_physicalDevice ), queueFamilyIndex, &device );
-
-      return { result, device };
-    }
-#  endif /*VK_USE_PLATFORM_UBM_SEC*/
 
     //====================
     //=== RAII Helpers ===

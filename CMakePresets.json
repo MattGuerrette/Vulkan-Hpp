@@ -15,11 +15,11 @@
     },
     {
       "name": "base-generator-build", "hidden": true,
-      "cacheVariables": { "VULKAN_HPP_GENERATOR_BUILD": "ON", "VULKAN_HPP_RUN_GENERATOR": "OFF" }
+      "cacheVariables": { "VULKAN_HPP_GENERATOR_BUILD": "ON", "VULKAN_HPP_RUN_GENERATOR": "OFF", "VULKAN_HPP_CLANG_FORMAT_PATH_HINT": "C:\\Program Files\\LLVM\\bin" }
     },
     {
       "name": "base-generator-run", "hidden": true,
-      "cacheVariables": { "VULKAN_HPP_GENERATOR_BUILD": "ON", "VULKAN_HPP_RUN_GENERATOR": "ON" }
+      "cacheVariables": { "VULKAN_HPP_GENERATOR_BUILD": "ON", "VULKAN_HPP_RUN_GENERATOR": "ON", "VULKAN_HPP_CLANG_FORMAT_PATH_HINT": "C:\\Program Files\\LLVM\\bin" }
     },
     {
       "name": "base-samples", "hidden": true,
